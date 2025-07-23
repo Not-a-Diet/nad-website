@@ -15,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: process.env.NEXT_PUBLIC_STRAPI_URL,
+        hostname: 'pleasant-card-4dcaa4dd10.media.strapiapp.com',
         pathname: '/**',
       },
     ],
