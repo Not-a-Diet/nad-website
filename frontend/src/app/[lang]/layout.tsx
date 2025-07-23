@@ -8,7 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
-
+import { Inter, Permanent_Marker, Bricolage_Grotesque } from "next/font/google"
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -53,6 +53,17 @@ export async function generateMetadata({ params } : { params: {lang: string}}): 
   };
 }
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", // optional: CSS variable
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+  weight: ['700'] // optional: CSS variable
+});
+
 export default async function RootLayout({
   children,
   params,
@@ -60,6 +71,7 @@ export default async function RootLayout({
   readonly children: React.ReactNode;
   readonly params: { lang: string };
 }) {
+
   const global = await getGlobal(params.lang);
   // TODO: CREATE A CUSTOM ERROR PAGE
   if (!global.data) return null;
@@ -74,8 +86,9 @@ export default async function RootLayout({
     footer.footerLogo.logoImg.data?.attributes.url
   );
 
+
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang} className={`${inter.variable} ${inter.className} ${bricolage.variable}`}>
       <body>
         <Navbar
           links={navbar.links}
@@ -83,7 +96,7 @@ export default async function RootLayout({
           logoText={navbar.navbarLogo.logoText}
         />
 
-        <main className="dark:bg-black dark:text-gray-100 min-h-screen">
+        <main className="bg-anti-flash_white text-night min-h-screen">
           {children}
         </main>
 

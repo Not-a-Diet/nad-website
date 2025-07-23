@@ -21,8 +21,8 @@ interface Article {
 
 function selectedFilter(current: string, selected: string) {
   return current === selected
-    ? "px-3 py-1 rounded-lg hover:underline dark:bg-violet-700 dark:text-gray-100"
-    : "px-3 py-1 rounded-lg hover:underline dark:bg-violet-400 dark:text-gray-900";
+    ? "px-3 py-1 rounded-lg hover:underline dark:bg-ebony dark:text-anti-flash_white"
+    : "px-3 py-1 rounded-lg hover:underline dark:bg-ebony dark:text-anti-flash_white";
 }
 
 export default function ArticleSelect({
@@ -39,11 +39,11 @@ export default function ArticleSelect({
 }) {
 
   return (
-    <div className="p-4 rounded-lg dark:bg-gray-900 min-h-[365px] relative">
+    <div className="p-4 rounded-lg bg-anti-fllash_white-100 min-h-[365px] relative drop-shadow-lg ">
       <h4 className="text-xl font-semibold">Browse By Category</h4>
 
       <div>
-        <div className="flex flex-wrap py-6 space-x-2 dark:border-gray-400">
+        <div className="flex flex-wrap py-6 space-x-2 light:border-night">
           {categories.map((category: Category) => {
             if (category.attributes.articles.data.length === 0) return null;
             return (
@@ -74,8 +74,8 @@ export default function ArticleSelect({
                     href={`/blog/${params.category}/${article.attributes.slug}`}
                     className={`${
                       params.slug === article.attributes.slug &&
-                      "text-violet-400"
-                    }  hover:underline hover:text-violet-400 transition-colors duration-200`}
+                      "text-kelly_green dark:text-kelly_green"
+                    }  hover:underline transition-colors duration-200`}
                   >
                     {article.attributes.title}
                   </Link>

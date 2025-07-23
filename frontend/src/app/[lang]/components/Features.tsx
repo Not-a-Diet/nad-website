@@ -21,43 +21,34 @@ interface Feature {
 function Feature({ title, description, showLink, newTab, url, text }: Feature) {
   return (
     <div className="flex flex-col items-center p-4">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        className="w-8 h-8 dark:text-violet-400"
-      >
-        <path
-          fillRule="evenodd"
-          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-          clipRule="evenodd"
-        ></path>
-      </svg>
-      <h3 className="my-3 text-3xl font-semibold">{title}</h3>
+      <svg 
+      height="40px" 
+      width="40px" 
+      version="1.1" 
+      id="_x32_" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlnsXlink="http://www.w3.org/1999/xlink" 
+      viewBox="0 0 512 512" xmlSpace="preserve" 
+      fill="#5da414">
+        <g id="SVGRepo_bgCarrier" 
+        stroke-width="0">
+          </g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier"><g> <path d="M447.086,151.483c0.871-5.634,1.326-11.401,1.326-17.288c0-61.926-50.204-112.136-112.136-112.136 c-16.007,0-31.224,3.36-44.995,9.404C268.701,11.864,239.222,0,206.978,0C141.236,0,87.016,49.302,79.259,112.949 C35.441,131.825,4.762,175.381,4.762,226.114c0,68.028,55.144,123.173,123.173,123.173c12.452,0,24.48-1.856,35.814-5.306 c15.336,24.86,46.426,86.204,40.837,168.018h121.332c0,0-6.826-66.643,33.019-174.465c13.682,6.73,29.078,10.522,45.353,10.522 c56.858,0,102.948-46.09,102.948-102.948C507.238,203.527,482.572,167.728,447.086,151.483z M200.136,339.406 c9.27,6.252,19.636,10.999,30.747,13.92l0.678,45.934L200.136,339.406z M280.513,424.045l-8.57-68.565 c10.88-1.654,21.186-5.074,30.635-9.904L280.513,424.045z"></path> </g> </g></svg>
+      <h3 className="my-3 text-3xl font-heading">{title}</h3>
       <div className="space-y-1 leading-tight my-6">
         <p>{description}</p>
       </div>
-      {showLink && url && text && (
-        <div>
-          <Link
-            href={url}
-            target={newTab ? "_blank" : "_self"}
-            className="inline-block px-4 py-2 mt-4 text-sm font-semibold text-white transition duration-200 ease-in-out bg-violet-500 rounded-lg hover:bg-violet-600"
-          >
-            {text}
-          </Link>
-        </div>
-      )}
     </div>
   );
 }
 
 export default function Features({ data }: FeaturesProps) {
   return (
-    <section className="dark:bg-black dark:text-gray-100 m:py-12 lg:py-24">
+    <section className="dark:bg-primary dark:text-night mt-[50px] lg:mt-2 m:py-12 lg:py-24">
       <div className="container mx-auto py-4 space-y-2 text-center">
-        <h2 className="text-5xl font-bold">{data.heading}</h2>
-        <p className="dark:text-gray-400">{data.description}</p>
+        <h2 className="text-5xl font-heading">{data.heading}</h2>
+        <p className="dark:text-night font-sans">{data.description}</p>
       </div>
       <div className="container mx-auto my-6 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {data.feature.map((feature: Feature, index: number) => (

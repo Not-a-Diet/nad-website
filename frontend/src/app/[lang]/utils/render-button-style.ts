@@ -1,10 +1,10 @@
 export function renderButtonStyle(type: string) {
 	switch (type) {
 		case "primary":
-			return "px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900";
+			return "px-8 py-3 text-lg font-semibold rounded-2xl dark:bg-ebony dark:text-anti-flash_white";
 		case "secondary":
-			return "px-8 py-3 text-lg font-semibold border rounded dark:border-gray-100";
+			return "px-8 py-3 text-lg font-semibold border rounded-2xl dark:border-ebony dark:text-ebony";
 		default:
-			return "px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900";
+			return "px-8 py-3 text-lg font-semibold rounded-2xl dark:bg-secondary dark:text-white";
 	}
 }

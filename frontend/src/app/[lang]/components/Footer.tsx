@@ -28,8 +28,8 @@ function FooterLink({ url, text }: FooterLink) {
     <li className="flex">
       <Link
         href={url}
-        className={`hover:dark:text-violet-400 ${
-          path === url && "dark:text-violet-400 dark:border-violet-400"
+        className={`hover:dark:text-kelly_green-400 ${
+          path === url && "dark:text-kelly_green-400 dark:border-kelly_green-400"
         }}`}
       >
         {text}
@@ -83,27 +83,27 @@ export default function Footer({
 }) {
 
   return (
-    <footer className="py-6 dark:bg-black dark:text-gray-50">
+    <footer className="py-6 dark:bg-ebony dark:text-white">
       <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
         <div className="grid grid-cols-12">
           <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
             <Logo src={logoUrl}>
-              {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
+              {logoText && <h2 className="text-2xl font-heading text-secondary">{logoText}</h2>}
             </Logo>
           </div>
 
-          <div className="col-span-6 text-center md:text-left md:col-span-3">
+          {/* <div className="col-span-6 text-center md:text-left md:col-span-3">
             <p className="pb-1 text-lg font-medium">Categories</p>
             <ul>
               {categoryLinks.map((link: CategoryLink) => (
                 <CategoryLink key={link.id} {...link} />
               ))}
             </ul>
-          </div>
+          </div> */}
 
-          <div className="col-span-6 text-center md:text-left md:col-span-3">
+          <div className="col-span-6 text-center md:text-right md:col-span-3">
             <p className="pb-1 text-lg font-medium">Menu</p>
-            <ul>
+            <ul className="flex flex-col items-center space-y-2 md:items-end">
               {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
               ))}
@@ -136,7 +136,7 @@ export default function Footer({
                   href={link.url}
                   title={link.text}
                   target={link.newTab ? "_blank" : "_self"}
-                  className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-gray-900"
+                  className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-quaternary dark:text-white"
                 >
                   <RenderSocialIcon social={link.social} />
                 </a>
