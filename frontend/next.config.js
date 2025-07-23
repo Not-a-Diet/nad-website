@@ -12,7 +12,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.pexels.com',
-      }
+      },
+      {
+        protocol: 'https',
+        hostname: NEXT_PUBLIC_STRAPI_API_URL,
+        pathname: '/**',
+      },
     ],
   },
 }
