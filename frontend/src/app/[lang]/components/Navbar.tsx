@@ -24,8 +24,8 @@ function NavLink({ url, text }: NavLink) {
     <li className="flex">
       <Link
         href={url}
-        className={`flex items-center mx-4 -mb-1 border-b-2 dark:border-transparent hover:text-night hover:underline ${
-          path === url && "dark:text-night dark:border-night"
+        className={`flex items-center mx-4 -mb-1 border-b-2 border-transparent hover:text-night hover:underline ${
+          path === url && "text-night border-night"
         }}`}
       >
         {text}
@@ -45,7 +45,7 @@ function MobileNavLink({ url, text, closeMenu }: MobileNavLink) {
         href={url}
         onClick={handleClick}
         className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-anti-flash_white hover:bg-gray-900 ${
-          path === url && "text-anti-flash_white dark:border-night"
+          path === url && "text-anti-flash_white border-night"
         }}`}
       >
         {text}

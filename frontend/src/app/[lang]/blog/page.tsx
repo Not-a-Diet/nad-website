@@ -75,7 +75,7 @@ export default function Profile() {
           <div className="flex justify-center">
             <button
               type="button"
-              className="px-6 py-3 text-sm rounded-lg hover:underline dark:bg-secondary dark:text-white"
+              className="px-6 py-3 text-sm rounded-lg hover:underline text-white"
               onClick={loadMorePosts}
             >
               Load more posts...

@@ -28,8 +28,8 @@ function FooterLink({ url, text }: FooterLink) {
     <li className="flex">
       <Link
         href={url}
-        className={`hover:dark:text-kelly_green-400 ${
-          path === url && "dark:text-kelly_green-400 dark:border-kelly_green-400"
+        className={`hover:text-kelly_green-400 ${
+          path === url && "text-kelly_green-400 border-kelly_green-400"
         }}`}
       >
         {text}
@@ -43,7 +43,7 @@ function CategoryLink({ attributes }: CategoryLink) {
     <li className="flex">
       <Link
         href={`/blog/${attributes.slug}`}
-        className="hover:dark:text-violet-400"
+        className="hover:text-night-400"
       >
         {attributes.name}
       </Link>
@@ -83,7 +83,7 @@ export default function Footer({
 }) {
 
   return (
-    <footer className="py-6 dark:bg-ebony dark:text-white">
+    <footer className="py-6 bg-ebony text-white">
       <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
         <div className="grid grid-cols-12">
           <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -136,7 +136,7 @@ export default function Footer({
                   href={link.url}
                   title={link.text}
                   target={link.newTab ? "_blank" : "_self"}
-                  className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-quaternary dark:text-white"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-quaternary text-white"
                 >
                   <RenderSocialIcon social={link.social} />
                 </a>

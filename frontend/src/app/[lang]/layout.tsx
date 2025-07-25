@@ -8,7 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
-import { Inter, Permanent_Marker, Bricolage_Grotesque } from "next/font/google"
+import { Inter, Bricolage_Grotesque } from "next/font/google"
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
