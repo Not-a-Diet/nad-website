@@ -38,13 +38,13 @@ export default function Hero({ data }: HeroProps) {
   const imgUrl = getStrapiMedia(data.picture.data.attributes.url);
 
     return (
-    <section className="text-night relative top-16">
-      <div className="container flex flex-col justify-evenly p-2 h-auto lg:max-w-[1100px] mx-auto sm:py-12 lg:py-24 lg:flex-row">
-        <div className="flex flex-col justify-center p-6 text-center rounded-lg lg:max-w-md xl:max-w-lg lg:text-left">
+    <section className="text-night relative md:mt-2 top-16">
+      <div className="container flex flex-col justify-center text-center w-full p-2 h-auto lg:max-w-[1100px] mx-auto sm:py-12 lg:py-24 lg:flex-row">
+        <div className="flex flex-col justify-center text-center rounded-lg mt-10 lg:p-6 lg:mt-0 lg:max-w-md xl:max-w-lg lg:text-left">
           <HighlightedText
             text={data.title}
             tag="h1"
-            className="font-heading text-5xl leading-none sm:text-6xl mb-8"
+            className="font-heading text-5xl sm:text-6xl mb-8"
             color="text-kelly_green"
           />
 
