@@ -2,10 +2,11 @@ import { fetchAPI } from '@/app/[lang]/utils/fetch-api';
 import Post from '@/app/[lang]/views/post';
 import type { Metadata } from 'next';
 
-async function getPostBySlug(slug: string) {
+async function getPostBySlug(slug: string, lang: string = 'en') {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
     const path = `/articles`;
     const urlParamsObject = {
+        locale: lang,
         filters: { slug },
         populate: {
             cover: { fields: ['url'] },
@@ -43,17 +44,17 @@ async function getMetaData(slug: string) {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const meta = await getMetaData(params.slug);
-    const metadata = meta[0].attributes.seo;
+    const metadata = meta[0]?.attributes.seo;
 
     return {
-        title: metadata.metaTitle,
-        description: metadata.metaDescription,
+        title: metadata?.metaTitle,
+        description: metadata?.metaDescription,
     };
 }
 
-export default async function PostRoute({ params }: { params: { slug: string } }) {
-    const { slug } = params;
-    const data = await getPostBySlug(slug);
+export default async function PostRoute({ params }: { params: { slug: string, lang: string } }) {
+    const { slug, lang } = params;
+    const data = await getPostBySlug(slug, lang);
     if (data.data.length === 0) return <h2>no post found</h2>;
     return <Post data={data.data[0]} />;
 }

@@ -23,8 +23,10 @@
       "enum": [
         "YOUTUBE",
         "TWITTER",
-        "DISCORD",
-        "WEBSITE"
+        "WEBSITE",
+        "LINKEDIN",
+        "INSTAGRAM",
+        "TIKTOK"
       ]
     }
   }

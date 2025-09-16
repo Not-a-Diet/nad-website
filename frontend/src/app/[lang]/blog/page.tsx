@@ -14,17 +14,25 @@ interface Meta {
   };
 }
 
-export default function Profile() {
+interface BlogHeaders {
+  heading: string;
+  text: string;
+}
+
+export default function Profile({ params }: { params: { lang: string } }) {
+  //console.log("POFILE PARAMS", params);
+  const { lang } = params;
   const [meta, setMeta] = useState<Meta | undefined>();
   const [data, setData] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
-
+  const [blogHeaders, setBlogHeaders] = useState<BlogHeaders>()
   const fetchData = useCallback(async (start: number, limit: number) => {
     setLoading(true);
     try {
       const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
       const path = `/articles`;
       const urlParamsObject = {
+        locale: lang,
         sort: { createdAt: "desc" },
         populate: {
           cover: { fields: ["url"] },
@@ -60,22 +68,42 @@ export default function Profile() {
     fetchData(nextPosts, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
   }
 
+  const fetchBlogHeaders = async () => {
+    setLoading(true);
+    try {
+      const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+      const path = `/blog-headers`;
+      const urlParamsObject = {
+        locale: lang,
+      };
+      const options = { headers: { Authorization: `Bearer ${token}` } };
+      const responseData = await fetchAPI(path, urlParamsObject, options);
+
+      setBlogHeaders(responseData.data[0].attributes);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
   useEffect(() => {
     fetchData(0, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
+    fetchBlogHeaders();
   }, [fetchData]);
-
+  
   if (isLoading) return <Loader />;
 
   return (
     <div>
-      <PageHeader heading="Our Blog" text="Checkout Something Cool" />
+      <PageHeader heading={blogHeaders ? blogHeaders.heading : ""} text={blogHeaders ? blogHeaders.text : ""} />
       <Blog data={data}>
         {meta!.pagination.start + meta!.pagination.limit <
           meta!.pagination.total && (
           <div className="flex justify-center">
             <button
               type="button"
-              className="px-6 py-3 text-sm rounded-lg hover:underline text-white"
+              className="px-6 py-3 text-sm rounded-lg hover:underline text-ebony"
               onClick={loadMorePosts}
             >
               Load more posts...

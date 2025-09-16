@@ -1,4 +1,3 @@
-import { i18n } from 'i18n-config';
 import LangRedirect from './components/LangRedirect';
 import componentResolver from './utils/component-resolver';
 import {getPageBySlug} from "@/app/[lang]/utils/get-page-by-slug";

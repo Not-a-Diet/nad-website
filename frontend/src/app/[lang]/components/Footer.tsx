@@ -3,8 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "./Logo";
 import { CgWebsite } from "react-icons/cg";
-import { FaDiscord } from "react-icons/fa";
-import { AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube, AiFillTikTok, AiFillLinkedin } from "react-icons/ai";
 
 interface FooterLink {
   id: number;
@@ -59,10 +58,14 @@ function RenderSocialIcon({ social }: { social: string | undefined }) {
       return <AiFillTwitterCircle />;
     case "YOUTUBE":
       return <AiFillYoutube />;
-    case "DISCORD":
-      return <FaDiscord />;
+    case "INSTAGRAM":
+      return <AiFillInstagram />;
+    case "TIKTOK":
+      return <AiFillTikTok />
+    case "LINKEDIN":
+      return <AiFillLinkedin />;
     default:
-      return null;
+      return <CgWebsite/>;
   }
 }
 
@@ -113,7 +116,7 @@ export default function Footer({
         <div className="grid justify-center pt-6 lg:justify-between">
           <div className="flex">
             <span className="mr-2">
-              ©{new Date().getFullYear()} All rights reserved
+              Copyright © {new Date().getFullYear()} Not a Diet All rights reserved
             </span>
             <ul className="flex">
               {legalLinks.map((link: FooterLink) => (

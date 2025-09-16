@@ -799,15 +799,35 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     description: Attribute.Text &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
       Attribute.SetMinMaxLength<{
         maxLength: 256;
       }>;
     slug: Attribute.UID<'api::article.article', 'title'>;
-    cover: Attribute.Media<'images' | 'files' | 'videos'>;
+    cover: Attribute.Media<'images' | 'files' | 'videos'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     category: Attribute.Relation<
       'api::article.article',
       'manyToOne',
@@ -821,13 +841,23 @@ export interface ApiArticleArticle extends Schema.CollectionType {
         'shared.slider',
         'shared.video-embed'
       ]
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     authorsBio: Attribute.Relation<
       'api::article.article',
       'manyToOne',
       'api::author.author'
     >;
-    seo: Attribute.Component<'shared.seo'>;
+    seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -843,6 +873,12 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::article.article',
+      'oneToMany',
+      'api::article.article'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -880,6 +916,63 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+  };
+}
+
+export interface ApiBlogHeaderBlogHeader extends Schema.CollectionType {
+  collectionName: 'blog_headers';
+  info: {
+    singularName: 'blog-header';
+    pluralName: 'blog-headers';
+    displayName: 'blog-header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    heading: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
+    text: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-header.blog-header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-header.blog-header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::blog-header.blog-header',
+      'oneToMany',
+      'api::blog-header.blog-header'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1187,6 +1280,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::blog-header.blog-header': ApiBlogHeaderBlogHeader;
       'api::category.category': ApiCategoryCategory;
       'api::food.food': ApiFoodFood;
       'api::global.global': ApiGlobalGlobal;

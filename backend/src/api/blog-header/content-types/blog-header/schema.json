@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_headers",
+  "info": {
+    "singularName": "blog-header",
+    "pluralName": "blog-headers",
+    "displayName": "blog-header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "heading": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "maxLength": 16
+    },
+    "text": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    }
+  }
+}

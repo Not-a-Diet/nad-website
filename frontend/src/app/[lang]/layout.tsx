@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
 import { Inter, Bricolage_Grotesque } from "next/font/google"
+import  ErrorComponent  from "./components/Error";
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -73,8 +74,7 @@ export default async function RootLayout({
 }) {
 
   const global = await getGlobal(params.lang);
-  // TODO: CREATE A CUSTOM ERROR PAGE
-  if (!global.data) return null;
+  if (!global.data) return (<> <ErrorComponent/> </>);
   
   const { notificationBanner, navbar, footer } = global.data.attributes;
 
