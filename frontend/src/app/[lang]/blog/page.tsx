@@ -89,8 +89,12 @@ export default function Profile({ params }: { params: { lang: string } }) {
   
   useEffect(() => {
     fetchData(0, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
-    fetchBlogHeaders();
   }, [fetchData]);
+  
+  useEffect(() => {
+    fetchBlogHeaders();
+  }, [])
+
   
   if (isLoading) return <Loader />;
 
