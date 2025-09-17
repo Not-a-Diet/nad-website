@@ -96,14 +96,14 @@ export default function Profile({ params }: { params: { lang: string } }) {
   }, [])
 
   
-  if (isLoading) return <Loader />;
+  if (isLoading || !meta) return <Loader />;
 
   return (
     <div>
       <PageHeader heading={blogHeaders ? blogHeaders.heading : ""} text={blogHeaders ? blogHeaders.text : ""} />
       <Blog data={data}>
-        {meta!.pagination.start + meta!.pagination.limit <
-          meta!.pagination.total && (
+        {meta.pagination.start + meta.pagination.limit <
+          meta.pagination.total && (
           <div className="flex justify-center">
             <button
               type="button"
