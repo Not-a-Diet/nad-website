@@ -91,6 +91,19 @@ export interface SectionsTestimonialsGroup extends Schema.Component {
   };
 }
 
+export interface SectionsTeam extends Schema.Component {
+  collectionName: 'components_sections_teams';
+  info: {
+    displayName: 'Team';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    member: Attribute.Component<'elements.team-member', true>;
+  };
+}
+
 export interface SectionsRichText extends Schema.Component {
   collectionName: 'components_sections_rich_texts';
   info: {
@@ -346,6 +359,7 @@ export interface LayoutFooter extends Schema.Component {
       'oneToMany',
       'api::category.category'
     >;
+    description: Attribute.Text;
   };
 }
 
@@ -361,6 +375,21 @@ export interface ElementsTestimonial extends Schema.Component {
     picture: Attribute.Media<'images'> & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
     authorName: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ElementsTeamMember extends Schema.Component {
+  collectionName: 'components_elements_team_members';
+  info: {
+    displayName: 'Team Member';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    profilePhoto: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
+    occupation: Attribute.String;
+    description: Attribute.Text;
+    skills: Attribute.Text;
   };
 }
 
@@ -434,6 +463,7 @@ export interface ElementsFeature extends Schema.Component {
   collectionName: 'components_elements_features';
   info: {
     displayName: 'Feature';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -443,6 +473,10 @@ export interface ElementsFeature extends Schema.Component {
     newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
     url: Attribute.String;
     text: Attribute.String;
+    color: Attribute.Enumeration<
+      ['primary', 'secondary', 'tertiary', 'quaternary']
+    >;
+    descriptionList: Attribute.Text;
   };
 }
 
@@ -487,6 +521,7 @@ declare module '@strapi/types' {
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
       'sections.testimonials-group': SectionsTestimonialsGroup;
+      'sections.team': SectionsTeam;
       'sections.rich-text': SectionsRichText;
       'sections.pricing': SectionsPricing;
       'sections.lead-form': SectionsLeadForm;
@@ -506,6 +541,7 @@ declare module '@strapi/types' {
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;
       'elements.testimonial': ElementsTestimonial;
+      'elements.team-member': ElementsTeamMember;
       'elements.plan': ElementsPlan;
       'elements.notification-banner': ElementsNotificationBanner;
       'elements.logos': ElementsLogos;

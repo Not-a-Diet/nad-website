@@ -21,6 +21,14 @@ const populate = {
           },
         },
       },
+      member: {
+        populate: {
+          fields: ["name", "description", "occupation", "skills"],
+          profilePhoto: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
       testimonials: {
         populate: {
           picture: {

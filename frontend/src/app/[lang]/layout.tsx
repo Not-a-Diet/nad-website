@@ -96,7 +96,7 @@ export default async function RootLayout({
           logoText={navbar.navbarLogo.logoText}
         />
 
-        <main className="bg-anti-flash_white text-night min-h-screen">
+        <main className="bg-anti-flash_white text-black min-h-screen">
           {children}
         </main>
 
@@ -105,6 +105,7 @@ export default async function RootLayout({
         <Footer
           logoUrl={footerLogoUrl}
           logoText={footer.footerLogo.logoText}
+          description={footer.description}
           menuLinks={footer.menuLinks}
           categoryLinks={footer.categories.data}
           legalLinks={footer.legalLinks}

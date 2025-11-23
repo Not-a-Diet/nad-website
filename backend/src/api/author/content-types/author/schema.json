@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "avatar": {
       "type": "media",
@@ -23,10 +24,12 @@
         "images",
         "files",
         "videos"
-      ]
+      ],
+      "pluginOptions": {}
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "articles": {
       "type": "relation",
