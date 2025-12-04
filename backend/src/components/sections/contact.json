@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_contacts",
+  "info": {
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "contactLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.social-link"
+    },
+    "hours": {
+      "displayName": "Hours",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.hours"
+    },
+    "contactForm": {
+      "displayName": "Contact form",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.contact-form"
+    }
+  }
+}

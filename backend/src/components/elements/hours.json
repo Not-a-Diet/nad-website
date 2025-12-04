@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_hours",
+  "info": {
+    "displayName": "Hours"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "timings": {
+      "type": "json"
+    }
+  }
+}

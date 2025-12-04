@@ -2,8 +2,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "./Logo";
-import { CgWebsite } from "react-icons/cg";
-import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube, AiFillTikTok, AiFillLinkedin } from "react-icons/ai";
+import { RenderSocialIcon } from "../utils/social-icon";
 
 interface FooterLink {
   id: number;
@@ -49,25 +48,6 @@ function CategoryLink({ attributes }: CategoryLink) {
       </Link>
     </li>
   );
-}
-
-function RenderSocialIcon({ social }: { social: string | undefined }) {
-  switch (social) {
-    case "WEBSITE":
-      return <CgWebsite />;
-    case "TWITTER":
-      return <AiFillTwitterCircle />;
-    case "YOUTUBE":
-      return <AiFillYoutube />;
-    case "INSTAGRAM":
-      return <AiFillInstagram />;
-    case "TIKTOK":
-      return <AiFillTikTok />
-    case "LINKEDIN":
-      return <AiFillLinkedin />;
-    default:
-      return <CgWebsite/>;
-  }
 }
 
 export default function Footer({

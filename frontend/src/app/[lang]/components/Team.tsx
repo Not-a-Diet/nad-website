@@ -2,12 +2,14 @@ import { assert } from "console";
 import { parseDescriptionList } from "../utils/description-parser";
 import { getStrapiMedia } from "../utils/api-helpers";
 import Image from "next/image";
+import Quote from "./Quote";
 
 interface TeamProps {
   data: {
     title: string;
     description: string;
     member: Array<TeamMember>;
+    filosofy: any;
   };
 }
 
@@ -75,6 +77,9 @@ export default function Team({ data }: TeamProps) {
                     </div>
                 ))}
             </div>
+            <Quote
+                data={data.filosofy}
+             />
         </div>
     </section>
   );

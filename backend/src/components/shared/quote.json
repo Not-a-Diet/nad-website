@@ -14,8 +14,18 @@
       "type": "text",
       "required": true
     },
-    "author": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "quotation",
+        "filosofy"
+      ]
+    },
+    "sign": {
       "type": "string"
+    },
+    "isList": {
+      "type": "boolean"
     }
   }
 }

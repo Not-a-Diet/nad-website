@@ -39,7 +39,9 @@
         "sections.lead-form",
         "sections.features",
         "sections.heading",
-        "sections.team"
+        "sections.team",
+        "sections.contact",
+        "sections.featured-posts"
       ],
       "pluginOptions": {
         "i18n": {

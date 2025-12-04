@@ -29,6 +29,24 @@ const populate = {
           },
         },
       },
+      contactForm: {
+        populate: {
+          submitButton: {
+            fields: ["text", "type"],
+          }
+        },
+      },
+      hours: {
+        populate: true,
+      },
+      contactLinks: {
+        populate: true,
+      },
+      filosofy: {
+        populate: {
+          fields: ["title", "body", "type", "sign", "isList"],
+        }
+      },
       testimonials: {
         populate: {
           picture: {
@@ -36,11 +54,26 @@ const populate = {
           },
         },
       },
+      posts: {
+        populate: {
+          category: {
+            fields: ["slug", "name"]
+          },
+          authorsBio: {
+            fields: ["name"],
+            populate: {
+              avatar: {
+                fields: ["url"]
+              }
+            }
+          },
+          cover: {
+            fields: ["url", "alternativeText", "caption", "width", "height"],
+          },
+        },
+      },
       plans: {
         populate: ["product_features"],
-      },
-      submitButton: {
-        populate: true,
       },
     },
   },

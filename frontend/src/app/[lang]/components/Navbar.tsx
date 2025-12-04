@@ -19,13 +19,14 @@ interface MobileNavLink extends NavLink {
     closeMenu: () => void;
 }
 
-function NavLink({ url, text }: NavLink) {
+function NavLink({ url, text, newTab}: NavLink) {
     const path = usePathname();
 
     return (
         <li className="flex">
             <Link
                 href={url}
+                target={ newTab ? "_blank" : "_self" }
                 className={`flex items-center mx-4 -mb-1 border-b-2 border-transparent hover:text-secondary-500 font-bold ${path === url && "text-night border-night"
                     }}`}
             >
@@ -106,8 +107,10 @@ export default function Navbar({
     const closeMenu = () => {
         setMobileMenuOpen(false);
     };
+    const scrolledTransition = 'transition delay-150 duration-300 rounded-full scale-75 drop-shadow-xl bg-anti-flash_white'
+    const notscrolledTransition = 'transition delay-150 duration-300 scale-100 bg-anti-flash_white'
     return (
-        <div className={`p-4 text-night ${mobileMenuOpen! ? 'fixed' : ''}fixed top-0 left-0 right-0 z-50 ${scrolled ? 'transition delay-150 duration-300 drop-shadow-xl bg-anti-flash_white' : ''}`}>
+        <div className={`p-4 ${mobileMenuOpen! ? 'fixed' : ''} fixed top-0 left-0 right-0 z-50 ${scrolled ? scrolledTransition : notscrolledTransition}`}>
             <div className="container flex justify-between h-16 mx-auto px-0 sm:px-6">
                 <Logo src={logoUrl}>
                     <h2 className="text-m font-sans font-bold">{logoText}</h2>

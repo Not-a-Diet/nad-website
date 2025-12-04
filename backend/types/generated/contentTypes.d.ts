@@ -1182,7 +1182,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.lead-form',
         'sections.features',
         'sections.heading',
-        'sections.team'
+        'sections.team',
+        'sections.contact',
+        'sections.featured-posts'
       ]
     > &
       Attribute.SetPluginOptions<{

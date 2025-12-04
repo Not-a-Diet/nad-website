@@ -22,29 +22,33 @@ interface Feature {
 
 function Feature({ title, description, showLink, newTab, url, text, color, descriptionList}: Feature) {
   const descriptions = parseDescriptionList(descriptionList);
-  const colorMap: Record<string, {bg: string, border: string, text: string}> = {
+  const colorMap: Record<string, {bg: string, border: string, text: string, button: string}> = {
     primary: {
       bg: "bg-primary-100",
       border: "border-primary-500",
-      text: "text-primary-500", 
+      text: "text-primary-500",
+      button: "bg-primary-500",
     },
     secondary: {
       bg: "bg-secondary-100",
       border: "border-secondary-500", 
       text: "text-secondary-500",
+      button: "bg-secondary-500",
     },
     tertiary: {
       bg: "bg-tertiary-100",
       border: "border-tertiary-500", 
       text: "text-tertiary-500",
+      button: "bg-tertiary-500",
     },
     quaternary: {
       bg: "bg-quaternary-100",
       border: "border-quaternary-500", 
       text: "text-quaternary-500",
+      button: "bg-quaternary-500",
     }
   }
-  const tw_col: {bg:string, border: string, text: string}  = colorMap[color] || "bg-gray-500";
+  const tw_col: {bg:string, border: string, text: string, button: string}  = colorMap[color] || "bg-gray-500";
   
   return (
     <div className={`flex flex-col ${tw_col.bg} shadow-m items-center p-4 border-2 ${tw_col.border} rounded-3xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 max-w-md`}>
@@ -76,7 +80,7 @@ function Feature({ title, description, showLink, newTab, url, text, color, descr
       </div>
       <div className="relative mt-auto">
         {
-          showLink && <a href={url} target={newTab ? '_blank' : '_self'}><button className={`${tw_col.border} border-2 py-2 px-6`}>{text}</button></a>  
+          showLink && <a href={url} target={newTab ? '_blank' : '_self'}><button className={`${tw_col.button} rounded-[0.5rem] py-2 px-6`}>{text}</button></a>  
         }
       </div>
     </div>
