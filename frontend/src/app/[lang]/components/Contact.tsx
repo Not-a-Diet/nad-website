@@ -1,9 +1,12 @@
+"use client"
 // --- Interfaces ---
 
+import { useState } from "react";
+import { getStrapiURL } from "../utils/api-helpers";
 import { RenderSocialIcon } from "../utils/social-icon";
 
 interface SocialLink {
-  text: string; 
+  text: string;
   url: string;
   social?: string; // e.g. 'email', 'phone', 'whatsapp', 'instagram'
   newTab?: boolean; // The text shown (e.g. "info@notadiet.life")
@@ -49,13 +52,13 @@ interface ContactFormData {
 }
 
 interface ContactProps {
-    data: {
-        title: string;
-        description: string;
-        contactLinks: SocialLink[];
-        hours: HoursData;
-        contactForm: ContactFormData;
-    }
+  data: {
+    title: string;
+    description: string;
+    contactLinks: SocialLink[];
+    hours: HoursData;
+    contactForm: ContactFormData;
+  }
 }
 
 // --- Helper Components ---
@@ -67,7 +70,7 @@ interface ContactProps {
 const HoursCard = ({ data }: { data: HoursData }) => {
   if (!data) return null;
 
- // Logic to group consecutive days with the same hours
+  // Logic to group consecutive days with the same hours
   const groupedTimings = data.timings.times.reduce((acc, current) => {
     const lastGroup = acc[acc.length - 1];
 
@@ -94,15 +97,15 @@ const HoursCard = ({ data }: { data: HoursData }) => {
 
   const bgClasses = "bg-gradient-to-br from-secondary-100/60 to-tertiary-100/60";
   return (
-    <div className={`${bgClasses} relative rounded-3xl p-4 mt-12 border border-secondary-100 border-[4px]`}>
+    <div className={`${bgClasses} relative rounded-3xl p-4 mt-12 border-secondary-100 border-[4px]`}>
       <h3 className="text-xl font-bold font-sans text-crema mb-6">
         {data.title}
       </h3>
-      
+
       <div className="space-y-2 font-sans text-crema-800">
-        {groupedDays.map((item, index) => (  
+        {groupedDays.map((item, index) => (
           <div key={index} className="flex justify-between items-center text-sm sm:text-base">
-             {/* Simple logic to group days if needed, otherwise render list */}
+            {/* Simple logic to group days if needed, otherwise render list */}
             <span className="font-medium">{item.day}:</span>
             <span>{item.hours}</span>
           </div>
@@ -124,6 +127,50 @@ const HoursCard = ({ data }: { data: HoursData }) => {
 const ContactForm = ({ data }: { data: ContactFormData }) => {
   if (!data) return null;
 
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const token = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+
+  async function handleSubmit() {
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Invalid email format.");
+      return;
+    }
+    if (!phoneRegex.test(phone)) {
+      setErrorMessage("Invalid phone format.");
+      return;
+    }
+
+    const res = await fetch(getStrapiURL() + "/api/contact-form-submissions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ data: { name, lastName, email, phone, message } }),
+    });
+
+    if (!res.ok) {
+      setErrorMessage("Email failed to submit.");
+      return;
+    }
+    setErrorMessage("");
+    setSuccessMessage("Email successfully submitted!");
+    setEmail("");
+    setName("");
+    setLastName("")
+    setMessage("")
+    setPhone("")
+
+  }
 
   return (
     <div className="bg-anti-flash_white h-full w-fit shadow-lg rounded-3xl p-8 md:p-10 border border-crema-200">
@@ -141,11 +188,12 @@ const ContactForm = ({ data }: { data: ContactFormData }) => {
             <label htmlFor="firstName" className="text-sm font-bold text-crema-800 font-sans">
               {data.firstNameLabel}
             </label>
-            <input 
+            <input
               id="firstName"
               type="text"
-              required={true} 
+              required={true}
               placeholder={data.firstNamePlaceholder}
+              onChange={(e) => setName(e.target.value)}
               className="bg-anti-flash_white-100 border border-crema-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tertiary-500 placeholder:text-crema-500 text-crema"
             />
           </div>
@@ -154,11 +202,12 @@ const ContactForm = ({ data }: { data: ContactFormData }) => {
             <label htmlFor="lastName" className="text-sm font-bold text-crema-800 font-sans">
               {data.lastNameLabel}
             </label>
-            <input 
+            <input
               id="lastName"
-              type="text" 
+              type="text"
               required={true}
               placeholder={data.lastNamePlaceholder}
+              onChange={(e) => setLastName(e.target.value)}
               className="bg-anti-flash_white-100 border border-crema-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tertiary-500 placeholder:text-crema-500 text-crema"
             />
           </div>
@@ -170,12 +219,13 @@ const ContactForm = ({ data }: { data: ContactFormData }) => {
           <label htmlFor="email" className="text-sm font-bold text-crema-800 font-sans">
             {data.emailLabel}
           </label>
-          <input 
-            autoComplete="on" 
+          <input
+            autoComplete="on"
             id="email"
             type="email"
-            required={true} 
+            required={true}
             placeholder={data.emailPlaceholder}
+            onChange={(e) => setEmail(e.target.value)}
             className="bg-anti-flash_white-100 border border-crema-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tertiary-500 placeholder:text-crema-500 text-crema"
           />
         </div>
@@ -186,10 +236,11 @@ const ContactForm = ({ data }: { data: ContactFormData }) => {
           </label>
           <input
             id="phone"
-            autoComplete="on" 
-            type="tel" 
+            autoComplete="on"
+            type="tel"
             placeholder={data.phonePlaceholder}
             required={true}
+            onChange={(e) => setPhone(e.target.value)}
             className="bg-anti-flash_white-100 border border-crema-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tertiary-500 placeholder:text-crema-500 text-crema"
           />
         </div>
@@ -204,20 +255,21 @@ const ContactForm = ({ data }: { data: ContactFormData }) => {
             {data.messageLabel}
           </label>
           <textarea
-            id="message" 
+            id="message"
             placeholder={data.messagePlaceholder}
             rows={4}
             required={true}
+            onChange={(e) => setMessage(e.target.value)}
             className="bg-anti-flash_white-100 border border-crema-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tertiary-500 placeholder:text-crema-500 text-crema resize-none"
           />
         </div>
 
         {/* Privacy Checkbox */}
         <div className="flex items-start gap-2 mt-2">
-          <input 
-            type="checkbox" 
+          <input
+            type="checkbox"
             id="privacy"
-            required={true} 
+            required={true}
             className="mt-1 w-4 h-4 text-tertiary-500 rounded border-gray-300 focus:ring-tertiary-500"
           />
           <label htmlFor="privacy" className="text-sm text-crema-500 font-sans leading-tight mt-1">
@@ -226,17 +278,28 @@ const ContactForm = ({ data }: { data: ContactFormData }) => {
         </div>
 
         {/* Submit Button */}
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           className="w-full bg-tertiary-100 hover:bg-tertiary-500 text-crema-800 font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-4 flex justify-center items-center gap-2"
+          onClick={handleSubmit}
         >
           {data.submitButton?.text || "Submit"}
         </button>
-        
+
         {/* Footer */}
         {data.footer && (
           <p className="text-center text-sm text-crema-500 mt-4">
             {data.footer}
+          </p>
+        )}
+        {errorMessage && (
+          <p className="text-red-500 bg-red-200 px-4 py-2 rounded-lg my-2">
+            {errorMessage}
+          </p>
+        )}
+        {successMessage && (
+          <p className="text-green-700 bg-green-300 px-4 py-2 rounded-lg">
+            {successMessage}
           </p>
         )}
       </form>
@@ -267,12 +330,12 @@ export default function Contact({ data }: ContactProps) {
   };
 
   return (
-    <section className="bg-anti-flash_white py-16 px-4 md:px-8 lg:px-16 font-sans">
+    <section id="contact" className="bg-anti-flash_white py-16 px-4 md:px-8 lg:px-16 font-sans">
       <div className="max-w-6xl mx-auto flex flex-col gap-8 items-center lg:flex-row lg:justify-between lg:items-center">
-        
+
         {/* Left Column: Info & Hours */}
         <div className="flex flex-col">
-    
+
 
           {/* Title & Desc */}
           <h2 className="text-2xl lg:text-4xl font-bold text-crema mb-6 leading-tight">
@@ -287,32 +350,32 @@ export default function Contact({ data }: ContactProps) {
             {contactLinks && contactLinks.map((link, index) => {
               const style = getIconStyle(index);
               return (
-              <a href={link.url} key={index} target={link.newTab ? "_blank" : "_self"} rel="noopener noreferrer">
-                <div key={index} className="flex items-center gap-4 group cursor-pointer lg:w-2/3 hover:scale-105 transition-transform">
-                  {/* Icon Container */}
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${style.bg} ${style.text} transition-transform group-hover:scale-105`}>
-                     {/* User specified "social icons and render are already defined".
+                <a href={link.url} key={index} target={link.newTab ? "_blank" : "_self"} rel="noopener noreferrer">
+                  <div key={index} className="flex items-center gap-4 group cursor-pointer lg:w-2/3 hover:scale-105 transition-transform">
+                    {/* Icon Container */}
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${style.bg} ${style.text} transition-transform group-hover:scale-105`}>
+                      {/* User specified "social icons and render are already defined".
                         Assuming 'link.iconName' or similar is passed to a generic Icon component here.
                         For now, rendering a placeholder visual.
                      */}
-                     <RenderSocialIcon social={link.social} />
-                     <span className="material-icons text-2xl">
-                       {/* Placeholder for icon rendering logic */}
-                     </span>
+                      <RenderSocialIcon social={link.social} />
+                      <span className="material-icons text-2xl">
+                        {/* Placeholder for icon rendering logic */}
+                      </span>
+                    </div>
+
+                    <div className="flex flex-col">
+                      <span className="font-bold text-crema text-lg leading-none mb-1">
+                        {link.text}
+                      </span>
+                    </div>
                   </div>
-                  
-                  <div className="flex flex-col">
-                    <span className="font-bold text-crema text-lg leading-none mb-1">
-                      {link.text}
-                    </span>
-                  </div>
-                </div>
-              </a>
+                </a>
               );
             })}
           </div>
 
-          
+
           {/* Hours Component */}
           {hours && (
             <HoursCard data={hours} />

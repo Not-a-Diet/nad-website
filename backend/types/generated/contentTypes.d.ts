@@ -1013,6 +1013,43 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactFormSubmissionContactFormSubmission
+  extends Schema.CollectionType {
+  collectionName: 'contact_form_submissions';
+  info: {
+    singularName: 'contact-form-submission';
+    pluralName: 'contact-form-submissions';
+    displayName: 'Contact form submission';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    lastName: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.Email;
+    message: Attribute.Text;
+    status: Attribute.Enumeration<['contacted', 'to-contact', 'ignore']> &
+      Attribute.DefaultTo<'to-contact'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-form-submission.contact-form-submission',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-form-submission.contact-form-submission',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFoodFood extends Schema.CollectionType {
   collectionName: 'foods';
   info: {
@@ -1285,6 +1322,7 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::blog-header.blog-header': ApiBlogHeaderBlogHeader;
       'api::category.category': ApiCategoryCategory;
+      'api::contact-form-submission.contact-form-submission': ApiContactFormSubmissionContactFormSubmission;
       'api::food.food': ApiFoodFood;
       'api::global.global': ApiGlobalGlobal;
       'api::lead-form-submission.lead-form-submission': ApiLeadFormSubmissionLeadFormSubmission;

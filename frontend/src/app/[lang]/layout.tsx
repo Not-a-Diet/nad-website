@@ -7,9 +7,10 @@ import { i18n } from "../../../i18n-config";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
+import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
 import { Inter, Bricolage_Grotesque } from "next/font/google"
-import  ErrorComponent  from "./components/Error";
+import ErrorComponent from "./components/Error";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -37,7 +38,7 @@ async function getGlobal(lang: string): Promise<any> {
   return await fetchAPI(path, urlParamsObject, options);
 }
 
-export async function generateMetadata({ params } : { params: {lang: string}}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
   const meta = await getGlobal(params.lang);
 
   if (!meta.data) return FALLBACK_SEO;
@@ -74,8 +75,8 @@ export default async function RootLayout({
 }) {
 
   const global = await getGlobal(params.lang);
-  if (!global.data) return (<> <ErrorComponent/> </>);
-  
+  if (!global.data) return (<> <ErrorComponent /> </>);
+
   const { notificationBanner, navbar, footer } = global.data.attributes;
 
   const navbarLogoUrl = getStrapiMedia(
@@ -89,6 +90,7 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang} className={`${inter.variable} ${inter.className} ${bricolage.variable}`}>
+
       <body>
         <Navbar
           links={navbar.links}
@@ -112,6 +114,7 @@ export default async function RootLayout({
           socialLinks={footer.socialLinks}
         />
       </body>
+      <GoogleAnalytics gaId="G-1D3M4CL6BH" />
     </html>
   );
 }

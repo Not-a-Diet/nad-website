@@ -35,42 +35,42 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
-    const imgUrls = data.picture.data?.map( attr => { 
-     return {
-      url: getStrapiMedia(attr.attributes.url), 
+  const imgUrls = data.picture.data?.map(attr => {
+    return {
+      url: getStrapiMedia(attr.attributes.url),
       alte: attr.attributes.alternativeText
     }
-    });
+  });
 
-    const pos = [
-      "bottom-32 right-4 lg:right-80",
-      "top-32 left-4 lg:left-64",
-      "top-42 right-4 lg:right-32",
-      "bottom-32 left-4 lg:left-40"
-    ]
-    const animations = [
-      "animate-float-slow",
-      "animate-float-medium",
-      "animate-float-fast",
-      "animate-float-medium"
-    ];
+  const pos = [
+    "lg:bottom-[35px] bottom-[1px] right-[10px] lg:right-80",
+    "top-32 left-4 lg:left-60",
+    "top-32 right-4 lg:right-32",
+    "bottom-32 left-4 lg:left-40"
+  ]
+  const animations = [
+    "animate-float-slow",
+    "animate-float-medium",
+    "animate-float-fast",
+    "animate-float-medium"
+  ];
 
-    return (
+  return (
     <section className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2">
       {imgUrls && imgUrls.map((imgUrl, index) => (
-      <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={index}>
-        <div className="relative w-44 h-44">
-          <Image
-            src={imgUrl.url || ""}
-            alt={
-              imgUrl.alte || "none provided"
-            }
-            className="object-contain rounded-xl h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
-            width={120}
-            height={120}
-          />
+        <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={index}>
+          <div className="relative w-44 h-44">
+            <Image
+              src={imgUrl.url || ""}
+              alt={
+                imgUrl.alte || "none provided"
+              }
+              width={120}
+              height={120}
+              className="object-contain rounded-xl h-[80px] w-[80px] lg:h-[120px] lg:w-[120px]"
+            />
+          </div>
         </div>
-      </div>
       ))}
 
       <div className="container flex justify-center text-center z-10 w-full p-2 h-auto lg:max-w-[1100px] mx-auto lg:py-24 lg:flex-col">
@@ -114,7 +114,7 @@ export default function Hero({ data }: HeroProps) {
           /> 
         </div> */}
       </div>
-            {/* CSS Animations */}
+      {/* CSS Animations */}
       <style>{`
         @keyframes float-slow {
           0%, 100% { transform: translate(0, 0) rotate(0deg); }
