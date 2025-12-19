@@ -38,15 +38,15 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
   const colorMap: Record<string, { bg: string, border: string, text: string, button: string }> = {
     primary: {
       bg: "bg-primary-100",
-      border: "border-primary-500",
+      border: "border-primary",
       text: "text-primary-500",
-      button: "bg-primary-500",
+      button: "bg-primary",
     },
     secondary: {
       bg: "bg-secondary-100",
-      border: "border-secondary-500",
+      border: "border-secondary",
       text: "text-secondary-500",
-      button: "bg-secondary-500",
+      button: "bg-secondary",
     },
     tertiary: {
       bg: "bg-tertiary-100",
@@ -71,9 +71,9 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
         alt={
           media?.data?.attributes?.alternativeText || "none provided"
         }
-        className="object-contain rounded-xl h-100 w-100 py-4"
-        width={100}
-        height={100}
+        width={150}
+        height={150}
+        className="rounded-xl w-[85px] h-[85px] py-4"
       />
 
       <h3 className="my-3 text-3xl font-sans font-semibold text-center">{title}</h3>
@@ -100,7 +100,7 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
 
 export default function Features({ data }: FeaturesProps) {
   return (
-    <section className="bg-white p-2 mt-24 lg:mt-2 lg:max-w[900px] m:py-12 lg:py-24">
+    <section id="features" className="bg-white p-2 mt-24 lg:mt-2 lg:max-w[900px] m:py-12 lg:py-24">
       <div className="container mx-auto py-4 space-y-2 text-center">
         <h2 className="text-4xl font-sans font-bold">{data.heading}</h2>
         <p className="font-sans">{data.description}</p>

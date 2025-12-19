@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
-
 import { i18n } from "../../../i18n-config";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
@@ -10,7 +9,7 @@ import Navbar from "./components/Navbar";
 import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
 import { Inter, Bricolage_Grotesque } from "next/font/google"
 import ErrorComponent from "./components/Error";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import GA4CookieConsentBanner from "./components/cookie-consent-banner";
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -90,7 +89,6 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang} className={`${inter.variable} ${inter.className} ${bricolage.variable}`}>
-
       <body>
         <Navbar
           links={navbar.links}
@@ -103,7 +101,6 @@ export default async function RootLayout({
         </main>
 
         <Banner data={notificationBanner} />
-
         <Footer
           logoUrl={footerLogoUrl}
           logoText={footer.footerLogo.logoText}
@@ -113,8 +110,8 @@ export default async function RootLayout({
           legalLinks={footer.legalLinks}
           socialLinks={footer.socialLinks}
         />
+        <GA4CookieConsentBanner measurementId="G-223FTH8TYJ" />
       </body>
-      <GoogleAnalytics gaId="G-1D3M4CL6BH" />
     </html>
   );
 }

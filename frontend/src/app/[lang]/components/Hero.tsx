@@ -3,7 +3,6 @@ import Image from "next/image";
 import HighlightedText from "./HighlightedText";
 import { getStrapiMedia } from "../utils/api-helpers";
 import { renderButtonStyle } from "../utils/render-button-style";
-import FoodCalculator from "./FoodCalculator";
 
 interface Button {
   id: string;
@@ -43,10 +42,10 @@ export default function Hero({ data }: HeroProps) {
   });
 
   const pos = [
-    "lg:bottom-[35px] bottom-[1px] right-[10px] lg:right-80",
-    "top-32 left-4 lg:left-60",
-    "top-32 right-4 lg:right-32",
-    "bottom-32 left-4 lg:left-40"
+    "lg:bottom-[35px] bottom-2 right-12 lg:right-80",
+    "top-32 left-8 lg:left-60",
+    "top-32 right-12 lg:right-32",
+    "bottom-32 left-8 lg:left-40"
   ]
   const animations = [
     "animate-float-slow",
@@ -56,18 +55,18 @@ export default function Hero({ data }: HeroProps) {
   ];
 
   return (
-    <section className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2">
+    <section id="hero" className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2">
       {imgUrls && imgUrls.map((imgUrl, index) => (
         <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={index}>
-          <div className="relative w-44 h-44">
-            <Image
+          <div className="relative">
+            <img
               src={imgUrl.url || ""}
               alt={
                 imgUrl.alte || "none provided"
               }
-              width={120}
-              height={120}
-              className="object-contain rounded-xl h-[80px] w-[80px] lg:h-[120px] lg:w-[120px]"
+              width={70}
+              height={70}
+              className="rounded-xl lg:h-[120px] lg:w-[120px]"
             />
           </div>
         </div>
@@ -79,8 +78,8 @@ export default function Hero({ data }: HeroProps) {
             text={data.title}
             tag="h1"
             className="font-sans font-bold text-[3rem] leading-none p-2"
-            color="text-primary-500"
-            secondColor="text-secondary-500"
+            color="text-primary"
+            secondColor="text-secondary"
           />
 
           <HighlightedText

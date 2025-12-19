@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "legals",
+  "info": {
+    "singularName": "legal",
+    "pluralName": "legals",
+    "displayName": "Legal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "privacy-policy",
+        "terms",
+        "cookie-policy"
+      ]
+    }
+  }
+}

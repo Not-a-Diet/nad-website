@@ -1,8 +1,8 @@
 export function renderButtonStyle(type: string) {
-	switch (type) {
-		case "primary":
-			return `
-				bg-primary-500 
+  switch (type) {
+    case "primary":
+      return `
+				bg-primary 
 				inline-flex 
 				justify-center 
 				items-center 
@@ -16,9 +16,9 @@ export function renderButtonStyle(type: string) {
 				hover:scale-105 hover:shadow-lg 
 				text-anti-flash_white
 			`;
-		case "secondary":
-			return "px-8 py-3 text-lg font-semibold border rounded-2xl border-ebony text-ebony";
-		default:
-			return "px-8 py-3 text-lg font-semibold rounded-2xl bg-secondary text-white";
-	}
+    case "secondary":
+      return "px-8 py-3 text-lg font-semibold border rounded-2xl border-ebony text-ebony";
+    default:
+      return "px-8 py-3 text-lg font-semibold rounded-2xl bg-secondary text-white";
+  }
 }

@@ -21,15 +21,14 @@ interface CategoryLink {
   };
 }
 
-function FooterLink({ url, text, className}: FooterLink) {
+function FooterLink({ url, text, className }: FooterLink) {
   const path = usePathname();
   return (
     <li className={className}>
       <Link
         href={url}
-        className={`text-crema-500 hover:text-secondary-500 ${
-          path === url && "text-secondary-500 border-secondary-500"
-        }}`}
+        className={`text-crema-500 hover:text-secondary ${path === url && "text-secondary border-secondary-500"
+          }}`}
       >
         {text}
       </Link>
@@ -42,7 +41,7 @@ function CategoryLink({ attributes }: CategoryLink) {
     <li>
       <Link
         href={`/blog/${attributes.slug}`}
-        className="hover:text-secondary-500"
+        className="hover:text-secondary"
       >
         {attributes.name}
       </Link>
@@ -68,41 +67,41 @@ export default function Footer({
   socialLinks: Array<FooterLink>;
 }) {
 
-const currentYear = new Date().getFullYear();
-return (
-  <footer className="bg-crema text-crema-200">
-    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer className="bg-crema text-crema-200">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
 
-        {/* Brand Column */}
-        <div className="lg:col-span-2">
-          <div className="mb-6 flex items-center space-x-3">
-            <div className="bg-crema-200 rounded-full w-auto"><Logo src={logoUrl}></Logo></div>
-            <span className="text-xl text-white">{logoText}</span>
+          {/* Brand Column */}
+          <div className="lg:col-span-2">
+            <div className="mb-6 flex items-center space-x-3">
+              <div className="bg-crema-200 rounded-full w-auto"><Logo src={logoUrl}></Logo></div>
+              <span className="text-xl text-white">{logoText}</span>
+            </div>
+            <p className="text-crema-500 mb-6 max-w-xs">{description}</p>
+            <div className="flex space-x-4">
+
+              {/* Social links*/}
+              {socialLinks.map((link: FooterLink) => {
+                return (
+                  <a
+                    key={link.id}
+                    rel="noopener noreferrer"
+                    href={link.url}
+                    title={link.text}
+                    target={link.newTab ? "_blank" : "_self"}
+                    className="flex items-center justify-center w-10 h-10 rounded-xl bg-crema-800 hover:bg-secondary hover:text-black text-secondary transition-colors"
+                  >
+                    <RenderSocialIcon social={link.social} />
+                  </a>
+                );
+              })}
+
+            </div>
           </div>
-          <p className="text-crema-500 mb-6 max-w-xs">{description}</p>
-          <div className="flex space-x-4">
-            
-            {/* Social links*/}
-            {socialLinks.map((link: FooterLink) => {
-              return (
-                <a
-                  key={link.id}
-                  rel="noopener noreferrer"
-                  href={link.url}
-                  title={link.text}
-                  target={link.newTab ? "_blank" : "_self"}
-                  className="flex items-center justify-center w-10 h-10 rounded-xl bg-crema-800 hover:bg-secondary-500 hover:text-secondary-100 text-secondary-500 transition-colors"
-                >
-                  <RenderSocialIcon social={link.social} />
-                </a>
-              );
-            })}
 
-          </div>
-        </div>
-
-        {/* Links Columns
+          {/* Links Columns
         <div className="col-span-6 text-center md:text-right md:col-span-3">
           <p className="pb-1 text-lg text-white font-medium">Menu</p>
           <ul className="flex flex-col items-center space-y-2 md:items-end">
@@ -112,12 +111,12 @@ return (
           </ul>
         </div> */}
 
-         <div>
+          <div>
             <h6 className="text-white mb-4">Menu</h6>
             <ul className="space-y-3">
-             {menuLinks.map((link: FooterLink) => (
+              {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
-            ))}
+              ))}
             </ul>
           </div>
 
@@ -125,25 +124,25 @@ return (
           <div></div>
 
 
-        {/* Bottom Bar */}
-      </div>
-      <div className="pt-8 border-t border-crema-800">
+          {/* Bottom Bar */}
+        </div>
+        <div className="pt-8 border-t border-crema-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-crema-500">
               © {currentYear} Notadiet™ All rights reserved.
             </p>
-            <div className="flex flex-row flex-end space-x-5">
+            <div className="flex flex-row flex-end space-x-4">
               <ul>
-                  {legalLinks.map((link: FooterLink) => (
-                    <FooterLink className="inline ml-9" key={link.id} {...link}/>
-                  ))}
+                {legalLinks.map((link: FooterLink) => (
+                  <FooterLink className=" lg:inline lg:ml-9" key={link.id} {...link} />
+                ))}
               </ul>
             </div>
           </div>
         </div>
       </div>
-  </footer>
-);
+    </footer>
+  );
 
 
 

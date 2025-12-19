@@ -321,7 +321,7 @@ export default function Contact({ data }: ContactProps) {
 
   const getIconStyle = (index: number) => {
     const styles = [
-      { bg: 'bg-secondary-100', text: 'text-secondary-500' }, // Email (Green)
+      { bg: 'bg-secondary/15', text: 'text-secondary' }, // Email (Green)
       { bg: 'bg-primary-100', text: 'text-primary' },       // Phone (Orange)
       { bg: 'bg-tertiary-100', text: 'text-tertiary' },     // WhatsApp (Yellow)
       { bg: 'bg-quaternary-100', text: 'text-quaternary' }, // Instagram (Cyan)
@@ -330,7 +330,7 @@ export default function Contact({ data }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="bg-anti-flash_white py-16 px-4 md:px-8 lg:px-16 font-sans">
+    <section id="contact" className="bg-anti-flash_white py-12 p-2 md:px-8 lg:px-16 font-sans">
       <div className="max-w-6xl mx-auto flex flex-col gap-8 items-center lg:flex-row lg:justify-between lg:items-center">
 
         {/* Left Column: Info & Hours */}
@@ -359,9 +359,6 @@ export default function Contact({ data }: ContactProps) {
                         For now, rendering a placeholder visual.
                      */}
                       <RenderSocialIcon social={link.social} />
-                      <span className="material-icons text-2xl">
-                        {/* Placeholder for icon rendering logic */}
-                      </span>
                     </div>
 
                     <div className="flex flex-col">
