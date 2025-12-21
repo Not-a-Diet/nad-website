@@ -3,15 +3,16 @@ import remarkGfm from "remark-gfm";
 
 interface RichTextProps {
   data: {
-    body: string;
+    content: string;
   };
 }
 
 export default function RichText({ data }: RichTextProps) {
-  // TODO: STYLE THE MARKDOWN
+  console.log("rich-text-data:", data);
+
   return (
-    <section className="rich-text py-6 bg-anti-flash_White text-night">
-      <Markdown children={data.body} remarkPlugins={[remarkGfm]} />
+    <section className="rich-text mt-24 p-6">
+      <Markdown children={data.content} remarkPlugins={[remarkGfm]} />
     </section>
   );
 }

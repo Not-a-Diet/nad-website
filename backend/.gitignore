@@ -1,7 +1,7 @@
 ############################
 # OS X
 ############################
-
+.tar.gz
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -16,6 +16,9 @@ Icon
 ############################
 
 *~
+public/uploads/*
+!public/uploads/.gitkeep
+public/uploads_backup_*
 
 
 ############################

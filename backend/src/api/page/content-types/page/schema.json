@@ -38,7 +38,10 @@
         "sections.pricing",
         "sections.lead-form",
         "sections.features",
-        "sections.heading"
+        "sections.heading",
+        "sections.team",
+        "sections.contact",
+        "sections.featured-posts"
       ],
       "pluginOptions": {
         "i18n": {

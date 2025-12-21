@@ -3,6 +3,7 @@ interface HighlightedTextProps {
   tag: string;
   className?: string;
   color?: string;
+  secondColor?: string;
 }
 
 export default function HighlightedText({
@@ -10,6 +11,7 @@ export default function HighlightedText({
   tag,
   className,
   color,
+  secondColor
 }: HighlightedTextProps) {
   const tempText = text.split(" ");
   let result = [];
@@ -20,9 +22,16 @@ export default function HighlightedText({
     if (word.includes("[")) {
       const highlight = word.replace("[", "").replace("]", "");
       result.push(
-        `<span key=${index} class="${color ? color : ""}">${highlight}</span> `
+        `<span key=${index} class="${ color ? color : "" }">${highlight}</span> `
       );
-    } else result.push(word + " ");
+    } else if (word.includes("{")) {
+      const highlight = word.replace("{", "").replace("}", "");
+      result.push(
+        `<span key=${index} class="${ secondColor ? secondColor : "" }">${highlight}</span> `
+      );
+    } else {
+      result.push(word + " ");
+    }
   });
 
   result.push(`</${tag}>`);

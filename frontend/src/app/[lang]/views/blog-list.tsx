@@ -11,6 +11,7 @@ interface Article {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
+    blocks: any[];
     cover: {
       data: {
         attributes: {
@@ -57,10 +58,8 @@ export default function PostList({
           const imageUrl = getStrapiMedia(
             article.attributes.cover.data?.attributes.url
           );
-
           const category = article.attributes.category.data?.attributes;
           const authorsBio = article.attributes.authorsBio.data?.attributes;
-
           const avatarUrl = getStrapiMedia(
             authorsBio?.avatar.data.attributes.url
           );
@@ -69,14 +68,15 @@ export default function PostList({
             <Link
               href={`/blog/${category?.slug}/${article.attributes.slug}`}
               key={article.id}
-              className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-anti-flash_white lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
+              className="group cursor-pointer bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              //className="max-w-sm mx-auto group-hover:no-underline focus:no-underline dark:bg-anti-flash_white lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
             >
               {imageUrl && (
                 <Image
                   alt="presentation"
                   width="240"
                   height="240"
-                  className="object-cover w-full h-44 "
+                  className="object-cover w-full h-44 group-hover:scale-105 transition-transform duration-300"
                   src={imageUrl}
                 />
               )}

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_features",
   "info": {
-    "displayName": "Feature"
+    "displayName": "Feature",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,14 +13,15 @@
       "type": "text"
     },
     "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "showLink": {
       "type": "boolean",
@@ -34,6 +36,18 @@
     },
     "text": {
       "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary",
+        "quaternary"
+      ]
+    },
+    "descriptionList": {
+      "type": "text"
     }
   }
 }

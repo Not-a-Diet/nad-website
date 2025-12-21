@@ -60,7 +60,9 @@ export interface SharedQuote extends Schema.Component {
   attributes: {
     title: Attribute.String;
     body: Attribute.Text & Attribute.Required;
-    author: Attribute.String;
+    type: Attribute.Enumeration<['quotation', 'filosofy']>;
+    sign: Attribute.String;
+    isList: Attribute.Boolean;
   };
 }
 
@@ -76,6 +78,20 @@ export interface SharedMedia extends Schema.Component {
   };
 }
 
+export interface MetaMetadata extends Schema.Component {
+  collectionName: 'components_meta_metadata';
+  info: {
+    name: 'Metadata';
+    displayName: 'Metadata';
+    icon: 'robot';
+    description: '';
+  };
+  attributes: {
+    metaTitle: Attribute.String & Attribute.Required;
+    metaDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface SectionsTestimonialsGroup extends Schema.Component {
   collectionName: 'components_slices_testimonials_groups';
   info: {
@@ -88,6 +104,20 @@ export interface SectionsTestimonialsGroup extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     testimonials: Attribute.Component<'elements.testimonial', true>;
+  };
+}
+
+export interface SectionsTeam extends Schema.Component {
+  collectionName: 'components_sections_teams';
+  info: {
+    displayName: 'Team';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    member: Attribute.Component<'elements.team-member', true>;
+    filosofy: Attribute.Component<'shared.quote'>;
   };
 }
 
@@ -159,7 +189,7 @@ export interface SectionsHero extends Schema.Component {
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
-    picture: Attribute.Media<'images'> & Attribute.Required;
+    picture: Attribute.Media<'images', true> & Attribute.Required;
     buttons: Attribute.Component<'links.button-link', true>;
   };
 }
@@ -188,6 +218,22 @@ export interface SectionsFeatures extends Schema.Component {
   };
 }
 
+export interface SectionsFeaturedPosts extends Schema.Component {
+  collectionName: 'components_sections_featured_posts';
+  info: {
+    displayName: 'Featured Posts';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    posts: Attribute.Relation<
+      'sections.featured-posts',
+      'oneToMany',
+      'api::article.article'
+    >;
+  };
+}
+
 export interface SectionsFeatureRowsGroup extends Schema.Component {
   collectionName: 'components_slices_feature_rows_groups';
   info: {
@@ -212,6 +258,21 @@ export interface SectionsFeatureColumnsGroup extends Schema.Component {
   };
 }
 
+export interface SectionsContact extends Schema.Component {
+  collectionName: 'components_sections_contacts';
+  info: {
+    displayName: 'Contact';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    contactLinks: Attribute.Component<'links.social-link', true>;
+    hours: Attribute.Component<'elements.hours'>;
+    contactForm: Attribute.Component<'elements.contact-form'>;
+  };
+}
+
 export interface SectionsBottomActions extends Schema.Component {
   collectionName: 'components_slices_bottom_actions';
   info: {
@@ -227,20 +288,6 @@ export interface SectionsBottomActions extends Schema.Component {
   };
 }
 
-export interface MetaMetadata extends Schema.Component {
-  collectionName: 'components_meta_metadata';
-  info: {
-    name: 'Metadata';
-    displayName: 'Metadata';
-    icon: 'robot';
-    description: '';
-  };
-  attributes: {
-    metaTitle: Attribute.String & Attribute.Required;
-    metaDescription: Attribute.Text & Attribute.Required;
-  };
-}
-
 export interface LinksSocialLink extends Schema.Component {
   collectionName: 'components_links_social_links';
   info: {
@@ -252,7 +299,17 @@ export interface LinksSocialLink extends Schema.Component {
     newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
     text: Attribute.String & Attribute.Required;
     social: Attribute.Enumeration<
-      ['YOUTUBE', 'TWITTER', 'WEBSITE', 'LINKEDIN', 'INSTAGRAM', 'TIKTOK']
+      [
+        'YOUTUBE',
+        'TWITTER',
+        'WEBSITE',
+        'LINKEDIN',
+        'INSTAGRAM',
+        'TIKTOK',
+        'WHATSAPP',
+        'PHONE',
+        'EMAIL'
+      ]
     >;
   };
 }
@@ -346,6 +403,7 @@ export interface LayoutFooter extends Schema.Component {
       'oneToMany',
       'api::category.category'
     >;
+    description: Attribute.Text;
   };
 }
 
@@ -361,6 +419,21 @@ export interface ElementsTestimonial extends Schema.Component {
     picture: Attribute.Media<'images'> & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
     authorName: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ElementsTeamMember extends Schema.Component {
+  collectionName: 'components_elements_team_members';
+  info: {
+    displayName: 'Team Member';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    profilePhoto: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
+    occupation: Attribute.String;
+    description: Attribute.Text;
+    skills: Attribute.Text;
   };
 }
 
@@ -417,6 +490,17 @@ export interface ElementsLogos extends Schema.Component {
   };
 }
 
+export interface ElementsHours extends Schema.Component {
+  collectionName: 'components_elements_hours';
+  info: {
+    displayName: 'Hours';
+  };
+  attributes: {
+    title: Attribute.String;
+    timings: Attribute.JSON;
+  };
+}
+
 export interface ElementsFooterSection extends Schema.Component {
   collectionName: 'components_links_footer_sections';
   info: {
@@ -434,6 +518,7 @@ export interface ElementsFeature extends Schema.Component {
   collectionName: 'components_elements_features';
   info: {
     displayName: 'Feature';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -443,6 +528,10 @@ export interface ElementsFeature extends Schema.Component {
     newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
     url: Attribute.String;
     text: Attribute.String;
+    color: Attribute.Enumeration<
+      ['primary', 'secondary', 'tertiary', 'quaternary']
+    >;
+    descriptionList: Attribute.Text;
   };
 }
 
@@ -477,6 +566,31 @@ export interface ElementsFeatureColumn extends Schema.Component {
   };
 }
 
+export interface ElementsContactForm extends Schema.Component {
+  collectionName: 'components_elements_contact_forms';
+  info: {
+    displayName: 'Contact form';
+    description: '';
+  };
+  attributes: {
+    firstNameLabel: Attribute.String;
+    firstNamePlaceholder: Attribute.String;
+    lastNameLabel: Attribute.String;
+    lastNamePlaceholder: Attribute.String;
+    emailLabel: Attribute.String;
+    emailPlaceholder: Attribute.String;
+    phoneLabel: Attribute.String;
+    phonePlaceholder: Attribute.String;
+    messageLabel: Attribute.String;
+    messagePlaceholder: Attribute.String;
+    privacyPolicyLabel: Attribute.Text;
+    submitButton: Attribute.Component<'links.button'>;
+    footer: Attribute.Text;
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -486,7 +600,9 @@ declare module '@strapi/types' {
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
+      'meta.metadata': MetaMetadata;
       'sections.testimonials-group': SectionsTestimonialsGroup;
+      'sections.team': SectionsTeam;
       'sections.rich-text': SectionsRichText;
       'sections.pricing': SectionsPricing;
       'sections.lead-form': SectionsLeadForm;
@@ -494,10 +610,11 @@ declare module '@strapi/types' {
       'sections.hero': SectionsHero;
       'sections.heading': SectionsHeading;
       'sections.features': SectionsFeatures;
+      'sections.featured-posts': SectionsFeaturedPosts;
       'sections.feature-rows-group': SectionsFeatureRowsGroup;
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
+      'sections.contact': SectionsContact;
       'sections.bottom-actions': SectionsBottomActions;
-      'meta.metadata': MetaMetadata;
       'links.social-link': LinksSocialLink;
       'links.link': LinksLink;
       'links.button': LinksButton;
@@ -506,13 +623,16 @@ declare module '@strapi/types' {
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;
       'elements.testimonial': ElementsTestimonial;
+      'elements.team-member': ElementsTeamMember;
       'elements.plan': ElementsPlan;
       'elements.notification-banner': ElementsNotificationBanner;
       'elements.logos': ElementsLogos;
+      'elements.hours': ElementsHours;
       'elements.footer-section': ElementsFooterSection;
       'elements.feature': ElementsFeature;
       'elements.feature-row': ElementsFeatureRow;
       'elements.feature-column': ElementsFeatureColumn;
+      'elements.contact-form': ElementsContactForm;
     }
   }
 }
