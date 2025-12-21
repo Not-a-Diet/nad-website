@@ -34,6 +34,7 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
+  if (!data) return null;
   const imgUrls = data.picture.data?.map(attr => {
     return {
       url: getStrapiMedia(attr.attributes.url),

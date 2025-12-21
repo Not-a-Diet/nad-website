@@ -92,6 +92,77 @@ export interface MetaMetadata extends Schema.Component {
   };
 }
 
+export interface LinksSocialLink extends Schema.Component {
+  collectionName: 'components_links_social_links';
+  info: {
+    displayName: 'Social Link';
+    description: '';
+  };
+  attributes: {
+    url: Attribute.String & Attribute.Required;
+    newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
+    text: Attribute.String & Attribute.Required;
+    social: Attribute.Enumeration<
+      [
+        'YOUTUBE',
+        'TWITTER',
+        'WEBSITE',
+        'LINKEDIN',
+        'INSTAGRAM',
+        'TIKTOK',
+        'WHATSAPP',
+        'PHONE',
+        'EMAIL'
+      ]
+    >;
+  };
+}
+
+export interface LinksLink extends Schema.Component {
+  collectionName: 'components_links_links';
+  info: {
+    name: 'Link';
+    displayName: 'Link';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    url: Attribute.String & Attribute.Required;
+    newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
+    text: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface LinksButton extends Schema.Component {
+  collectionName: 'components_links_simple_buttons';
+  info: {
+    name: 'Button';
+    displayName: 'Button';
+    icon: 'fingerprint';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String;
+    type: Attribute.Enumeration<['primary', 'secondary']>;
+  };
+}
+
+export interface LinksButtonLink extends Schema.Component {
+  collectionName: 'components_links_buttons';
+  info: {
+    name: 'Button-link';
+    displayName: 'Button link';
+    icon: 'fingerprint';
+    description: '';
+  };
+  attributes: {
+    url: Attribute.String;
+    newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
+    text: Attribute.String;
+    type: Attribute.Enumeration<['primary', 'secondary']>;
+  };
+}
+
 export interface SectionsTestimonialsGroup extends Schema.Component {
   collectionName: 'components_slices_testimonials_groups';
   info: {
@@ -285,77 +356,6 @@ export interface SectionsBottomActions extends Schema.Component {
     title: Attribute.String;
     buttons: Attribute.Component<'links.button-link', true>;
     description: Attribute.Text;
-  };
-}
-
-export interface LinksSocialLink extends Schema.Component {
-  collectionName: 'components_links_social_links';
-  info: {
-    displayName: 'Social Link';
-    description: '';
-  };
-  attributes: {
-    url: Attribute.String & Attribute.Required;
-    newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
-    text: Attribute.String & Attribute.Required;
-    social: Attribute.Enumeration<
-      [
-        'YOUTUBE',
-        'TWITTER',
-        'WEBSITE',
-        'LINKEDIN',
-        'INSTAGRAM',
-        'TIKTOK',
-        'WHATSAPP',
-        'PHONE',
-        'EMAIL'
-      ]
-    >;
-  };
-}
-
-export interface LinksLink extends Schema.Component {
-  collectionName: 'components_links_links';
-  info: {
-    name: 'Link';
-    displayName: 'Link';
-    icon: 'link';
-    description: '';
-  };
-  attributes: {
-    url: Attribute.String & Attribute.Required;
-    newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
-    text: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface LinksButton extends Schema.Component {
-  collectionName: 'components_links_simple_buttons';
-  info: {
-    name: 'Button';
-    displayName: 'Button';
-    icon: 'fingerprint';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.String;
-    type: Attribute.Enumeration<['primary', 'secondary']>;
-  };
-}
-
-export interface LinksButtonLink extends Schema.Component {
-  collectionName: 'components_links_buttons';
-  info: {
-    name: 'Button-link';
-    displayName: 'Button link';
-    icon: 'fingerprint';
-    description: '';
-  };
-  attributes: {
-    url: Attribute.String;
-    newTab: Attribute.Boolean & Attribute.DefaultTo<false>;
-    text: Attribute.String;
-    type: Attribute.Enumeration<['primary', 'secondary']>;
   };
 }
 
@@ -601,6 +601,10 @@ declare module '@strapi/types' {
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
       'meta.metadata': MetaMetadata;
+      'links.social-link': LinksSocialLink;
+      'links.link': LinksLink;
+      'links.button': LinksButton;
+      'links.button-link': LinksButtonLink;
       'sections.testimonials-group': SectionsTestimonialsGroup;
       'sections.team': SectionsTeam;
       'sections.rich-text': SectionsRichText;
@@ -615,10 +619,6 @@ declare module '@strapi/types' {
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
       'sections.contact': SectionsContact;
       'sections.bottom-actions': SectionsBottomActions;
-      'links.social-link': LinksSocialLink;
-      'links.link': LinksLink;
-      'links.button': LinksButton;
-      'links.button-link': LinksButtonLink;
       'layout.navbar': LayoutNavbar;
       'layout.logo': LayoutLogo;
       'layout.footer': LayoutFooter;

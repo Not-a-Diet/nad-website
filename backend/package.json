@@ -1,5 +1,5 @@
 {
-  "name": "corporate-blog-template",
+  "name": "nad-website-backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -23,7 +23,7 @@
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Kaido997"
   },
   "strapi": {
     "uuid": "0f95dc7c-202b-4ab2-a874-3799d23b1640"
