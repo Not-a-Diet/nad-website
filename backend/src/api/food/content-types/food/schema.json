@@ -4,7 +4,8 @@
   "info": {
     "singularName": "food",
     "pluralName": "foods",
-    "displayName": "Foods"
+    "displayName": "Foods",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,32 @@
       "type": "string"
     },
     "factor": {
-      "type": "float"
+      "type": "decimal",
+      "required": true
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "freash_meat",
+        "fish",
+        "legumes",
+        "cereals_and_tubers",
+        "vegetables"
+      ],
+      "required": true
+    },
+    "cooking_method": {
+      "type": "enumeration",
+      "enum": [
+        "boiling",
+        "steaming",
+        "pan-frying_with_oil",
+        "roasting",
+        "microwave",
+        "boiling/pressure_cooking",
+        "steaming/pressure_cooking"
+      ],
+      "required": true
     }
   }
 }

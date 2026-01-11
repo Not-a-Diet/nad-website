@@ -1056,13 +1056,30 @@ export interface ApiFoodFood extends Schema.CollectionType {
     singularName: 'food';
     pluralName: 'foods';
     displayName: 'Foods';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String;
-    factor: Attribute.Float;
+    factor: Attribute.Decimal & Attribute.Required;
+    group: Attribute.Enumeration<
+      ['freash_meat', 'fish', 'legumes', 'cereals_and_tubers', 'vegetables']
+    > &
+      Attribute.Required;
+    cooking_method: Attribute.Enumeration<
+      [
+        'boiling',
+        'steaming',
+        'pan-frying_with_oil',
+        'roasting',
+        'microwave',
+        'boiling/pressure_cooking',
+        'steaming/pressure_cooking'
+      ]
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
