@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 
 interface RichTextProps {
   data: {
-    content: string;
+    body: string;
   };
 }
 
@@ -12,7 +12,7 @@ export default function RichText({ data }: RichTextProps) {
 
   return (
     <section className="rich-text mt-24 p-6">
-      <Markdown children={data.content} remarkPlugins={[remarkGfm]} />
+      <Markdown children={data.body} remarkPlugins={[remarkGfm]} />
     </section>
   );
 }
