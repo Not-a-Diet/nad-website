@@ -37,10 +37,35 @@ const populate = {
         },
       },
       hours: {
-        populate: true,
+        populate: {
+          title: true,
+          description: true,
+          locations: {
+            populate: true,
+          },
+        },
       },
       contactLinks: {
         populate: true,
+      },
+      bookingCalendar: {
+        populate: {
+          bookingTitle: true,
+          persons: {
+            populate: {
+              locations: {
+                populate: true,
+              },
+            },
+          },
+          personLabel: true,
+          locationLabel: true,
+          selectPersonPlaceholder: true,
+          selectLocationPlaceholder: true,
+          noSelectionMessage: true,
+          viewCalendarButtonText: true,
+          backButtonText: true,
+        },
       },
       filosofy: {
         populate: {

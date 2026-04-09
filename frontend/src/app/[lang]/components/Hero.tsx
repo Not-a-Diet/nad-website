@@ -101,17 +101,6 @@ export default function Hero({ data }: HeroProps) {
             ))}
           </div>
         </div>
-        {/* <div className="flex items-center drop-shadow-2xl rounded-2xl justify-center mt-8 lg:mt-0 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-          {/* <Image
-            src={imgUrl || ""}
-            alt={
-              data.picture.data.attributes.alternativeText || "none provided"
-            }
-            className="object-contain rounded-xl h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
-            width={600}
-            height={600}
-          /> 
-        </div> */}
       </div>
       {/* CSS Animations */}
       <style>{`

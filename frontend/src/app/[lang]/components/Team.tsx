@@ -1,4 +1,3 @@
-import { assert } from "console";
 import { parseDescriptionList } from "../utils/description-parser";
 import { getStrapiMedia } from "../utils/api-helpers";
 import Image from "next/image";
@@ -32,7 +31,7 @@ function TeamMemberCard({ name, occupation, profilePhoto, description, skills }:
   const profilePhotoUrl = getStrapiMedia(profilePhoto.data?.attributes.url);
 
   return (
-    <div className="bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg: max-w-md mx-4 my-4">
+    <div className="bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg:max-w-md mx-4 my-4">
       <div className="w-32 h-32 mx-auto mb-4 relative">
         <div className="absolute inset-0 rounded-full bg-gradient-to-br from-kiwi-100 to-pasta-100"></div>
         {profilePhotoUrl && (

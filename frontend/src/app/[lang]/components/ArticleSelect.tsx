@@ -39,7 +39,7 @@ export default function ArticleSelect({
 }) {
 
   return (
-    <div className="p-4 flex flex-col itmes-center text-center rounded-lg bg-anti-fllash_white-100 min-h-[365px] drop-shadow-lg ">
+    <div className="p-4 flex flex-col items-center text-center rounded-lg bg-anti-flash_white-100 min-h-[365px] drop-shadow-lg ">
       <h4 className="text-xl font-semibold">Browse By Category</h4>
 
       <div>

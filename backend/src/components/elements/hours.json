@@ -1,15 +1,21 @@
 {
   "collectionName": "components_elements_hours",
   "info": {
-    "displayName": "Hours"
+    "displayName": "Hours",
+    "description": "Business hours with title, description, and physical locations"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "timings": {
-      "type": "json"
+    "description": {
+      "type": "text"
+    },
+    "locations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.location"
     }
   }
 }

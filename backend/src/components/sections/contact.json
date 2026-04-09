@@ -28,6 +28,12 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.contact-form"
+    },
+    "bookingCalendar": {
+      "displayName": "Booking Calendar",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.booking-calendar"
     }
   }
 }

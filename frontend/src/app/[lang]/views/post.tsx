@@ -70,7 +70,7 @@ export default function Post({ data }: { data: Article }) {
           </div>
         </div>
       </div>
-      <div className="text-black bg:anti-flash_white">
+      <div className="text-black bg-anti-flash_white">
         <p>{description}</p>
         {data.attributes.blocks.map((section: any, index: number) => componentResolver(section, index))}
       </div>

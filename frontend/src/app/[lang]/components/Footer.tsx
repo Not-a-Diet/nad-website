@@ -101,16 +101,6 @@ export default function Footer({
             </div>
           </div>
 
-          {/* Links Columns
-        <div className="col-span-6 text-center md:text-right md:col-span-3">
-          <p className="pb-1 text-lg text-white font-medium">Menu</p>
-          <ul className="flex flex-col items-center space-y-2 md:items-end">
-            {menuLinks.map((link: FooterLink) => (
-                <FooterLink key={link.id} {...link} />
-            ))}
-          </ul>
-        </div> */}
-
           <div>
             <h6 className="text-white mb-4">Menu</h6>
             <ul className="space-y-3">
@@ -119,10 +109,6 @@ export default function Footer({
               ))}
             </ul>
           </div>
-
-          <div></div>
-          <div></div>
-
 
           {/* Bottom Bar */}
         </div>
@@ -138,74 +124,6 @@ export default function Footer({
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-
-
-
-  return (
-    <footer className="py-6 bg-[#1c1917] text-white">
-      <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
-        <div className="grid grid-cols-12">
-          <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-            <Logo src={logoUrl}>
-              {logoText && <h2 className="text-m font-sans text-anti-flash_white">{logoText}</h2>}
-            </Logo>
-          </div>
-
-          {/* <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Categories</p>
-            <ul>
-              {categoryLinks.map((link: CategoryLink) => (
-                <CategoryLink key={link.id} {...link} />
-              ))}
-            </ul>
-          </div> */}
-
-          <div className="col-span-6 text-center md:text-right md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Menu</p>
-            <ul className="flex flex-col items-center space-y-2 md:items-end">
-              {menuLinks.map((link: FooterLink) => (
-                <FooterLink key={link.id} {...link} />
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="grid justify-center pt-6 lg:justify-between">
-          <div className="flex">
-            <span className="mr-2">
-              Copyright © {new Date().getFullYear()} Not a Diet All rights reserved
-            </span>
-            <ul className="flex">
-              {legalLinks.map((link: FooterLink) => (
-                <Link
-                  href={link.url}
-                  className="text-gray-400 hover:text-gray-300 mr-2"
-                  key={link.id}
-                >
-                  {link.text}
-                </Link>
-              ))}
-            </ul>
-          </div>
-          <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-            {socialLinks.map((link: FooterLink) => {
-              return (
-                <a
-                  key={link.id}
-                  rel="noopener noreferrer"
-                  href={link.url}
-                  title={link.text}
-                  target={link.newTab ? "_blank" : "_self"}
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-quaternary text-white"
-                >
-                  <RenderSocialIcon social={link.social} />
-                </a>
-              );
-            })}
           </div>
         </div>
       </div>

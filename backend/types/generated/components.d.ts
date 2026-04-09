@@ -256,6 +256,7 @@ export interface SectionsContact extends Schema.Component {
     contactLinks: Attribute.Component<'links.social-link', true>;
     hours: Attribute.Component<'elements.hours'>;
     contactForm: Attribute.Component<'elements.contact-form'>;
+    bookingCalendar: Attribute.Component<'elements.booking-calendar'>;
   };
 }
 
@@ -271,6 +272,21 @@ export interface SectionsBottomActions extends Schema.Component {
     title: Attribute.String;
     buttons: Attribute.Component<'links.button-link', true>;
     description: Attribute.Text;
+  };
+}
+
+export interface SectionsBookingCalendar extends Schema.Component {
+  collectionName: 'components_sections_booking_calendars';
+  info: {
+    displayName: 'Booking Calendar';
+    description: 'Google Calendar appointment scheduling with person/location selector';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    persons: Attribute.Component<'elements.booking-person', true>;
+    defaultPersonIndex: Attribute.Integer & Attribute.DefaultTo<0>;
+    defaultLocationIndex: Attribute.Integer & Attribute.DefaultTo<0>;
   };
 }
 
@@ -490,14 +506,27 @@ export interface ElementsLogos extends Schema.Component {
   };
 }
 
+export interface ElementsLocation extends Schema.Component {
+  collectionName: 'components_elements_locations';
+  info: {
+    displayName: 'Location';
+    description: 'A physical location address that links to Google Maps';
+  };
+  attributes: {
+    address: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface ElementsHours extends Schema.Component {
   collectionName: 'components_elements_hours';
   info: {
     displayName: 'Hours';
+    description: 'Business hours with title, description, and physical locations';
   };
   attributes: {
     title: Attribute.String;
-    timings: Attribute.JSON;
+    description: Attribute.Text;
+    locations: Attribute.Component<'elements.location', true>;
   };
 }
 
@@ -591,6 +620,55 @@ export interface ElementsContactForm extends Schema.Component {
   };
 }
 
+export interface ElementsBookingPerson extends Schema.Component {
+  collectionName: 'components_elements_booking_persons';
+  info: {
+    displayName: 'Booking Person';
+    description: 'A person with their locations and calendar embed URLs';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    locations: Attribute.Component<'elements.booking-location', true>;
+  };
+}
+
+export interface ElementsBookingLocation extends Schema.Component {
+  collectionName: 'components_elements_booking_locations';
+  info: {
+    displayName: 'Booking Location';
+    description: 'A location with its Google Calendar embed URL';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    embedUrl: Attribute.String & Attribute.Required;
+    isDefault: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
+export interface ElementsBookingCalendar extends Schema.Component {
+  collectionName: 'components_elements_booking_calendars';
+  info: {
+    displayName: 'Booking Calendar';
+    description: 'Person/location selector with Google Calendar embed';
+  };
+  attributes: {
+    bookingTitle: Attribute.String &
+      Attribute.DefaultTo<'Book your appointment'>;
+    persons: Attribute.Component<'elements.booking-person', true>;
+    personLabel: Attribute.String & Attribute.DefaultTo<'Person'>;
+    locationLabel: Attribute.String & Attribute.DefaultTo<'Location'>;
+    selectPersonPlaceholder: Attribute.String &
+      Attribute.DefaultTo<'Select a person'>;
+    selectLocationPlaceholder: Attribute.String &
+      Attribute.DefaultTo<'Select a location'>;
+    noSelectionMessage: Attribute.Text &
+      Attribute.DefaultTo<'Please select a person and location to view available times.'>;
+    viewCalendarButtonText: Attribute.String &
+      Attribute.DefaultTo<'View Calendar'>;
+    backButtonText: Attribute.String & Attribute.DefaultTo<'Back'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -614,6 +692,7 @@ declare module '@strapi/types' {
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
       'sections.contact': SectionsContact;
       'sections.bottom-actions': SectionsBottomActions;
+      'sections.booking-calendar': SectionsBookingCalendar;
       'meta.metadata': MetaMetadata;
       'links.social-link': LinksSocialLink;
       'links.link': LinksLink;
@@ -627,12 +706,16 @@ declare module '@strapi/types' {
       'elements.plan': ElementsPlan;
       'elements.notification-banner': ElementsNotificationBanner;
       'elements.logos': ElementsLogos;
+      'elements.location': ElementsLocation;
       'elements.hours': ElementsHours;
       'elements.footer-section': ElementsFooterSection;
       'elements.feature': ElementsFeature;
       'elements.feature-row': ElementsFeatureRow;
       'elements.feature-column': ElementsFeatureColumn;
       'elements.contact-form': ElementsContactForm;
+      'elements.booking-person': ElementsBookingPerson;
+      'elements.booking-location': ElementsBookingLocation;
+      'elements.booking-calendar': ElementsBookingCalendar;
     }
   }
 }

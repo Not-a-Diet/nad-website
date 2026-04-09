@@ -69,7 +69,7 @@ function Testimonial({ text, authorName, picture }: Readonly<Testimonial>) {
 
 export default function Testimonials({ data }: TestimonialsProps) {
   return (
-    <section className="bg-black text-gray-100  m:py-12 lg:py-24">
+    <section className="bg-black text-gray-100 my-12 lg:py-24">
       <div className="container mx-auto py-4 space-y-2 text-center">
         <h1 className="text-4xl font-semibold leading-none text-center">
           {data.title}

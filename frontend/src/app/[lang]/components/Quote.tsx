@@ -1,4 +1,3 @@
-import React from 'react';
 import { parseDescriptionList } from '../utils/description-parser';
 
 // --- Types & Interfaces ---
