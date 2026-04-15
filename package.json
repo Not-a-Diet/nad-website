@@ -3,11 +3,12 @@
     "frontend": "yarn dev --prefix ../frontend/",
     "backend": "yarn dev --prefix ../backend/",
     "clear": "cd frontend && rm -rf .next && rm -rf cache",
+    "clean:setup": "rm -rf node_modules && rm -rf frontend/node_modules && rm -rf backend/node_modules && yarn setup",
     "setup:frontend": "cd frontend && yarn",
     "setup:backend": "cd backend && yarn",
     "setup": "yarn install && yarn setup:frontend && yarn setup:backend",
     "dev": "yarn clear && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\"",
-    "seed": "cd backend && yarn strapi import -f ../seed-data.tar.gz",
+    "seed": "cd backend && yarn strapi import -f ../nad-database.tar.gz",
     "export": "cd backend && yarn strapi export --no-encrypt -f ../seed-data",
     "repo:upstream": "git fetch upstream && git merge upstream/main"
   },

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { fetchAPI } from "../utils/fetch-api";
 
 import Loader from "../components/Loader";
@@ -20,14 +20,55 @@ interface BlogHeaders {
 }
 
 export default function Profile({ params }: { params: { lang: string } }) {
-  //console.log("POFILE PARAMS", params);
   const { lang } = params;
   const [meta, setMeta] = useState<Meta | undefined>();
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<any[]>([]);
   const [isLoading, setLoading] = useState(true);
-  const [blogHeaders, setBlogHeaders] = useState<BlogHeaders>()
-  const fetchData = useCallback(async (start: number, limit: number) => {
-    setLoading(true);
+  const [blogHeaders, setBlogHeaders] = useState<BlogHeaders>();
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadInitialData() {
+      setLoading(true);
+      try {
+        const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+        const options = { headers: { Authorization: `Bearer ${token}` } };
+
+        const [articlesResponse, headersResponse] = await Promise.all([
+          fetchAPI("/articles", {
+            locale: lang,
+            sort: { createdAt: "desc" },
+            populate: {
+              cover: { fields: ["url"] },
+              category: { populate: "*" },
+              authorsBio: { populate: "*" },
+            },
+            pagination: { start: 0, limit: Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) },
+          }, options),
+          fetchAPI("/blog-headers", { locale: lang }, options),
+        ]);
+
+        if (cancelled) return;
+
+        setData(articlesResponse.data);
+        setMeta(articlesResponse.meta);
+        setBlogHeaders(headersResponse.data[0]?.attributes);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+
+    loadInitialData();
+    return () => { cancelled = true; };
+  }, [lang]);
+
+  async function loadMorePosts(): Promise<void> {
+    if (!meta) return;
+    const start = meta.pagination.start + meta.pagination.limit;
+    const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT);
     try {
       const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
       const path = `/articles`;
@@ -37,65 +78,20 @@ export default function Profile({ params }: { params: { lang: string } }) {
         populate: {
           cover: { fields: ["url"] },
           category: { populate: "*" },
-          authorsBio: {
-            populate: "*",
-          },
+          authorsBio: { populate: "*" },
         },
-        pagination: {
-          start: start,
-          limit: limit,
-        },
+        pagination: { start, limit },
       };
       const options = { headers: { Authorization: `Bearer ${token}` } };
       const responseData = await fetchAPI(path, urlParamsObject, options);
 
-      if (start === 0) {
-        setData(responseData.data);
-      } else {
-        setData((prevData: any[] ) => [...prevData, ...responseData.data]);
-      }
-
+      setData((prevData) => [...prevData, ...responseData.data]);
       setMeta(responseData.meta);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
-  }, []);
-
-  function loadMorePosts(): void {
-    const nextPosts = meta!.pagination.start + meta!.pagination.limit;
-    fetchData(nextPosts, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
   }
 
-  const fetchBlogHeaders = async () => {
-    setLoading(true);
-    try {
-      const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
-      const path = `/blog-headers`;
-      const urlParamsObject = {
-        locale: lang,
-      };
-      const options = { headers: { Authorization: `Bearer ${token}` } };
-      const responseData = await fetchAPI(path, urlParamsObject, options);
-
-      setBlogHeaders(responseData.data[0].attributes);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-  
-  useEffect(() => {
-    fetchData(0, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
-  }, [fetchData]);
-  
-  useEffect(() => {
-    fetchBlogHeaders();
-  }, [])
-
-  
   if (isLoading || !meta) return <Loader />;
 
   return (

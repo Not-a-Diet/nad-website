@@ -57,8 +57,7 @@ const config = {
   locales: ["it"]
 };
 
-const bootstrap = (app) => {
-  console.log(app);
+const bootstrap = () => {
 };
 
 export default {

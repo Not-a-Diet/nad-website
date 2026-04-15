@@ -70,6 +70,9 @@ const populate = {
       filosofy: {
         populate: {
           fields: ["title", "body", "type", "sign", "isList"],
+          items: {
+            populate: true,
+          },
         }
       },
       testimonials: {
@@ -109,15 +112,15 @@ const populate = {
 };
 
 module.exports = (config, { strapi }) => {
-  // Add your own logic here.
   return async (ctx, next) => {
+    const slug = ctx.query?.filters?.slug;
+    const locale = ctx.query?.locale;
+
     ctx.query = {
       populate,
-      filters: { slug: ctx.query.filters.slug },
-      locale: ctx.query.locale,
+      ...(slug ? { filters: { slug } } : {}),
+      ...(locale ? { locale } : {}),
     };
-
-    console.log("page-populate-middleware.js: ctx.query = ", ctx.query);
 
     await next();
   };

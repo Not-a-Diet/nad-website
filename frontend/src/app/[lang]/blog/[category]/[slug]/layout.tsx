@@ -70,7 +70,11 @@ export default async function LayoutRoute({
   };
 }) {
   const { category } = params;
-  const { categories, articles } = (await fetchSideMenuData(category)) as Data;
+  const sideMenuData = await fetchSideMenuData(category);
+  if (!sideMenuData) {
+    return <section className="container p-4 mx-auto"><p>Failed to load sidebar data.</p>{children}</section>;
+  }
+  const { categories, articles } = sideMenuData as Data;
 
   return (
     <section className="container p-4 mx-auto h-full relative m-24 space-y-6 sm:space-y-12">

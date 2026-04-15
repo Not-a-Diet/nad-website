@@ -55,10 +55,10 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
       button: "bg-tertiary-500",
     },
     quaternary: {
-      bg: "bg-quaternary-100",
-      border: "border-quaternary-500",
-      text: "text-quaternary-500",
-      button: "bg-quaternary-500",
+      bg: "bg-[#bf3d5c]/10",
+      border: "border-[#bf3d5c]",
+      text: "text-[#bf3d5c]",
+      button: "bg-[#bf3d5c]",
     }
   }
   const tw_col: { bg: string, border: string, text: string, button: string } = colorMap[color] || "bg-gray-500";
@@ -90,7 +90,7 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
       </div>
       <div className="relative mt-auto">
         {
-          showLink && <a href={url} target={newTab ? '_blank' : '_self'} rel="noopener noreferrer" className={`${tw_col.button} rounded-[0.5rem] py-2 px-6 inline-block`}>{text}</a>
+          showLink && <a href={url} target={newTab ? '_blank' : '_self'} rel="noopener noreferrer" className={`${tw_col.button} rounded-[0.5rem] py-2 px-6 inline-block text-white`}>{text}</a>
         }
       </div>
     </div>
@@ -105,9 +105,9 @@ export default function Features({ data }: FeaturesProps) {
         <h2 className="text-4xl font-sans font-bold">{data.heading}</h2>
         <p className="font-sans">{data.description}</p>
       </div>
-      <div className="container mx-auto my-6 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {data.feature.map((feature: Feature, index: number) => (
-          <Feature key={index} {...feature} />
+      <div className="container mx-auto my-6 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {data.feature.map((feature: Feature) => (
+          <Feature key={feature.id} {...feature} />
         ))}
       </div>
     </section>

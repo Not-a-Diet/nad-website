@@ -8,7 +8,18 @@ interface TeamProps {
     title: string;
     description: string;
     member: Array<TeamMember>;
-    filosofy: any;
+    filosofy: {
+      title?: string;
+      body: string;
+      type: 'quotation' | 'filosofy';
+      sign?: string;
+      isList: boolean;
+      items?: Array<{
+        id: number;
+        title: string;
+        description: string;
+      }>;
+    };
   };
 }
 
@@ -37,7 +48,7 @@ function TeamMemberCard({ name, occupation, profilePhoto, description, skills }:
         {profilePhotoUrl && (
           <Image
             src={profilePhotoUrl}
-            alt="professionist image"
+            alt={name}
             width={400}
             height={400}
             className="border-2 rounded-full drop-shadow-md dark:bg-gray-500 dark:border-gray-700"
@@ -70,10 +81,8 @@ export default function Team({ data }: TeamProps) {
           <p className="text-crema-700 max-w-2xl mx-auto">{data.description}</p>
         </div>
         <div className="flex flex-row items-center justify-center flex-wrap">
-          {data.member?.map((member, index) => (
-            <div key={index}>
-              <TeamMemberCard key={index} {...member} />
-            </div>
+          {data.member?.map((member) => (
+            <TeamMemberCard key={member.name} {...member} />
           ))}
         </div>
         <Quote

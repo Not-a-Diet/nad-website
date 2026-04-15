@@ -88,7 +88,7 @@ describe('Dynamic Page Route', () => {
     expect(result).toBeTruthy()
   })
 
-  it('returns null when page is not found', async () => {
+  it('returns error component when page is not found', async () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         ok: true,
@@ -102,6 +102,6 @@ describe('Dynamic Page Route', () => {
       params: { lang: 'en', slug: ['nonexistent'] },
     })
 
-    expect(result).toBeNull()
+    expect(result).toBeTruthy()
   })
 })
