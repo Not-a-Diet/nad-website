@@ -101,8 +101,6 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
     backButtonText = "Back",
   } = data;
 
-  if (!persons.length) return null;
-
   const [selectedPerson, setSelectedPerson] = useState<number | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<number | null>(null);
   const [view, setView] = useState<'selection' | 'calendar'>('selection');
@@ -112,6 +110,8 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
     if (!persons[selectedPerson]?.locations[selectedLocation]) return "";
     return persons[selectedPerson].locations[selectedLocation].embedUrl;
   }, [selectedPerson, selectedLocation, persons]);
+
+  if (!persons.length) return null;
 
   const handlePersonChange = (index: number) => {
     setSelectedPerson(index);
@@ -146,7 +146,6 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
             style={{ border: 0 }}
             width="100%"
             height="700"
-            frameBorder="0"
             title={`Booking calendar for ${persons[selectedPerson!]?.name} - ${persons[selectedPerson!]?.locations[selectedLocation!]?.name}`}
           />
         </div>
@@ -272,7 +271,7 @@ export default function Contact({ data }: ContactProps) {
         </div>
 
           <div className="w-full flex-col lg:flex-col">
-            <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-col gap-6 mb-4">
+            <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-col lg:gap-6 mb-4">
               {contactLinks && contactLinks.map((link, index) => {
                 const style = getIconStyle(index);
                 return (

@@ -23,6 +23,10 @@ export default class SectionErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
+  componentDidCatch(error: Error, info: React.ErrorInfo): void {
+    console.error('[SectionErrorBoundary]', error, info.componentStack);
+  }
+
   render() {
     if (this.state.hasError) {
       return (

@@ -430,7 +430,6 @@ export interface SectionsContact extends Schema.Component {
   };
   attributes: {
     bookingCalendar: Attribute.Component<'elements.booking-calendar'>;
-    contactForm: Attribute.Component<'elements.contact-form'>;
     contactLinks: Attribute.Component<'links.social-link', true>;
     description: Attribute.Text;
     hours: Attribute.Component<'elements.hours'>;

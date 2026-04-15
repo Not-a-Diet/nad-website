@@ -1,16 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
-jest.mock('next/navigation', () => ({
-  usePathname: () => '/en',
-  useRouter: () => ({
-    push: jest.fn(),
-    replace: jest.fn(),
-    refresh: jest.fn(),
-  }),
-  useParams: () => ({ lang: 'en' }),
-}))
-
 const mockNavbarProps = {
   links: [
     { id: 1, url: '/en/about', newTab: false, text: 'About' },
@@ -121,10 +111,10 @@ describe('Layout Components', () => {
     it('renders loading spinner', async () => {
       const Loader = (await import('@/app/[lang]/components/Loader')).default
 
-      render(<Loader />)
+      const { container } = render(<Loader />)
 
-      const svg = document.querySelector('svg')
-      expect(svg).toBeTruthy()
+      const svg = container.querySelector('svg')
+      expect(svg).toBeInTheDocument()
     })
   })
 

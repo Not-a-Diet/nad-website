@@ -82,7 +82,7 @@ export default function Team({ data }: TeamProps) {
         </div>
         <div className="flex flex-row items-center justify-center flex-wrap">
           {data.member?.map((member) => (
-            <TeamMemberCard key={member.name} {...member} />
+            <TeamMemberCard key={`${member.name}-${member.occupation}`} {...member} />
           ))}
         </div>
         <Quote

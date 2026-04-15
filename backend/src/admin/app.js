@@ -61,7 +61,6 @@ const bootstrap = () => {
 };
 
 export default {
-  bootstrap() { },
-  config,
   bootstrap,
+  config,
 };

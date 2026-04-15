@@ -1,13 +1,17 @@
 'use client';
 import ErrorComponent from './components/Error';
 
+interface RootErrorBoundaryProps {
+  error: Error & { digest?: string };
+  reset: () => void;
+}
+
 export default function RootErrorBoundary({
   error,
   reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
+}: RootErrorBoundaryProps) {
+  console.error(error);
+
   return (
     <div>
       <ErrorComponent />

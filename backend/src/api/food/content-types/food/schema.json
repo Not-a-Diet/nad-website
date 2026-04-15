@@ -23,6 +23,7 @@
       "type": "enumeration",
       "enum": [
         "freash_meat",
+        "fresh_meat",
         "fish",
         "legumes",
         "cereals_and_tubers",

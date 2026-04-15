@@ -12,7 +12,8 @@
     },
     "embedUrl": {
       "type": "string",
-      "required": true
+      "required": true,
+      "format": "uri"
     },
     "isDefault": {
       "type": "boolean",

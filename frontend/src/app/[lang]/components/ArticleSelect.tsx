@@ -71,7 +71,6 @@ export default function ArticleSelect({
               return (
                 <li key={article.id}>
                   <Link
-                    rel="noopener noreferrer"
                     href={`/blog/${params.category}/${article.attributes.slug}`}
                     className={`${
                       params.slug === article.attributes.slug &&

@@ -55,10 +55,10 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
       button: "bg-tertiary-500",
     },
     quaternary: {
-      bg: "bg-[#bf3d5c]/10",
-      border: "border-[#bf3d5c]",
-      text: "text-[#bf3d5c]",
-      button: "bg-[#bf3d5c]",
+      bg: "bg-quaternary-rose-100",
+      border: "border-quaternary-rose",
+      text: "text-quaternary-rose",
+      button: "bg-quaternary-rose",
     }
   }
   const tw_col: { bg: string, border: string, text: string, button: string } = colorMap[color] || "bg-gray-500";

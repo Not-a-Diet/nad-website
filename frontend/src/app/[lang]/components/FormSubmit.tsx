@@ -1,3 +1,4 @@
+/** @deprecated Replaced by Google Calendar bookings. Do not use. */
 export default function FormSubmit({
   placeholder,
   text,

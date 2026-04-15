@@ -15,7 +15,7 @@ export default function componentResolver(section: any, index: number): ReactEle
 
   let module = lazy(() => import(`../components/${componentName}`))
 
-  const reactElement = createElement(module, { data: section, key: index })
+  const reactElement = createElement(module, { data: section })
 
   return (
     <SectionErrorBoundary key={index}>

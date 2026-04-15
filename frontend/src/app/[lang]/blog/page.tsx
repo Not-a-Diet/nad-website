@@ -44,7 +44,7 @@ export default function Profile({ params }: { params: { lang: string } }) {
               category: { populate: "*" },
               authorsBio: { populate: "*" },
             },
-            pagination: { start: 0, limit: Number(process.env.NEXT_PUBLIC_PAGE_LIMIT) },
+            pagination: { start: 0, limit: parseInt(process.env.NEXT_PUBLIC_PAGE_LIMIT ?? '6', 10) },
           }, options),
           fetchAPI("/blog-headers", { locale: lang }, options),
         ]);
@@ -68,7 +68,7 @@ export default function Profile({ params }: { params: { lang: string } }) {
   async function loadMorePosts(): Promise<void> {
     if (!meta) return;
     const start = meta.pagination.start + meta.pagination.limit;
-    const limit = Number(process.env.NEXT_PUBLIC_PAGE_LIMIT);
+    const limit = parseInt(process.env.NEXT_PUBLIC_PAGE_LIMIT ?? '6', 10);
     try {
       const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
       const path = `/articles`;

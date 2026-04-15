@@ -12,11 +12,6 @@ const customJestConfig = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
-  transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: '<rootDir>/tsconfig.json',
-    }],
-  },
   moduleDirectories: ['node_modules', '<rootDir>/'],
   roots: ['<rootDir>/src'],
 }

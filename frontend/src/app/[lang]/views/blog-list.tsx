@@ -72,7 +72,7 @@ export default function PostList({
             >
               {imageUrl && (
                 <Image
-                  alt="cover image for article"
+                  alt={`${article.attributes.title} cover image`}
                   width="240"
                   height="240"
                   className="object-cover w-full h-44 group-hover:scale-105 transition-transform duration-300"

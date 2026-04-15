@@ -141,7 +141,7 @@ body {
   Booking Calendar Animations
 *******************************************/
 
-@keyframes slideInRight {
+@keyframes slide-in-right {
   from {
     opacity: 0;
     transform: translateX(-30px);
@@ -153,5 +153,5 @@ body {
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.4s ease-out forwards;
+  animation: slide-in-right 0.4s ease-out forwards;
 }

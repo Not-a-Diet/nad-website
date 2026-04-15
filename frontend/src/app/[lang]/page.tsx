@@ -1,7 +1,6 @@
 import LangRedirect from './components/LangRedirect';
 import componentResolver from './utils/component-resolver';
 import {getPageBySlug} from "@/app/[lang]/utils/get-page-by-slug";
-import ErrorComponent from './components/Error';
 
 
 export default async function RootRoute({params}: { params: { lang: string } }) {
@@ -18,6 +17,9 @@ export default async function RootRoute({params}: { params: { lang: string } }) 
         componentResolver(section, index)
       )
     } catch (error) {
-      return <ErrorComponent />
+      if (error instanceof Error && error.message.includes('401')) {
+        throw error
+      }
+      throw error
     }
 }

@@ -31,7 +31,9 @@ module.exports = {
         {
           DEFAULT: '#06b6d4',
           500: '#67e8f9',
-          100: '#cffafe'
+          100: '#cffafe',
+          rose: '#bf3d5c',
+          'rose-100': '#fce4ec',
         },
         'crema':
         {
@@ -44,7 +46,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
-        heading: ['var(--font-bricolage)', 'cursive']
+        heading: ['var(--font-inter)', 'sans-serif']
       },
     },
 

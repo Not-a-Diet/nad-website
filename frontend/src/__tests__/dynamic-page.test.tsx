@@ -1,4 +1,3 @@
-import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 const mockGlobalResponse = {
@@ -88,7 +87,7 @@ describe('Dynamic Page Route', () => {
     expect(result).toBeTruthy()
   })
 
-  it('returns error component when page is not found', async () => {
+  it('throws notFound when page is not found', async () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
         ok: true,
@@ -98,10 +97,8 @@ describe('Dynamic Page Route', () => {
 
     const PageRoute = (await import('@/app/[lang]/[...slug]/page')).default
 
-    const result = await PageRoute({
+    await expect(PageRoute({
       params: { lang: 'en', slug: ['nonexistent'] },
-    })
-
-    expect(result).toBeTruthy()
+    })).rejects.toThrow('NOT_FOUND')
   })
 })

@@ -15,14 +15,23 @@ jest.mock('next/link', () => ({
   },
 }))
 
+const mockPush = jest.fn()
+const mockReplace = jest.fn()
+const mockRefresh = jest.fn()
+
 jest.mock('next/navigation', () => ({
   usePathname: () => '/en',
   useRouter: () => ({
-    push: jest.fn(),
-    replace: jest.fn(),
-    refresh: jest.fn(),
+    push: mockPush,
+    replace: mockReplace,
+    refresh: mockRefresh,
   }),
   useParams: () => ({ lang: 'en' }),
+  notFound: () => {
+    const error = new Error('NOT_FOUND')
+    error.digest = 'NEXT_NOT_FOUND'
+    throw error
+  },
 }))
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({

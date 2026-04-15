@@ -81,7 +81,7 @@ describe('Blog Listing Page', () => {
   it('blog list view renders articles', () => {
     render(<PostList data={mockArticlesResponse.data} />)
 
-    expect(screen.getByText('Test Article')).toBeTruthy()
-    expect(screen.getByText('Test Author')).toBeTruthy()
+    expect(screen.getByText('Test Article')).toBeInTheDocument()
+    expect(screen.getByText('Test Author')).toBeInTheDocument()
   })
 })

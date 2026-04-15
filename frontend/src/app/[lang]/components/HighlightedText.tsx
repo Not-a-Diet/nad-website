@@ -38,6 +38,12 @@ export default function HighlightedText({
       );
       children.push(" ");
     } else {
+      if ((word.includes("[") || word.includes("{")) && !word.startsWith("[") && !word.startsWith("{")) {
+        console.warn(
+          `[HighlightedText] Marker found mid-token: "${word}". ` +
+          `Place [ or { at token start for highlighting to work.`
+        );
+      }
       children.push(word);
       children.push(" ");
     }

@@ -616,7 +616,14 @@ export interface ApiFoodFood extends Schema.CollectionType {
       Attribute.Private;
     factor: Attribute.Decimal & Attribute.Required;
     group: Attribute.Enumeration<
-      ['freash_meat', 'fish', 'legumes', 'cereals_and_tubers', 'vegetables']
+      [
+        'freash_meat',
+        'fresh_meat',
+        'fish',
+        'legumes',
+        'cereals_and_tubers',
+        'vegetables'
+      ]
     > &
       Attribute.Required;
     name: Attribute.String;

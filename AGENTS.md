@@ -261,7 +261,7 @@ These are the `__component` values Strapi sends and the React components they re
 ### API Call Patterns
 - Always use `fetchAPI()` from `utils/fetch-api.tsx`, never raw `fetch()`
 - Token retrieval pattern: `const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN`
-- Options object: `{ headers: { Authorization: `Bearer ${token}` } }`
+- Options object: `{ headers: { Authorization: 'Bearer ${token}' } }`
 - Path prefix: use leading slash (`/global`, `/articles`, `/pages`)
 
 ### Component Props

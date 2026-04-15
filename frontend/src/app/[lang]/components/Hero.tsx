@@ -36,6 +36,7 @@ interface HeroProps {
 export default function Hero({ data }: HeroProps) {
   const imgUrls = data.picture.data?.map(attr => {
     return {
+      id: attr.id,
       url: getStrapiMedia(attr.attributes.url),
       alt: attr.attributes.alternativeText
     }
@@ -57,7 +58,7 @@ export default function Hero({ data }: HeroProps) {
   return (
     <section id="hero" className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2">
       {imgUrls && imgUrls.map((imgUrl, index) => (
-        <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={imgUrl.alt || index}>
+        <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={imgUrl.id ?? imgUrl.alt ?? index}>
           <div className="relative">
             <Image
               src={imgUrl.url || ""}
