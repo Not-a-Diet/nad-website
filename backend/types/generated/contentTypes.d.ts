@@ -587,53 +587,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
-export interface ApiFoodFood extends Schema.CollectionType {
-  collectionName: 'foods';
-  info: {
-    description: '';
-    displayName: 'Foods';
-    pluralName: 'foods';
-    singularName: 'food';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    cooking_method: Attribute.Enumeration<
-      [
-        'boiling',
-        'steaming',
-        'pan-frying_with_oil',
-        'roasting',
-        'microwave',
-        'boiling/pressure_cooking',
-        'steaming/pressure_cooking'
-      ]
-    > &
-      Attribute.Required;
-    createdAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::food.food', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    factor: Attribute.Decimal & Attribute.Required;
-    group: Attribute.Enumeration<
-      [
-        'freash_meat',
-        'fresh_meat',
-        'fish',
-        'legumes',
-        'cereals_and_tubers',
-        'vegetables'
-      ]
-    > &
-      Attribute.Required;
-    name: Attribute.String;
-    publishedAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    updatedBy: Attribute.Relation<'api::food.food', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiGlobalGlobal extends Schema.SingleType {
   collectionName: 'globals';
   info: {
@@ -767,7 +720,6 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.large-video',
         'sections.rich-text',
         'sections.pricing',
-        'sections.lead-form',
         'sections.features',
         'sections.heading',
         'sections.team',
@@ -1297,7 +1249,6 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::blog-header.blog-header': ApiBlogHeaderBlogHeader;
       'api::category.category': ApiCategoryCategory;
-      'api::food.food': ApiFoodFood;
       'api::global.global': ApiGlobalGlobal;
       'api::legal.legal': ApiLegalLegal;
       'api::page.page': ApiPagePage;

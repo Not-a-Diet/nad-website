@@ -49,31 +49,6 @@ export interface ElementsBookingPerson extends Schema.Component {
   };
 }
 
-export interface ElementsContactForm extends Schema.Component {
-  collectionName: 'components_elements_contact_forms';
-  info: {
-    description: '';
-    displayName: 'Contact form';
-  };
-  attributes: {
-    description: Attribute.Text;
-    emailLabel: Attribute.String;
-    emailPlaceholder: Attribute.String;
-    firstNameLabel: Attribute.String;
-    firstNamePlaceholder: Attribute.String;
-    footer: Attribute.Text;
-    lastNameLabel: Attribute.String;
-    lastNamePlaceholder: Attribute.String;
-    messageLabel: Attribute.String;
-    messagePlaceholder: Attribute.String;
-    phoneLabel: Attribute.String;
-    phonePlaceholder: Attribute.String;
-    privacyPolicyLabel: Attribute.Text;
-    submitButton: Attribute.Component<'links.button'>;
-    title: Attribute.String;
-  };
-}
-
 export interface ElementsFeature extends Schema.Component {
   collectionName: 'components_elements_features';
   info: {
@@ -688,7 +663,6 @@ declare module '@strapi/types' {
       'elements.booking-calendar': ElementsBookingCalendar;
       'elements.booking-location': ElementsBookingLocation;
       'elements.booking-person': ElementsBookingPerson;
-      'elements.contact-form': ElementsContactForm;
       'elements.feature': ElementsFeature;
       'elements.feature-column': ElementsFeatureColumn;
       'elements.feature-row': ElementsFeatureRow;

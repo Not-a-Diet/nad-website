@@ -29,13 +29,6 @@ const populate = {
           },
         },
       },
-      contactForm: {
-        populate: {
-          submitButton: {
-            fields: ["text", "type"],
-          }
-        },
-      },
       hours: {
         populate: {
           title: true,

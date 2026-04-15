@@ -126,9 +126,6 @@ All Strapi API calls go through `fetchAPI()` in `fetch-api.tsx`:
 - Development mode includes API call benchmarking with timing logs
 - Requires `NEXT_PUBLIC_STRAPI_API_TOKEN` for authenticated requests
 
-### Form Submission Pattern (DEPRECATED)
-Form submissions previously used `NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN` to POST directly to Strapi. This pattern has been stripped from Contact.tsx, FoodCalculator.tsx, and FormSubmit.tsx. Future form integration will use Google Calendar bookings.
-
 ### i18n Middleware
 - `src/middleware.ts` handles locale detection and redirection
 - Checks `NEXT_LOCALE` cookie first, falls back to `Accept-Language` header
@@ -164,9 +161,6 @@ Located at `backend/src/api/page/middlewares/page-populate-middleware.js`:
 | `global` | `/api/global` | Site-wide settings (navbar, footer, SEO, banner) |
 | `blog-header` | `/api/blog-headers` | Blog listing page heading |
 | `author` | `/api/authors` | Article author bio and avatar |
-| `contact-form-submission` | `/api/contact-form-submissions` | ~~Contact form entries~~ (disabled) |
-| `lead-form-submission` | `/api/lead-form-submissions` | ~~Email lead capture~~ (disabled) |
-| `food` | `/api/foods` | Food calculator (stub, no logic) |
 | `product-feature` | `/api/product-features` | Pricing plan features |
 | `legal` | `/api/legals` | Legal documents (privacy, terms, cookie policy) |
 
@@ -183,7 +177,6 @@ These are the `__component` values Strapi sends and the React components they re
 | `sections.testimonials-group` | `TestimonialsGroup` | `components/TestimonialsGroup.tsx` |
 | `sections.rich-text` | `RichText` | `components/RichText.tsx` |
 | `sections.heading` | `Heading` | (not yet implemented) |
-| `sections.lead-form` | `LeadForm` | `components/LeadForm.tsx` |
 | `sections.bottom-actions` | `BottomActions` | (not yet implemented) |
 | `sections.large-video` | `LargeVideo` | (not yet implemented) |
 | `sections.feature-columns-group` | `FeatureColumnsGroup` | (not yet implemented) |
@@ -204,7 +197,6 @@ These are the `__component` values Strapi sends and the React components they re
 - Environment variables configured in Vercel dashboard
 - `NEXT_PUBLIC_STRAPI_API_URL` → Strapi Cloud URL
 - `NEXT_PUBLIC_STRAPI_API_TOKEN` → Read-only API token
-- `NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN` → Form submission token (currently unused)
 - `NEXT_PUBLIC_PAGE_LIMIT` → Blog pagination limit (default: 6)
 
 ### Backend (Strapi Cloud)
@@ -218,7 +210,6 @@ These are the `__component` values Strapi sends and the React components they re
 |---|---|---|---|
 | `NEXT_PUBLIC_STRAPI_API_URL` | ✅ | | Strapi base URL |
 | `NEXT_PUBLIC_STRAPI_API_TOKEN` | ✅ | | Read-only API token |
-| `NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN` | ✅ | | Form POST token (unused) |
 | `NEXT_PUBLIC_PAGE_LIMIT` | ✅ | | Blog posts per page |
 | `HOST` | | ✅ | Server bind address |
 | `PORT` | | ✅ | Server port (1337) |
@@ -231,7 +222,7 @@ These are the `__component` values Strapi sends and the React components they re
 ## Known Issues & Tech Debt
 
 ### Fixed (Week 1 Audit)
-- ~~Broken form handlers in Contact/FoodCalculator/FormSubmit~~ → Stripped, awaiting Google Calendar integration
+- ~~Broken form handlers in Contact/FoodCalculator/FormSubmit~~ → Removed (FoodCalculator, LeadForm, FormSubmit deleted; booking calendar replaces forms)
 - ~~9 CSS typo classes~~ → All fixed
 - ~~Dead code (200+ lines)~~ → Removed
 - ~~XSS vulnerability in RichText~~ → Added rehype-sanitize
