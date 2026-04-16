@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_elements_booking_calendars",
+  "info": {
+    "displayName": "Booking Calendar",
+    "description": "Person/location selector with Google Calendar embed"
+  },
+  "options": {},
+  "attributes": {
+    "bookingTitle": {
+      "type": "string",
+      "default": "Book your appointment"
+    },
+    "persons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.booking-person"
+    },
+    "personLabel": {
+      "type": "string",
+      "default": "Person"
+    },
+    "locationLabel": {
+      "type": "string",
+      "default": "Location"
+    },
+    "selectPersonPlaceholder": {
+      "type": "string",
+      "default": "Select a person"
+    },
+    "selectLocationPlaceholder": {
+      "type": "string",
+      "default": "Select a location"
+    },
+    "noSelectionMessage": {
+      "type": "text",
+      "default": "Please select a person and location to view available times."
+    },
+    "viewCalendarButtonText": {
+      "type": "string",
+      "default": "View Calendar"
+    },
+    "backButtonText": {
+      "type": "string",
+      "default": "Back"
+    }
+  }
+}

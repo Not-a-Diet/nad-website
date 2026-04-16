@@ -5,3 +5,5 @@ readme-images
 **/.yarn
 frontend/next.config.js
 .env.example
+
+*.tar.gz

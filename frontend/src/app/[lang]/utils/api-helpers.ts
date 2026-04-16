@@ -22,5 +22,4 @@ export function formatDate(dateString: string) {
     return date.toLocaleDateString('en-US', options);
 }
 
-// ADDS DELAY TO SIMULATE SLOW API REMOVE FOR PRODUCTION
-export const delay = (time: number) => new Promise((resolve) => setTimeout(() => resolve(1), time));
+

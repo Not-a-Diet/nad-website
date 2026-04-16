@@ -21,7 +21,7 @@ interface Article {
 
 function selectedFilter(current: string, selected: string) {
   return current === selected
-    ? "px-3 py-1 rounded-lg hover:underline bg-secondary-100 text-black"
+    ? "px-3 py-1 rounded-lg bg-secondary text-white"
     : "px-3 py-1 rounded-lg hover:underline bg-secondary-100 text-black";
 }
 
@@ -39,7 +39,7 @@ export default function ArticleSelect({
 }) {
 
   return (
-    <div className="p-4 flex flex-col itmes-center text-center rounded-lg bg-anti-fllash_white-100 min-h-[365px] drop-shadow-lg ">
+    <div className="p-4 flex flex-col items-center text-center rounded-lg bg-anti-flash_white min-h-[365px]">
       <h4 className="text-xl font-semibold">Browse By Category</h4>
 
       <div>
@@ -48,6 +48,7 @@ export default function ArticleSelect({
             if (category.attributes.articles.data.length === 0) return null;
             return (
               <Link
+                key={category.id}
                 href={`/blog/${category.attributes.slug}`}
                 className={selectedFilter(
                   category.attributes.slug,
@@ -58,7 +59,7 @@ export default function ArticleSelect({
               </Link>
             );
           })}
-          <Link href={"/blog"} className={selectedFilter("", "filter")}>
+          <Link href="/blog" key="all" className={selectedFilter("", "filter")}>
             #all
           </Link>
         </div>
@@ -68,9 +69,8 @@ export default function ArticleSelect({
           <ul className="ml-4 space-y-1 list-disc">
             {articles.map((article: Article) => {
               return (
-                <li>
+                <li key={article.id}>
                   <Link
-                    rel="noopener noreferrer"
                     href={`/blog/${params.category}/${article.attributes.slug}`}
                     className={`${
                       params.slug === article.attributes.slug &&

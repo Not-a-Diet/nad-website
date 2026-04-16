@@ -1,4 +1,3 @@
-import { assert } from "console";
 import { parseDescriptionList } from "../utils/description-parser";
 import { getStrapiMedia } from "../utils/api-helpers";
 import Image from "next/image";
@@ -9,7 +8,18 @@ interface TeamProps {
     title: string;
     description: string;
     member: Array<TeamMember>;
-    filosofy: any;
+    filosofy: {
+      title?: string;
+      body: string;
+      type: 'quotation' | 'filosofy';
+      sign?: string;
+      isList: boolean;
+      items?: Array<{
+        id: number;
+        title: string;
+        description: string;
+      }>;
+    };
   };
 }
 
@@ -32,13 +42,13 @@ function TeamMemberCard({ name, occupation, profilePhoto, description, skills }:
   const profilePhotoUrl = getStrapiMedia(profilePhoto.data?.attributes.url);
 
   return (
-    <div className="bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg: max-w-md mx-4 my-4">
+    <div className="bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg:max-w-md mx-4 my-4">
       <div className="w-32 h-32 mx-auto mb-4 relative">
         <div className="absolute inset-0 rounded-full bg-gradient-to-br from-kiwi-100 to-pasta-100"></div>
         {profilePhotoUrl && (
           <Image
             src={profilePhotoUrl}
-            alt="professionist image"
+            alt={name}
             width={400}
             height={400}
             className="border-2 rounded-full drop-shadow-md dark:bg-gray-500 dark:border-gray-700"
@@ -71,10 +81,8 @@ export default function Team({ data }: TeamProps) {
           <p className="text-crema-700 max-w-2xl mx-auto">{data.description}</p>
         </div>
         <div className="flex flex-row items-center justify-center flex-wrap">
-          {data.member?.map((member, index) => (
-            <div key={index}>
-              <TeamMemberCard key={index} {...member} />
-            </div>
+          {data.member?.map((member) => (
+            <TeamMemberCard key={`${member.name}-${member.occupation}`} {...member} />
           ))}
         </div>
         <Quote

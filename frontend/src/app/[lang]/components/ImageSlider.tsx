@@ -22,11 +22,11 @@ export default function Slideshow({ data }: { data: SlidShowProps }) {
   return (
     <div className="slide-container">
       <Fade>
-        {data.files.data.map((fadeImage: Image, index) => {
+        {data.files.data.map((fadeImage: Image) => {
           const imageUrl = getStrapiMedia(fadeImage.attributes.url);
           return (
-            <div key={index}>
-              {imageUrl && <Image className="w-full h-96 object-cover rounded-lg" height={400} width={600} alt="alt text" src={imageUrl} />}
+            <div key={fadeImage.id}>
+              {imageUrl && <Image className="w-full h-96 object-cover rounded-lg" height={400} width={600} alt={fadeImage.attributes.alternativeText ?? fadeImage.attributes.caption ?? "image"} src={imageUrl} />}
             </div>
           );
         })}

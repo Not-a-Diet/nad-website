@@ -13,16 +13,34 @@
     "baseline-browser-mapping": "^2.10.17"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "4.25.6",
-    "@strapi/plugin-i18n": "4.25.6",
+    "@strapi/plugin-cloud": "4.26.1",
+    "@strapi/plugin-i18n": "4.26.1",
     "@strapi/plugin-seo": "^1.9.8",
-    "@strapi/plugin-users-permissions": "4.25.6",
-    "@strapi/strapi": "4.25.6",
+    "@strapi/plugin-users-permissions": "4.26.1",
+    "@strapi/strapi": "4.26.1",
     "better-sqlite3": "8.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
     "styled-components": "5.3.3"
+  },
+  "resolutions": {
+    "@casl/ability": ">=6.7.5",
+    "axios": ">=1.15.0",
+    "form-data": ">=4.0.4",
+    "handlebars": ">=4.7.9",
+    "elliptic": ">=6.6.1",
+    "braces": ">=3.0.3",
+    "cross-spawn": ">=7.0.5",
+    "lodash": ">=4.17.21",
+    "lodash-es": ">=4.17.21",
+    "minimatch": ">=9.0.5",
+    "picomatch": ">=4.0.2",
+    "tar": ">=6.2.1",
+    "tar-fs": ">=3.0.6",
+    "jws": ">=4.0.0",
+    "rollup": ">=3.29.5",
+    "serialize-javascript": ">=6.0.2"
   },
   "author": {
     "name": "A Strapi developer"

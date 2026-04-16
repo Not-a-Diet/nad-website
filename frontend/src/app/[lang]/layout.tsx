@@ -7,7 +7,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
-import { Inter, Bricolage_Grotesque } from "next/font/google"
+import { Inter } from "next/font/google"
 import ErrorComponent from "./components/Error";
 import GA4CookieConsentBanner from "./components/cookie-consent-banner";
 
@@ -59,11 +59,6 @@ const inter = Inter({
   variable: "--font-inter", // optional: CSS variable
 });
 
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-bricolage",
-  weight: ['700'] // optional: CSS variable
-});
 
 export default async function RootLayout({
   children,
@@ -88,7 +83,7 @@ export default async function RootLayout({
 
 
   return (
-    <html lang={params.lang} className={`${inter.variable} ${inter.className} ${bricolage.variable}`}>
+    <html lang={params.lang} className={`${inter.variable} ${inter.className}`}>
       <body>
         <Navbar
           links={navbar.links}

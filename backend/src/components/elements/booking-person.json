@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_booking_persons",
+  "info": {
+    "displayName": "Booking Person",
+    "description": "A person with their locations and calendar embed URLs"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "locations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.booking-location"
+    }
+  }
+}

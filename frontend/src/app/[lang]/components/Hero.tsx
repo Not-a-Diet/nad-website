@@ -36,8 +36,9 @@ interface HeroProps {
 export default function Hero({ data }: HeroProps) {
   const imgUrls = data.picture.data?.map(attr => {
     return {
+      id: attr.id,
       url: getStrapiMedia(attr.attributes.url),
-      alte: attr.attributes.alternativeText
+      alt: attr.attributes.alternativeText
     }
   });
 
@@ -57,16 +58,14 @@ export default function Hero({ data }: HeroProps) {
   return (
     <section id="hero" className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2">
       {imgUrls && imgUrls.map((imgUrl, index) => (
-        <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={index}>
+        <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={imgUrl.id ?? imgUrl.alt ?? index}>
           <div className="relative">
-            <img
+            <Image
               src={imgUrl.url || ""}
-              alt={
-                imgUrl.alte || "none provided"
-              }
-              width={70}
-              height={70}
-              className="rounded-xl lg:h-[120px] lg:w-[120px]"
+              alt={imgUrl.alt || "hero image"}
+              width={120}
+              height={120}
+              className="rounded-xl"
             />
           </div>
         </div>
@@ -85,15 +84,16 @@ export default function Hero({ data }: HeroProps) {
           <HighlightedText
             text={data.description}
             tag="p"
-            className="font-sans p-5"
+            className="font-sans p-5 w-2/3"
             color="text-night"
           />
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-center">
             {data.buttons.map((button: Button, index: number) => (
               <Link
-                key={index}
+                key={button.id}
                 href={button.url}
                 target={button.newTab ? "_blank" : "_self"}
+                rel={button.newTab ? "noopener noreferrer" : undefined}
                 className={renderButtonStyle(button.type)}
               >
                 {button.text}
@@ -101,17 +101,6 @@ export default function Hero({ data }: HeroProps) {
             ))}
           </div>
         </div>
-        {/* <div className="flex items-center drop-shadow-2xl rounded-2xl justify-center mt-8 lg:mt-0 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-          {/* <Image
-            src={imgUrl || ""}
-            alt={
-              data.picture.data.attributes.alternativeText || "none provided"
-            }
-            className="object-contain rounded-xl h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
-            width={600}
-            height={600}
-          /> 
-        </div> */}
       </div>
       {/* CSS Animations */}
       <style>{`

@@ -1,6 +1,7 @@
 "use client";
 import Logo from "./Logo";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -26,6 +27,7 @@ function NavLink({ url, text, newTab }: NavLink) {
       <Link
         href={url}
         target={newTab ? "_blank" : "_self"}
+        rel={newTab ? "noopener noreferrer" : undefined}
         className={`flex items-center mx-4 -mb-1 border-b-2 border-transparent hover:text-secondary-500 font-bold ${path === url && "text-night border-night"
           }}`}
       >
@@ -34,7 +36,6 @@ function NavLink({ url, text, newTab }: NavLink) {
     </li>
   );
 }
-// === OPTION 1: Using Next.js App Router (Recommended) ===
 function LanguageSelector({ id }: { id: string }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -164,7 +165,7 @@ export default function Navbar({
 
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Not A Diet</span>
-                {logoUrl && <img className="h-16 w-16" src={logoUrl} alt="" />}
+                {logoUrl && <Image className="h-16 w-16" src={logoUrl} alt="Not A Diet logo" width={64} height={64} />}
               </a>
 
               <button

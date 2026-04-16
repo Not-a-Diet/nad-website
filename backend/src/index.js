@@ -1,20 +1,13 @@
 'use strict';
 
 module.exports = {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
   register(/*{ strapi }*/) {},
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({ strapi }) {
+    if (process.env.NODE_ENV === 'production' && !process.env.FRONTEND_URL) {
+      strapi.log.warn(
+        'FRONTEND_URL is not set in production. CORS will fall back to http://localhost:3000, which will break in production.'
+      );
+    }
+  },
 };

@@ -23,11 +23,11 @@
       "repeatable": false,
       "component": "elements.hours"
     },
-    "contactForm": {
-      "displayName": "Contact form",
+    "bookingCalendar": {
+      "displayName": "Booking Calendar",
       "type": "component",
       "repeatable": false,
-      "component": "elements.contact-form"
+      "component": "elements.booking-calendar"
     }
   }
 }

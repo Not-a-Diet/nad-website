@@ -105,9 +105,9 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
               acceptNecessaryBtn: 'Hold the sugar',
               showPreferencesBtn: 'Manage Individual preferences',
               footer: `
-                        <a href="/privacy-policy" target="_blank">Privacy Policy</a>
-                        <a href="/cookie-policy" target="_blank">Cookie Policy</a>
-                        <a href="/terms" target="_blank">Terms and conditions</a>
+                        <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                        <a href="/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+                        <a href="/terms" target="_blank" rel="noopener noreferrer">Terms and conditions</a>
                     `,
             },
             preferencesModal: {
@@ -166,7 +166,6 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
     }
     if (!CookieConsent.validConsent()) {
       CookieConsent.reset();
-      //console.log("CONSENT RESET", CookieConsent.validConsent(), CookieConsent.validCookie("cc_cookie"), CookieConsent.getCookie())
     }
     CookieConsent.run(cookieConfig);
   }, [locale]);

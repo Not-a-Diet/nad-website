@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_elements_locations",
+  "info": {
+    "displayName": "Location",
+    "description": "A physical location address that links to Google Maps"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

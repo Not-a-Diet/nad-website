@@ -1,3 +1,5 @@
+import { createElement, ReactNode } from "react";
+
 interface HighlightedTextProps {
   text: string;
   tag: string;
@@ -13,28 +15,39 @@ export default function HighlightedText({
   color,
   secondColor
 }: HighlightedTextProps) {
-  const tempText = text.split(" ");
-  let result = [];
+  const words = text.split(" ");
+  const children: ReactNode[] = [];
 
-  result.push(`<${tag} class="${className ? className : ""}">`);
-
-  tempText.forEach((word: string, index: number) => {
-    if (word.includes("[")) {
+  words.forEach((word: string, index: number) => {
+    if (word.startsWith("[")) {
       const highlight = word.replace("[", "").replace("]", "");
-      result.push(
-        `<span key=${index} class="${ color ? color : "" }">${highlight}</span> `
+      children.push(
+        createElement("span", {
+          key: index,
+          className: color || "",
+        }, highlight)
       );
-    } else if (word.includes("{")) {
+      children.push(" ");
+    } else if (word.startsWith("{")) {
       const highlight = word.replace("{", "").replace("}", "");
-      result.push(
-        `<span key=${index} class="${ secondColor ? secondColor : "" }">${highlight}</span> `
+      children.push(
+        createElement("span", {
+          key: index,
+          className: secondColor || "",
+        }, highlight)
       );
+      children.push(" ");
     } else {
-      result.push(word + " ");
+      if ((word.includes("[") || word.includes("{")) && !word.startsWith("[") && !word.startsWith("{")) {
+        console.warn(
+          `[HighlightedText] Marker found mid-token: "${word}". ` +
+          `Place [ or { at token start for highlighting to work.`
+        );
+      }
+      children.push(word);
+      children.push(" ");
     }
   });
 
-  result.push(`</${tag}>`);
-
-  return <div dangerouslySetInnerHTML={{ __html: result.join("") }} />;
+  return createElement(tag, { className: className || "" }, children);
 }

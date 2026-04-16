@@ -29,22 +29,43 @@ const populate = {
           },
         },
       },
-      contactForm: {
-        populate: {
-          submitButton: {
-            fields: ["text", "type"],
-          }
-        },
-      },
       hours: {
-        populate: true,
+        populate: {
+          title: true,
+          description: true,
+          locations: {
+            populate: true,
+          },
+        },
       },
       contactLinks: {
         populate: true,
       },
+      bookingCalendar: {
+        populate: {
+          bookingTitle: true,
+          persons: {
+            populate: {
+              locations: {
+                populate: true,
+              },
+            },
+          },
+          personLabel: true,
+          locationLabel: true,
+          selectPersonPlaceholder: true,
+          selectLocationPlaceholder: true,
+          noSelectionMessage: true,
+          viewCalendarButtonText: true,
+          backButtonText: true,
+        },
+      },
       filosofy: {
         populate: {
           fields: ["title", "body", "type", "sign", "isList"],
+          items: {
+            populate: true,
+          },
         }
       },
       testimonials: {
@@ -84,15 +105,15 @@ const populate = {
 };
 
 module.exports = (config, { strapi }) => {
-  // Add your own logic here.
   return async (ctx, next) => {
+    const slug = ctx.query?.filters?.slug;
+    const locale = ctx.query?.locale;
+
     ctx.query = {
       populate,
-      filters: { slug: ctx.query.filters.slug },
-      locale: ctx.query.locale,
+      ...(slug ? { filters: { slug } } : {}),
+      ...(locale ? { locale } : {}),
     };
-
-    console.log("page-populate-middleware.js: ctx.query = ", ctx.query);
 
     await next();
   };

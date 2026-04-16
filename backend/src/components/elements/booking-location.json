@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_booking_locations",
+  "info": {
+    "displayName": "Booking Location",
+    "description": "A location with its Google Calendar embed URL"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "embedUrl": {
+      "type": "string",
+      "required": true,
+      "format": "uri"
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

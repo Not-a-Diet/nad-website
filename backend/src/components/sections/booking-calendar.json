@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_booking_calendars",
+  "info": {
+    "displayName": "Booking Calendar",
+    "description": "Google Calendar appointment scheduling with person/location selector"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "persons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.booking-person"
+    },
+    "defaultPersonIndex": {
+      "type": "integer",
+      "default": 0
+    },
+    "defaultLocationIndex": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

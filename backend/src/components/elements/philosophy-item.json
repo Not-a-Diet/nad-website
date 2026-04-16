@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_philosophy_items",
+  "info": {
+    "displayName": "Philosophy Item",
+    "icon": "bulletList",
+    "description": "A title and description pair for philosophy lists"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

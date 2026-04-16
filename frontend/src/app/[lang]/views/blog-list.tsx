@@ -69,11 +69,10 @@ export default function PostList({
               href={`/blog/${category?.slug}/${article.attributes.slug}`}
               key={article.id}
               className="group cursor-pointer bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              //className="max-w-sm mx-auto group-hover:no-underline focus:no-underline dark:bg-anti-flash_white lg:w-[300px] xl:min-w-[375px] rounded-2xl overflow-hidden shadow-lg"
             >
               {imageUrl && (
                 <Image
-                  alt="presentation"
+                  alt={`${article.attributes.title} cover image`}
                   width="240"
                   height="240"
                   className="object-cover w-full h-44 group-hover:scale-105 transition-transform duration-300"
@@ -83,7 +82,7 @@ export default function PostList({
               <div className="p-6 space-y-2 relative">
                 {avatarUrl && (
                   <Image
-                    alt="avatar"
+                    alt={authorsBio ? `${authorsBio.name}'s avatar` : "author avatar"}
                     width="80"
                     height="80"
                     src={avatarUrl}
