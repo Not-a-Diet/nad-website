@@ -2,11 +2,12 @@ import PageHeader from '@/app/[lang]/components/PageHeader';
 import { fetchAPI } from '@/app/[lang]/utils/fetch-api';
 import BlogList from '@/app/[lang]/views/blog-list';
 
-async function fetchPostsByCategory(filter: string) {
+async function fetchPostsByCategory(filter: string, lang: string) {
     try {
         const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
         const path = `/articles`;
         const urlParamsObject = {
+            locale: lang,
             sort: { createdAt: 'desc' },
             filters: {
                 category: {
@@ -31,9 +32,9 @@ async function fetchPostsByCategory(filter: string) {
     }
 }
 
-export default async function CategoryRoute({ params }: { params: { category: string } }) {
-    const filter = params.category;
-    const responseData = await fetchPostsByCategory(filter);
+export default async function CategoryRoute({ params }: { params: { category: string; lang: string } }) {
+    const { category, lang } = params;
+    const responseData = await fetchPostsByCategory(category, lang);
     const data = responseData?.data ?? [];
 
     if (data.length === 0) return <div>No posts in this category.</div>;
@@ -43,7 +44,7 @@ export default async function CategoryRoute({ params }: { params: { category: st
     return (
         <div>
             <PageHeader heading={name} text={description} />
-            <BlogList data={data} />
+            <BlogList data={data} lang={lang} />
         </div>
     );
 }

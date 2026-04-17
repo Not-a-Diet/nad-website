@@ -34,7 +34,7 @@ interface Article {
   };
 }
 
-export default function Post({ data }: { data: Article }) {
+export default function Post({ data, lang = 'en' }: { data: Article; lang?: string }) {
   const { title, description, publishedAt, cover, authorsBio } = data.attributes;
   const author = authorsBio.data?.attributes;
   const imageUrl = getStrapiMedia(cover.data?.attributes.url);
@@ -71,7 +71,7 @@ alt={author ? `${author.name}` : "author"}
       </div>
       <div className="text-black bg-anti-flash_white">
         <p>{description}</p>
-        {data.attributes.blocks.map((section: any, index: number) => componentResolver(section, index))}
+        {data.attributes.blocks.map((section: any, index: number) => componentResolver(section, index, lang))}
       </div>
     </article>
   );

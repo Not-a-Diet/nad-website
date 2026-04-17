@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { renderButtonStyle } from "../utils/render-button-style";
 import HighlightedText from "./HighlightedText";
+import { i18n } from "i18n-config";
 
 export default function LangRedirect() {
   return (
@@ -16,7 +17,7 @@ export default function LangRedirect() {
           />
 
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <Link href="/en" className={renderButtonStyle("primary")}>
+            <Link href={`/${i18n.defaultLocale}`} className={renderButtonStyle("primary")}>
               Back To English
             </Link>
           </div>

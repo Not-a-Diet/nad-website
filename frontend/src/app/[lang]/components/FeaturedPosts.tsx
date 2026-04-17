@@ -55,7 +55,7 @@ interface FeaturedArticlesProps {
   };
 }
 
-export default function FeaturedArticles({ data }: FeaturedArticlesProps) {
+export default function FeaturedArticles({ data, lang = 'en' }: FeaturedArticlesProps & { lang?: string }) {
   if (!data) return null;
 
   const { title, description } = data;
@@ -76,7 +76,7 @@ export default function FeaturedArticles({ data }: FeaturedArticlesProps) {
 
         {/* Posts Grid */}
         <div className='flex flex-col'>
-          <PostList data={data.posts.data} />
+          <PostList data={data.posts.data} lang={lang} />
         </div>
 
       </div>

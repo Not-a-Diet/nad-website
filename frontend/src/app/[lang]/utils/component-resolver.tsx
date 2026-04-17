@@ -2,7 +2,7 @@ import { ReactElement, lazy, createElement, Suspense } from 'react';
 import Loader from '../components/Loader';
 import SectionErrorBoundary from '../components/SectionErrorBoundary';
 
-export default function componentResolver(section: any, index: number): ReactElement {
+export default function componentResolver(section: any, index: number, lang?: string): ReactElement {
   const names: string[] = section.__component.split('.')
   const category = names[0]
   const component = names[1]
@@ -15,7 +15,7 @@ export default function componentResolver(section: any, index: number): ReactEle
 
   let module = lazy(() => import(`../components/${componentName}`))
 
-  const reactElement = createElement(module, { data: section })
+  const reactElement = createElement(module, { data: section, lang })
 
   return (
     <SectionErrorBoundary key={index}>

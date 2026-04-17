@@ -35,6 +35,7 @@ export default function ArticleSelect({
   params: {
     slug: string;
     category: string;
+    lang: string;
   };
 }) {
 
@@ -49,7 +50,7 @@ export default function ArticleSelect({
             return (
               <Link
                 key={category.id}
-                href={`/blog/${category.attributes.slug}`}
+                href={`/${params.lang}/blog/${category.attributes.slug}`}
                 className={selectedFilter(
                   category.attributes.slug,
                   params.category
@@ -59,7 +60,7 @@ export default function ArticleSelect({
               </Link>
             );
           })}
-          <Link href="/blog" key="all" className={selectedFilter("", "filter")}>
+          <Link href={`/${params.lang}/blog`} key="all" className={selectedFilter("", "filter")}>
             #all
           </Link>
         </div>
@@ -71,7 +72,7 @@ export default function ArticleSelect({
               return (
                 <li key={article.id}>
                   <Link
-                    href={`/blog/${params.category}/${article.attributes.slug}`}
+                    href={`/${params.lang}/blog/${params.category}/${article.attributes.slug}`}
                     className={`${
                       params.slug === article.attributes.slug &&
                       "text-secondary"

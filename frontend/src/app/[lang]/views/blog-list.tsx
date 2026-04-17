@@ -47,9 +47,11 @@ interface Article {
 export default function PostList({
   data: articles,
   children,
+  lang = 'en',
 }: {
   data: Article[];
   children?: React.ReactNode;
+  lang?: string;
 }) {
   return (
     <section className="container p-6 mx-auto space-y-6 sm:space-y-12">
@@ -66,7 +68,7 @@ export default function PostList({
 
           return (
             <Link
-              href={`/blog/${category?.slug}/${article.attributes.slug}`}
+              href={`/${lang}/blog/${category?.slug}/${article.attributes.slug}`}
               key={article.id}
               className="group cursor-pointer bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >

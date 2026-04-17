@@ -97,7 +97,7 @@ export default function Profile({ params }: { params: { lang: string } }) {
   return (
     <div>
       <PageHeader heading={blogHeaders ? blogHeaders.heading : ""} text={blogHeaders ? blogHeaders.text : ""} />
-      <Blog data={data}>
+      <Blog data={data} lang={lang}>
         {meta.pagination.start + meta.pagination.limit <
           meta.pagination.total && (
           <div className="flex justify-center">

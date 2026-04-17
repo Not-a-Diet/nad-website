@@ -1,14 +1,15 @@
 import ArticleSelect from "@/app/[lang]/components/ArticleSelect";
 import { fetchAPI } from "@/app/[lang]/utils/fetch-api";
+import { i18n } from "i18n-config";
 
-async function fetchSideMenuData(filter: string) {
+async function fetchSideMenuData(filter: string, lang: string) {
   try {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
     const options = { headers: { Authorization: `Bearer ${token}` } };
 
     const categoriesResponse = await fetchAPI(
       "/categories",
-      { populate: "*" },
+      { locale: lang, populate: "*" },
       options
     );
 
@@ -16,13 +17,14 @@ async function fetchSideMenuData(filter: string) {
       "/articles",
       filter
         ? {
+            locale: lang,
             filters: {
               category: {
                 name: filter,
               },
             },
           }
-        : {},
+        : { locale: lang },
       options
     );
 
@@ -67,10 +69,11 @@ export default async function LayoutRoute({
   params: {
     slug: string;
     category: string;
+    lang: string;
   };
 }) {
-  const { category } = params;
-  const sideMenuData = await fetchSideMenuData(category);
+  const { category, lang } = params;
+  const sideMenuData = await fetchSideMenuData(category, lang);
   if (!sideMenuData) {
     return <section className="container p-4 mx-auto"><p>Failed to load sidebar data.</p>{children}</section>;
   }
@@ -96,22 +99,26 @@ export async function generateStaticParams() {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
   const path = `/articles`;
   const options = { headers: { Authorization: `Bearer ${token}` } };
-  const articleResponse = await fetchAPI(
-    path,
-    {
-      populate: ["category"],
-    },
-    options
-  );
 
-  return articleResponse.data.map(
-    (article: {
-      attributes: {
-        slug: string;
-        category: {
-          slug: string;
-        };
-      };
-    }) => ({ slug: article.attributes.slug, category: article.attributes.slug })
-  );
+  const params = [];
+  for (const locale of i18n.locales) {
+    const articleResponse = await fetchAPI(
+      path,
+      {
+        locale,
+        populate: ["category"],
+      },
+      options
+    );
+
+    for (const article of articleResponse.data) {
+      params.push({
+        slug: article.attributes.slug,
+        category: article.attributes.category?.data?.attributes?.slug ?? article.attributes.slug,
+        lang: locale,
+      });
+    }
+  }
+
+  return params;
 }

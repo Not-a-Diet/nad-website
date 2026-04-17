@@ -28,7 +28,7 @@ function FooterLink({ url, text, className }: FooterLink) {
       <Link
         href={url}
         className={`text-crema-500 hover:text-secondary ${path === url && "text-secondary border-secondary-500"
-          }}`}
+          }`}
       >
         {text}
       </Link>
@@ -37,10 +37,12 @@ function FooterLink({ url, text, className }: FooterLink) {
 }
 
 function CategoryLink({ attributes }: CategoryLink) {
+  const path = usePathname();
+  const lang = path.split('/')[1] || 'en';
   return (
     <li>
       <Link
-        href={`/blog/${attributes.slug}`}
+        href={`/${lang}/blog/${attributes.slug}`}
         className="hover:text-secondary"
       >
         {attributes.name}
