@@ -3,13 +3,49 @@
 /**
  * `page-populate-middleware` middleware
  *
- * Strapi v5 requires populate: "*" for dynamic zones (polymorphic structures).
- * Field-specific targeting within dynamic zones is not supported.
+ * Strapi v5 populate: "*" only goes one level deep.
+ * Use `on` filter for dynamic zones with explicit deep populate
+ * to include nested components, media, and relations.
  */
 
 const populate = {
   contentSections: {
-    populate: "*",
+    on: {
+      "sections.hero": {
+        populate: { picture: true, buttons: true },
+      },
+      "sections.features": {
+        populate: { feature: { populate: { media: true } } },
+      },
+      "sections.team": {
+        populate: {
+          member: { populate: { profilePhoto: true } },
+          filosofy: { populate: { items: true } },
+        },
+      },
+      "sections.testimonials-group": {
+        populate: { testimonials: { populate: { picture: true } } },
+      },
+      "sections.pricing": {
+        populate: { plans: { populate: { product_features: true } } },
+      },
+      "sections.contact": {
+        populate: {
+          contactLinks: true,
+          hours: { populate: { locations: true } },
+          bookingCalendar: { populate: { persons: { populate: { locations: true } } } },
+        },
+      },
+      "sections.featured-posts": {
+        populate: { posts: { populate: "*" } },
+      },
+      "sections.rich-text": { populate: "*" },
+      "sections.heading": { populate: "*" },
+      "sections.bottom-actions": { populate: "*" },
+      "sections.large-video": { populate: "*" },
+      "sections.feature-columns-group": { populate: "*" },
+      "sections.feature-rows-group": { populate: "*" },
+    },
   },
   seo: {
     populate: "*",
