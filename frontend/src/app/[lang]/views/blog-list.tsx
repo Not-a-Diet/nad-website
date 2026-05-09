@@ -4,42 +4,24 @@ import { getStrapiMedia, formatDate } from "../utils/api-helpers";
 
 interface Article {
   id: number;
-  attributes: {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
+  slug: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  blocks: any[];
+  cover: {
+    url: string;
+  };
+  category: {
+    name: string;
     slug: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    blocks: any[];
-    cover: {
-      data: {
-        attributes: {
-          url: string;
-        };
-      };
-    };
-    category: {
-      data: {
-        attributes: {
-          name: string;
-          slug: string;
-        };
-      };
-    };
-    authorsBio: {
-      data: {
-        attributes: {
-          name: string;
-          avatar: {
-            data: {
-              attributes: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
+  };
+  authorsBio: {
+    name: string;
+    avatar: {
+      url: string;
     };
   };
 }
@@ -58,23 +40,23 @@ export default function PostList({
       <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article) => {
           const imageUrl = getStrapiMedia(
-            article.attributes.cover.data?.attributes.url
+            article.cover?.url
           );
-          const category = article.attributes.category.data?.attributes;
-          const authorsBio = article.attributes.authorsBio.data?.attributes;
+          const category = article.category;
+          const authorsBio = article.authorsBio;
           const avatarUrl = getStrapiMedia(
-            authorsBio?.avatar.data.attributes.url
+            authorsBio?.avatar?.url
           );
 
           return (
             <Link
-              href={`/${lang}/blog/${category?.slug}/${article.attributes.slug}`}
+              href={category?.slug ? `/${lang}/blog/${category.slug}/${article.slug}` : `/${lang}/blog/${article.slug}`}
               key={article.id}
               className="group cursor-pointer bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               {imageUrl && (
                 <Image
-                  alt={`${article.attributes.title} cover image`}
+                  alt={`${article.title} cover image`}
                   width="240"
                   height="240"
                   className="object-cover w-full h-44 group-hover:scale-105 transition-transform duration-300"
@@ -93,12 +75,12 @@ export default function PostList({
                 )}
 
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                  {article.attributes.title}
+                  {article.title}
                 </h3>
 
                 <div className="flex justify-between items-center">
                   <span className="text-xs dark:text-gray-400">
-                    {formatDate(article.attributes.publishedAt)}
+                    {formatDate(article.publishedAt)}
                   </span>
                   {authorsBio && (
                     <span className="text-xs dark:text-gray-400">
@@ -106,7 +88,7 @@ export default function PostList({
                     </span>
                   )}
                 </div>
-                <p className="py-4">{article.attributes.description}</p>
+                <p className="py-4">{article.description}</p>
               </div>
             </Link>
           );

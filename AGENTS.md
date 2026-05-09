@@ -4,30 +4,40 @@
 This repository contains a Next.js frontend and Strapi backend for the "Not a Diet" (notadiet.life) health and wellness brand website.
 
 ### Architecture
-- **Monorepo** with two independent apps: `frontend/` (Next.js 14 App Router) + `backend/` (Strapi 4.25.6 CMS)
-- **Frontend**: Next.js 14.1.3, React 18.2, TypeScript 5.4.2, Tailwind CSS 3.4.1
-- **Backend**: Strapi 4.25.6, SQLite (better-sqlite3), 5 plugins (Cloud, i18n, SEO, Users-Permissions)
-- **i18n**: 3 locales (en, it, pt) with middleware-based locale detection + cookie persistence
+- **Monorepo** with Yarn 4.14.1 Berry workspaces: `frontend/` (Next.js 16) + `backend/` (Strapi 5.45.0 CMS)
+- **Frontend**: Next.js 16.2.4, React 19.2.5, TypeScript 5.5.0, Tailwind CSS 3.4.1
+- **Backend**: Strapi 5.45.0, SQLite (better-sqlite3), 3 plugins (Cloud, SEO, Users-Permissions)
+- **i18n**: 3 locales (en, it, pt) with proxy-based locale detection + cookie persistence
 - **Deployment**: Frontend on Vercel, Backend on Strapi Cloud (project: `nad-website-b96ec93f1f`)
 
 ### Key Data Flow
 1. Next.js Server Components fetch data from Strapi via `fetchAPI()` utility
-2. Strapi responses are deeply populated via `page-populate-middleware.js` on the backend
-3. Dynamic component resolver maps Strapi `__component` field names to React components
-4. ISR with 60-second revalidation is the default caching strategy
+2. Strapi v5 responses use flat format: `{data: {documentId, id, ...fields}}` (no `.data.attributes` nesting)
+3. Dynamic zone populate on `/api/pages` uses `on` filter with explicit deep populate (v5 `populate: "*"` only goes one level deep)
+4. Dynamic component resolver maps Strapi `__component` field names to React components
+5. ISR with 60-second revalidation is the default caching strategy
 
 ## Development Commands
 
-### Root Level Commands
+### Root Level Commands (Yarn Berry Workspaces)
 ```bash
-# Install all dependencies (root, frontend, backend)
-yarn setup
+# Install all dependencies
+yarn install
 
 # Start both frontend and backend concurrently
 yarn dev
 
-# Clear frontend cache and next build
+# Clear frontend cache
 yarn clear
+
+# Build frontend
+yarn build
+
+# Run frontend tests
+yarn test
+
+# Lint frontend code
+yarn lint
 
 # Seed data from tarball
 yarn seed
@@ -39,41 +49,30 @@ yarn export
 yarn repo:upstream
 ```
 
-### Frontend Specific (Next.js)
+### Frontend Specific (Next.js 16)
 ```bash
-# Development server
-yarn dev --prefix frontend/
-
-# Production build
-yarn build --prefix frontend/
-
-# Start production server
-yarn start --prefix frontend/
-
-# Lint code (uses Next.js ESLint integration)
-yarn lint --prefix frontend/
-
-# Run tests
-yarn test --prefix frontend/
-
-# Run tests in watch mode
-yarn test:watch --prefix frontend/
+yarn workspace frontend dev      # Development server
+yarn workspace frontend build    # Production build
+yarn workspace frontend start    # Start production server
+yarn workspace frontend lint     # Lint code (ESLint flat config)
+yarn workspace frontend test     # Run tests
+yarn workspace frontend test:watch # Watch mode
 ```
 
-### Backend Specific (Strapi)
+### Backend Specific (Strapi 5)
 ```bash
-# Development server
-yarn develop --prefix backend/
-
-# Production start
-yarn start --prefix backend/
-
-# Production build
-yarn build --prefix backend/
-
-# Strapi CLI
-yarn strapi --prefix backend/
+yarn workspace backend develop   # Development server
+yarn workspace backend start     # Production start
+yarn workspace backend build     # Production build
+yarn workspace backend strapi    # Strapi CLI
 ```
+
+### Package Manager
+- **Yarn 4.14.1 Berry** with `nodeLinker: node-modules` (workspaces mode)
+- Root `package.json` defines workspaces `["frontend", "backend"]`
+- Root-level `resolutions` field handles security version overrides
+- `packageManager: "yarn@4.14.1"` in root `package.json`
+- Workspace names: `frontend` and `backend` (use `yarn workspace <name> <command>`)
 
 ## Testing
 
@@ -93,24 +92,31 @@ yarn test:watch        # Watch mode for development
 - `next/image` → renders as plain `<img>` tag
 - `next/link` → renders as plain `<a>` tag
 - `next/navigation` → mocked usePathname, useRouter, useParams
-- `global.fetch` → mock per-test with `jest.fn()` returning Strapi-shaped responses
+- `global.fetch` → mock per-test with `jest.fn()` returning Strapi v5 flat-format responses
 - `ResizeObserver` → mocked no-op for component compatibility
 
 ### Writing New Tests
 1. Place test files in `frontend/src/__tests__/`
 2. Use `@/` path alias for imports (e.g., `@/app/[lang]/components/Navbar`)
-3. Mock `global.fetch` to return realistic Strapi response shapes:
+3. Mock `global.fetch` to return realistic Strapi v5 response shapes:
    ```typescript
-   { data: [...], meta: { pagination: { start, limit, total } } }
+   { data: { documentId: "...", id: 1, ...fields }, meta: {} }
    ```
-4. For server components, call the component function directly (no render):
+4. For server components with async params, use `Promise.resolve()`:
    ```typescript
-   const result = await MyServerComponent({ params: { lang: 'en' } })
-   expect(result).toBeTruthy()
+   const result = await MyServerComponent({ params: Promise.resolve({ lang: 'en' }) })
    ```
 5. For client components, use `render()` from `@testing-library/react`
 
 ## Project-Specific Patterns
+
+### Strapi v5 API Response Format
+Strapi v5 uses a flat response format (no `.data.attributes` nesting):
+- **v4**: `{ data: { id: 1, attributes: { title: "Hello" } } }`
+- **v5**: `{ data: { documentId: "abc", id: 1, title: "Hello" } }`
+- Relations are inline: `{ data: { id: 1, category: { id: 2, name: "Food" } } }`
+- The `fetchAPI()` utility in `fetch-api.tsx` includes a `normalizePopulate()` helper that converts dot-notation arrays to nested objects for v5 compatibility
+- **CRITICAL for dynamic zones**: Strapi v5 requires `on` filter with explicit deep populate for dynamic zones. `populate: "*"` only populates one level deep — nested components, media, and relations need explicit populate entries per section type.
 
 ### Component Resolver Pattern
 The `component-resolver.tsx` dynamically maps Strapi component names to React components:
@@ -118,37 +124,39 @@ The `component-resolver.tsx` dynamically maps Strapi component names to React co
 - Converts kebab-case to PascalCase: `feature-columns-group` → `FeatureColumnsGroup`
 - Uses React `lazy()` + `Suspense` for code splitting
 - **Important**: Component file names MUST match the PascalCase resolved name
+- Variable must be named `Module` (not `let module`) to avoid Next.js ESLint rule
 
 ### Centralized API Fetcher
 All Strapi API calls go through `fetchAPI()` in `fetch-api.tsx`:
 - Uses `qs` library for query string serialization
+- `normalizePopulate()` auto-converts dot-notation populate arrays to v5 nested object format
 - Default ISR revalidation: 60 seconds
-- Development mode includes API call benchmarking with timing logs
 - Requires `NEXT_PUBLIC_STRAPI_API_TOKEN` for authenticated requests
+- **v5 populate format must use nested objects**:
+  ```typescript
+  // WRONG (v4 dot-notation, no longer works):
+  populate: ["metadata.shareImage", "navbar.links"]
+  // CORRECT (v5 nested objects):
+  populate: { metadata: { populate: "*" }, navbar: { populate: { links: true } } }
+  // Also correct (auto-converted by normalizePopulate):
+  populate: ["metadata", "navbar.links"]  // converted to nested format
+  ```
 
-### i18n Middleware
-- `src/middleware.ts` handles locale detection and redirection
+### i18n Proxy (formerly Middleware)
+- `src/proxy.ts` handles locale detection and redirection (Next.js 16 renamed middleware.ts → proxy.ts)
+- Exported as `export default function proxy` (not named export)
 - Checks `NEXT_LOCALE` cookie first, falls back to `Accept-Language` header
 - Redirects `/about` → `/en/about` (or detected locale)
-- Matcher: `/((?!_next).*)` — runs on all non-`_next` routes
+- Matcher config: `/((?!_next).*)` — runs on all non-`_next` routes
+- Next.js 16 deprecates `middleware.ts`; use `proxy.ts` instead
 
 ### Strapi Page Populate Middleware
 Located at `backend/src/api/page/middlewares/page-populate-middleware.js`:
 - Intercepts `find` and `findOne` for `/api/pages`
-- Deep-populates all 14 possible `contentSections` component types
+- Uses Strapi v5 `on` filter for `contentSections` dynamic zone with explicit deep populate for each section type
+- `populate: "*"` only goes one level deep in Strapi v5 — nested components, media, and relations need explicit populate
 - Passes through `locale` for i18n
-- Has a `console.log` on line 95 (development artifact, safe to ignore)
-- **CRITICAL**: When adding or modifying nested components (repeatable or single components inside another component), you MUST update the populate config. `populate: true` only fetches top-level scalar fields — it does NOT recursively populate nested component arrays. Always use explicit nested object syntax for components with children:
-  ```js
-  hours: {
-    populate: {
-      title: true,
-      description: true,
-      locations: { populate: true },
-    },
-  },
-  ```
-  Failing to update this middleware results in the frontend receiving `null` or missing data for nested components.
+- **CRITICAL**: When adding new section types to the dynamic zone, you MUST add an entry in the `on` filter object, otherwise the section will get NO population
 
 ## Content Model Map
 
@@ -204,6 +212,8 @@ These are the `__component` values Strapi sends and the React components they re
 - Admin panel customized with dark theme and Italian locale
 - SQLite database (development only — Strapi Cloud uses managed DB)
 - Data exports stored as `export_*.tar.gz` in backend root
+- `@strapi/plugin-seo@2.0.9` (compatible with v5.x)
+- `@strapi/plugin-cloud@5.45.0` and `@strapi/plugin-users-permissions@5.45.0` must match `@strapi/strapi` version
 
 ### Environment Variables
 | Variable | Frontend | Backend | Purpose |
@@ -221,26 +231,31 @@ These are the `__component` values Strapi sends and the React components they re
 
 ## Known Issues & Tech Debt
 
-### Fixed (Week 1 Audit)
-- ~~Broken form handlers in Contact/FoodCalculator/FormSubmit~~ → Removed (FoodCalculator, LeadForm, FormSubmit deleted; booking calendar replaces forms)
-- ~~9 CSS typo classes~~ → All fixed
-- ~~Dead code (200+ lines)~~ → Removed
-- ~~XSS vulnerability in RichText~~ → Added rehype-sanitize
-- ~~Missing test infrastructure~~ → Jest + RTL set up with 16 passing tests
+### Fixed (Migration to v5 + Next.js 16)
+- ~~Strapi v4.25.6 → v5.45.0~~ — Migrated with codemod and manual API format changes
+- ~~Next.js 14.1.3 → Next.js 16.2.4~~ — Migrated with async params, proxy.ts, ESLint flat config
+- ~~React 18.2 → React 19.2.5~~ — Migrated with `@headlessui/react` v2.2.0
+- ~~Yarn 1.22.22 (Classic) → Yarn 4.14.1 (Berry)~~ — Workspaces with `nodeLinker: node-modules`
+- ~~`middleware.ts` → `proxy.ts`~~ — Renamed per Next.js 16 conventions, `export default function proxy`
+- ~~`@import` after `@tailwind` in globals.css~~ — Moved CSS imports before Tailwind directives
+- ~~`debug_mode: true` in GA4 config~~ — Changed to `false`
+- ~~`middleware.ts` deleted~~ — Replaced by `proxy.ts`
+- ~~`@next/third-parties` unused dependency~~ — Removed
+- ~~Dot-notation populate strings~~ — Converted all to v5 nested object format
+- ~~Field-specific populate in dynamic zones~~ — Changed to `populate: "*"` (v5 requirement)
+- ~~`page-populate-middleware.js`~~ — Updated to use `on` filter with explicit deep populate (v5 `populate: "*"` only goes one level deep)
+- ~~Empty string in Next.js `Image` src~~ — Guard with conditional render in Features.tsx
 
 ### Remaining Issues
 1. **Duplicate `getGlobal()` API calls** — `layout.tsx` calls it in both `generateMetadata` and `RootLayout`
-2. **Pervasive `any` types** — 20+ instances defeating TypeScript safety
+2. **Pervasive `any` types** — Reduced but still present in some components
 3. **Duplicate interface definitions** — `Article`, `Attribute`, `Data` defined in 3+ files
 4. **Fixed small image dimensions** — 70px/240px/400px used for all screen sizes
 5. **Native `<img>` in Hero/Navbar** — should use Next.js `<Image>`
-6. **Strapi v4.25.6 → v5.x** — major version behind
-7. **SQLite in production** — should migrate to PostgreSQL
-8. **No rate limiting** on public form endpoints
-9. **`window.alert` in server component** — `page.tsx:23` throws ReferenceError
-10. **Missing `rel="noopener noreferrer"`** — Banner.tsx (fixed), Features.tsx (fixed)
-11. **`debug_mode: true`** in GA4 config — should be false in production
-12. **Middleware runs on every request** — should exclude static/API routes
+6. **SQLite in production** — should migrate to PostgreSQL
+7. **No rate limiting** on public form endpoints
+8. **2 pre-existing ESLint errors** — empty object `{}` types in Category and Article interfaces
+9. **ESLint `ts-empty-object` rule** — Two instances of `{}` type in test files (pre-existing)
 
 ## Project-Specific Conventions
 
@@ -248,32 +263,39 @@ These are the `__component` values Strapi sends and the React components they re
 - Components: PascalCase (`Navbar.tsx`, `Footer.tsx`)
 - Utilities: camelCase (`api-helpers.ts`, `fetch-api.tsx`) — note: some existing files use kebab-case, new files should use camelCase
 - Views (page-level display): kebab-case (`blog-list.tsx`, `post.tsx`)
+- Proxy file: `proxy.ts` (not `middleware.ts` — Next.js 16 convention)
 
 ### API Call Patterns
 - Always use `fetchAPI()` from `utils/fetch-api.tsx`, never raw `fetch()`
 - Token retrieval pattern: `const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN`
 - Options object: `{ headers: { Authorization: 'Bearer ${token}' } }`
 - Path prefix: use leading slash (`/global`, `/articles`, `/pages`)
+- **v5 populate format**: Use nested objects, NOT dot-notation strings. The `normalizePopulate()` helper in `fetchAPI` auto-converts simple arrays.
 
 ### Component Props
 - CMS-driven components receive a `data` prop matching the Strapi section shape
 - Layout components (Navbar, Footer, Banner) receive destructured props from global data
 - Always define TypeScript interfaces for props
+- In v5, props access fields directly (no `.attributes` nesting): `data.title` not `data.attributes.title`
 
 ### Styling
 - Tailwind CSS with custom color palette (primary, secondary, tertiary, quaternary, crema, anti-flash_white)
 - Custom fonts: Inter (body), Bricolage Grotesque (headings, w700)
 - Rich text content has dedicated styles in `globals.css`
 - Avoid `@apply`; prefer utility classes directly in JSX
+- CSS `@import` statements MUST precede `@tailwind` directives (Turbopack requirement)
 
 ### Important Gotchas
-1. **Component resolver requires exact file name match** — `sections.feature-columns-group` needs `FeatureColumnsGroup.tsx`
-2. **Dynamic import path has static prefix** — Webpack requires `../components/` as static part
+1. **Component resolver variable naming** — Use `Module` not `module` (Next.js ESLint rule)
+2. **Dynamic import path has static prefix** — Turbopack/Webpack requires `../components/` as static part
 3. **Server components cannot use `window`/`document`** — use `"use client"` directive
 4. **`generateStaticParams` calls Strapi** — build will fail if backend is not running
 5. **ISR revalidation is 60s globally** — no per-page granularity yet
 6. **Blog listing is a client component** — uses useState/useEffect for pagination
-7. **Form submission tokens are exposed in client JS** — anyone can extract and abuse them
+7. **Strapi v5 `populate: "*"` only goes one level deep** — use `on` filter with explicit deep populate in middleware for nested components/media/relations
+8. **All page/layout params are async in Next.js 16** — must `await params` before accessing properties
+9. **Yarn Berry workspaces** — use `yarn workspace <name> <command>`, not `yarn --prefix`
+10. **Strapi Cloud deployment** — all `@strapi/*` packages MUST be the same version (currently 5.45.0)
 
 ## When in Doubt
 1. Follow existing patterns in the codebase

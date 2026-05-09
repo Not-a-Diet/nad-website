@@ -16,7 +16,7 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
     // Helper to sync consent with GA4
     function updateConsent(cookie: any, changedCategories?: any, changedServices?: any) {
       const analyticsEnabled = cookie.categories.includes('analytics');
-      //@ts-ignore
+      //@ts-expect-error gtag is a global injected by GA4 Script
       gtag('consent', 'update', {
         analytics_storage: analyticsEnabled ? 'granted' : 'denied',
       });
@@ -214,7 +214,7 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
         {`
           window.gtag('js', new Date());
           window.gtag('config', '${measurementId}', {
-            debug_mode: true
+            debug_mode: false
           });
         `}
       </Script>

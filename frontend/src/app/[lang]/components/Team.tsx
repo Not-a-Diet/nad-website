@@ -27,11 +27,7 @@ interface TeamMember {
   name: string;
   occupation: string;
   profilePhoto: {
-    data: {
-      attributes: {
-        url: string;
-      };
-    }
+    url: string;
   };
   description: string;
   skills: string;
@@ -39,7 +35,7 @@ interface TeamMember {
 
 function TeamMemberCard({ name, occupation, profilePhoto, description, skills }: TeamMember) {
   const skillsArr = parseDescriptionList(skills);
-  const profilePhotoUrl = getStrapiMedia(profilePhoto.data?.attributes.url);
+  const profilePhotoUrl = getStrapiMedia(profilePhoto?.url);
 
   return (
     <div className="bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg:max-w-md mx-4 my-4">

@@ -19,20 +19,7 @@ interface PhilosophyProps {
   };
 }
 
-/**
- * Maps a title string to a specific icon component.
- * This bridges the gap since the API doesn't provide the icon image.
- */
-const getIconForTitle = (title: string) => {
-  const normalized = title.toLowerCase();
-  
-  if (normalized.includes('educazione')) return "🎓";
-  if (normalized.includes('equilibrio')) return "⚖️";
-  if (normalized.includes('sostenibilità')) return "🌱";
-  
-  // Fallback icon
-  return "🌱";
-};
+const PHILOSOPHY_ICONS = ["🎓", "⚖️", "🌱"];
 
 // --- Sub-Components ---
 
@@ -52,11 +39,11 @@ const PhilosophyList = ({
       )}
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full max-w-5xl">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <div key={item.id} className="flex flex-col items-center">
             {/* Icon Circle */}
             <div className="w-16 h-16 text-2xl rounded-full bg-white flex items-center justify-center shadow-sm mb-6">
-               {getIconForTitle(item.title)}
+               {PHILOSOPHY_ICONS[index % PHILOSOPHY_ICONS.length]}
             </div>
             
             {/* Title */}

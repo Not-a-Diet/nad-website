@@ -2,106 +2,58 @@
 
 /**
  * `page-populate-middleware` middleware
+ *
+ * Strapi v5 populate: "*" only goes one level deep.
+ * Use `on` filter for dynamic zones with explicit deep populate
+ * to include nested components, media, and relations.
  */
 
 const populate = {
   contentSections: {
-    populate: {
-      picture: {
-        fields: ["url", "alternativeText", "caption", "width", "height"],
+    on: {
+      "sections.hero": {
+        populate: { picture: true, buttons: true },
       },
-      buttons: {
-        populate: true,
+      "sections.features": {
+        populate: { feature: { populate: { media: true } } },
       },
-      feature: {
+      "sections.team": {
         populate: {
-          fields: ["title", "description", "showLink", "newTab", "url", "text"],
-          media: {
-            fields: ["url", "alternativeText", "caption", "width", "height"],
-          },
+          member: { populate: { profilePhoto: true } },
+          filosofy: { populate: { items: true } },
         },
       },
-      member: {
+      "sections.testimonials-group": {
+        populate: { testimonials: { populate: { picture: true } } },
+      },
+      "sections.pricing": {
+        populate: { plans: { populate: { product_features: true } } },
+      },
+      "sections.contact": {
         populate: {
-          fields: ["name", "description", "occupation", "skills"],
-          profilePhoto: {
-            fields: ["url", "alternativeText", "caption", "width", "height"],
-          },
+          contactLinks: true,
+          hours: { populate: { locations: true } },
+          bookingCalendar: { populate: { persons: { populate: { locations: true } } } },
         },
       },
-      hours: {
-        populate: {
-          title: true,
-          description: true,
-          locations: {
-            populate: true,
-          },
-        },
+      "sections.featured-posts": {
+        populate: { posts: { populate: "*" } },
       },
-      contactLinks: {
-        populate: true,
+      "sections.rich-text": { populate: "*" },
+      "sections.heading": { populate: "*" },
+      "sections.bottom-actions": { populate: "*" },
+      "sections.large-video": { populate: "*" },
+      "sections.feature-columns-group": {
+        populate: { features: { populate: { icon: true } } },
       },
-      bookingCalendar: {
-        populate: {
-          bookingTitle: true,
-          persons: {
-            populate: {
-              locations: {
-                populate: true,
-              },
-            },
-          },
-          personLabel: true,
-          locationLabel: true,
-          selectPersonPlaceholder: true,
-          selectLocationPlaceholder: true,
-          noSelectionMessage: true,
-          viewCalendarButtonText: true,
-          backButtonText: true,
-        },
-      },
-      filosofy: {
-        populate: {
-          fields: ["title", "body", "type", "sign", "isList"],
-          items: {
-            populate: true,
-          },
-        }
-      },
-      testimonials: {
-        populate: {
-          picture: {
-            fields: ["url", "alternativeText", "caption", "width", "height"],
-          },
-        },
-      },
-      posts: {
-        populate: {
-          category: {
-            fields: ["slug", "name"]
-          },
-          authorsBio: {
-            fields: ["name"],
-            populate: {
-              avatar: {
-                fields: ["url"]
-              }
-            }
-          },
-          cover: {
-            fields: ["url", "alternativeText", "caption", "width", "height"],
-          },
-        },
-      },
-      plans: {
-        populate: ["product_features"],
+      "sections.feature-rows-group": {
+        populate: { features: { populate: { media: true, link: true } } },
       },
     },
   },
   seo: {
-    fields: ["metaTitle", "metaDescription"],
     populate: { shareImage: true },
-  }
+  },
 };
 
 module.exports = (config, { strapi }) => {

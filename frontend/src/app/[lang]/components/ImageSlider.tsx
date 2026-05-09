@@ -5,28 +5,24 @@ import Image from "next/image";
 
 interface Image {
   id: number;
-  attributes: {
-    alternativeText: string | null;
-    caption: string | null;
-    url: string;
-  };
+  alternativeText: string | null;
+  caption: string | null;
+  url: string;
 }
 
 interface SlidShowProps {
-  files: {
-    data: Image[];
-  };
+  files: Image[];
 }
 
 export default function Slideshow({ data }: { data: SlidShowProps }) {
   return (
     <div className="slide-container">
       <Fade>
-        {data.files.data.map((fadeImage: Image) => {
-          const imageUrl = getStrapiMedia(fadeImage.attributes.url);
+        {data.files.map((fadeImage: Image) => {
+          const imageUrl = getStrapiMedia(fadeImage.url);
           return (
             <div key={fadeImage.id}>
-              {imageUrl && <Image className="w-full h-96 object-cover rounded-lg" height={400} width={600} alt={fadeImage.attributes.alternativeText ?? fadeImage.attributes.caption ?? "image"} src={imageUrl} />}
+              {imageUrl && <Image className="w-full h-96 object-cover rounded-lg" height={400} width={600} alt={fadeImage.alternativeText ?? fadeImage.caption ?? "image"} src={imageUrl} />}
             </div>
           );
         })}

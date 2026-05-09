@@ -14,11 +14,9 @@ interface FooterLink {
 }
 
 interface CategoryLink {
-  id: string;
-  attributes: {
-    name: string;
-    slug: string;
-  };
+  id: number;
+  name: string;
+  slug: string;
 }
 
 function FooterLink({ url, text, className }: FooterLink) {
@@ -36,16 +34,16 @@ function FooterLink({ url, text, className }: FooterLink) {
   );
 }
 
-function CategoryLink({ attributes }: CategoryLink) {
+function CategoryLink({ name, slug }: CategoryLink) {
   const path = usePathname();
   const lang = path.split('/')[1] || 'en';
   return (
     <li>
       <Link
-        href={`/${lang}/blog/${attributes.slug}`}
+        href={`/${lang}/blog/${slug}`}
         className="hover:text-secondary"
       >
-        {attributes.name}
+        {name}
       </Link>
     </li>
   );

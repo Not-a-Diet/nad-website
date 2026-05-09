@@ -10,14 +10,10 @@ interface FeaturesProps {
   };
 }
 interface Picture {
-  data: {
-    id: string;
-    attributes: {
-      url: string;
-      name: string;
-      alternativeText: string;
-    };
-  };
+  id: string;
+  url: string;
+  name: string;
+  alternativeText: string;
 }
 
 interface Feature {
@@ -66,15 +62,17 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
 
   return (
     <div className={`flex flex-col ${tw_col.bg} shadow-m items-center p-4 border-2 ${tw_col.border} rounded-3xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 max-w-md`}>
+      {getStrapiMedia(media?.url) && (
       <Image
-        src={getStrapiMedia(media?.data?.attributes?.url) || ""}
+        src={getStrapiMedia(media?.url)!}
         alt={
-          media?.data?.attributes?.alternativeText || "none provided"
+          media?.alternativeText || "none provided"
         }
         width={150}
         height={150}
         className="rounded-xl w-[85px] h-[85px] py-4"
       />
+      )}
 
       <h3 className="my-3 text-3xl font-sans font-semibold text-center">{title}</h3>
         <div className="space-y-1 my-6 flex flex-col justify-between">
