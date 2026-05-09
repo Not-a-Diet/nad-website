@@ -20,30 +20,26 @@ async function getGlobal(lang: string): Promise<any> {
   const options = { headers: { Authorization: `Bearer ${token}` } };
 
   const urlParamsObject = {
-    populate: [
-      "metadata.shareImage",
-      "favicon",
-      "notificationBanner.link",
-      "navbar.links",
-      "navbar.navbarLogo.logoImg",
-      "footer.footerLogo.logoImg",
-      "footer.menuLinks",
-      "footer.legalLinks",
-      "footer.socialLinks",
-      "footer.categories",
-    ],
+    populate: {
+      metadata: { populate: "*" },
+      favicon: true,
+      notificationBanner: { populate: { link: true } },
+      navbar: { populate: { links: true, navbarLogo: { populate: { logoImg: true } } } },
+      footer: { populate: { footerLogo: { populate: { logoImg: true } }, menuLinks: true, legalLinks: true, socialLinks: true, categories: true } },
+    },
     locale: lang,
   };
   return await fetchAPI(path, urlParamsObject, options);
 }
 
-export async function generateMetadata({ params }: { params: { lang: string } }): Promise<Metadata> {
-  const meta = await getGlobal(params.lang);
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const meta = await getGlobal(lang);
 
   if (!meta.data) return FALLBACK_SEO;
 
-  const { metadata, favicon } = meta.data.attributes;
-  const { url } = favicon.data.attributes;
+  const { metadata, favicon } = meta.data;
+  const { url } = favicon;
 
   return {
     title: metadata.metaTitle,
@@ -65,25 +61,26 @@ export default async function RootLayout({
   params,
 }: {
   readonly children: React.ReactNode;
-  readonly params: { lang: string };
+  readonly params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
 
-  const global = await getGlobal(params.lang);
+  const global = await getGlobal(lang);
   if (!global.data) return (<> <ErrorComponent /> </>);
 
-  const { notificationBanner, navbar, footer } = global.data.attributes;
+  const { notificationBanner, navbar, footer } = global.data;
 
   const navbarLogoUrl = getStrapiMedia(
-    navbar.navbarLogo.logoImg.data?.attributes.url
+    navbar.navbarLogo.logoImg?.url
   );
 
   const footerLogoUrl = getStrapiMedia(
-    footer.footerLogo.logoImg.data?.attributes.url
+    footer.footerLogo.logoImg?.url
   );
 
 
   return (
-    <html lang={params.lang} className={`${inter.variable} ${inter.className}`}>
+    <html lang={lang} className={`${inter.variable} ${inter.className}`}>
       <body>
         <Navbar
           links={navbar.links}
@@ -101,7 +98,7 @@ export default async function RootLayout({
           logoText={footer.footerLogo.logoText}
           description={footer.description}
           menuLinks={footer.menuLinks}
-          categoryLinks={footer.categories.data}
+          categoryLinks={footer.categories}
           legalLinks={footer.legalLinks}
           socialLinks={footer.socialLinks}
         />

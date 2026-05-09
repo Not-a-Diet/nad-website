@@ -2,21 +2,15 @@ import Link from "next/link";
 
 interface Category {
   id: number;
-  attributes: {
-    name: string;
-    slug: string;
-    articles: {
-      data: Array<{}>;
-    };
-  };
+  name: string;
+  slug: string;
+  articles: Array<{}>;
 }
 
 interface Article {
   id: number;
-  attributes: {
-    title: string;
-    slug: string;
-  };
+  title: string;
+  slug: string;
 }
 
 function selectedFilter(current: string, selected: string) {
@@ -46,17 +40,17 @@ export default function ArticleSelect({
       <div>
         <div className="text-secondary flex flex-wrap items-center justify-center py-6 space-x-2 border-black">
           {categories.map((category: Category) => {
-            if (category.attributes.articles.data.length === 0) return null;
+            if (category.articles.length === 0) return null;
             return (
               <Link
                 key={category.id}
-                href={`/${params.lang}/blog/${category.attributes.slug}`}
+                href={`/${params.lang}/blog/${category.slug}`}
                 className={selectedFilter(
-                  category.attributes.slug,
+                  category.slug,
                   params.category
                 )}
               >
-                #{category.attributes.name}
+                #{category.name}
               </Link>
             );
           })}
@@ -72,13 +66,13 @@ export default function ArticleSelect({
               return (
                 <li key={article.id}>
                   <Link
-                    href={`/${params.lang}/blog/${params.category}/${article.attributes.slug}`}
+                    href={`/${params.lang}/blog/${params.category}/${article.slug}`}
                     className={`${
-                      params.slug === article.attributes.slug &&
+                      params.slug === article.slug &&
                       "text-secondary"
                     }  hover:underline transition-colors duration-200`}
                   >
-                    {article.attributes.title}
+                    {article.title}
                   </Link>
                 </li>
               );

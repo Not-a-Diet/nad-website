@@ -12,15 +12,11 @@ interface Button {
   newTab: boolean;
 }
 
-interface Picture {
-  data: {
-    id: string;
-    attributes: {
-      url: string;
-      name: string;
-      alternativeText: string;
-    };
-  }[];
+interface PictureItem {
+  id: string;
+  url: string;
+  name: string;
+  alternativeText: string;
 }
 
 interface HeroProps {
@@ -28,17 +24,17 @@ interface HeroProps {
     id: string;
     title: string;
     description: string;
-    picture: Picture;
+    picture: PictureItem[];
     buttons: Button[];
   };
 }
 
 export default function Hero({ data }: HeroProps) {
-  const imgUrls = data.picture.data?.map(attr => {
+  const imgUrls = data.picture?.map(attr => {
     return {
       id: attr.id,
-      url: getStrapiMedia(attr.attributes.url),
-      alt: attr.attributes.alternativeText
+      url: getStrapiMedia(attr.url),
+      alt: attr.alternativeText
     }
   });
 

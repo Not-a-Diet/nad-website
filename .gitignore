@@ -2,8 +2,16 @@ node_modules
 readme-images
 .vscode
 .DS_Store
-**/.yarn
 frontend/next.config.js
 .env.example
 
 *.tar.gz
+
+# Yarn Berry
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions.pnp.cjs
+.pnp.*

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { use, useState, useEffect } from "react";
 import { fetchAPI } from "../utils/fetch-api";
 
 import Loader from "../components/Loader";
@@ -19,8 +19,8 @@ interface BlogHeaders {
   text: string;
 }
 
-export default function Profile({ params }: { params: { lang: string } }) {
-  const { lang } = params;
+export default function Profile({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = use(params);
   const [meta, setMeta] = useState<Meta | undefined>();
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setLoading] = useState(true);
@@ -53,7 +53,7 @@ export default function Profile({ params }: { params: { lang: string } }) {
 
         setData(articlesResponse.data);
         setMeta(articlesResponse.meta);
-        setBlogHeaders(headersResponse.data[0]?.attributes);
+        setBlogHeaders(headersResponse.data[0]);
       } catch (error) {
         console.error(error);
       } finally {

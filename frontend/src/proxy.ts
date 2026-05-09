@@ -17,18 +17,18 @@ function getLocale(request: NextRequest): string | undefined {
     request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
     // Use negotiator and intl-localematcher to get best locale
-    let languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-    // @ts-ignore locales are readonly
+    const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
+    // @ts-expect-error locales are readonly
     const locales: string[] = i18n.locales;
     try {
         return matchLocale(languages, locales, i18n.defaultLocale);
-      } catch (e) {
+      } catch {
         // Invalid accept-language header
         return i18n.defaultLocale;
       }
 }
 
-export function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
 
     // Check if there is any supported locale in the pathname

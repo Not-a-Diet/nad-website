@@ -39,21 +39,15 @@ async function fetchSideMenuData(filter: string, lang: string) {
 
 interface Category {
   id: number;
-  attributes: {
-    name: string;
-    slug: string;
-    articles: {
-      data: Array<{}>;
-    };
-  };
+  name: string;
+  slug: string;
+  articles: Array<{}>;
 }
 
 interface Article {
   id: number;
-  attributes: {
-    title: string;
-    slug: string;
-  };
+  title: string;
+  slug: string;
 }
 
 interface Data {
@@ -66,13 +60,13 @@ export default async function LayoutRoute({
   children,
 }: {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     slug: string;
     category: string;
     lang: string;
-  };
+  }>;
 }) {
-  const { category, lang } = params;
+  const { category, lang, slug } = await params;
   const sideMenuData = await fetchSideMenuData(category, lang);
   if (!sideMenuData) {
     return <section className="container p-4 mx-auto"><p>Failed to load sidebar data.</p>{children}</section>;
@@ -87,7 +81,7 @@ export default async function LayoutRoute({
           <ArticleSelect
             categories={categories}
             articles={articles}
-            params={params}
+            params={{ slug, category, lang }}
           />
         </aside>
       </div>
@@ -106,17 +100,17 @@ export async function generateStaticParams() {
       path,
       {
         locale,
-        populate: ["category"],
+        populate: { category: { fields: ['slug', 'name'] } },
       },
       options
     );
 
     for (const article of articleResponse.data) {
-      params.push({
-        slug: article.attributes.slug,
-        category: article.attributes.category?.data?.attributes?.slug ?? article.attributes.slug,
-        lang: locale,
-      });
+params.push({
+                slug: article.slug,
+                category: article.category?.slug ?? article.slug,
+                lang: locale,
+            });
     }
   }
 

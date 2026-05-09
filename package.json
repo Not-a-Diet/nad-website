@@ -1,19 +1,46 @@
 {
+  "name": "nad-website",
+  "private": true,
+  "packageManager": "yarn@4.14.1",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "frontend": "yarn dev --prefix ../frontend/",
-    "backend": "yarn dev --prefix ../backend/",
-    "clear": "cd frontend && rm -rf .next && rm -rf cache",
-    "clean:setup": "rm -rf node_modules && rm -rf frontend/node_modules && rm -rf backend/node_modules && yarn setup",
-    "setup:frontend": "cd frontend && yarn",
-    "setup:backend": "cd backend && yarn",
-    "setup": "yarn install && yarn setup:frontend && yarn setup:backend",
-    "dev": "yarn clear && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\"",
-    "seed": "cd backend && yarn strapi import -f ../nad-database.tar.gz",
-    "export": "cd backend && yarn strapi export --no-encrypt -f ../nad-database.tar.gz",
+    "dev": "yarn clear && concurrently \"yarn workspace frontend dev\" \"yarn workspace backend develop\"",
+    "frontend": "yarn workspace frontend dev",
+    "backend": "yarn workspace backend develop",
+    "clear": "rm -rf frontend/.next frontend/cache",
+    "clean:setup": "rm -rf node_modules frontend/node_modules backend/node_modules && yarn install",
+    "setup": "yarn install",
+    "build": "yarn workspace frontend build",
+    "lint": "yarn workspace frontend lint",
+    "test": "yarn workspace frontend test",
+    "test:watch": "yarn workspace frontend test:watch",
+    "seed": "yarn workspace backend strapi import -f ../nad-database.tar.gz",
+    "export": "yarn workspace backend strapi export --no-encrypt -f ../nad-database.tar.gz",
     "repo:upstream": "git fetch upstream && git merge upstream/main"
   },
   "dependencies": {
     "concurrently": "^8.2.2",
     "npm-check-updates": "^16.14.15"
+  },
+  "resolutions": {
+    "@casl/ability": ">=6.7.5",
+    "axios": ">=1.15.0",
+    "form-data": ">=4.0.4",
+    "handlebars": ">=4.7.9",
+    "elliptic": ">=6.6.1",
+    "braces": ">=3.0.3",
+    "cross-spawn": ">=7.0.5",
+    "lodash": ">=4.17.21",
+    "lodash-es": ">=4.17.21",
+    "minimatch": ">=9.0.5",
+    "picomatch": ">=4.0.2",
+    "tar": ">=6.2.1",
+    "tar-fs": ">=3.0.6",
+    "jws": ">=4.0.0",
+    "rollup": ">=3.29.5",
+    "serialize-javascript": ">=6.0.2"
   }
 }

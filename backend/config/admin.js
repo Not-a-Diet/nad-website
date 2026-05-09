@@ -9,5 +9,9 @@ module.exports = ({ env }) => ({
     token: {
       salt: env('TRANSFER_TOKEN_SALT'),
     }
-  }
+  },
+  sessions: {
+    maxRefreshTokenLifespan: '7d',
+    maxSessionLifespan: '30d',
+  },
 });

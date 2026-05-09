@@ -1,5 +1,5 @@
 {
-  "name": "corporate-blog-template",
+  "name": "backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -13,34 +13,15 @@
     "baseline-browser-mapping": "^2.10.17"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "4.26.1",
-    "@strapi/plugin-i18n": "4.26.1",
-    "@strapi/plugin-seo": "^1.9.8",
-    "@strapi/plugin-users-permissions": "4.26.1",
-    "@strapi/strapi": "4.26.1",
-    "better-sqlite3": "8.6.0",
+    "@strapi/plugin-cloud": "5.42.1",
+    "@strapi/plugin-seo": "^2.0.9",
+    "@strapi/plugin-users-permissions": "5.42.1",
+    "@strapi/strapi": "5.42.1",
+    "better-sqlite3": "12.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "5.3.4",
-    "styled-components": "5.3.3"
-  },
-  "resolutions": {
-    "@casl/ability": ">=6.7.5",
-    "axios": ">=1.15.0",
-    "form-data": ">=4.0.4",
-    "handlebars": ">=4.7.9",
-    "elliptic": ">=6.6.1",
-    "braces": ">=3.0.3",
-    "cross-spawn": ">=7.0.5",
-    "lodash": ">=4.17.21",
-    "lodash-es": ">=4.17.21",
-    "minimatch": ">=9.0.5",
-    "picomatch": ">=4.0.2",
-    "tar": ">=6.2.1",
-    "tar-fs": ">=3.0.6",
-    "jws": ">=4.0.0",
-    "rollup": ">=3.29.5",
-    "serialize-javascript": ">=6.0.2"
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "author": {
     "name": "A Strapi developer"
@@ -49,7 +30,7 @@
     "uuid": "0f95dc7c-202b-4ab2-a874-3799d23b1640"
   },
   "engines": {
-    "node": ">=18.0.0 <=20.x.x",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

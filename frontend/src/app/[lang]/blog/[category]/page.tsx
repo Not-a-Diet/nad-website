@@ -32,14 +32,14 @@ async function fetchPostsByCategory(filter: string, lang: string) {
     }
 }
 
-export default async function CategoryRoute({ params }: { params: { category: string; lang: string } }) {
-    const { category, lang } = params;
+export default async function CategoryRoute({ params }: { params: Promise<{ category: string; lang: string }> }) {
+    const { category, lang } = await params;
     const responseData = await fetchPostsByCategory(category, lang);
     const data = responseData?.data ?? [];
 
     if (data.length === 0) return <div>No posts in this category.</div>;
 
-    const { name, description } = data[0]?.attributes.category.data.attributes;
+    const { name, description } = data[0]?.category;
 
     return (
         <div>

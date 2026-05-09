@@ -13,17 +13,7 @@ async function getPostBySlug(slug: string, lang: string) {
             cover: { fields: ['url'] },
             authorsBio: { populate: '*' },
             category: { fields: ['name'] },
-            blocks: { 
-                populate: {
-                    '__component': '*', 
-                    'files': '*',
-                    'file': '*',
-                    'url': '*',
-                    'body': '*',
-                    'title': '*',
-                    'author': '*',
-                }
-            },
+            blocks: { populate: '*' },
         },
     };
     const options = { headers: { Authorization: `Bearer ${token}` } };
@@ -44,9 +34,10 @@ async function getMetaData(slug: string, lang: string) {
     return response.data;
 }
 
-export async function generateMetadata({ params }: { params: { slug: string; lang: string } }): Promise<Metadata> {
-    const meta = await getMetaData(params.slug, params.lang);
-    const metadata = meta[0]?.attributes.seo;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; lang: string }> }): Promise<Metadata> {
+    const { slug, lang } = await params;
+    const meta = await getMetaData(slug, lang);
+    const metadata = meta[0]?.seo;
 
     return {
         title: metadata?.metaTitle,
@@ -54,8 +45,8 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
     };
 }
 
-export default async function PostRoute({ params }: { params: { slug: string, lang: string } }) {
-    const { slug, lang } = params;
+export default async function PostRoute({ params }: { params: Promise<{ slug: string; lang: string }> }) {
+    const { slug, lang } = await params;
     const data = await getPostBySlug(slug, lang);
     if (data.data.length === 0) return <h2>no post found</h2>;
     return <Post data={data.data[0]} lang={lang} />;
@@ -72,15 +63,15 @@ export async function generateStaticParams() {
             path,
             {
                 locale,
-                populate: ['category'],
+                populate: { category: { fields: ['slug', 'name'] } },
             },
             options
         );
 
         for (const article of articleResponse.data) {
             params.push({
-                slug: article.attributes.slug,
-                category: article.attributes.category?.data?.attributes?.slug ?? article.attributes.slug,
+                slug: article.slug,
+                category: article.category?.slug ?? article.slug,
                 lang: locale,
             });
         }

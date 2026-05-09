@@ -1,6 +1,7 @@
 import PostList from '../views/blog-list';
 
-interface ArticleAttributes {
+interface Article {
+  id: number;
   title: string;
   description: string;
   slug: string;
@@ -9,49 +10,25 @@ interface ArticleAttributes {
   publishedAt: string;
   blocks: any[];
   cover: {
-    data: {
-      attributes: {
-        url: string;
-      };
-    };
+    url: string;
   };
   category: {
-    data: {
-      attributes: {
-        name: string;
-        slug: string;
-      };
-    };
+    name: string;
+    slug: string;
   };
   authorsBio: {
-    data: {
-      attributes: {
-        name: string;
-        avatar: {
-          data: {
-            attributes: {
-              url: string;
-            };
-          };
-        };
-      };
+    name: string;
+    avatar: {
+      url: string;
     };
   };
-};
-
-interface ArticleEntity {
-  id: number;
-  attributes: ArticleAttributes;
 }
 
-// Main Component Interface matching the provided API structure
 interface FeaturedArticlesProps {
   data: {
     title: string;
     description: string;
-    posts: {
-      data: ArticleEntity[];
-    };
+    posts: Article[];
   };
 }
 
@@ -76,7 +53,7 @@ export default function FeaturedArticles({ data, lang = 'en' }: FeaturedArticles
 
         {/* Posts Grid */}
         <div className='flex flex-col'>
-          <PostList data={data.posts.data} lang={lang} />
+          <PostList data={data.posts} lang={lang} />
         </div>
 
       </div>

@@ -4,41 +4,27 @@ import componentResolver from '../utils/component-resolver';
 
 interface Article {
   id: number;
-  attributes: {
-    title: string;
-    description: string;
-    slug: string;
-    cover: {
-      data: {
-        attributes: {
-          url: string;
-        };
-      };
-    };
-    authorsBio: {
-      data: {
-        attributes: {
-          name: string;
-          avatar: {
-            data: {
-              attributes: {
-                url: string;
-              };
-            };
-          };
-        };
-      };
-    };
-    blocks: any[];
-    publishedAt: string;
+  title: string;
+  description: string;
+  slug: string;
+  cover: {
+    url: string;
   };
+  authorsBio: {
+    name: string;
+    avatar: {
+      url: string;
+    };
+  };
+  blocks: any[];
+  publishedAt: string;
 }
 
 export default function Post({ data, lang = 'en' }: { data: Article; lang?: string }) {
-  const { title, description, publishedAt, cover, authorsBio } = data.attributes;
-  const author = authorsBio.data?.attributes;
-  const imageUrl = getStrapiMedia(cover.data?.attributes.url);
-  const authorImgUrl = getStrapiMedia(authorsBio.data?.attributes?.avatar?.data?.attributes?.url ?? '');
+  const { title, description, publishedAt, cover, authorsBio } = data;
+  const author = authorsBio;
+  const imageUrl = getStrapiMedia(cover?.url);
+  const authorImgUrl = getStrapiMedia(authorsBio?.avatar?.url ?? '');
   return (
     <article className="space-y-8 bg-anti-flash_white text-night">
       {imageUrl && (
@@ -71,7 +57,7 @@ alt={author ? `${author.name}` : "author"}
       </div>
       <div className="text-black bg-anti-flash_white">
         <p>{description}</p>
-        {data.attributes.blocks.map((section: any, index: number) => componentResolver(section, index, lang))}
+        {data.blocks.map((section: any, index: number) => componentResolver(section, index, lang))}
       </div>
     </article>
   );
