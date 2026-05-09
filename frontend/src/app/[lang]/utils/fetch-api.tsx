@@ -22,7 +22,7 @@ function normalizePopulate(populate: unknown): unknown {
       } else if (typeof item === "string") {
         result[item] = true;
       } else {
-        return populate;
+        throw new TypeError(`populate array entries must be strings, got: ${typeof item} ${item}`);
       }
     }
     return result;
@@ -67,6 +67,9 @@ export async function fetchAPI(
     return data;
 
   } catch (error) {
+    if (error instanceof Error && error.message.startsWith('Strapi API error')) {
+      throw error;
+    }
     console.error(error);
     throw new Error(
       `Please check if your server is running and you set all the required tokens.`

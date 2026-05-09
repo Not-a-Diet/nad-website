@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getStrapiMedia } from "../utils/api-helpers";
 
 interface Testimonial {
+  id: string;
   text: string;
   authorName: string;
   picture: {
@@ -74,7 +75,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-8 lg:gap-20 md:px-10 md:pb-10 lg:grid-cols-2">
         {data.testimonials.map((testimonial: Testimonial, index: number) => (
-          <Testimonial key={index} {...testimonial} />
+          <Testimonial key={testimonial.id ?? index} {...testimonial} />
         ))}
       </div>
     </section>

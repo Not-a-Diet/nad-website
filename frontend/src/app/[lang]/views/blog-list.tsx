@@ -50,7 +50,7 @@ export default function PostList({
 
           return (
             <Link
-              href={`/${lang}/blog/${category?.slug}/${article.slug}`}
+              href={category?.slug ? `/${lang}/blog/${category.slug}/${article.slug}` : `/${lang}/blog/${article.slug}`}
               key={article.id}
               className="group cursor-pointer bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >

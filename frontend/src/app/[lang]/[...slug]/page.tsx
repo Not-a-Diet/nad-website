@@ -32,5 +32,6 @@ export default async function PageRoute({params}: Props) {
     const page = await getPageBySlug(slug.join('/'), lang);
     if (!page.data || page.data.length === 0) return notFound();
     const contentSections = page.data[0].contentSections;
+    if (!Array.isArray(contentSections)) return notFound();
     return contentSections.map((section: any, index: number) => componentResolver(section, index, lang));
 }

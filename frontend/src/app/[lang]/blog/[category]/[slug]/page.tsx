@@ -71,7 +71,7 @@ export async function generateStaticParams() {
         for (const article of articleResponse.data) {
             params.push({
                 slug: article.slug,
-                category: article.category?.slug ?? article.slug,
+                category: article.category?.slug ?? 'uncategorized',
                 lang: locale,
             });
         }

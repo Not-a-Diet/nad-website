@@ -14,7 +14,7 @@ interface FooterLink {
 }
 
 interface CategoryLink {
-  id: string;
+  id: number;
   name: string;
   slug: string;
 }

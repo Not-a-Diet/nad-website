@@ -3,10 +3,11 @@ import Image from "next/image";
 
 interface MediaProps {
   file: {
-    id: string;
+    id: number;
     url: string;
     name: string;
-    alternativeText: string;
+    alternativeText: string | null;
+    documentId?: string | number;
   };
 }
 
@@ -16,7 +17,7 @@ export default function Media({ data }: { data: MediaProps }) {
     <div className="flex items-center justify-center mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
       <Image
         src={imgUrl || ""}
-        alt={data.file.alternativeText || "none provided"}
+        alt={data.file.alternativeText ?? "none provided"}
         className="object-cover w-full h-full rounded-lg overflow-hidden"
         width={400}
         height={400}

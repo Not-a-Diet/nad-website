@@ -43,12 +43,16 @@ const populate = {
       "sections.heading": { populate: "*" },
       "sections.bottom-actions": { populate: "*" },
       "sections.large-video": { populate: "*" },
-      "sections.feature-columns-group": { populate: "*" },
-      "sections.feature-rows-group": { populate: "*" },
+      "sections.feature-columns-group": {
+        populate: { features: { populate: { icon: true } } },
+      },
+      "sections.feature-rows-group": {
+        populate: { features: { populate: { media: true, link: true } } },
+      },
     },
   },
   seo: {
-    populate: "*",
+    populate: { shareImage: true },
   },
 };
 

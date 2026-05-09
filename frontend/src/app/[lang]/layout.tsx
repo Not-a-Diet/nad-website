@@ -38,15 +38,17 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   if (!meta.data) return FALLBACK_SEO;
 
-  const { metadata, favicon } = meta.data;
-  const { url } = favicon;
+  const metadata = meta.data.metadata;
+  const faviconUrl = meta.data.favicon?.url;
 
   return {
-    title: metadata.metaTitle,
-    description: metadata.metaDescription,
-    icons: {
-      icon: [new URL(url, getStrapiURL())],
-    },
+    title: metadata?.metaTitle ?? FALLBACK_SEO.title,
+    description: metadata?.metaDescription ?? FALLBACK_SEO.description,
+    ...(faviconUrl ? {
+      icons: {
+        icon: [new URL(faviconUrl, getStrapiURL())],
+      },
+    } : {}),
   };
 }
 
@@ -71,11 +73,11 @@ export default async function RootLayout({
   const { notificationBanner, navbar, footer } = global.data;
 
   const navbarLogoUrl = getStrapiMedia(
-    navbar.navbarLogo.logoImg?.url
+    navbar?.navbarLogo?.logoImg?.url ?? ''
   );
 
   const footerLogoUrl = getStrapiMedia(
-    footer.footerLogo.logoImg?.url
+    footer?.footerLogo?.logoImg?.url ?? ''
   );
 
 

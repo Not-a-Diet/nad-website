@@ -22,7 +22,7 @@ const nextConfig = {
     minimumCacheTTL: 60,
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     qualities: [50, 75, 100],
-    dangerouslyAllowLocalIP: true,
+    dangerouslyAllowLocalIP: process.env.NODE_ENV !== 'production',
   },
 }
 

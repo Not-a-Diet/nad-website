@@ -12,7 +12,7 @@ const eslintConfig = tseslint.config(
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs["core-web-vitals"].rules,
       "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-explicit-any": "off", // TODO: re-enable after Strapi v5 migration stabilizes
     },
   },
   {

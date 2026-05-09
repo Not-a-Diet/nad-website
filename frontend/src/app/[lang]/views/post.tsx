@@ -43,7 +43,7 @@ export default function Post({ data, lang = 'en' }: { data: Article; lang?: stri
             {authorImgUrl && (
               <Image
                 src={authorImgUrl}
-alt={author ? `${author.name}` : "author"}
+                alt={author ? `${author.name}` : "author"}
                 width={400}
                 height={400}
                 className="w-14 h-14 border rounded-full dark:bg-gray-500 dark:border-gray-700"
@@ -57,7 +57,7 @@ alt={author ? `${author.name}` : "author"}
       </div>
       <div className="text-black bg-anti-flash_white">
         <p>{description}</p>
-        {data.blocks.map((section: any, index: number) => componentResolver(section, index, lang))}
+        {(data.blocks || []).map((section: any, index: number) => componentResolver(section, index, lang))}
       </div>
     </article>
   );
