@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_pricing_steps",
+  "info": {
+    "name": "PricingSteps",
+    "displayName": "Pricing steps",
+    "description": "Structured pathway section: heading plus a repeatable list of numbered steps",
+    "icon": "list-ol"
+  },
+  "options": {},
+  "attributes": {
+    "structureTitle": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pricing-step"
+    },
+    "decoration": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

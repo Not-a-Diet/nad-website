@@ -7,7 +7,9 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "seed:dev": "node scripts/seed.js",
+    "seed:dev:all": "node scripts/seed.js --all"
   },
   "devDependencies": {
     "baseline-browser-mapping": "^2.10.17"

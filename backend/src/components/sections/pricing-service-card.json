@@ -1,0 +1,95 @@
+{
+  "collectionName": "components_sections_pricing_service_cards",
+  "info": {
+    "name": "PricingServiceCard",
+    "displayName": "Pricing service card",
+    "description": "Hero pricing card: intro copy + single service with two prices, badges, note, CTA and reassurances",
+    "icon": "credit-card"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cardIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "cardTitle": {
+      "type": "string"
+    },
+    "cardSubtitle": {
+      "type": "text"
+    },
+    "showStudio": {
+      "type": "boolean",
+      "default": true
+    },
+    "showOnline": {
+      "type": "boolean",
+      "default": true
+    },
+    "studioLabel": {
+      "type": "string",
+      "default": "In studio"
+    },
+    "onlineLabel": {
+      "type": "string",
+      "default": "Online"
+    },
+    "firstVisitName": {
+      "type": "string"
+    },
+    "firstVisitSub": {
+      "type": "text"
+    },
+    "firstVisitPrice": {
+      "type": "string"
+    },
+    "firstVisitMeta": {
+      "type": "string"
+    },
+    "followUpName": {
+      "type": "string"
+    },
+    "followUpSub": {
+      "type": "text"
+    },
+    "followUpPrice": {
+      "type": "string"
+    },
+    "followUpMeta": {
+      "type": "string"
+    },
+    "cardNote": {
+      "type": "text"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    },
+    "ctaNewTab": {
+      "type": "boolean",
+      "default": true
+    },
+    "reassurances": {
+      "type": "text"
+    },
+    "decoration": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
