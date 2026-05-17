@@ -18,6 +18,8 @@
     "test": "yarn workspace frontend test",
     "test:watch": "yarn workspace frontend test:watch",
     "seed": "yarn workspace backend strapi import -f ../nad-database.tar.gz",
+    "seed:dev": "yarn workspace backend seed:dev",
+    "seed:dev:all": "yarn workspace backend seed:dev:all",
     "export": "yarn workspace backend strapi export --no-encrypt -f ../nad-database.tar.gz",
     "repo:upstream": "git fetch upstream && git merge upstream/main"
   },

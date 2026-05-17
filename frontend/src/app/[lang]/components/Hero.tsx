@@ -1,7 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import HighlightedText from "./HighlightedText";
-import { getStrapiMedia } from "../utils/api-helpers";
+import FloatingFood from "./FloatingFood";
 import { renderButtonStyle } from "../utils/render-button-style";
 
 interface Button {
@@ -30,42 +29,12 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
-  const imgUrls = data.picture?.map(attr => {
-    return {
-      id: attr.id,
-      url: getStrapiMedia(attr.url),
-      alt: attr.alternativeText
-    }
-  });
-
-  const pos = [
-    "lg:bottom-[35px] bottom-2 right-12 lg:right-80",
-    "top-32 left-8 lg:left-60",
-    "top-32 right-12 lg:right-32",
-    "bottom-32 left-8 lg:left-40"
-  ]
-  const animations = [
-    "animate-float-slow",
-    "animate-float-medium",
-    "animate-float-fast",
-    "animate-float-medium"
-  ];
-
   return (
-    <section id="hero" className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2">
-      {imgUrls && imgUrls.filter(img => img.url).map((imgUrl, index) => (
-        <div className={`absolute z-[0] ${pos[index]} ${animations[index]} saturate-135`} key={imgUrl.id ?? imgUrl.alt ?? index}>
-          <div className="relative">
-            <Image
-              src={imgUrl.url || ""}
-              alt={imgUrl.alt || "hero image"}
-              width={120}
-              height={120}
-              className="rounded-xl"
-            />
-          </div>
-        </div>
-      ))}
+    <section
+      id="hero"
+      className="flex item-center justify-center text-black min-h-[90vh] relative md:mt-2 overflow-hidden"
+    >
+      <FloatingFood items={data.picture} size={120} />
 
       <div className="container flex justify-center text-center z-10 w-full p-2 h-auto lg:max-w-[1100px] mx-auto lg:py-24 lg:flex-col">
         <div className="flex flex-col justify-center items-center text-center rounded-lg mt-10 lg:p-6 lg:mt-0 lg:w-auto xl:w-auto lg:text-center">
@@ -84,7 +53,7 @@ export default function Hero({ data }: HeroProps) {
             color="text-night"
           />
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-center">
-            {data.buttons.map((button: Button, index: number) => (
+            {data.buttons.map((button: Button) => (
               <Link
                 key={button.id}
                 href={button.url}
@@ -98,33 +67,6 @@ export default function Hero({ data }: HeroProps) {
           </div>
         </div>
       </div>
-      {/* CSS Animations */}
-      <style>{`
-        @keyframes float-slow {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          33% { transform: translate(10px, -20px) rotate(5deg); }
-          66% { transform: translate(-10px, -10px) rotate(-5deg); }
-        }
-        @keyframes float-medium {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          33% { transform: translate(-15px, -15px) rotate(-3deg); }
-          66% { transform: translate(15px, -25px) rotate(3deg); }
-        }
-        @keyframes float-fast {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          33% { transform: translate(20px, -10px) rotate(8deg); }
-          66% { transform: translate(-20px, -20px) rotate(-8deg); }
-        }
-        .animate-float-slow {
-          animation: float-slow 12s ease-in-out infinite;
-        }
-        .animate-float-medium {
-          animation: float-medium 10s ease-in-out infinite;
-        }
-        .animate-float-fast {
-          animation: float-fast 8s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }
