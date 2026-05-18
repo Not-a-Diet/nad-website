@@ -1,17 +1,5 @@
 import Link from "next/link";
-
-interface Category {
-  id: number;
-  name: string;
-  slug: string;
-  articles: Article[];
-}
-
-interface Article {
-  id: number;
-  title: string;
-  slug: string;
-}
+import type { Category, ArticleSummary } from "../types/strapi";
 
 function selectedFilter(current: string, selected: string) {
   return current === selected
@@ -25,7 +13,7 @@ export default function ArticleSelect({
   params,
 }: {
   categories: Category[];
-  articles: Article[];
+  articles: ArticleSummary[];
   params: {
     slug: string;
     category: string;
@@ -62,7 +50,7 @@ export default function ArticleSelect({
         <div className="space-y-2">
           <h4 className="text-lg font-semibold">Other Posts You May Like</h4>
           <ul className="ml-4 space-y-1 list-disc">
-            {articles.map((article: Article) => {
+            {articles.map((article: ArticleSummary) => {
               return (
                 <li key={article.id}>
                   <Link

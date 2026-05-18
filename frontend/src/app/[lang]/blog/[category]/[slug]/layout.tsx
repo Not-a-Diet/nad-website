@@ -1,8 +1,9 @@
 import ArticleSelect from "@/app/[lang]/components/ArticleSelect";
 import { fetchAPI } from "@/app/[lang]/utils/fetch-api";
 import { i18n } from "i18n-config";
+import type { SideMenuData } from "@/app/[lang]/types/strapi";
 
-async function fetchSideMenuData(filter: string, lang: string) {
+async function fetchSideMenuData(filter: string, lang: string): Promise<SideMenuData | null> {
   try {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
     const options = { headers: { Authorization: `Bearer ${token}` } };
@@ -33,26 +34,10 @@ async function fetchSideMenuData(filter: string, lang: string) {
       categories: categoriesResponse.data,
     };
   } catch (error) {
-    console.error(error);
+    // Intentional: degrade to article-without-sidebar rather than 500 the whole page.
+    console.error("[blog/layout] sidebar fetch failed", { lang, filter, error });
+    return null;
   }
-}
-
-interface Category {
-  id: number;
-  name: string;
-  slug: string;
-  articles: Article[];
-}
-
-interface Article {
-  id: number;
-  title: string;
-  slug: string;
-}
-
-interface Data {
-  articles: Article[];
-  categories: Category[];
 }
 
 export default async function LayoutRoute({
@@ -71,7 +56,7 @@ export default async function LayoutRoute({
   if (!sideMenuData) {
     return <section className="container p-4 mx-auto"><p>Failed to load sidebar data.</p>{children}</section>;
   }
-  const { categories, articles } = sideMenuData as Data;
+  const { categories, articles } = sideMenuData;
 
   return (
     <section className="container p-4 mx-auto h-full relative m-24 space-y-6 sm:space-y-12">

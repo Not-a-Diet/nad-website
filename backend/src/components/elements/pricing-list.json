@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_pricing_lists",
+  "info": {
+    "name": "PricingList",
+    "displayName": "Pricing list",
+    "description": "A heading plus a newline-separated list of bullet items used inside a pricing step",
+    "icon": "list-ul"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "items": {
+      "type": "text"
+    }
+  }
+}

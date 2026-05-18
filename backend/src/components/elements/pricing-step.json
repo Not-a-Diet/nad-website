@@ -1,0 +1,71 @@
+{
+  "collectionName": "components_elements_pricing_steps",
+  "info": {
+    "name": "PricingStep",
+    "displayName": "Pricing step",
+    "description": "A single numbered step within the structured pricing page",
+    "icon": "list-ol"
+  },
+  "options": {},
+  "attributes": {
+    "stepNumber": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "imagePlaceholder": {
+      "type": "string"
+    },
+    "stickerText": {
+      "type": "string"
+    },
+    "durationLabel": {
+      "type": "string",
+      "default": "Durata"
+    },
+    "durationValue": {
+      "type": "string"
+    },
+    "modeLabel": {
+      "type": "string",
+      "default": "Modalità"
+    },
+    "modeValue": {
+      "type": "string"
+    },
+    "priceLabel": {
+      "type": "string",
+      "default": "Prezzo"
+    },
+    "priceValue": {
+      "type": "string"
+    },
+    "lists": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pricing-list"
+    },
+    "callout": {
+      "type": "text"
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "accent": {
+      "type": "enumeration",
+      "enum": ["primary", "secondary"],
+      "default": "primary"
+    }
+  }
+}

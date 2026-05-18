@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "project": "Not a Diet — notadiet.life",
+    "framework": "Next.js 16 + Tailwind CSS 3.4",
+    "font": "Inter (Google Fonts, variable --font-inter)",
+    "tailwindConfig": "frontend/tailwind.config.js",
+    "cssFile": "frontend/src/app/[lang]/globals.css"
+  },
+
+  "colors": {
+    "primary": {
+      "DEFAULT": "#e8471e",
+      "usage": "Main CTA buttons, hero text highlight, feature card borders/icons",
+      "500": "#ff8566",
+      "500_usage": "Hover tints, nav active underline",
+      "100": "#ffedd5",
+      "100_usage": "Feature card background (primary variant)"
+    },
+    "secondary": {
+      "DEFAULT": "#B8CE12",
+      "usage": "Green accents, ✓ icons in feature lists, footer hover, default CTA",
+      "500": "#16a34a",
+      "500_usage": "Nav hover links",
+      "100": "#dcfce7",
+      "100_usage": "Feature card background (secondary variant), booking card gradient start"
+    },
+    "tertiary": {
+      "DEFAULT": "#a16207",
+      "usage": "Amber/brown accents",
+      "500": "#facc15",
+      "500_usage": "Yellow highlight",
+      "100": "#fef9c3",
+      "100_usage": "Feature card background (tertiary variant), booking card gradient end"
+    },
+    "quaternary": {
+      "DEFAULT": "#06b6d4",
+      "usage": "Cyan accents",
+      "500": "#67e8f9",
+      "100": "#cffafe",
+      "100_usage": "Feature card background (quaternary variant), contact icon bg",
+      "rose": "#bf3d5c",
+      "rose_usage": "Rose/pink accent (quaternary card borders/icons)",
+      "rose-100": "#fce4ec",
+      "rose-100_usage": "Feature card background (rose/quaternary variant)"
+    },
+    "crema": {
+      "DEFAULT": "#1c1917",
+      "usage": "Primary text, headings, footer background",
+      "200": "#e7e5e4",
+      "200_usage": "Light borders, dividers",
+      "500": "#a8a29e",
+      "500_usage": "Secondary/muted text, footer text",
+      "800": "#292524",
+      "800_usage": "Dark card backgrounds (footer social icons)"
+    },
+    "anti-flash_white": {
+      "DEFAULT": "#ffffff",
+      "usage": "Page background, card surfaces",
+      "100": "#fafaf9",
+      "100_usage": "Subtle section backgrounds (Team, About)"
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "body": "Inter, sans-serif",
+      "heading": "Inter, sans-serif",
+      "cssVariable": "--font-inter",
+      "tailwindClass": "font-sans"
+    },
+    "scale": {
+      "h1": "text-[3rem] font-bold leading-none",
+      "h1_hero": "text-[3rem] font-bold leading-none font-sans (used in Hero via HighlightedText)",
+      "h2_section": "text-4xl font-bold font-sans",
+      "h2_large": "text-4xl md:text-5xl font-bold",
+      "h3_card": "text-3xl font-semibold font-sans text-center",
+      "h3_sub": "text-xl font-bold font-sans",
+      "body": "text-base font-sans",
+      "body_lg": "text-lg font-sans",
+      "caption": "text-sm"
+    },
+    "richText": {
+      "wrapper": "rich-text",
+      "note": "Apply .rich-text class to a container for full heading/list/blockquote/code styles (defined in globals.css)"
+    },
+    "highlightedText": {
+      "description": "HighlightedText component renders inline color spans. Wrap a word in [brackets] for primary color, {braces} for secondary color.",
+      "example_strapi_text": "We help you [live] {better}",
+      "example_usage": "<HighlightedText text={title} tag='h1' className='text-[3rem] font-bold' color='text-primary' secondColor='text-secondary' />"
+    }
+  },
+
+  "spacing": {
+    "containerPadding": "px-4 lg:px-6 xl:px-8",
+    "containerMaxWidth": {
+      "default": "container mx-auto",
+      "wide": "max-w-7xl mx-auto px-6 lg:px-8",
+      "narrow": "max-w-6xl mx-auto",
+      "hero": "lg:max-w-[1100px] mx-auto lg:py-24"
+    },
+    "sectionPadding": {
+      "default": "py-12",
+      "lg": "py-24 lg:py-24",
+      "hero": "min-h-[90vh]"
+    }
+  },
+
+  "borderRadius": {
+    "sm": "rounded-lg",
+    "md": "rounded-2xl",
+    "lg": "rounded-3xl",
+    "xl": "rounded-[2.5rem]",
+    "pill": "rounded-full",
+    "card": "rounded-3xl",
+    "button_primary": "rounded-full",
+    "button_secondary": "rounded-2xl",
+    "input": "rounded-xl",
+    "icon": "rounded-xl"
+  },
+
+  "shadows": {
+    "card_default": "shadow-md",
+    "card_hover": "hover:shadow-xl",
+    "navbar": "drop-shadow-xl"
+  },
+
+  "buttons": {
+    "primary": {
+      "tailwind": "bg-primary inline-flex justify-center items-center gap-3 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg text-white",
+      "hex_bg": "#e8471e",
+      "text": "white",
+      "hover": "scale(1.05) + shadow-lg",
+      "shape": "pill"
+    },
+    "secondary": {
+      "tailwind": "px-8 py-3 text-lg font-semibold border rounded-2xl border-black text-black",
+      "style": "ghost/outline",
+      "shape": "rounded-2xl"
+    },
+    "default": {
+      "tailwind": "bg-secondary px-8 py-3 text-lg font-semibold rounded-2xl text-white",
+      "hex_bg": "#B8CE12",
+      "text": "white",
+      "shape": "rounded-2xl"
+    },
+    "booking_cta": {
+      "tailwind": "w-full rounded-xl px-6 py-4 text-lg font-bold bg-secondary text-white hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] transition-all",
+      "disabled": "bg-crema-200 text-crema-500 cursor-not-allowed"
+    },
+    "booking_back": {
+      "tailwind": "w-fit bg-gradient-to-br from-secondary-100/60 to-tertiary-100/60 rounded-xl px-8 py-3 text-crema-800 font-semibold border-secondary-100 border-[3px] hover:scale-105 active:scale-95 transition-transform"
+    }
+  },
+
+  "cards": {
+    "feature": {
+      "description": "Service/feature card with colored variant per category",
+      "base": "flex flex-col shadow-m items-center p-4 border-2 rounded-3xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 max-w-md",
+      "variants": {
+        "primary": {
+          "bg": "bg-primary-100",
+          "border": "border-primary",
+          "iconText": "text-primary-500",
+          "button": "bg-primary",
+          "hexBg": "#ffedd5",
+          "hexBorder": "#e8471e"
+        },
+        "secondary": {
+          "bg": "bg-secondary-100",
+          "border": "border-secondary",
+          "iconText": "text-secondary-500",
+          "button": "bg-secondary",
+          "hexBg": "#dcfce7",
+          "hexBorder": "#B8CE12"
+        },
+        "tertiary": {
+          "bg": "bg-tertiary-100",
+          "border": "border-tertiary-500",
+          "iconText": "text-tertiary-500",
+          "button": "bg-tertiary-500",
+          "hexBg": "#fef9c3",
+          "hexBorder": "#facc15"
+        },
+        "quaternary": {
+          "bg": "bg-quaternary-rose-100",
+          "border": "border-quaternary-rose",
+          "iconText": "text-quaternary-rose",
+          "button": "bg-quaternary-rose",
+          "hexBg": "#fce4ec",
+          "hexBorder": "#bf3d5c"
+        }
+      }
+    },
+    "team": {
+      "description": "Team member profile card",
+      "tailwind": "bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg:max-w-md mx-4 my-4"
+    },
+    "booking_selector": {
+      "description": "Booking form / hours card",
+      "tailwind": "bg-gradient-to-br from-secondary-100/60 to-tertiary-100/60 rounded-3xl p-6 border-secondary-100 border-[4px]",
+      "gradient_from": "#dcfce7 at 60% opacity",
+      "gradient_to": "#fef9c3 at 60% opacity"
+    },
+    "quote_philosophy": {
+      "description": "Quote or philosophy panel (used in Team section)",
+      "tailwind": "bg-gradient-to-br drop-shadow-md from-secondary-100/60 via-anti-flash_white-100 to-tertiary-100/60 rounded-[2.5rem] p-10 lg:p-6 min-h-[300px]"
+    }
+  },
+
+  "sections": {
+    "light": {
+      "bg": "bg-anti-flash_white",
+      "hex": "#ffffff",
+      "usage": "Default, Contact, FeaturedPosts"
+    },
+    "offWhite": {
+      "bg": "bg-anti-flash_white-100",
+      "hex": "#fafaf9",
+      "usage": "Team / About section"
+    },
+    "white": {
+      "bg": "bg-white",
+      "usage": "Features section"
+    },
+    "dark": {
+      "bg": "bg-black text-gray-100",
+      "usage": "Pricing, Testimonials"
+    },
+    "footer": {
+      "bg": "bg-crema text-crema-200",
+      "hex": "#1c1917",
+      "usage": "Site footer"
+    }
+  },
+
+  "navbar": {
+    "description": "Fixed top navbar with scroll-shrink animation",
+    "scrolled": "transition delay-150 duration-300 rounded-full scale-75 drop-shadow-xl bg-anti-flash_white",
+    "notScrolled": "transition delay-150 duration-300 scale-100 bg-anti-flash_white",
+    "linkActive": "border-b-2 border-current",
+    "linkHover": "hover:text-secondary-500",
+    "mobilePanel": "bg-gray-200 w-full sm:max-w-sm shadow-lg"
+  },
+
+  "icons": {
+    "social_footer": "w-10 h-10 rounded-xl bg-crema-800 hover:bg-secondary hover:text-black text-secondary transition-colors",
+    "contact_cycle": [
+      { "bg": "bg-secondary/15", "text": "text-secondary" },
+      { "bg": "bg-primary-100", "text": "text-primary" },
+      { "bg": "bg-tertiary-100", "text": "text-tertiary" },
+      { "bg": "bg-quaternary-100", "text": "text-quaternary" }
+    ],
+    "iconSize": "w-12 h-12 rounded-xl"
+  },
+
+  "animations": {
+    "hero_images": {
+      "float-slow": "12s ease-in-out infinite — gentle drift ±10px X, ±20px Y, ±5deg",
+      "float-medium": "10s ease-in-out infinite — ±15px X, ±25px Y, ±3deg",
+      "float-fast": "8s ease-in-out infinite — ±20px X, ±20px Y, ±8deg"
+    },
+    "booking_calendar": "animate-slide-in-right — 0.4s ease-out, translateX -30px → 0",
+    "card_hover": "hover:-translate-y-2 transition-all duration-300 (feature cards), hover:-translate-y-1 (team cards)",
+    "button_hover": "hover:scale-105 transition-all duration-300 (primary button)",
+    "navbar_scroll": "scale-75 to scale-100, 300ms delay-150 duration-300"
+  },
+
+  "forms": {
+    "select": "w-full rounded-xl border-2 border-secondary-200 bg-white px-4 py-3 text-crema-800 font-medium focus:border-secondary-400 focus:outline-none focus:ring-2 focus:ring-secondary-200 transition-colors appearance-none",
+    "label": "text-sm font-semibold text-crema-800",
+    "language_selector": "rounded-2xl bg-gray-300 p-2 focus:outline-none"
+  },
+
+  "banner": {
+    "description": "Fixed bottom notification banner",
+    "info": "bg-kelly_green-400",
+    "warning": "bg-yellow-500",
+    "alert": "bg-red-500",
+    "default": "bg-gray-900",
+    "shape": "sm:rounded-xl py-2.5 px-6 sm:py-3"
+  }
+}

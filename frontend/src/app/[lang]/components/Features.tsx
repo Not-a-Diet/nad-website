@@ -70,6 +70,7 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
         }
         width={150}
         height={150}
+        loading="lazy"
         className="rounded-xl w-[85px] h-[85px] py-4"
       />
       )}

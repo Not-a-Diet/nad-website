@@ -21,6 +21,7 @@ export default function Media({ data }: { data: MediaProps }) {
         className="object-cover w-full h-full rounded-lg overflow-hidden"
         width={400}
         height={400}
+        loading="lazy"
       />
     </div>
   );

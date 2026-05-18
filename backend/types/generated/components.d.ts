@@ -206,6 +206,51 @@ export interface ElementsPlan extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsPricingList extends Struct.ComponentSchema {
+  collectionName: 'components_elements_pricing_lists';
+  info: {
+    description: 'A heading plus a newline-separated list of bullet items used inside a pricing step';
+    displayName: 'Pricing list';
+    icon: 'list-ul';
+    name: 'PricingList';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    items: Schema.Attribute.Text;
+  };
+}
+
+export interface ElementsPricingStep extends Struct.ComponentSchema {
+  collectionName: 'components_elements_pricing_steps';
+  info: {
+    description: 'A single numbered step within the structured pricing page';
+    displayName: 'Pricing step';
+    icon: 'list-ol';
+    name: 'PricingStep';
+  };
+  attributes: {
+    accent: Schema.Attribute.Enumeration<['primary', 'secondary']> &
+      Schema.Attribute.DefaultTo<'primary'>;
+    callout: Schema.Attribute.Text;
+    durationLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Durata'>;
+    durationValue: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    imagePlaceholder: Schema.Attribute.String;
+    lede: Schema.Attribute.Text;
+    lists: Schema.Attribute.Component<'elements.pricing-list', true>;
+    modeLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Modalit\u00E0'>;
+    modeValue: Schema.Attribute.String;
+    priceLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Prezzo'>;
+    priceValue: Schema.Attribute.String;
+    reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    stepNumber: Schema.Attribute.String;
+    stickerText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsTeamMember extends Struct.ComponentSchema {
   collectionName: 'components_elements_team_members';
   info: {
@@ -541,6 +586,93 @@ export interface SectionsPricing extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsPricingServiceCard extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pricing_service_cards';
+  info: {
+    description: 'Hero pricing card: intro copy + single service with two prices, badges, note, CTA and reassurances';
+    displayName: 'Pricing service card';
+    icon: 'credit-card';
+    name: 'PricingServiceCard';
+  };
+  attributes: {
+    cardIcon: Schema.Attribute.Media<'images'>;
+    cardNote: Schema.Attribute.Text;
+    cardSubtitle: Schema.Attribute.Text;
+    cardTitle: Schema.Attribute.String;
+    ctaNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    ctaText: Schema.Attribute.String;
+    ctaUrl: Schema.Attribute.String;
+    decoration: Schema.Attribute.Media<'images', true>;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    firstVisitMeta: Schema.Attribute.String;
+    firstVisitName: Schema.Attribute.String;
+    firstVisitPrice: Schema.Attribute.String;
+    firstVisitSub: Schema.Attribute.Text;
+    followUpMeta: Schema.Attribute.String;
+    followUpName: Schema.Attribute.String;
+    followUpPrice: Schema.Attribute.String;
+    followUpSub: Schema.Attribute.Text;
+    onlineLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Online'>;
+    reassurances: Schema.Attribute.Text;
+    showOnline: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    showStudio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    studioLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'In studio'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsPricingSteps extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pricing_steps';
+  info: {
+    description: 'Structured pathway section: heading plus a repeatable list of numbered steps';
+    displayName: 'Pricing steps';
+    icon: 'list-ol';
+    name: 'PricingSteps';
+  };
+  attributes: {
+    decoration: Schema.Attribute.Media<'images', true>;
+    steps: Schema.Attribute.Component<'elements.pricing-step', true>;
+    structureTitle: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsPricingTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pricing_teasers';
+  info: {
+    description: 'Compact homepage hook that previews the two consultation prices and links to the full pricing page';
+    displayName: 'Pricing teaser';
+    icon: 'tag';
+    name: 'PricingTeaser';
+  };
+  attributes: {
+    ctaNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    ctaText: Schema.Attribute.String;
+    ctaUrl: Schema.Attribute.String;
+    decoration: Schema.Attribute.Media<'images', true>;
+    eyebrow: Schema.Attribute.String;
+    firstVisitLabel: Schema.Attribute.String;
+    firstVisitMeta: Schema.Attribute.String;
+    firstVisitPrice: Schema.Attribute.String;
+    followUpLabel: Schema.Attribute.String;
+    followUpMeta: Schema.Attribute.String;
+    followUpPrice: Schema.Attribute.String;
+    headline: Schema.Attribute.String;
+    lede: Schema.Attribute.Text;
+    mascot: Schema.Attribute.Media<'images'>;
+    onlineLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Online'>;
+    secondaryLinkText: Schema.Attribute.String;
+    secondaryLinkUrl: Schema.Attribute.String;
+    showOnline: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    showStudio: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    studioLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'In studio'>;
+    variant: Schema.Attribute.Enumeration<['card', 'band', 'inline']> &
+      Schema.Attribute.DefaultTo<'card'>;
+  };
+}
+
 export interface SectionsRichText extends Struct.ComponentSchema {
   collectionName: 'components_sections_rich_texts';
   info: {
@@ -677,6 +809,8 @@ declare module '@strapi/strapi' {
       'elements.notification-banner': ElementsNotificationBanner;
       'elements.philosophy-item': ElementsPhilosophyItem;
       'elements.plan': ElementsPlan;
+      'elements.pricing-list': ElementsPricingList;
+      'elements.pricing-step': ElementsPricingStep;
       'elements.team-member': ElementsTeamMember;
       'elements.testimonial': ElementsTestimonial;
       'layout.footer': LayoutFooter;
@@ -699,6 +833,9 @@ declare module '@strapi/strapi' {
       'sections.large-video': SectionsLargeVideo;
       'sections.lead-form': SectionsLeadForm;
       'sections.pricing': SectionsPricing;
+      'sections.pricing-service-card': SectionsPricingServiceCard;
+      'sections.pricing-steps': SectionsPricingSteps;
+      'sections.pricing-teaser': SectionsPricingTeaser;
       'sections.rich-text': SectionsRichText;
       'sections.team': SectionsTeam;
       'sections.testimonials-group': SectionsTestimonialsGroup;

@@ -1,0 +1,88 @@
+{
+  "collectionName": "components_sections_pricing_teasers",
+  "info": {
+    "name": "PricingTeaser",
+    "displayName": "Pricing teaser",
+    "description": "Compact homepage hook that previews the two consultation prices and links to the full pricing page",
+    "icon": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "lede": {
+      "type": "text"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["card", "band", "inline"],
+      "default": "card"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    },
+    "ctaNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "secondaryLinkText": {
+      "type": "string"
+    },
+    "secondaryLinkUrl": {
+      "type": "string"
+    },
+    "firstVisitLabel": {
+      "type": "string"
+    },
+    "firstVisitPrice": {
+      "type": "string"
+    },
+    "firstVisitMeta": {
+      "type": "string"
+    },
+    "followUpLabel": {
+      "type": "string"
+    },
+    "followUpPrice": {
+      "type": "string"
+    },
+    "followUpMeta": {
+      "type": "string"
+    },
+    "showStudio": {
+      "type": "boolean",
+      "default": true
+    },
+    "showOnline": {
+      "type": "boolean",
+      "default": true
+    },
+    "studioLabel": {
+      "type": "string",
+      "default": "In studio"
+    },
+    "onlineLabel": {
+      "type": "string",
+      "default": "Online"
+    },
+    "mascot": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "decoration": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

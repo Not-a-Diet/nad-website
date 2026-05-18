@@ -1,8 +1,9 @@
 import { ReactElement, lazy, createElement, Suspense } from 'react';
 import Loader from '../components/Loader';
 import SectionErrorBoundary from '../components/SectionErrorBoundary';
+import type { Section } from '../types/strapi';
 
-export default function componentResolver(section: any, index: number, lang?: string): ReactElement {
+export default function componentResolver(section: Section, index: number, lang?: string): ReactElement {
   const names: string[] = section.__component.split('.')
   const component = names[1]
 

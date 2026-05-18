@@ -22,7 +22,7 @@ export default function Slideshow({ data }: { data: SlidShowProps }) {
           const imageUrl = getStrapiMedia(fadeImage.url);
           return (
             <div key={fadeImage.id}>
-              {imageUrl && <Image className="w-full h-96 object-cover rounded-lg" height={400} width={600} alt={fadeImage.alternativeText ?? fadeImage.caption ?? "image"} src={imageUrl} />}
+              {imageUrl && <Image className="w-full h-96 object-cover rounded-lg" height={400} width={600} loading="lazy" alt={fadeImage.alternativeText ?? fadeImage.caption ?? "image"} src={imageUrl} />}
             </div>
           );
         })}
