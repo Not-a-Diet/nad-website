@@ -4,6 +4,11 @@
 @tailwind utilities;
 
 
+html {
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-anti-flash_white font-sans
 }

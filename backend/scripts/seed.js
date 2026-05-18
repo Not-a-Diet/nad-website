@@ -133,6 +133,95 @@ function buildExistenceQuery(uniqueBy) {
   return params.toString();
 }
 
+const STRIP_KEYS_TOP = new Set([
+  'documentId',
+  'createdAt',
+  'updatedAt',
+  'publishedAt',
+  'locale',
+  'localizations',
+]);
+
+function isMediaObject(v) {
+  return (
+    v &&
+    typeof v === 'object' &&
+    !Array.isArray(v) &&
+    'id' in v &&
+    'url' in v &&
+    ('mime' in v || 'hash' in v || 'provider' in v)
+  );
+}
+
+function isRelationObject(v) {
+  return (
+    v &&
+    typeof v === 'object' &&
+    !Array.isArray(v) &&
+    'documentId' in v &&
+    !('__component' in v) &&
+    !('url' in v)
+  );
+}
+
+function sanitizeValue(value, opts = {}) {
+  if (Array.isArray(value)) {
+    if (value.length && isMediaObject(value[0])) return value.map((v) => v.id);
+    if (value.length && isRelationObject(value[0])) return value.map((v) => v.id);
+    return value.map((v) => sanitizeValue(v));
+  }
+  if (value && typeof value === 'object') {
+    if (isMediaObject(value)) return value.id;
+    if (isRelationObject(value)) return value.id;
+    const out = {};
+    // Strapi v5 validator requires __component to appear BEFORE other component fields,
+    // otherwise it can't match the component schema and rejects them as "Invalid key".
+    if ('__component' in value) out.__component = value.__component;
+    for (const [k, v] of Object.entries(value)) {
+      if (STRIP_KEYS_TOP.has(k)) continue;
+      if (k === '__component') continue;
+      if (opts.dropId && k === 'id') continue;
+      out[k] = sanitizeValue(v);
+    }
+    return out;
+  }
+  return value;
+}
+
+async function appendSectionEntry(name, endpoint, uniqueBy, section, locale) {
+  const label = `${name}[${locale}]`;
+  let query = buildExistenceQuery(uniqueBy);
+  query += `&locale=${encodeURIComponent(locale)}`;
+
+  console.log(`[seed:dev] ${label}: fetching ${JSON.stringify(uniqueBy)} locale=${locale}`);
+  const existing = await api('GET', `${endpoint}?${query}`);
+  if (!Array.isArray(existing.data) || existing.data.length === 0) {
+    console.error(`[seed:dev] ${label}: no entry found — create the home page for this locale first, skipping.`);
+    return;
+  }
+  const entry = existing.data[0];
+  const documentId = entry.documentId;
+  if (!documentId) {
+    fail(`${label}: entry missing documentId (Strapi v5 expected).`);
+  }
+  const sections = Array.isArray(entry.contentSections) ? entry.contentSections : [];
+  if (sections.some((s) => s && s.__component === section.__component)) {
+    console.log(`[seed:dev] ${label}: ${section.__component} already present, skipping.`);
+    return;
+  }
+  // Note: PUT replaces the whole dynamic zone; existing components are recreated rather
+  // than updated in place (Strapi v5 rejects {id, __component, ...fields} payloads with
+  // "Invalid key __component"). Dropping ids is the only shape it accepts here.
+  const keptExisting = sections.map((s) => sanitizeValue(s, { dropId: true }));
+  const body = { data: { contentSections: [...keptExisting, section] } };
+  if (process.env.SEED_DEBUG) {
+    require('fs').writeFileSync(`/tmp/seed-payload-${locale}.json`, JSON.stringify(body, null, 2));
+    console.log(`[seed:dev] ${label}: wrote payload to /tmp/seed-payload-${locale}.json`);
+  }
+  await api('PUT', `${endpoint}/${documentId}?locale=${encodeURIComponent(locale)}`, { body });
+  console.log(`[seed:dev] ${label}: appended ${section.__component}.`);
+}
+
 async function runSeedEntry(name, endpoint, uniqueBy, data, locale) {
   const label = locale ? `${name}[${locale}]` : name;
   let query = buildExistenceQuery(uniqueBy);
@@ -153,6 +242,19 @@ async function runSeedEntry(name, endpoint, uniqueBy, data, locale) {
 async function runSeed(name) {
   const manifest = resolveManifest(name);
   const endpoint = endpointFor(manifest);
+
+  if (manifest.mode === 'append-section') {
+    if (!Array.isArray(manifest.entries) || manifest.entries.length === 0) {
+      fail(`${name}: mode=append-section requires entries[] with { locale, section }.`);
+    }
+    for (const entry of manifest.entries) {
+      if (!entry.locale || !entry.section || !entry.section.__component) {
+        fail(`${name}: each append-section entry needs { locale, section: { __component, ... } }.`);
+      }
+      await appendSectionEntry(name, endpoint, manifest.uniqueBy, entry.section, entry.locale);
+    }
+    return;
+  }
 
   if (manifest.entries) {
     for (const entry of manifest.entries) {

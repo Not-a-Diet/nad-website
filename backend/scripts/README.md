@@ -12,7 +12,7 @@ When you build a new Strapi component, drop a manifest in `seeds/<name>.js` and 
 2. Open admin: `http://localhost:1337/admin` → **Settings → API Tokens → Create new API Token**
    - **Name**: `Local Dev Seed`
    - **Token duration**: `Unlimited`
-   - **Token type**: `Custom` — grant `find` + `create` on every content type a seed will target (start with `Page`).
+   - **Token type**: `Custom` — grant `find` + `create` on every content type a seed will target (start with `Page`). Add `update` if you use `mode: 'append-section'` manifests.
 3. Copy the generated token. Open `backend/.env` and set:
    ```
    SEED_DEV_TOKEN=<paste-here>
@@ -62,6 +62,25 @@ module.exports = {
 ```
 
 Dynamic-zone entries use `__component` keys, same shape as Strapi v5 REST expects.
+
+### `mode: 'append-section'` — patch an existing localized entry
+
+For when the target entry already exists per locale (e.g. the home page) and you only want to add a section to its dynamic zone without recreating it:
+
+```js
+module.exports = {
+  contentType: 'api::page.page',
+  uniqueBy: { slug: 'home' },
+  mode: 'append-section',
+  entries: [
+    { locale: 'en', section: { __component: 'sections.pricing-teaser', /* ... */ } },
+    { locale: 'it', section: { __component: 'sections.pricing-teaser', /* ... */ } },
+    { locale: 'pt', section: { __component: 'sections.pricing-teaser', /* ... */ } },
+  ],
+};
+```
+
+Behavior per entry: fetches the entry for that locale via `filters[uniqueBy]` + `locale`, skips if a component with the same `__component` is already present, otherwise PUTs back the whole `contentSections` array (existing components preserved by `id`) with the new section appended.
 
 ## Adding a new seed
 

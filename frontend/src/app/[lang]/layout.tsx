@@ -11,6 +11,7 @@ import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
 import { Inter } from "next/font/google"
 import ErrorComponent from "./components/Error";
 import GA4CookieConsentBanner from "./components/cookie-consent-banner";
+import HashScroller from "./components/HashScroller";
 
 const GA_MEASUREMENT_ID = "G-223FTH8TYJ";
 
@@ -87,6 +88,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={`${inter.variable} ${inter.className}`}>
       <body suppressHydrationWarning>
+        <HashScroller />
         <Navbar
           links={navbar.links}
           logoUrl={navbarLogoUrl}

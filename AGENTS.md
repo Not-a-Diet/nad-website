@@ -1,21 +1,21 @@
 # Agent Guidelines for NAD Website Repository
 
 ## Overview
-This repository contains a Next.js frontend and Strapi backend for the "Not a Diet" (notadiet.life) health and wellness brand website.
+Next.js frontend + Strapi backend for "Not a Diet" (notadiet.life) health/wellness brand.
 
 ### Architecture
-- **Monorepo** with Yarn 4.14.1 Berry workspaces: `frontend/` (Next.js 16) + `backend/` (Strapi 5.45.0 CMS)
+- **Monorepo** Yarn 4.14.1 Berry workspaces: `frontend/` (Next.js 16) + `backend/` (Strapi 5.45.0 CMS)
 - **Frontend**: Next.js 16.2.4, React 19.2.5, TypeScript 5.5.0, Tailwind CSS 3.4.1
 - **Backend**: Strapi 5.45.0, SQLite (better-sqlite3), 3 plugins (Cloud, SEO, Users-Permissions)
-- **i18n**: 3 locales (en, it, pt) with proxy-based locale detection + cookie persistence
-- **Deployment**: Frontend on Vercel, Backend on Strapi Cloud (project: `nad-website-b96ec93f1f`)
+- **i18n**: 3 locales (en, it, pt) with proxy-based locale detect + cookie persistence
+- **Deploy**: Frontend Vercel, Backend Strapi Cloud (project: `nad-website-b96ec93f1f`)
 
 ### Key Data Flow
-1. Next.js Server Components fetch data from Strapi via `fetchAPI()` utility
-2. Strapi v5 responses use flat format: `{data: {documentId, id, ...fields}}` (no `.data.attributes` nesting)
+1. Next.js Server Components fetch from Strapi via `fetchAPI()` utility
+2. Strapi v5 flat response: `{data: {documentId, id, ...fields}}` (no `.data.attributes` nesting)
 3. Dynamic zone populate on `/api/pages` uses `on` filter with explicit deep populate (v5 `populate: "*"` only goes one level deep)
 4. Dynamic component resolver maps Strapi `__component` field names to React components
-5. ISR with 60-second revalidation is the default caching strategy
+5. ISR with 60-second revalidation is default caching strategy
 
 ## Development Commands
 
@@ -39,8 +39,14 @@ yarn test
 # Lint frontend code
 yarn lint
 
-# Seed data from tarball
+# Seed data from tarball (hard reset)
 yarn seed
+
+# Run one manifest from backend/scripts/seeds/<name>.js
+yarn seed:dev <name>
+
+# Run every manifest in backend/scripts/seeds/
+yarn seed:dev:all
 
 # Export Strapi data
 yarn export
@@ -111,20 +117,20 @@ yarn test:watch        # Watch mode for development
 ## Project-Specific Patterns
 
 ### Strapi v5 API Response Format
-Strapi v5 uses a flat response format (no `.data.attributes` nesting):
+Strapi v5 uses flat response (no `.data.attributes` nesting):
 - **v4**: `{ data: { id: 1, attributes: { title: "Hello" } } }`
 - **v5**: `{ data: { documentId: "abc", id: 1, title: "Hello" } }`
-- Relations are inline: `{ data: { id: 1, category: { id: 2, name: "Food" } } }`
-- The `fetchAPI()` utility in `fetch-api.tsx` includes a `normalizePopulate()` helper that converts dot-notation arrays to nested objects for v5 compatibility
+- Relations inline: `{ data: { id: 1, category: { id: 2, name: "Food" } } }`
+- `fetchAPI()` in `fetch-api.tsx` includes `normalizePopulate()` helper converting dot-notation arrays to nested objects for v5 compatibility
 - **CRITICAL for dynamic zones**: Strapi v5 requires `on` filter with explicit deep populate for dynamic zones. `populate: "*"` only populates one level deep — nested components, media, and relations need explicit populate entries per section type.
 
 ### Component Resolver Pattern
-The `component-resolver.tsx` dynamically maps Strapi component names to React components:
+`component-resolver.tsx` dynamically maps Strapi component names to React components:
 - Strapi sends `__component: "sections.hero"` → resolves to `../components/Hero`
 - Converts kebab-case to PascalCase: `feature-columns-group` → `FeatureColumnsGroup`
 - Uses React `lazy()` + `Suspense` for code splitting
-- **Important**: Component file names MUST match the PascalCase resolved name
-- Variable must be named `Module` (not `let module`) to avoid Next.js ESLint rule
+- **Important**: Component file names MUST match PascalCase resolved name
+- Variable must be `Module` (not `let module`) to avoid Next.js ESLint rule
 
 ### Centralized API Fetcher
 All Strapi API calls go through `fetchAPI()` in `fetch-api.tsx`:
@@ -143,7 +149,7 @@ All Strapi API calls go through `fetchAPI()` in `fetch-api.tsx`:
   ```
 
 ### i18n Proxy (formerly Middleware)
-- `src/proxy.ts` handles locale detection and redirection (Next.js 16 renamed middleware.ts → proxy.ts)
+- `src/proxy.ts` handles locale detect and redirect (Next.js 16 renamed middleware.ts → proxy.ts)
 - Exported as `export default function proxy` (not named export)
 - Checks `NEXT_LOCALE` cookie first, falls back to `Accept-Language` header
 - Redirects `/about` → `/en/about` (or detected locale)
@@ -151,12 +157,73 @@ All Strapi API calls go through `fetchAPI()` in `fetch-api.tsx`:
 - Next.js 16 deprecates `middleware.ts`; use `proxy.ts` instead
 
 ### Strapi Page Populate Middleware
-Located at `backend/src/api/page/middlewares/page-populate-middleware.js`:
+At `backend/src/api/page/middlewares/page-populate-middleware.js`:
 - Intercepts `find` and `findOne` for `/api/pages`
-- Uses Strapi v5 `on` filter for `contentSections` dynamic zone with explicit deep populate for each section type
-- `populate: "*"` only goes one level deep in Strapi v5 — nested components, media, and relations need explicit populate
+- Uses Strapi v5 `on` filter for `contentSections` dynamic zone with explicit deep populate per section type
+- `populate: "*"` only goes one level deep in Strapi v5 — nested components, media, relations need explicit populate
 - Passes through `locale` for i18n
-- **CRITICAL**: When adding new section types to the dynamic zone, you MUST add an entry in the `on` filter object, otherwise the section will get NO population
+- **CRITICAL**: When adding new section types to dynamic zone, MUST add entry in `on` filter object, else section gets NO population
+
+### Seeding via `yarn seed:dev`
+
+Local-only tooling under `backend/scripts/`. Refuses non-localhost `STRAPI_URL` and refuses `NODE_ENV=production`. Designed for repeatable test-data setup so you don't have to click through the admin every time you add a component.
+
+**Setup** — create a Custom API Token in admin → Settings → API Tokens with `find` + `create` on each target content type (plus `update` if any manifest uses `mode: 'append-section'`). Save it as `SEED_DEV_TOKEN=...` in `backend/.env`. The backend dev server must be running.
+
+**Manifest shapes** in `backend/scripts/seeds/<name>.js`:
+
+1. **Create-if-missing (default)** — POST a brand-new entry if `uniqueBy` doesn't match anything.
+   ```js
+   // Single entry (no i18n)
+   module.exports = {
+     contentType: 'api::page.page',
+     uniqueBy: { slug: 'pricing' },
+     data: { slug: 'pricing', heading: '...', contentSections: [...] },
+   };
+   // Per-locale entries
+   module.exports = {
+     contentType: 'api::page.page',
+     uniqueBy: { slug: 'terms' },
+     entries: [
+       { locale: 'en', data: { slug: 'terms', locale: 'en', ... } },
+       { locale: 'it', data: { slug: 'terms', locale: 'it', ... } },
+       { locale: 'pt', data: { slug: 'terms', locale: 'pt', ... } },
+     ],
+   };
+   ```
+
+2. **`mode: 'append-section'`** — patch an existing localized entry by appending one component to its dynamic zone. Idempotent: skips if a component with the same `__component` is already present in that locale.
+   ```js
+   module.exports = {
+     contentType: 'api::page.page',
+     uniqueBy: { slug: 'home' },
+     mode: 'append-section',
+     entries: [
+       { locale: 'en', section: { __component: 'sections.pricing-teaser', /* ...fields */ } },
+       { locale: 'it', section: { __component: 'sections.pricing-teaser', /* ...fields */ } },
+       { locale: 'pt', section: { __component: 'sections.pricing-teaser', /* ...fields */ } },
+     ],
+   };
+   ```
+   Per entry: GET the page with `filters[uniqueBy]` + `locale`, check `contentSections` for an existing `__component` match, otherwise PUT the full sanitized `contentSections` back with the new section appended. Set `SEED_DEBUG=1` to dump the PUT payload to `/tmp/seed-payload-<locale>.json`.
+
+#### Strapi v5 dynamic-zone PUT gotchas (why `append-section` exists)
+
+When updating a DZ over REST PUT, the only payload shape Strapi v5 accepts for each component is `{__component, ...fields}` with **no `id`**:
+
+- **`__component` must be the FIRST key** in each component object. JSON key order matters — if `__component` comes after the other fields, Strapi rejects with `"Invalid key __component at contentSections"` (its validator can't match a component schema yet when it encounters other keys first).
+- **No `id` on existing components**. `{id, __component, ...}` is rejected with the same "Invalid key" error; `{id}` alone is rejected with `"__component is a required field"`. There is no in-place update for DZ components via the public REST API — every PUT recreates them.
+- **DZ PUT replaces the whole array**. The seed reads existing sections (via the populate middleware), sanitizes them (strips `documentId/createdAt/updatedAt/publishedAt/locale/localizations`, flattens media and relation objects to ids, drops top-level `id`, emits `__component` first), appends the new section, and PUTs the entire array back. The page entity and `documentId` are unchanged; old component rows in `components_sections_*` tables are orphaned by Strapi.
+- These rules apply to the **public REST API** only — the admin Content Manager uses a different endpoint and the Strapi document service in a custom script has its own semantics. If REST gets too brittle for a use case, write a one-off script that loads the Strapi instance and calls `strapi.documents('api::page.page').update(...)` instead.
+
+#### Adding a new section to the home page across locales
+
+1. Create the component schema → `backend/src/components/sections/<name>.json`.
+2. Add the UID to `Page.contentSections.components` → `backend/src/api/page/content-types/page/schema.json`.
+3. Add a populate entry to the `on` filter → `backend/src/api/page/middlewares/page-populate-middleware.js` (otherwise the section reaches the frontend with no nested data).
+4. Build the React component → `frontend/src/app/[lang]/components/<PascalName>.tsx` matching the resolver convention.
+5. Add a `mode: 'append-section'` manifest at `backend/scripts/seeds/<slug>.js` with one `entries[]` item per locale.
+6. `yarn dev` (backend up) → `yarn seed:dev <slug>` — idempotent across all locales, safe to re-run.
 
 ## Content Model Map
 
@@ -170,10 +237,10 @@ Located at `backend/src/api/page/middlewares/page-populate-middleware.js`:
 | `blog-header` | `/api/blog-headers` | Blog listing page heading |
 | `author` | `/api/authors` | Article author bio and avatar |
 | `product-feature` | `/api/product-features` | Pricing plan features |
-| `legal` | `/api/legals` | Legal documents (privacy, terms, cookie policy) |
+| `legal` | `/api/legals` | Legal docs (privacy, terms, cookie policy) |
 
 ### Dynamic Zone Components (contentSections)
-These are the `__component` values Strapi sends and the React components they resolve to:
+`__component` values Strapi sends + React components they resolve to:
 | Strapi Component | Resolves To | File |
 |---|---|---|
 | `sections.hero` | `Hero` | `components/Hero.tsx` |
@@ -202,7 +269,7 @@ These are the `__component` values Strapi sends and the React components they re
 ## Deployment Info
 
 ### Frontend (Vercel)
-- Environment variables configured in Vercel dashboard
+- Env vars configured in Vercel dashboard
 - `NEXT_PUBLIC_STRAPI_API_URL` → Strapi Cloud URL
 - `NEXT_PUBLIC_STRAPI_API_TOKEN` → Read-only API token
 - `NEXT_PUBLIC_PAGE_LIMIT` → Blog pagination limit (default: 6)
@@ -232,7 +299,7 @@ These are the `__component` values Strapi sends and the React components they re
 ## Known Issues & Tech Debt
 
 ### Fixed (Migration to v5 + Next.js 16)
-- ~~Strapi v4.25.6 → v5.45.0~~ — Migrated with codemod and manual API format changes
+- ~~Strapi v4.25.6 → v5.45.0~~ — Migrated with codemod + manual API format changes
 - ~~Next.js 14.1.3 → Next.js 16.2.4~~ — Migrated with async params, proxy.ts, ESLint flat config
 - ~~React 18.2 → React 19.2.5~~ — Migrated with `@headlessui/react` v2.2.0
 - ~~Yarn 1.22.22 (Classic) → Yarn 4.14.1 (Berry)~~ — Workspaces with `nodeLinker: node-modules`
@@ -261,47 +328,47 @@ These are the `__component` values Strapi sends and the React components they re
 
 ### File Naming
 - Components: PascalCase (`Navbar.tsx`, `Footer.tsx`)
-- Utilities: camelCase (`api-helpers.ts`, `fetch-api.tsx`) — note: some existing files use kebab-case, new files should use camelCase
+- Utilities: camelCase (`api-helpers.ts`, `fetch-api.tsx`) — some existing files use kebab-case, new files should use camelCase
 - Views (page-level display): kebab-case (`blog-list.tsx`, `post.tsx`)
 - Proxy file: `proxy.ts` (not `middleware.ts` — Next.js 16 convention)
 
 ### API Call Patterns
-- Always use `fetchAPI()` from `utils/fetch-api.tsx`, never raw `fetch()`
-- Token retrieval pattern: `const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN`
+- Use `fetchAPI()` from `utils/fetch-api.tsx`, never raw `fetch()`
+- Token: `const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN`
 - Options object: `{ headers: { Authorization: 'Bearer ${token}' } }`
-- Path prefix: use leading slash (`/global`, `/articles`, `/pages`)
-- **v5 populate format**: Use nested objects, NOT dot-notation strings. The `normalizePopulate()` helper in `fetchAPI` auto-converts simple arrays.
+- Path prefix: leading slash (`/global`, `/articles`, `/pages`)
+- **v5 populate format**: Use nested objects, NOT dot-notation strings. `normalizePopulate()` helper in `fetchAPI` auto-converts simple arrays.
 
 ### Component Props
-- CMS-driven components receive a `data` prop matching the Strapi section shape
+- CMS-driven components receive `data` prop matching Strapi section shape
 - Layout components (Navbar, Footer, Banner) receive destructured props from global data
 - Always define TypeScript interfaces for props
 - In v5, props access fields directly (no `.attributes` nesting): `data.title` not `data.attributes.title`
 
 ### Styling
-- Tailwind CSS with custom color palette (primary, secondary, tertiary, quaternary, crema, anti-flash_white)
+- Tailwind CSS custom color palette (primary, secondary, tertiary, quaternary, crema, anti-flash_white)
 - Custom fonts: Inter (body), Bricolage Grotesque (headings, w700)
 - Rich text content has dedicated styles in `globals.css`
-- Avoid `@apply`; prefer utility classes directly in JSX
-- CSS `@import` statements MUST precede `@tailwind` directives (Turbopack requirement)
+- Avoid `@apply`; prefer utility classes in JSX
+- CSS `@import` MUST precede `@tailwind` directives (Turbopack requirement)
 
 ### Important Gotchas
 1. **Component resolver variable naming** — Use `Module` not `module` (Next.js ESLint rule)
 2. **Dynamic import path has static prefix** — Turbopack/Webpack requires `../components/` as static part
 3. **Server components cannot use `window`/`document`** — use `"use client"` directive
-4. **`generateStaticParams` calls Strapi** — build will fail if backend is not running
+4. **`generateStaticParams` calls Strapi** — build fails if backend not running
 5. **ISR revalidation is 60s globally** — no per-page granularity yet
-6. **Blog listing is a client component** — uses useState/useEffect for pagination
+6. **Blog listing is client component** — uses useState/useEffect for pagination
 7. **Strapi v5 `populate: "*"` only goes one level deep** — use `on` filter with explicit deep populate in middleware for nested components/media/relations
-8. **All page/layout params are async in Next.js 16** — must `await params` before accessing properties
+8. **All page/layout params async in Next.js 16** — `await params` before accessing properties
 9. **Yarn Berry workspaces** — use `yarn workspace <name> <command>`, not `yarn --prefix`
-10. **Strapi Cloud deployment** — all `@strapi/*` packages MUST be the same version (currently 5.45.0)
+10. **Strapi Cloud deployment** — all `@strapi/*` packages MUST match version (currently 5.45.0)
 
 ## When in Doubt
-1. Follow existing patterns in the codebase
+1. Follow existing patterns in codebase
 2. Prioritize readability over cleverness
-3. When adding dependencies, consider bundle size and maintenance overhead
+3. When adding dependencies, consider bundle size + maintenance overhead
 4. Write tests for complex logic
 5. Document non-obvious decisions
 6. Run `yarn test` before committing changes
-7. Check the "Known Issues & Tech Debt" section for existing problems before adding new code
+7. Check "Known Issues & Tech Debt" section for existing problems before adding new code
