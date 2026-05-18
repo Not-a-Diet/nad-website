@@ -1,4 +1,7 @@
 {
-  "installCommand": "corepack enable && yarn install --immutable",
-  "buildCommand": "yarn workspace frontend build"
+  "build": {
+    "env": {
+      "ENABLE_EXPERIMENTAL_COREPACK": "1"
+    }
+  }
 }
