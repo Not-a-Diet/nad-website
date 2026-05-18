@@ -17,6 +17,10 @@ module.exports = () =>
     id: (ctx) => ctx.ip,
     max: 200,
     disableHeader: false,
-    whitelist: () => false,
+    // Only rate-limit the public Content API. Admin panel routes
+    // (/admin, /content-manager, /upload, /i18n, etc.) make many parallel
+    // requests — especially the Media Library — and would otherwise hit
+    // the limit, returning a plain-text 429 the admin client can't parse.
+    whitelist: (ctx) => !ctx.path?.startsWith('/api/'),
     blacklist: () => false,
   });
