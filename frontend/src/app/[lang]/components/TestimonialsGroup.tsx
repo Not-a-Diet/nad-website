@@ -34,6 +34,7 @@ function Testimonial({ text, authorName, picture }: Readonly<Testimonial>) {
             className="inline-block h-32 w-32 rounded-full"
             width={200}
             height={200}
+            loading="lazy"
           />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cache } from "react";
 import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
@@ -11,7 +12,9 @@ import { Inter } from "next/font/google"
 import ErrorComponent from "./components/Error";
 import GA4CookieConsentBanner from "./components/cookie-consent-banner";
 
-async function getGlobal(lang: string): Promise<any> {
+const GA_MEASUREMENT_ID = "G-223FTH8TYJ";
+
+const getGlobal = cache(async (lang: string): Promise<any> => {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
 
   if (!token) throw new Error("The Strapi API Token environment variable is not set.");
@@ -30,7 +33,7 @@ async function getGlobal(lang: string): Promise<any> {
     locale: lang,
   };
   return await fetchAPI(path, urlParamsObject, options);
-}
+});
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -83,7 +86,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} className={`${inter.variable} ${inter.className}`}>
-      <body>
+      <body suppressHydrationWarning>
         <Navbar
           links={navbar.links}
           logoUrl={navbarLogoUrl}
@@ -104,7 +107,7 @@ export default async function RootLayout({
           legalLinks={footer.legalLinks}
           socialLinks={footer.socialLinks}
         />
-        <GA4CookieConsentBanner measurementId="G-223FTH8TYJ" />
+        <GA4CookieConsentBanner measurementId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );

@@ -47,6 +47,7 @@ function TeamMemberCard({ name, occupation, profilePhoto, description, skills }:
             alt={name}
             width={400}
             height={400}
+            loading="lazy"
             className="border-2 rounded-full drop-shadow-md dark:bg-gray-500 dark:border-gray-700"
           />
         )}

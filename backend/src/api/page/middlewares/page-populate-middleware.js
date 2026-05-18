@@ -49,6 +49,23 @@ const populate = {
       "sections.feature-rows-group": {
         populate: { features: { populate: { media: true, link: true } } },
       },
+      "sections.pricing-teaser": {
+        populate: { mascot: true, decoration: true },
+      },
+      "sections.pricing-service-card": {
+        populate: { cardIcon: true, decoration: true },
+      },
+      "sections.pricing-steps": {
+        populate: {
+          decoration: true,
+          steps: {
+            populate: {
+              image: true,
+              lists: true,
+            },
+          },
+        },
+      },
     },
   },
   seo: {

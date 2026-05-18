@@ -3,6 +3,7 @@ import {notFound} from "next/navigation";
 import {getPageBySlug} from "@/app/[lang]/utils/get-page-by-slug";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
 import componentResolver from "../utils/component-resolver";
+import type { Section } from "../types/strapi";
 
 
 type Props = {
@@ -33,5 +34,5 @@ export default async function PageRoute({params}: Props) {
     if (!page.data || page.data.length === 0) return notFound();
     const contentSections = page.data[0].contentSections;
     if (!Array.isArray(contentSections)) return notFound();
-    return contentSections.map((section: any, index: number) => componentResolver(section, index, lang));
+    return contentSections.map((section: Section, index: number) => componentResolver(section, index, lang));
 }

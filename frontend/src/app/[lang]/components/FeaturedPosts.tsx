@@ -1,28 +1,5 @@
 import PostList from '../views/blog-list';
-
-interface Article {
-  id: number;
-  title: string;
-  description: string;
-  slug: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  blocks: any[];
-  cover: {
-    url: string;
-  };
-  category: {
-    name: string;
-    slug: string;
-  };
-  authorsBio: {
-    name: string;
-    avatar: {
-      url: string;
-    };
-  };
-}
+import type { Article } from '../types/strapi';
 
 interface FeaturedArticlesProps {
   data: {

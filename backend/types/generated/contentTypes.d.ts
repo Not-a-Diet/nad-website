@@ -756,6 +756,9 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.team',
         'sections.contact',
         'sections.featured-posts',
+        'sections.pricing-teaser',
+        'sections.pricing-service-card',
+        'sections.pricing-steps',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
