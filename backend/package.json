@@ -15,10 +15,10 @@
     "baseline-browser-mapping": "^2.10.17"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.45.0",
+    "@strapi/plugin-cloud": "5.46.0",
     "@strapi/plugin-seo": "^2.0.9",
-    "@strapi/plugin-users-permissions": "5.45.0",
-    "@strapi/strapi": "5.45.0",
+    "@strapi/plugin-users-permissions": "5.46.0",
+    "@strapi/strapi": "5.46.0",
     "better-sqlite3": "12.8.0",
     "koa-ratelimit": "^6.0.0",
     "react": "^18.0.0",

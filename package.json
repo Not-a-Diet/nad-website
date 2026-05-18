@@ -28,6 +28,7 @@
     "npm-check-updates": "^16.14.15"
   },
   "resolutions": {
+    "wrap-ansi@^7.0.0": "7.0.0",
     "@casl/ability": ">=6.7.5",
     "axios": ">=1.15.0",
     "form-data": ">=4.0.4",
