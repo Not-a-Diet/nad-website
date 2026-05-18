@@ -71,6 +71,7 @@ function Step({ step, index }: { step: PricingStep; index: number }) {
               alt={step.image?.alternativeText || step.title || ""}
               fill
               sizes="(max-width: 920px) 100vw, 50vw"
+              loading="lazy"
               className="object-cover"
             />
           ) : step.imagePlaceholder ? (

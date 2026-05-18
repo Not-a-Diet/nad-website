@@ -74,6 +74,7 @@ export default function FloatingFood({
               alt={item.alternativeText || ""}
               width={size}
               height={size}
+              loading="lazy"
               className="select-none"
             />
           </span>

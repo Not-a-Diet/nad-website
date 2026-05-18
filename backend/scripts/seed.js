@@ -85,8 +85,8 @@ function resolveManifest(name) {
     fail(`unknown seed: ${name}. Available: ${available}`);
   }
   const manifest = require(resolved);
-  if (!manifest.contentType || !manifest.uniqueBy || !manifest.data) {
-    fail(`malformed manifest at ${resolved}: must export { contentType, uniqueBy, data }.`);
+  if (!manifest.contentType || !manifest.uniqueBy || (!manifest.data && !manifest.entries)) {
+    fail(`malformed manifest at ${resolved}: must export { contentType, uniqueBy, data } or { contentType, uniqueBy, entries }.`);
   }
   return manifest;
 }
@@ -133,21 +133,35 @@ function buildExistenceQuery(uniqueBy) {
   return params.toString();
 }
 
-async function runSeed(name) {
-  const manifest = resolveManifest(name);
-  const endpoint = endpointFor(manifest);
-  const query = buildExistenceQuery(manifest.uniqueBy);
+async function runSeedEntry(name, endpoint, uniqueBy, data, locale) {
+  const label = locale ? `${name}[${locale}]` : name;
+  let query = buildExistenceQuery(uniqueBy);
+  if (locale) query += `&locale=${encodeURIComponent(locale)}`;
 
-  console.log(`[seed:dev] ${name}: checking ${manifest.contentType} where ${JSON.stringify(manifest.uniqueBy)}`);
+  console.log(`[seed:dev] ${label}: checking where ${JSON.stringify(uniqueBy)}${locale ? ` locale=${locale}` : ''}`);
   const existing = await api('GET', `${endpoint}?${query}`);
   if (Array.isArray(existing.data) && existing.data.length > 0) {
-    console.log(`[seed:dev] ${name}: exists (id=${existing.data[0].id}), skipping.`);
+    console.log(`[seed:dev] ${label}: exists (id=${existing.data[0].id}), skipping.`);
     return;
   }
 
-  const created = await api('POST', `${endpoint}?status=published`, { body: { data: manifest.data } });
+  const created = await api('POST', `${endpoint}?status=published`, { body: { data } });
   const id = created?.data?.id ?? '?';
-  console.log(`[seed:dev] ${name}: created (id=${id}).`);
+  console.log(`[seed:dev] ${label}: created (id=${id}).`);
+}
+
+async function runSeed(name) {
+  const manifest = resolveManifest(name);
+  const endpoint = endpointFor(manifest);
+
+  if (manifest.entries) {
+    for (const entry of manifest.entries) {
+      const uniqueBy = entry.uniqueBy || manifest.uniqueBy;
+      await runSeedEntry(name, endpoint, uniqueBy, entry.data, entry.locale || null);
+    }
+  } else {
+    await runSeedEntry(name, endpoint, manifest.uniqueBy, manifest.data, null);
+  }
 }
 
 async function main() {

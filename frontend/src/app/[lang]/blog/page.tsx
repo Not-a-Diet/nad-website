@@ -25,12 +25,14 @@ export default function Profile({ params }: { params: Promise<{ lang: string }> 
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setLoading] = useState(true);
   const [blogHeaders, setBlogHeaders] = useState<BlogHeaders>();
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
     async function loadInitialData() {
       setLoading(true);
+      setLoadError(null);
       try {
         const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
         const options = { headers: { Authorization: `Bearer ${token}` } };
@@ -55,7 +57,9 @@ export default function Profile({ params }: { params: Promise<{ lang: string }> 
         setMeta(articlesResponse.meta);
         setBlogHeaders(headersResponse.data[0]);
       } catch (error) {
-        console.error(error);
+        if (cancelled) return;
+        console.error("[blog] failed to load initial posts", error);
+        setLoadError("We couldn't load the blog right now. Please try again in a moment.");
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -88,11 +92,20 @@ export default function Profile({ params }: { params: Promise<{ lang: string }> 
       setData((prevData) => [...prevData, ...responseData.data]);
       setMeta(responseData.meta);
     } catch (error) {
-      console.error(error);
+      console.error("[blog] failed to load more posts", error);
+      setLoadError("We couldn't load more posts. Please try again.");
     }
   }
 
-  if (isLoading || !meta) return <Loader />;
+  if (isLoading) return <Loader />;
+  if (loadError && !meta) {
+    return (
+      <div className="container mx-auto p-8 text-center">
+        <p className="text-night">{loadError}</p>
+      </div>
+    );
+  }
+  if (!meta) return <Loader />;
 
   return (
     <div>

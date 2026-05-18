@@ -86,6 +86,7 @@ function CardVariant({ data }: { data: PricingTeaserData }) {
               alt={data.mascot?.alternativeText || ""}
               width={90}
               height={90}
+              loading="lazy"
             />
           </span>
         ) : null}
@@ -140,6 +141,7 @@ function BandVariant({ data }: { data: PricingTeaserData }) {
             alt=""
             width={220}
             height={220}
+            loading="lazy"
             className="invert"
           />
         </span>

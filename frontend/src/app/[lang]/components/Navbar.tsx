@@ -198,8 +198,11 @@ export default function Navbar({
           </Dialog.Panel>
         </Dialog>
         <button
+          type="button"
           className="p-4 lg:hidden"
-          onClick={() => mobileMenuOpen ? setMobileMenuOpen(false) : setMobileMenuOpen((true))}
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
         >
           <Bars3Icon className="h-7 w-7 text-night" aria-hidden="true" />
         </button>

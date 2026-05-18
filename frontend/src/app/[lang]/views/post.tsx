@@ -1,24 +1,7 @@
 import { formatDate, getStrapiMedia } from '@/app/[lang]/utils/api-helpers';
 import Image from 'next/image';
 import componentResolver from '../utils/component-resolver';
-
-interface Article {
-  id: number;
-  title: string;
-  description: string;
-  slug: string;
-  cover: {
-    url: string;
-  };
-  authorsBio: {
-    name: string;
-    avatar: {
-      url: string;
-    };
-  };
-  blocks: any[];
-  publishedAt: string;
-}
+import type { Article, Section } from '../types/strapi';
 
 export default function Post({ data, lang = 'en' }: { data: Article; lang?: string }) {
   const { title, description, publishedAt, cover, authorsBio } = data;
@@ -57,7 +40,7 @@ export default function Post({ data, lang = 'en' }: { data: Article; lang?: stri
       </div>
       <div className="text-black bg-anti-flash_white">
         <p>{description}</p>
-        {(data.blocks || []).map((section: any, index: number) => componentResolver(section, index, lang))}
+        {(data.blocks || []).map((section: Section, index: number) => componentResolver(section, index, lang))}
       </div>
     </article>
   );

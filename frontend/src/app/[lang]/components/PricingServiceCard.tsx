@@ -88,6 +88,7 @@ export default function PricingServiceCard({ data }: PricingServiceCardProps) {
                   alt={data.cardIcon?.alternativeText || ""}
                   width={46}
                   height={46}
+                  loading="lazy"
                 />
               </span>
             ) : null}
