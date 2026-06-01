@@ -1,0 +1,1 @@
+{"nodes": [{"id": "description_parser_parsedescriptionlist", "label": "parseDescriptionList", "file_type": "code", "source_file": "frontend/src/app/[lang]/utils/description-parser.ts", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

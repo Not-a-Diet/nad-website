@@ -1,0 +1,20 @@
+node_modules
+readme-images
+.vscode
+.DS_Store
+frontend/next.config.js
+.env.example
+
+*.tar.gz
+
+# Strapi media library — 399 binary uploads, no value for a code graph
+backend/public/uploads*
+
+# Yarn Berry
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions.pnp.cjs
+.pnp.*

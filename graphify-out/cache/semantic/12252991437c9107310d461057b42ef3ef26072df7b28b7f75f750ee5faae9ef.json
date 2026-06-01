@@ -1,0 +1,1 @@
+{"nodes": [{"id": "api_strapi_rest_config", "label": "Strapi REST API Config (defaultLimit 25)", "file_type": "code", "source_file": "backend/config/api.js", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

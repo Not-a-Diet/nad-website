@@ -1,0 +1,1 @@
+{"nodes": [{"id": "product_feature_schema_product_feature", "label": "Product Feature Content Type", "file_type": "code", "source_file": "backend/src/api/product-feature/content-types/product-feature/schema.json", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}
