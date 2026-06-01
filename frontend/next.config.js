@@ -3,8 +3,8 @@
 const isDev = process.env.NODE_ENV !== 'production';
 
 // Hosts the app needs to load from / connect to.
-// Railway uses the local upload provider on a volume, so media + API share one host.
-const STRAPI_MEDIA_HOST = 'cms.notadiet.life';
+// Media lives on Cloudflare R2 (public custom domain); API on the Railway Strapi.
+const STRAPI_MEDIA_HOST = 'media.notadiet.life';
 const STRAPI_API_HOST = 'cms.notadiet.life';
 
 const csp = [
