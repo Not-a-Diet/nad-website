@@ -3,8 +3,9 @@
 const isDev = process.env.NODE_ENV !== 'production';
 
 // Hosts the app needs to load from / connect to.
-const STRAPI_MEDIA_HOST = 'pleasant-card-4dcaa4dd10.media.strapiapp.com';
-const STRAPI_API_HOST = 'nad-website-b96ec93f1f.strapiapp.com';
+// Media lives on Cloudflare R2 (public custom domain); API on the Railway Strapi.
+const STRAPI_MEDIA_HOST = 'media.notadiet.life';
+const STRAPI_API_HOST = 'cms.notadiet.life';
 
 const csp = [
   "default-src 'self'",
