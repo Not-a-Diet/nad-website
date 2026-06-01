@@ -26,7 +26,7 @@ module.exports = [
           'connect-src': ["'self'", 'https:'],
           'img-src': ["'self'", 'data:', 'blob:', ...mediaHosts],
           'media-src': ["'self'", 'data:', 'blob:', ...mediaHosts],
-          'upgrade-insecure-requests': null,
+          upgradeInsecureRequests: null,
         },
       },
     },
