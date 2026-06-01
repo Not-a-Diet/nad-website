@@ -7,9 +7,30 @@ const corsOrigins = [
     : []),
 ];
 
+// Host(s) the admin Media Library must load images from. With the S3 bucket
+// provider, set AWS_CDN_HOST to the bucket's public hostname so admin previews
+// aren't blocked by the default 'self'-only CSP.
+const mediaHosts = [
+  'market-assets.strapi.io',
+  ...(process.env.AWS_CDN_HOST ? [process.env.AWS_CDN_HOST] : []),
+];
+
 module.exports = [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', ...mediaHosts],
+          'media-src': ["'self'", 'data:', 'blob:', ...mediaHosts],
+          'upgrade-insecure-requests': null,
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
