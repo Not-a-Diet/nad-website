@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_sections_faqs",
+  "info": {
+    "name": "Faq",
+    "displayName": "FAQ",
+    "icon": "question-circle",
+    "description": "Hairline-divided FAQ accordion. Emits FAQPage JSON-LD for answer engines."
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "openMode": {
+      "type": "enumeration",
+      "enum": ["single", "multi"],
+      "default": "single",
+      "required": true
+    },
+    "ctaNote": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.faq-item"
+    }
+  }
+}

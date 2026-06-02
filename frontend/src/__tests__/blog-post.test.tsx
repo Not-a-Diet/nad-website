@@ -62,7 +62,8 @@ describe('Post view', () => {
 
     render(<Post data={article} />)
 
-    const img = screen.getByAltText('article cover image')
+    // alt now uses cover.alternativeText (falls back to title, then a default)
+    const img = screen.getByAltText('Cover')
     expect(img).toHaveAttribute('src', 'http://example.com/cover.jpg')
   })
 

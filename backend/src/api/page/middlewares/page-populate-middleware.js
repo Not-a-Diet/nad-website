@@ -66,6 +66,9 @@ const populate = {
           },
         },
       },
+      "sections.faq": {
+        populate: { items: true },
+      },
     },
   },
   seo: {

@@ -48,7 +48,8 @@
         "sections.featured-posts",
         "sections.pricing-teaser",
         "sections.pricing-service-card",
-        "sections.pricing-steps"
+        "sections.pricing-steps",
+        "sections.faq"
       ]
     },
     "slug": {

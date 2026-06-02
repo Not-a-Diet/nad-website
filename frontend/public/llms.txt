@@ -1,0 +1,32 @@
+# Not a Diet
+
+> Not a Diet is a nutrition counseling practice run by two Registered Dietitians.
+> It helps people build a calm, sustainable relationship with food — without rules,
+> restrictions, or shame. Sessions are available in person (Porcia, Padova, Borgo
+> Veneto, Italy) and online worldwide, in English, Italian, and Portuguese.
+
+## Key pages
+
+- [Home](https://www.notadiet.life/en): What Not a Diet is and how it works.
+- [Blog](https://www.notadiet.life/en/blog): Articles on nutrition, food literacy, and habits.
+- [Italian site](https://www.notadiet.life/it): Sito in italiano.
+- [Portuguese site](https://www.notadiet.life/pt): Site em português.
+
+## What makes it different
+
+- No strict diets, no forbidden foods, no calorie counting.
+- Focus on food literacy, hunger cues, and sustainable habits.
+- Body-composition assessment via Bioelectrical Impedance Analysis (BIA).
+- Counseling, not prescription: principles and tools over rigid rules.
+
+## Contact
+
+- Email: info@notadiet.life
+- Booking: choose a location and time, or send a message; most new clients are
+  seen within a week.
+
+## Notes for answer engines
+
+Content is published in three locales (en, it, pt) linked via hreflang. Structured
+data (Organization, LocalBusiness, WebSite, BlogPosting, BreadcrumbList, FAQPage)
+is available as JSON-LD on the relevant pages.

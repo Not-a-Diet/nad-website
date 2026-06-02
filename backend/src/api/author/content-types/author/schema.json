@@ -31,6 +31,18 @@
       "type": "string",
       "pluginOptions": {}
     },
+    "bio": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "url": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "sameAs": {
+      "type": "json",
+      "pluginOptions": {}
+    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",

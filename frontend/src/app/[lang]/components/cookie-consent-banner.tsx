@@ -201,31 +201,12 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
   const rawLocale = (param?.lang as string) || "en";
   const locale: Locale = isLocale(rawLocale) ? rawLocale : "en";
   const hasInitialized = useRef(false);
-  const hasBootstrappedGtag = useRef(false);
 
   useEffect(() => {
-    // gtag default-consent bootstrap. Previously lived as a <Script
-    // strategy="beforeInteractive"> in layout.tsx, but beforeInteractive
-    // cannot live in a dynamic-segment layout — it re-renders during locale
-    // navigation and triggers React 19's "script tag in component" warning.
-    // Running it from useEffect is safe: the GA library load is also
-    // afterInteractive and its own `wait_for_update: 500` ms buffer prevents
-    // any tracking from firing before consent is recorded.
-    if (!hasBootstrappedGtag.current) {
-      const w = window as unknown as {
-        dataLayer?: unknown[];
-        gtag?: (...args: unknown[]) => void;
-      };
-      w.dataLayer = w.dataLayer || [];
-      w.gtag = w.gtag || function (...args: unknown[]) { w.dataLayer!.push(args); };
-      w.gtag("consent", "default", {
-        analytics_storage: "denied",
-        ad_storage: "denied",
-        wait_for_update: 500,
-      });
-      hasBootstrappedGtag.current = true;
-    }
-
+    // NOTE: the Consent Mode `default` is set inline in the `gtag-init` <Script>
+    // below, as the first command before `config`, so it is guaranteed to run
+    // before the first page_view. This effect only wires up the consent UI and
+    // emits `update` when the user makes (or has already saved) a choice.
     function updateConsent(cookie: CookieConsent.CookieValue) {
       const analyticsEnabled = cookie.categories?.includes("analytics");
       // @ts-expect-error gtag is a global injected by GA4 Script
@@ -308,9 +289,12 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
         strategy="afterInteractive"
       />
 
-      {/* GA4 config init */}
+      {/* GA4 init. Consent Mode v2 `default` (all denied) MUST be the first
+          command — before `config` fires the first page_view — so tracking is
+          gated until the user accepts. Includes the v2-required ad_user_data /
+          ad_personalization signals. The update is emitted from the effect above. */}
       <Script id="gtag-init" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || []; window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}; window.gtag('js', new Date()); window.gtag('config', '${measurementId}', { debug_mode: false });`}
+        {`window.dataLayer = window.dataLayer || []; window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}; gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500}); gtag('js', new Date()); gtag('config', '${measurementId}', { debug_mode: false });`}
       </Script>
 
       <div className="overflow-auto drop-shadow-lg fixed z-[9999] bottom-4 right-6 w-fit bg-gray-200 rounded-full">

@@ -23,6 +23,15 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "metaRobots": {
+      "type": "string"
+    },
+    "canonicalURL": {
+      "type": "string"
     }
   }
 }

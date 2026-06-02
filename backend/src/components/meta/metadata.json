@@ -15,6 +15,14 @@
     "metaDescription": {
       "type": "text",
       "required": true
+    },
+    "shareImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -4,7 +4,7 @@ Guidance for Claude Code working in this repo.
 
 ## Overview
 
-Monorepo "Not a Diet" (notadiet.life) health/wellness site. **Yarn 4.14.1 Berry** workspaces: `frontend/` (Next.js 16.2.4, React 19, TypeScript, Tailwind) + `backend/` (Strapi 5.45.0 CMS, SQLite). Deploy: frontend Vercel, backend Strapi Cloud (`nad-website-b96ec93f1f`). Locales: `en`, `it`, `pt`.
+Monorepo "Not a Diet" health/wellness site. **Yarn 4.14.1 Berry** workspaces: `frontend/` (Next.js 16.2.4, React 19, TypeScript, Tailwind) + `backend/` (Strapi 5.46.1 CMS, PostgreSQL). Deploy: frontend Vercel → **`www.notadiet.life`** (canonical; apex 301→www), backend **Railway → `cms.notadiet.life`**, media **Cloudflare R2 → `media.notadiet.life`** (prod uploads are absolute CDN URLs; local dev falls back to `localhost:1337`). Locales: `en`, `it`, `pt`.
 
 ## Commands
 

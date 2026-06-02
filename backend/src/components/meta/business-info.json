@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_meta_business_infos",
+  "info": {
+    "name": "BusinessInfo",
+    "displayName": "Business info",
+    "icon": "briefcase",
+    "description": "Sitewide LocalBusiness / Organization facts for JSON-LD (schema.org). One primary location; sameAs and openingHours are JSON arrays."
+  },
+  "options": {},
+  "attributes": {
+    "legalName": {
+      "type": "string"
+    },
+    "businessType": {
+      "type": "enumeration",
+      "enum": [
+        "Nutritionist",
+        "MedicalBusiness",
+        "HealthAndBeautyBusiness",
+        "LocalBusiness",
+        "Organization"
+      ],
+      "default": "Nutritionist",
+      "required": true
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "priceRange": {
+      "type": "string"
+    },
+    "streetAddress": {
+      "type": "string"
+    },
+    "addressLocality": {
+      "type": "string"
+    },
+    "addressRegion": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "addressCountry": {
+      "type": "string",
+      "default": "IT"
+    },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "decimal"
+    },
+    "openingHours": {
+      "type": "json"
+    },
+    "sameAs": {
+      "type": "json"
+    }
+  }
+}

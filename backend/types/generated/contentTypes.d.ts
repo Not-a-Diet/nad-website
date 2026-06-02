@@ -465,6 +465,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'shared.rich-text',
         'shared.slider',
         'shared.video-embed',
+        'sections.faq',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -531,6 +532,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   attributes: {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    bio: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -543,9 +545,11 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    sameAs: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -649,6 +653,12 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    businessInfo: Schema.Attribute.Component<'meta.business-info', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -759,6 +769,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.pricing-teaser',
         'sections.pricing-service-card',
         'sections.pricing-steps',
+        'sections.faq',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

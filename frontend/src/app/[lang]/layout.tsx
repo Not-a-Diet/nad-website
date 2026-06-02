@@ -7,11 +7,15 @@ import { i18n } from "../../../i18n-config";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
+import { FALLBACK_SEO, SITE_URL } from "@/app/[lang]/utils/constants";
+import { ogLocale, safeMediaUrl } from "@/app/[lang]/utils/seo";
 import { Inter } from "next/font/google"
 import ErrorComponent from "./components/Error";
 import GA4CookieConsentBanner from "./components/cookie-consent-banner";
 import HashScroller from "./components/HashScroller";
+import JsonLd from "./components/JsonLd";
+import { resolveBusinessInfo } from "./utils/site-config";
+import { localBusinessSchema, organizationSchema, websiteSchema } from "./utils/structured-data";
 
 const GA_MEASUREMENT_ID = "G-223FTH8TYJ";
 
@@ -30,6 +34,7 @@ const getGlobal = cache(async (lang: string): Promise<any> => {
       notificationBanner: { populate: { link: true } },
       navbar: { populate: { links: true, navbarLogo: { populate: { logoImg: true } } } },
       footer: { populate: { footerLogo: { populate: { logoImg: true } }, menuLinks: true, legalLinks: true, socialLinks: true, categories: true } },
+      businessInfo: true,
     },
     locale: lang,
   };
@@ -45,9 +50,34 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const metadata = meta.data.metadata;
   const faviconUrl = meta.data.favicon?.url;
 
+  const title = metadata?.metaTitle ?? FALLBACK_SEO.title;
+  const description = metadata?.metaDescription ?? FALLBACK_SEO.description;
+
+  // Sitewide default share image: CMS `metadata.shareImage` when present and
+  // absolute (prod CDN), otherwise the static /og-default.png resolved against
+  // metadataBase. Never a localhost dev URL.
+  const cmsShareImage = safeMediaUrl(metadata?.shareImage?.url);
+  const ogImages = [cmsShareImage ?? "/og-default.png"];
+
   return {
-    title: metadata?.metaTitle ?? FALLBACK_SEO.title,
-    description: metadata?.metaDescription ?? FALLBACK_SEO.description,
+    metadataBase: new URL(SITE_URL),
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      siteName: "Not a Diet",
+      type: "website",
+      locale: ogLocale(lang),
+      url: `${SITE_URL}/${lang}`,
+      images: ogImages,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ogImages,
+    },
     ...(faviconUrl ? {
       icons: {
         icon: [new URL(faviconUrl, getStrapiURL())],
@@ -76,6 +106,8 @@ export default async function RootLayout({
 
   const { notificationBanner, navbar, footer } = global.data;
 
+  const business = resolveBusinessInfo(global.data.businessInfo);
+
   const navbarLogoUrl = getStrapiMedia(
     navbar?.navbarLogo?.logoImg?.url ?? ''
   );
@@ -88,6 +120,9 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={`${inter.variable} ${inter.className}`}>
       <body suppressHydrationWarning>
+        <JsonLd data={organizationSchema(business)} />
+        <JsonLd data={localBusinessSchema(business)} />
+        <JsonLd data={websiteSchema(business, lang)} />
         <HashScroller />
         <Navbar
           links={navbar.links}

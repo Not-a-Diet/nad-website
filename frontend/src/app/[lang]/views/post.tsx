@@ -13,7 +13,7 @@ export default function Post({ data, lang = 'en' }: { data: Article; lang?: stri
       {imageUrl && (
         <Image
           src={imageUrl}
-          alt="article cover image"
+          alt={cover?.alternativeText || title || "article cover image"}
           width={400}
           height={400}
           className="w-full h-96 object-cover rounded-lg"

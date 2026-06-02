@@ -51,6 +51,20 @@ export interface ElementsBookingPerson extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_faq_items';
+  info: {
+    description: 'A single question/answer pair. Separate answer paragraphs with a blank line.';
+    displayName: 'FAQ item';
+    icon: 'question';
+    name: 'FaqItem';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsFeature extends Struct.ComponentSchema {
   collectionName: 'components_elements_features';
   info: {
@@ -401,6 +415,42 @@ export interface LinksSocialLink extends Struct.ComponentSchema {
   };
 }
 
+export interface MetaBusinessInfo extends Struct.ComponentSchema {
+  collectionName: 'components_meta_business_infos';
+  info: {
+    description: 'Sitewide LocalBusiness / Organization facts for JSON-LD (schema.org). One primary location; sameAs and openingHours are JSON arrays.';
+    displayName: 'Business info';
+    icon: 'briefcase';
+    name: 'BusinessInfo';
+  };
+  attributes: {
+    addressCountry: Schema.Attribute.String & Schema.Attribute.DefaultTo<'IT'>;
+    addressLocality: Schema.Attribute.String;
+    addressRegion: Schema.Attribute.String;
+    businessType: Schema.Attribute.Enumeration<
+      [
+        'Nutritionist',
+        'MedicalBusiness',
+        'HealthAndBeautyBusiness',
+        'LocalBusiness',
+        'Organization',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Nutritionist'>;
+    email: Schema.Attribute.String;
+    latitude: Schema.Attribute.Decimal;
+    legalName: Schema.Attribute.String;
+    longitude: Schema.Attribute.Decimal;
+    openingHours: Schema.Attribute.JSON;
+    postalCode: Schema.Attribute.String;
+    priceRange: Schema.Attribute.String;
+    sameAs: Schema.Attribute.JSON;
+    streetAddress: Schema.Attribute.String;
+    telephone: Schema.Attribute.String;
+  };
+}
+
 export interface MetaMetadata extends Struct.ComponentSchema {
   collectionName: 'components_meta_metadata';
   info: {
@@ -412,6 +462,7 @@ export interface MetaMetadata extends Struct.ComponentSchema {
   attributes: {
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    shareImage: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -461,6 +512,28 @@ export interface SectionsContact extends Struct.ComponentSchema {
     contactLinks: Schema.Attribute.Component<'links.social-link', true>;
     description: Schema.Attribute.Text;
     hours: Schema.Attribute.Component<'elements.hours', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsFaq extends Struct.ComponentSchema {
+  collectionName: 'components_sections_faqs';
+  info: {
+    description: 'Hairline-divided FAQ accordion. Emits FAQPage JSON-LD for answer engines.';
+    displayName: 'FAQ';
+    icon: 'question-circle';
+    name: 'Faq';
+  };
+  attributes: {
+    ctaNote: Schema.Attribute.String;
+    ctaText: Schema.Attribute.String;
+    ctaUrl: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'elements.faq-item', true>;
+    openMode: Schema.Attribute.Enumeration<['single', 'multi']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'single'>;
+    subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -764,7 +837,10 @@ export interface SharedSeo extends Struct.ComponentSchema {
     name: 'Seo';
   };
   attributes: {
+    canonicalURL: Schema.Attribute.String;
+    keywords: Schema.Attribute.String;
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaRobots: Schema.Attribute.String;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
     shareImage: Schema.Attribute.Media<'images'>;
   };
@@ -799,6 +875,7 @@ declare module '@strapi/strapi' {
       'elements.booking-calendar': ElementsBookingCalendar;
       'elements.booking-location': ElementsBookingLocation;
       'elements.booking-person': ElementsBookingPerson;
+      'elements.faq-item': ElementsFaqItem;
       'elements.feature': ElementsFeature;
       'elements.feature-column': ElementsFeatureColumn;
       'elements.feature-row': ElementsFeatureRow;
@@ -820,10 +897,12 @@ declare module '@strapi/strapi' {
       'links.button-link': LinksButtonLink;
       'links.link': LinksLink;
       'links.social-link': LinksSocialLink;
+      'meta.business-info': MetaBusinessInfo;
       'meta.metadata': MetaMetadata;
       'sections.booking-calendar': SectionsBookingCalendar;
       'sections.bottom-actions': SectionsBottomActions;
       'sections.contact': SectionsContact;
+      'sections.faq': SectionsFaq;
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
       'sections.feature-rows-group': SectionsFeatureRowsGroup;
       'sections.featured-posts': SectionsFeaturedPosts;

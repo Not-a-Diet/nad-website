@@ -71,6 +71,16 @@
         }
       },
       "component": "layout.footer"
+    },
+    "businessInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.business-info",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }

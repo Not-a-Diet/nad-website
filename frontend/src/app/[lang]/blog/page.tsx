@@ -1,129 +1,75 @@
-"use client";
-import { use, useState, useEffect } from "react";
+import type { Metadata } from "next";
 import { fetchAPI } from "../utils/fetch-api";
-
-import Loader from "../components/Loader";
 import Blog from "../views/blog-list";
 import PageHeader from "../components/PageHeader";
+import BlogLoadMore from "../components/BlogLoadMore";
+import { buildAlternates, pageUrl } from "../utils/seo";
 
-interface Meta {
-  pagination: {
-    start: number;
-    limit: number;
-    total: number;
+const PAGE_LIMIT = parseInt(process.env.NEXT_PUBLIC_PAGE_LIMIT ?? "6", 10);
+
+async function getBlogHeaders(lang: string) {
+  const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+  try {
+    const res = await fetchAPI(
+      "/blog-headers",
+      { locale: lang },
+      { headers: { Authorization: `Bearer ${token}` } },
+    );
+    return res?.data?.[0];
+  } catch {
+    return undefined;
+  }
+}
+
+async function getInitialArticles(lang: string) {
+  const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+  return fetchAPI(
+    "/articles",
+    {
+      locale: lang,
+      sort: { createdAt: "desc" },
+      populate: {
+        cover: { fields: ["url"] },
+        category: { populate: "*" },
+        authorsBio: { populate: "*" },
+      },
+      pagination: { start: 0, limit: PAGE_LIMIT },
+    },
+    { headers: { Authorization: `Bearer ${token}` } },
+  );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const headers = await getBlogHeaders(lang);
+  const title = headers?.heading ? `${headers.heading}` : "Blog";
+  const description = headers?.text;
+  return {
+    title,
+    ...(description ? { description } : {}),
+    alternates: buildAlternates(lang, "/blog"),
+    openGraph: { title, ...(description ? { description } : {}), url: pageUrl(lang, "/blog"), type: "website" },
   };
 }
 
-interface BlogHeaders {
-  heading: string;
-  text: string;
-}
+export default async function BlogIndex({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
 
-export default function Profile({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = use(params);
-  const [meta, setMeta] = useState<Meta | undefined>();
-  const [data, setData] = useState<any[]>([]);
-  const [isLoading, setLoading] = useState(true);
-  const [blogHeaders, setBlogHeaders] = useState<BlogHeaders>();
-  const [loadError, setLoadError] = useState<string | null>(null);
+  const [articlesResponse, blogHeaders] = await Promise.all([
+    getInitialArticles(lang),
+    getBlogHeaders(lang),
+  ]);
 
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadInitialData() {
-      setLoading(true);
-      setLoadError(null);
-      try {
-        const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
-        const options = { headers: { Authorization: `Bearer ${token}` } };
-
-        const [articlesResponse, headersResponse] = await Promise.all([
-          fetchAPI("/articles", {
-            locale: lang,
-            sort: { createdAt: "desc" },
-            populate: {
-              cover: { fields: ["url"] },
-              category: { populate: "*" },
-              authorsBio: { populate: "*" },
-            },
-            pagination: { start: 0, limit: parseInt(process.env.NEXT_PUBLIC_PAGE_LIMIT ?? '6', 10) },
-          }, options),
-          fetchAPI("/blog-headers", { locale: lang }, options),
-        ]);
-
-        if (cancelled) return;
-
-        setData(articlesResponse.data);
-        setMeta(articlesResponse.meta);
-        setBlogHeaders(headersResponse.data[0]);
-      } catch (error) {
-        if (cancelled) return;
-        console.error("[blog] failed to load initial posts", error);
-        setLoadError("We couldn't load the blog right now. Please try again in a moment.");
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    }
-
-    loadInitialData();
-    return () => { cancelled = true; };
-  }, [lang]);
-
-  async function loadMorePosts(): Promise<void> {
-    if (!meta) return;
-    const start = meta.pagination.start + meta.pagination.limit;
-    const limit = parseInt(process.env.NEXT_PUBLIC_PAGE_LIMIT ?? '6', 10);
-    try {
-      const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
-      const path = `/articles`;
-      const urlParamsObject = {
-        locale: lang,
-        sort: { createdAt: "desc" },
-        populate: {
-          cover: { fields: ["url"] },
-          category: { populate: "*" },
-          authorsBio: { populate: "*" },
-        },
-        pagination: { start, limit },
-      };
-      const options = { headers: { Authorization: `Bearer ${token}` } };
-      const responseData = await fetchAPI(path, urlParamsObject, options);
-
-      setData((prevData) => [...prevData, ...responseData.data]);
-      setMeta(responseData.meta);
-    } catch (error) {
-      console.error("[blog] failed to load more posts", error);
-      setLoadError("We couldn't load more posts. Please try again.");
-    }
-  }
-
-  if (isLoading) return <Loader />;
-  if (loadError && !meta) {
-    return (
-      <div className="container mx-auto p-8 text-center">
-        <p className="text-night">{loadError}</p>
-      </div>
-    );
-  }
-  if (!meta) return <Loader />;
+  const articles = articlesResponse?.data ?? [];
+  const meta = articlesResponse?.meta ?? {
+    pagination: { start: 0, limit: PAGE_LIMIT, total: articles.length },
+  };
 
   return (
     <div>
-      <PageHeader heading={blogHeaders ? blogHeaders.heading : ""} text={blogHeaders ? blogHeaders.text : ""} />
-      <Blog data={data} lang={lang}>
-        {meta.pagination.start + meta.pagination.limit <
-          meta.pagination.total && (
-          <div className="flex justify-center">
-            <button
-              type="button"
-              className="px-6 py-3 text-sm rounded-lg hover:underline text-ebony"
-              onClick={loadMorePosts}
-            >
-              Load more posts...
-            </button>
-          </div>
-        )}
-      </Blog>
+      <PageHeader heading={blogHeaders?.heading ?? ""} text={blogHeaders?.text ?? ""} />
+      <Blog data={articles} lang={lang} />
+      <BlogLoadMore lang={lang} initialMeta={meta} />
     </div>
   );
 }

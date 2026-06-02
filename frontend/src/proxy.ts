@@ -47,6 +47,8 @@ export default function proxy(request: NextRequest) {
 }
 
 export const config = {
-    // Matcher ignoring `/_next/` and `/api/`
-    matcher: ['/((?!_next).*)'],
+    // Skip `/_next/` and any path with a file extension (e.g. /sitemap.xml,
+    // /robots.txt, /llms.txt, /manifest.webmanifest, favicon.ico) so metadata
+    // routes aren't locale-redirected into a 404.
+    matcher: ['/((?!_next|.*\\.[^/]+$).*)'],
 };
