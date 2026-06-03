@@ -40,9 +40,11 @@ export default function proxy(request: NextRequest) {
     if (pathnameIsMissingLocale) {
         const locale = getLocale(request);
 
-        // e.g. incoming request is /products
-        // The new URL is now /en-US/products
-        return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
+        // pathname already starts with "/", so prefix the locale directly.
+        // e.g. "/products" -> "/en/products", and "/" -> "/en" (no trailing
+        // slash, avoiding a second redirect hop and the old "/en//" bug).
+        const newPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`;
+        return NextResponse.redirect(new URL(newPath, request.url));
     }
 }
 

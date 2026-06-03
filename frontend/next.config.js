@@ -64,6 +64,20 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // Permanently send the default Vercel production domain to the canonical
+      // host so search engines don't index a duplicate copy of the site.
+      // Matches only this exact host — per-deployment preview *.vercel.app URLs
+      // are left alone (they're already noindexed by Vercel).
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'nad-website.vercel.app' }],
+        destination: 'https://www.notadiet.life/:path*',
+        permanent: true,
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig

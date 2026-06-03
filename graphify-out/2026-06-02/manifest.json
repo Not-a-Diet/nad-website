@@ -15,7 +15,7 @@
     "semantic_hash": "3d5ce288d093b7b235c55a7020891015"
   },
   "/home/kaido/dev/nad-website/backend/.strapi-updater.json": {
-    "mtime": 1780360178.315512,
+    "mtime": 1780359785.661054,
     "ast_hash": "950591e78ed7c65a60cdc4e1ee02c0c1",
     "semantic_hash": ""
   },
@@ -50,7 +50,7 @@
     "semantic_hash": "6d1009c18a93c1d3a38abde51a3350ab"
   },
   "/home/kaido/dev/nad-website/backend/.strapi/client/app.js": {
-    "mtime": 1780360179.1334524,
+    "mtime": 1780359786.7209768,
     "ast_hash": "8e610fa843decd24376b1562fddf63bd",
     "semantic_hash": "8e610fa843decd24376b1562fddf63bd"
   },
@@ -515,13 +515,13 @@
     "semantic_hash": "34b72dad2ee0b62e8dc9106c3220ddac"
   },
   "/home/kaido/dev/nad-website/backend/types/generated/contentTypes.d.ts": {
-    "mtime": 1780360179.497426,
-    "ast_hash": "19a5f0d6b50b531c8caa50943d03c62d",
+    "mtime": 1780359787.2039416,
+    "ast_hash": "fe39c817fb1089cec1a73b4994b6b43e",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/types/generated/components.d.ts": {
-    "mtime": 1780360179.498426,
-    "ast_hash": "f14e35c29482f1f410000f631cf74bc6",
+    "mtime": 1780359787.2049415,
+    "ast_hash": "3d17be24235dc3a608d02191bd34c9d4",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/.claude/settings.local.json": {
@@ -565,9 +565,9 @@
     "semantic_hash": "fbb469021e872201d6b6f74d4d59d1f5"
   },
   "/home/kaido/dev/nad-website/frontend/vercel.json": {
-    "mtime": 1780447866.181732,
-    "ast_hash": "291fc2908b0476673ff977506411da79",
-    "semantic_hash": ""
+    "mtime": 1780353164.3269727,
+    "ast_hash": "32bd3b3af35a1e8cf0b6fb0f36dc779f",
+    "semantic_hash": "32bd3b3af35a1e8cf0b6fb0f36dc779f"
   },
   "/home/kaido/dev/nad-website/frontend/eslint.config.mjs": {
     "mtime": 1779051107.3787708,
@@ -580,8 +580,8 @@
     "semantic_hash": "0f831060fe39fe096936f275bc58c80b"
   },
   "/home/kaido/dev/nad-website/frontend/src/proxy.ts": {
-    "mtime": 1780450874.3729541,
-    "ast_hash": "bfa6e1da11f92926a95637d40fe41817",
+    "mtime": 1780359786.9530263,
+    "ast_hash": "bbb2884d0a1dedd936a4448a70302f8b",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/section-error-boundary.test.tsx": {
@@ -850,9 +850,9 @@
     "semantic_hash": "4c80e3596178918f09b61ab1391fc395"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/cookie-consent-banner.tsx": {
-    "mtime": 1780365071.533503,
-    "ast_hash": "dfbc6a630db5adac086027ac3af673fd",
-    "semantic_hash": ""
+    "mtime": 1779137029.2540035,
+    "ast_hash": "7c204505d526d2d47665e290705e6436",
+    "semantic_hash": "7c204505d526d2d47665e290705e6436"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/ArticleSelect.tsx": {
     "mtime": 1779137029.2540035,
@@ -970,7 +970,7 @@
     "semantic_hash": "8b577cfb69ca544af4277b042c0ec9cb"
   },
   "/home/kaido/dev/nad-website/backend/.strapi/client/index.html": {
-    "mtime": 1780360179.1114542,
+    "mtime": 1780359786.6949787,
     "ast_hash": "eda04f64d11a5c9c5df544c8274f6cc3",
     "semantic_hash": "eda04f64d11a5c9c5df544c8274f6cc3"
   },
@@ -1035,8 +1035,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/.claude/settings.json": {
-    "mtime": 1780364757.406117,
-    "ast_hash": "b7fa4645c6be8b408b2a80e975cc37bc",
+    "mtime": 1780356186.447476,
+    "ast_hash": "87f0d903477984d0587a02f8fe185263",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Faq.tsx": {
@@ -1095,8 +1095,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/public/llms.txt": {
-    "mtime": 1780365752.0851426,
-    "ast_hash": "88f5716282df1719da6ef7a107b64cfd",
+    "mtime": 1780359902.4225605,
+    "ast_hash": "1c0fe1c6bf40c46faa3dc5a652cd33c5",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/public/og-default.png": {
