@@ -2052,7 +2052,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L29",
       "id": "sections_pricing_service_card_attributes_cardsubtitle",
-      "community": 8,
+      "community": 212,
       "norm_label": "cardsubtitle"
     },
     {
@@ -2061,7 +2061,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L30",
       "id": "sections_pricing_service_card_cardsubtitle_type",
-      "community": 8,
+      "community": 212,
       "norm_label": "type"
     },
     {
@@ -2124,7 +2124,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L40",
       "id": "sections_pricing_service_card_attributes_studiolabel",
-      "community": 197,
+      "community": 168,
       "norm_label": "studiolabel"
     },
     {
@@ -2133,7 +2133,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L41",
       "id": "sections_pricing_service_card_studiolabel_type",
-      "community": 197,
+      "community": 168,
       "norm_label": "type"
     },
     {
@@ -2142,7 +2142,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L42",
       "id": "sections_pricing_service_card_studiolabel_default",
-      "community": 197,
+      "community": 168,
       "norm_label": "default"
     },
     {
@@ -2151,7 +2151,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L44",
       "id": "sections_pricing_service_card_attributes_onlinelabel",
-      "community": 168,
+      "community": 197,
       "norm_label": "onlinelabel"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L45",
       "id": "sections_pricing_service_card_onlinelabel_type",
-      "community": 168,
+      "community": 197,
       "norm_label": "type"
     },
     {
@@ -2169,7 +2169,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L46",
       "id": "sections_pricing_service_card_onlinelabel_default",
-      "community": 168,
+      "community": 197,
       "norm_label": "default"
     },
     {
@@ -2178,7 +2178,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L48",
       "id": "sections_pricing_service_card_attributes_firstvisitname",
-      "community": 8,
+      "community": 166,
       "norm_label": "firstvisitname"
     },
     {
@@ -2187,7 +2187,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L49",
       "id": "sections_pricing_service_card_firstvisitname_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2196,7 +2196,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L51",
       "id": "sections_pricing_service_card_attributes_firstvisitsub",
-      "community": 8,
+      "community": 166,
       "norm_label": "firstvisitsub"
     },
     {
@@ -2205,7 +2205,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L52",
       "id": "sections_pricing_service_card_firstvisitsub_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2232,7 +2232,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L57",
       "id": "sections_pricing_service_card_attributes_firstvisitmeta",
-      "community": 166,
+      "community": 8,
       "norm_label": "firstvisitmeta"
     },
     {
@@ -2241,7 +2241,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L58",
       "id": "sections_pricing_service_card_firstvisitmeta_type",
-      "community": 166,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2268,7 +2268,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L63",
       "id": "sections_pricing_service_card_attributes_followupsub",
-      "community": 212,
+      "community": 8,
       "norm_label": "followupsub"
     },
     {
@@ -2277,7 +2277,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L64",
       "id": "sections_pricing_service_card_followupsub_type",
-      "community": 212,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2286,7 +2286,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L66",
       "id": "sections_pricing_service_card_attributes_followupprice",
-      "community": 166,
+      "community": 8,
       "norm_label": "followupprice"
     },
     {
@@ -2295,7 +2295,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L67",
       "id": "sections_pricing_service_card_followupprice_type",
-      "community": 166,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L75",
       "id": "sections_pricing_service_card_attributes_ctatext",
-      "community": 166,
+      "community": 213,
       "norm_label": "ctatext"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L76",
       "id": "sections_pricing_service_card_ctatext_type",
-      "community": 166,
+      "community": 213,
       "norm_label": "type"
     },
     {
@@ -2358,7 +2358,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L78",
       "id": "sections_pricing_service_card_attributes_ctaurl",
-      "community": 8,
+      "community": 166,
       "norm_label": "ctaurl"
     },
     {
@@ -2367,7 +2367,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L79",
       "id": "sections_pricing_service_card_ctaurl_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2403,7 +2403,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L85",
       "id": "sections_pricing_service_card_attributes_reassurances",
-      "community": 213,
+      "community": 8,
       "norm_label": "reassurances"
     },
     {
@@ -2412,7 +2412,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L86",
       "id": "sections_pricing_service_card_reassurances_type",
-      "community": 213,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -16065,7 +16065,7 @@
       "source_file": "frontend/src/app/[lang]/blog/layout.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_blog_layout_tsx",
-      "community": 190,
+      "community": 64,
       "norm_label": "layout.tsx"
     },
     {
@@ -16074,7 +16074,7 @@
       "source_file": "frontend/src/app/[lang]/blog/layout.tsx",
       "source_location": "L1",
       "id": "blog_layout_layout",
-      "community": 190,
+      "community": 64,
       "norm_label": "layout()"
     },
     {
@@ -16182,7 +16182,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/layout.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_blog_category_slug_layout_tsx",
-      "community": 31,
+      "community": 17,
       "norm_label": "layout.tsx"
     },
     {
@@ -16191,7 +16191,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/layout.tsx",
       "source_location": "L6",
       "id": "slug_layout_fetchsidemenudata",
-      "community": 31,
+      "community": 17,
       "norm_label": "fetchsidemenudata()"
     },
     {
@@ -16200,7 +16200,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/layout.tsx",
       "source_location": "L43",
       "id": "slug_layout_layoutroute",
-      "community": 31,
+      "community": 17,
       "norm_label": "layoutroute()"
     },
     {
@@ -16209,7 +16209,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/layout.tsx",
       "source_location": "L77",
       "id": "slug_layout_generatestaticparams",
-      "community": 31,
+      "community": 17,
       "norm_label": "generatestaticparams()"
     },
     {
@@ -16218,7 +16218,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/page.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_blog_category_slug_page_tsx",
-      "community": 64,
+      "community": 39,
       "norm_label": "page.tsx"
     },
     {
@@ -16227,7 +16227,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/page.tsx",
       "source_location": "L10",
       "id": "slug_page_getpostbyslug",
-      "community": 64,
+      "community": 190,
       "norm_label": "getpostbyslug()"
     },
     {
@@ -16236,7 +16236,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/page.tsx",
       "source_location": "L28",
       "id": "slug_page_getmetadata",
-      "community": 64,
+      "community": 17,
       "norm_label": "getmetadata()"
     },
     {
@@ -16254,7 +16254,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/page.tsx",
       "source_location": "L77",
       "id": "slug_page_postroute",
-      "community": 64,
+      "community": 39,
       "norm_label": "postroute()"
     },
     {
@@ -16263,7 +16263,7 @@
       "source_file": "frontend/src/app/[lang]/[...slug]/page.tsx",
       "source_location": "L72",
       "id": "slug_page_generatestaticparams",
-      "community": 64,
+      "community": 17,
       "norm_label": "generatestaticparams()"
     },
     {
@@ -16542,7 +16542,7 @@
       "source_file": "frontend/src/app/[lang]/utils/fetch-api.tsx",
       "source_location": "L40",
       "id": "utils_fetch_api_fetchapi",
-      "community": 64,
+      "community": 17,
       "norm_label": "fetchapi()"
     },
     {
@@ -17377,7 +17377,7 @@
       "label": "RichText()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/RichText.tsx",
-      "source_location": "L15",
+      "source_location": "L11",
       "id": "components_richtext_richtext",
       "community": 90,
       "norm_label": "richtext()"
@@ -20465,7 +20465,7 @@
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L22",
-      "community": 190,
+      "community": 64,
       "norm_label": "profile()",
       "id": "blog_page_profile"
     },
@@ -22337,7 +22337,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 50,
       "norm_label": "dynamic page route test suite",
       "id": "dynamic_page_test_suite"
     },
@@ -22350,7 +22350,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 50,
       "norm_label": "home page route test suite",
       "id": "home_page_test_suite"
     },
@@ -22389,7 +22389,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 50,
       "norm_label": "fetchapi util",
       "id": "fetch_api_fetchapi"
     },
@@ -22441,7 +22441,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 50,
       "norm_label": "strapi v5 dynamic zone pattern",
       "id": "concept_strapi_dynamic_zone"
     },
@@ -22558,7 +22558,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 64,
+      "community": 190,
       "norm_label": "postroute (blog article page)",
       "id": "_slug__page_postroute"
     },
@@ -22571,7 +22571,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 64,
+      "community": 190,
       "norm_label": "getmetadata (blog article)",
       "id": "_slug__page_getmetadata"
     },
@@ -22584,7 +22584,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 64,
+      "community": 190,
       "norm_label": "generatemetadata (blog article page)",
       "id": "_slug__page_generatemetadata"
     },
@@ -22636,7 +22636,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 190,
+      "community": 64,
       "norm_label": "loadinitialdata",
       "id": "blog_page_loadinitialdata"
     },
@@ -22649,7 +22649,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 190,
+      "community": 64,
       "norm_label": "loadmoreposts (pagination handler)",
       "id": "blog_page_loadmoreposts"
     },
@@ -22766,7 +22766,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 50,
       "norm_label": "getstrapiurl",
       "id": "api_helpers_getstrapiurl"
     },
@@ -22896,7 +22896,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 50,
       "norm_label": "strapi v5 flat response shape",
       "id": "types_strapi_v5_flat_response"
     },
@@ -44081,9 +44081,9 @@
       "source_file": "frontend/vercel.json",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "frontend_vercel_json",
-      "target": "frontend_vercel_git"
+      "target": "frontend_vercel_git",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44111,9 +44111,9 @@
       "source_file": "frontend/vercel.json",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "frontend_vercel_git",
-      "target": "frontend_vercel_git_deploymentenabled"
+      "target": "frontend_vercel_git_deploymentenabled",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44121,9 +44121,9 @@
       "source_file": "frontend/vercel.json",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "frontend_vercel_git_deploymentenabled",
-      "target": "frontend_vercel_deploymentenabled_main"
+      "target": "frontend_vercel_deploymentenabled_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56517,5 +56517,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "37f62750ea28833c0ecaf722655a3d5998e39ceb"
+  "built_at_commit": "a3388f732962801f34b8af0bb2d3df65307ddf2a"
 }
