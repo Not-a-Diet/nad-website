@@ -98,7 +98,8 @@ export default function Faq({ data }: Readonly<FaqProps>) {
 
   return (
     <section
-      className="faq-v1 w-full px-6 py-14 lg:px-8 lg:py-20"
+      id="faq"
+      className="faq-v1 w-full px-6 py-20 lg:px-8 lg:py-24"
       aria-labelledby={items.length ? `${idPrefix}-title` : undefined}
     >
       <div className="mx-auto max-w-[1180px]">

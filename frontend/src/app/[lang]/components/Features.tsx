@@ -99,7 +99,7 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
 
 export default function Features({ data }: FeaturesProps) {
   return (
-    <section id="features" className="bg-white p-2 mt-24 lg:mt-2 my-12 lg:py-24">
+    <section id="features" className="bg-white px-2 py-20 lg:py-24">
       <div className="container mx-auto py-4 space-y-2 text-center">
         <h2 className="text-4xl font-sans font-bold">{data.heading}</h2>
         <p className="font-sans">{data.description}</p>

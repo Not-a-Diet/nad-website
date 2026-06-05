@@ -254,7 +254,7 @@ export default function Contact({ data }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="bg-anti-flash_white py-12 p-2 md:px-8 lg:px-16 font-sans">
+    <section id="contact" className="bg-anti-flash_white py-20 px-2 md:px-8 lg:px-16 lg:py-24 font-sans">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row">
 
         <div className="flex lg:flex-col lg:w-1/3">

@@ -247,7 +247,7 @@ export default function PricingTeaser({ data }: PricingTeaserProps) {
   const Variant = variant === "band" ? BandVariant : variant === "inline" ? InlineVariant : CardVariant;
 
   return (
-    <section className="relative overflow-hidden px-6 py-24">
+    <section className="relative overflow-hidden px-6 py-20 lg:py-24">
       <FloatingFood
         items={data.decoration}
         positions={COMPACT_FLOAT_POSITIONS}

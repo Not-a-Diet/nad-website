@@ -51,7 +51,7 @@ export default function PricingServiceCard({ data }: PricingServiceCardProps) {
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden bg-anti-flash_white pb-16 pt-24"
+      className="relative overflow-hidden bg-anti-flash_white py-20 lg:py-24"
     >
       <FloatingFood
         items={data.decoration}

@@ -71,7 +71,7 @@ function TeamMemberCard({ name, occupation, profilePhoto, description, skills }:
 
 export default function Team({ data }: TeamProps) {
   return (
-    <section id="about" className="py-24 bg-anti-flash_white-100 relative overflow-hidden">
+    <section id="about" className="py-20 lg:py-24 bg-anti-flash_white-100 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-sans font-bold text-crema-900 mb-4">{data.title}</h2>

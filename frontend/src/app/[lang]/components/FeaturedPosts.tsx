@@ -15,7 +15,7 @@ export default function FeaturedArticles({ data, lang = 'en' }: FeaturedArticles
   const { title, description } = data;
 
   return (
-    <section id="featured-posts" className="bg-anti-flash_white px-4 font-sans">
+    <section id="featured-posts" className="bg-anti-flash_white px-4 py-20 lg:py-24 font-sans">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}

@@ -16,7 +16,7 @@ export default function RichText({ data }: RichTextProps) {
   const markdown = data.content ?? data.body ?? "";
 
   return (
-    <section className="rich-text mt-24 p-6">
+    <section className="rich-text px-6 py-20 lg:py-24">
       <Markdown
         children={markdown}
         remarkPlugins={[remarkGfm]}
