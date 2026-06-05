@@ -265,6 +265,38 @@ export interface ElementsPricingStep extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsReview extends Struct.ComponentSchema {
+  collectionName: 'components_elements_reviews';
+  info: {
+    description: 'A single customer review: author, rating, comment and the platform it came from.';
+    displayName: 'Review';
+    icon: 'star';
+    name: 'Review';
+  };
+  attributes: {
+    authorName: Schema.Attribute.String & Schema.Attribute.Required;
+    avatar: Schema.Attribute.Media<'images'>;
+    comment: Schema.Attribute.Text & Schema.Attribute.Required;
+    date: Schema.Attribute.Date;
+    platform: Schema.Attribute.Enumeration<
+      ['google', 'trustpilot', 'instagram', 'facebook']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'google'>;
+    rating: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<5>;
+    sourceUrl: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsTeamMember extends Struct.ComponentSchema {
   collectionName: 'components_elements_team_members';
   info: {
@@ -746,6 +778,46 @@ export interface SectionsPricingTeaser extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsReviews extends Struct.ComponentSchema {
+  collectionName: 'components_sections_reviews';
+  info: {
+    description: 'Title + horizontal carousel of review cards. Platform shown as a faded watermark (or inline chip) per card.';
+    displayName: 'Reviews';
+    icon: 'star';
+    name: 'Reviews';
+  };
+  attributes: {
+    autoplay: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    autoplayInterval: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 2;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<5>;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    loop: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    reviews: Schema.Attribute.Component<'elements.review', true>;
+    showSummary: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    summaryAverage: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      >;
+    summaryCount: Schema.Attribute.Integer;
+    summaryLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['watermark', 'inline']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'watermark'>;
+  };
+}
+
 export interface SectionsRichText extends Struct.ComponentSchema {
   collectionName: 'components_sections_rich_texts';
   info: {
@@ -888,6 +960,7 @@ declare module '@strapi/strapi' {
       'elements.plan': ElementsPlan;
       'elements.pricing-list': ElementsPricingList;
       'elements.pricing-step': ElementsPricingStep;
+      'elements.review': ElementsReview;
       'elements.team-member': ElementsTeamMember;
       'elements.testimonial': ElementsTestimonial;
       'layout.footer': LayoutFooter;
@@ -915,6 +988,7 @@ declare module '@strapi/strapi' {
       'sections.pricing-service-card': SectionsPricingServiceCard;
       'sections.pricing-steps': SectionsPricingSteps;
       'sections.pricing-teaser': SectionsPricingTeaser;
+      'sections.reviews': SectionsReviews;
       'sections.rich-text': SectionsRichText;
       'sections.team': SectionsTeam;
       'sections.testimonials-group': SectionsTestimonialsGroup;

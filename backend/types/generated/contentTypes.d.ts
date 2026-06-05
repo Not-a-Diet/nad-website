@@ -770,6 +770,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.pricing-service-card',
         'sections.pricing-steps',
         'sections.faq',
+        'sections.reviews',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

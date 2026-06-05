@@ -49,7 +49,8 @@
         "sections.pricing-teaser",
         "sections.pricing-service-card",
         "sections.pricing-steps",
-        "sections.faq"
+        "sections.faq",
+        "sections.reviews"
       ]
     },
     "slug": {

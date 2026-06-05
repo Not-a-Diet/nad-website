@@ -69,6 +69,9 @@ const populate = {
       "sections.faq": {
         populate: { items: true },
       },
+      "sections.reviews": {
+        populate: { reviews: { populate: { avatar: true } } },
+      },
     },
   },
   seo: {

@@ -1183,69 +1183,6 @@
       "norm_label": "richtext()"
     },
     {
-      "label": "reviews.js",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L1",
-      "id": "backend_scripts_seeds_reviews_js",
-      "community": 197,
-      "norm_label": "reviews.js"
-    },
-    {
-      "label": "meta",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L15",
-      "id": "seeds_reviews_meta",
-      "community": 197,
-      "norm_label": "meta"
-    },
-    {
-      "label": "withComments()",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L27",
-      "id": "seeds_reviews_withcomments",
-      "community": 197,
-      "norm_label": "withcomments()"
-    },
-    {
-      "label": "base",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L30",
-      "id": "seeds_reviews_base",
-      "community": 197,
-      "norm_label": "base"
-    },
-    {
-      "label": "en",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L40",
-      "id": "seeds_reviews_en",
-      "community": 197,
-      "norm_label": "en"
-    },
-    {
-      "label": "it",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L59",
-      "id": "seeds_reviews_it",
-      "community": 197,
-      "norm_label": "it"
-    },
-    {
-      "label": "pt",
-      "file_type": "code",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L78",
-      "id": "seeds_reviews_pt",
-      "community": 197,
-      "norm_label": "pt"
-    },
-    {
       "label": "app.js",
       "file_type": "code",
       "source_file": "backend/.strapi/client/app.js",
@@ -2187,7 +2124,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L40",
       "id": "sections_pricing_service_card_attributes_studiolabel",
-      "community": 168,
+      "community": 197,
       "norm_label": "studiolabel"
     },
     {
@@ -2196,7 +2133,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L41",
       "id": "sections_pricing_service_card_studiolabel_type",
-      "community": 168,
+      "community": 197,
       "norm_label": "type"
     },
     {
@@ -2205,7 +2142,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L42",
       "id": "sections_pricing_service_card_studiolabel_default",
-      "community": 168,
+      "community": 197,
       "norm_label": "default"
     },
     {
@@ -2214,7 +2151,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L44",
       "id": "sections_pricing_service_card_attributes_onlinelabel",
-      "community": 218,
+      "community": 168,
       "norm_label": "onlinelabel"
     },
     {
@@ -2223,7 +2160,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L45",
       "id": "sections_pricing_service_card_onlinelabel_type",
-      "community": 218,
+      "community": 168,
       "norm_label": "type"
     },
     {
@@ -2232,7 +2169,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L46",
       "id": "sections_pricing_service_card_onlinelabel_default",
-      "community": 218,
+      "community": 168,
       "norm_label": "default"
     },
     {
@@ -3790,384 +3727,6 @@
       "source_location": "L13",
       "id": "sections_feature_columns_group_features_component",
       "community": 5,
-      "norm_label": "component"
-    },
-    {
-      "label": "reviews.json",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L1",
-      "id": "backend_src_components_sections_reviews_json",
-      "community": 204,
-      "norm_label": "reviews.json"
-    },
-    {
-      "label": "collectionName",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L2",
-      "id": "sections_reviews_collectionname",
-      "community": 204,
-      "norm_label": "collectionname"
-    },
-    {
-      "label": "info",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L3",
-      "id": "sections_reviews_info",
-      "community": 204,
-      "norm_label": "info"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L4",
-      "id": "sections_reviews_info_name",
-      "community": 204,
-      "norm_label": "name"
-    },
-    {
-      "label": "displayName",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L5",
-      "id": "sections_reviews_info_displayname",
-      "community": 204,
-      "norm_label": "displayname"
-    },
-    {
-      "label": "icon",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L6",
-      "id": "sections_reviews_info_icon",
-      "community": 204,
-      "norm_label": "icon"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L7",
-      "id": "sections_reviews_info_description",
-      "community": 204,
-      "norm_label": "description"
-    },
-    {
-      "label": "options",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L9",
-      "id": "sections_reviews_options",
-      "community": 204,
-      "norm_label": "options"
-    },
-    {
-      "label": "attributes",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L10",
-      "id": "sections_reviews_attributes",
-      "community": 204,
-      "norm_label": "attributes"
-    },
-    {
-      "label": "eyebrow",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L11",
-      "id": "sections_reviews_attributes_eyebrow",
-      "community": 204,
-      "norm_label": "eyebrow"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L12",
-      "id": "sections_reviews_eyebrow_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "title",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L14",
-      "id": "sections_reviews_attributes_title",
-      "community": 204,
-      "norm_label": "title"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L15",
-      "id": "sections_reviews_title_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L17",
-      "id": "sections_reviews_attributes_description",
-      "community": 204,
-      "norm_label": "description"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L18",
-      "id": "sections_reviews_description_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "variant",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L20",
-      "id": "sections_reviews_attributes_variant",
-      "community": 204,
-      "norm_label": "variant"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L21",
-      "id": "sections_reviews_variant_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "enum",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L22",
-      "id": "sections_reviews_variant_enum",
-      "community": 204,
-      "norm_label": "enum"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L23",
-      "id": "sections_reviews_variant_default",
-      "community": 204,
-      "norm_label": "default"
-    },
-    {
-      "label": "required",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L24",
-      "id": "sections_reviews_variant_required",
-      "community": 204,
-      "norm_label": "required"
-    },
-    {
-      "label": "showSummary",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L26",
-      "id": "sections_reviews_attributes_showsummary",
-      "community": 204,
-      "norm_label": "showsummary"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L27",
-      "id": "sections_reviews_showsummary_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L28",
-      "id": "sections_reviews_showsummary_default",
-      "community": 204,
-      "norm_label": "default"
-    },
-    {
-      "label": "summaryAverage",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L30",
-      "id": "sections_reviews_attributes_summaryaverage",
-      "community": 204,
-      "norm_label": "summaryaverage"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L31",
-      "id": "sections_reviews_summaryaverage_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "min",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L32",
-      "id": "sections_reviews_summaryaverage_min",
-      "community": 204,
-      "norm_label": "min"
-    },
-    {
-      "label": "max",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L33",
-      "id": "sections_reviews_summaryaverage_max",
-      "community": 204,
-      "norm_label": "max"
-    },
-    {
-      "label": "summaryCount",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L35",
-      "id": "sections_reviews_attributes_summarycount",
-      "community": 204,
-      "norm_label": "summarycount"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L36",
-      "id": "sections_reviews_summarycount_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "summaryLabel",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L38",
-      "id": "sections_reviews_attributes_summarylabel",
-      "community": 204,
-      "norm_label": "summarylabel"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L39",
-      "id": "sections_reviews_summarylabel_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "autoplay",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L41",
-      "id": "sections_reviews_attributes_autoplay",
-      "community": 204,
-      "norm_label": "autoplay"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L42",
-      "id": "sections_reviews_autoplay_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L43",
-      "id": "sections_reviews_autoplay_default",
-      "community": 204,
-      "norm_label": "default"
-    },
-    {
-      "label": "autoplayInterval",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L45",
-      "id": "sections_reviews_attributes_autoplayinterval",
-      "community": 204,
-      "norm_label": "autoplayinterval"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L46",
-      "id": "sections_reviews_autoplayinterval_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L47",
-      "id": "sections_reviews_autoplayinterval_default",
-      "community": 204,
-      "norm_label": "default"
-    },
-    {
-      "label": "min",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L48",
-      "id": "sections_reviews_autoplayinterval_min",
-      "community": 204,
-      "norm_label": "min"
-    },
-    {
-      "label": "reviews",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L50",
-      "id": "sections_reviews_attributes_reviews",
-      "community": 204,
-      "norm_label": "reviews"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L51",
-      "id": "sections_reviews_reviews_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "repeatable",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L52",
-      "id": "sections_reviews_reviews_repeatable",
-      "community": 204,
-      "norm_label": "repeatable"
-    },
-    {
-      "label": "component",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L53",
-      "id": "sections_reviews_reviews_component",
-      "community": 204,
       "norm_label": "component"
     },
     {
@@ -8671,312 +8230,6 @@
       "norm_label": "component"
     },
     {
-      "label": "review.json",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L1",
-      "id": "backend_src_components_elements_review_json",
-      "community": 214,
-      "norm_label": "review.json"
-    },
-    {
-      "label": "collectionName",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L2",
-      "id": "elements_review_collectionname",
-      "community": 214,
-      "norm_label": "collectionname"
-    },
-    {
-      "label": "info",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L3",
-      "id": "elements_review_info",
-      "community": 214,
-      "norm_label": "info"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L4",
-      "id": "elements_review_info_name",
-      "community": 214,
-      "norm_label": "name"
-    },
-    {
-      "label": "displayName",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L5",
-      "id": "elements_review_info_displayname",
-      "community": 214,
-      "norm_label": "displayname"
-    },
-    {
-      "label": "icon",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L6",
-      "id": "elements_review_info_icon",
-      "community": 214,
-      "norm_label": "icon"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L7",
-      "id": "elements_review_info_description",
-      "community": 214,
-      "norm_label": "description"
-    },
-    {
-      "label": "options",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L9",
-      "id": "elements_review_options",
-      "community": 214,
-      "norm_label": "options"
-    },
-    {
-      "label": "attributes",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L10",
-      "id": "elements_review_attributes",
-      "community": 214,
-      "norm_label": "attributes"
-    },
-    {
-      "label": "authorName",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L11",
-      "id": "elements_review_attributes_authorname",
-      "community": 214,
-      "norm_label": "authorname"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L12",
-      "id": "elements_review_authorname_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "required",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L13",
-      "id": "elements_review_authorname_required",
-      "community": 214,
-      "norm_label": "required"
-    },
-    {
-      "label": "date",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L15",
-      "id": "elements_review_attributes_date",
-      "community": 214,
-      "norm_label": "date"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L16",
-      "id": "elements_review_date_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "rating",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L18",
-      "id": "elements_review_attributes_rating",
-      "community": 214,
-      "norm_label": "rating"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L19",
-      "id": "elements_review_rating_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L20",
-      "id": "elements_review_rating_default",
-      "community": 214,
-      "norm_label": "default"
-    },
-    {
-      "label": "min",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L21",
-      "id": "elements_review_rating_min",
-      "community": 214,
-      "norm_label": "min"
-    },
-    {
-      "label": "max",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L22",
-      "id": "elements_review_rating_max",
-      "community": 214,
-      "norm_label": "max"
-    },
-    {
-      "label": "required",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L23",
-      "id": "elements_review_rating_required",
-      "community": 214,
-      "norm_label": "required"
-    },
-    {
-      "label": "comment",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L25",
-      "id": "elements_review_attributes_comment",
-      "community": 214,
-      "norm_label": "comment"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L26",
-      "id": "elements_review_comment_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "required",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L27",
-      "id": "elements_review_comment_required",
-      "community": 214,
-      "norm_label": "required"
-    },
-    {
-      "label": "platform",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L29",
-      "id": "elements_review_attributes_platform",
-      "community": 214,
-      "norm_label": "platform"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L30",
-      "id": "elements_review_platform_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "enum",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L31",
-      "id": "elements_review_platform_enum",
-      "community": 214,
-      "norm_label": "enum"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L32",
-      "id": "elements_review_platform_default",
-      "community": 214,
-      "norm_label": "default"
-    },
-    {
-      "label": "required",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L33",
-      "id": "elements_review_platform_required",
-      "community": 214,
-      "norm_label": "required"
-    },
-    {
-      "label": "sourceUrl",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L35",
-      "id": "elements_review_attributes_sourceurl",
-      "community": 214,
-      "norm_label": "sourceurl"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L36",
-      "id": "elements_review_sourceurl_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "avatar",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L38",
-      "id": "elements_review_attributes_avatar",
-      "community": 214,
-      "norm_label": "avatar"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L39",
-      "id": "elements_review_avatar_type",
-      "community": 214,
-      "norm_label": "type"
-    },
-    {
-      "label": "multiple",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L40",
-      "id": "elements_review_avatar_multiple",
-      "community": 214,
-      "norm_label": "multiple"
-    },
-    {
-      "label": "allowedTypes",
-      "file_type": "code",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L41",
-      "id": "elements_review_avatar_allowedtypes",
-      "community": 214,
-      "norm_label": "allowedtypes"
-    },
-    {
       "label": "feature-column.json",
       "file_type": "code",
       "source_file": "backend/src/components/elements/feature-column.json",
@@ -12904,7 +12157,7 @@
       "label": "slug",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L56",
+      "source_location": "L55",
       "id": "page_schema_attributes_slug",
       "community": 56,
       "norm_label": "slug"
@@ -12913,7 +12166,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L57",
+      "source_location": "L56",
       "id": "page_schema_slug_type",
       "community": 56,
       "norm_label": "type"
@@ -12922,7 +12175,7 @@
       "label": "pluginOptions",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L58",
+      "source_location": "L57",
       "id": "page_schema_slug_pluginoptions",
       "community": 56,
       "norm_label": "pluginoptions"
@@ -12931,7 +12184,7 @@
       "label": "regex",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L63",
+      "source_location": "L62",
       "id": "page_schema_slug_regex",
       "community": 56,
       "norm_label": "regex"
@@ -12940,7 +12193,7 @@
       "label": "heading",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L65",
+      "source_location": "L64",
       "id": "page_schema_attributes_heading",
       "community": 56,
       "norm_label": "heading"
@@ -12949,7 +12202,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L66",
+      "source_location": "L65",
       "id": "page_schema_heading_type",
       "community": 56,
       "norm_label": "type"
@@ -12958,7 +12211,7 @@
       "label": "pluginOptions",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L67",
+      "source_location": "L66",
       "id": "page_schema_heading_pluginoptions",
       "community": 56,
       "norm_label": "pluginoptions"
@@ -12967,7 +12220,7 @@
       "label": "description",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L73",
+      "source_location": "L72",
       "id": "page_schema_attributes_description",
       "community": 56,
       "norm_label": "description"
@@ -12976,7 +12229,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L74",
+      "source_location": "L73",
       "id": "page_schema_description_type",
       "community": 56,
       "norm_label": "type"
@@ -12985,7 +12238,7 @@
       "label": "pluginOptions",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L75",
+      "source_location": "L74",
       "id": "page_schema_description_pluginoptions",
       "community": 56,
       "norm_label": "pluginoptions"
@@ -12994,7 +12247,7 @@
       "label": "seo",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L81",
+      "source_location": "L80",
       "id": "page_schema_attributes_seo",
       "community": 56,
       "norm_label": "seo"
@@ -13003,7 +12256,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L82",
+      "source_location": "L81",
       "id": "page_schema_seo_type",
       "community": 56,
       "norm_label": "type"
@@ -13012,7 +12265,7 @@
       "label": "pluginOptions",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L83",
+      "source_location": "L82",
       "id": "page_schema_seo_pluginoptions",
       "community": 56,
       "norm_label": "pluginoptions"
@@ -13021,7 +12274,7 @@
       "label": "component",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L88",
+      "source_location": "L87",
       "id": "page_schema_seo_component",
       "community": 1,
       "norm_label": "component"
@@ -13030,7 +12283,7 @@
       "label": "repeatable",
       "file_type": "code",
       "source_file": "backend/src/api/page/content-types/page/schema.json",
-      "source_location": "L89",
+      "source_location": "L88",
       "id": "page_schema_seo_repeatable",
       "community": 56,
       "norm_label": "repeatable"
@@ -14454,7 +13707,7 @@
       "source_file": "backend/config/middlewares.js",
       "source_location": "L1",
       "id": "backend_config_middlewares_js",
-      "community": 217,
+      "community": 204,
       "norm_label": "middlewares.js"
     },
     {
@@ -14463,7 +13716,7 @@
       "source_file": "backend/config/middlewares.js",
       "source_location": "L14",
       "id": "config_middlewares_corsorigins",
-      "community": 217,
+      "community": 204,
       "norm_label": "corsorigins"
     },
     {
@@ -14472,7 +13725,7 @@
       "source_file": "backend/config/middlewares.js",
       "source_location": "L23",
       "id": "config_middlewares_mediahosts",
-      "community": 217,
+      "community": 204,
       "norm_label": "mediahosts"
     },
     {
@@ -14695,7 +13948,7 @@
       "label": "ApiProductFeatureProductFeature",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L823",
+      "source_location": "L822",
       "id": "generated_contenttypes_d_apiproductfeatureproductfeature",
       "community": 14,
       "norm_label": "apiproductfeatureproductfeature"
@@ -14704,7 +13957,7 @@
       "label": "PluginContentReleasesRelease",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L853",
+      "source_location": "L852",
       "id": "generated_contenttypes_d_plugincontentreleasesrelease",
       "community": 14,
       "norm_label": "plugincontentreleasesrelease"
@@ -14713,7 +13966,7 @@
       "label": "PluginContentReleasesReleaseAction",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L901",
+      "source_location": "L900",
       "id": "generated_contenttypes_d_plugincontentreleasesreleaseaction",
       "community": 14,
       "norm_label": "plugincontentreleasesreleaseaction"
@@ -14722,7 +13975,7 @@
       "label": "PluginI18NLocale",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L946",
+      "source_location": "L945",
       "id": "generated_contenttypes_d_plugini18nlocale",
       "community": 14,
       "norm_label": "plugini18nlocale"
@@ -14731,7 +13984,7 @@
       "label": "PluginReviewWorkflowsWorkflow",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L992",
+      "source_location": "L991",
       "id": "generated_contenttypes_d_pluginreviewworkflowsworkflow",
       "community": 14,
       "norm_label": "pluginreviewworkflowsworkflow"
@@ -14740,7 +13993,7 @@
       "label": "PluginReviewWorkflowsWorkflowStage",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1044",
+      "source_location": "L1043",
       "id": "generated_contenttypes_d_pluginreviewworkflowsworkflowstage",
       "community": 14,
       "norm_label": "pluginreviewworkflowsworkflowstage"
@@ -14749,7 +14002,7 @@
       "label": "PluginUploadFile",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1090",
+      "source_location": "L1089",
       "id": "generated_contenttypes_d_pluginuploadfile",
       "community": 14,
       "norm_label": "pluginuploadfile"
@@ -14758,7 +14011,7 @@
       "label": "PluginUploadFolder",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1150",
+      "source_location": "L1149",
       "id": "generated_contenttypes_d_pluginuploadfolder",
       "community": 14,
       "norm_label": "pluginuploadfolder"
@@ -14767,7 +14020,7 @@
       "label": "PluginUsersPermissionsPermission",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1201",
+      "source_location": "L1200",
       "id": "generated_contenttypes_d_pluginuserspermissionspermission",
       "community": 14,
       "norm_label": "pluginuserspermissionspermission"
@@ -14776,7 +14029,7 @@
       "label": "PluginUsersPermissionsRole",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1244",
+      "source_location": "L1243",
       "id": "generated_contenttypes_d_pluginuserspermissionsrole",
       "community": 14,
       "norm_label": "pluginuserspermissionsrole"
@@ -14785,7 +14038,7 @@
       "label": "PluginUsersPermissionsUser",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1297",
+      "source_location": "L1296",
       "id": "generated_contenttypes_d_pluginuserspermissionsuser",
       "community": 14,
       "norm_label": "pluginuserspermissionsuser"
@@ -14794,7 +14047,7 @@
       "label": "ContentTypeSchemas",
       "file_type": "code",
       "source_file": "backend/types/generated/contentTypes.d.ts",
-      "source_location": "L1355",
+      "source_location": "L1354",
       "id": "generated_contenttypes_d_contenttypeschemas",
       "community": 14,
       "norm_label": "contenttypeschemas"
@@ -14953,19 +14206,10 @@
       "norm_label": "elementspricingstep"
     },
     {
-      "label": "ElementsReview",
-      "file_type": "code",
-      "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L268",
-      "id": "generated_components_d_elementsreview",
-      "community": 1,
-      "norm_label": "elementsreview"
-    },
-    {
       "label": "ElementsTeamMember",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L300",
+      "source_location": "L268",
       "id": "generated_components_d_elementsteammember",
       "community": 1,
       "norm_label": "elementsteammember"
@@ -14974,7 +14218,7 @@
       "label": "ElementsTestimonial",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L317",
+      "source_location": "L285",
       "id": "generated_components_d_elementstestimonial",
       "community": 1,
       "norm_label": "elementstestimonial"
@@ -14983,7 +14227,7 @@
       "label": "LayoutFooter",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L332",
+      "source_location": "L300",
       "id": "generated_components_d_layoutfooter",
       "community": 1,
       "norm_label": "layoutfooter"
@@ -14992,7 +14236,7 @@
       "label": "LayoutLogo",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L351",
+      "source_location": "L319",
       "id": "generated_components_d_layoutlogo",
       "community": 1,
       "norm_label": "layoutlogo"
@@ -15001,7 +14245,7 @@
       "label": "LayoutNavbar",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L364",
+      "source_location": "L332",
       "id": "generated_components_d_layoutnavbar",
       "community": 1,
       "norm_label": "layoutnavbar"
@@ -15010,7 +14254,7 @@
       "label": "LinksButton",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L379",
+      "source_location": "L347",
       "id": "generated_components_d_linksbutton",
       "community": 1,
       "norm_label": "linksbutton"
@@ -15019,7 +14263,7 @@
       "label": "LinksButtonLink",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L393",
+      "source_location": "L361",
       "id": "generated_components_d_linksbuttonlink",
       "community": 1,
       "norm_label": "linksbuttonlink"
@@ -15028,7 +14272,7 @@
       "label": "LinksLink",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L409",
+      "source_location": "L377",
       "id": "generated_components_d_linkslink",
       "community": 1,
       "norm_label": "linkslink"
@@ -15037,7 +14281,7 @@
       "label": "LinksSocialLink",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L424",
+      "source_location": "L392",
       "id": "generated_components_d_linkssociallink",
       "community": 1,
       "norm_label": "linkssociallink"
@@ -15046,7 +14290,7 @@
       "label": "MetaBusinessInfo",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L450",
+      "source_location": "L418",
       "id": "generated_components_d_metabusinessinfo",
       "community": 1,
       "norm_label": "metabusinessinfo"
@@ -15055,7 +14299,7 @@
       "label": "MetaMetadata",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L486",
+      "source_location": "L454",
       "id": "generated_components_d_metametadata",
       "community": 1,
       "norm_label": "metametadata"
@@ -15064,7 +14308,7 @@
       "label": "SectionsBookingCalendar",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L501",
+      "source_location": "L469",
       "id": "generated_components_d_sectionsbookingcalendar",
       "community": 1,
       "norm_label": "sectionsbookingcalendar"
@@ -15073,7 +14317,7 @@
       "label": "SectionsBottomActions",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L518",
+      "source_location": "L486",
       "id": "generated_components_d_sectionsbottomactions",
       "community": 1,
       "norm_label": "sectionsbottomactions"
@@ -15082,7 +14326,7 @@
       "label": "SectionsContact",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L533",
+      "source_location": "L501",
       "id": "generated_components_d_sectionscontact",
       "community": 1,
       "norm_label": "sectionscontact"
@@ -15091,7 +14335,7 @@
       "label": "SectionsFaq",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L551",
+      "source_location": "L519",
       "id": "generated_components_d_sectionsfaq",
       "community": 1,
       "norm_label": "sectionsfaq"
@@ -15100,7 +14344,7 @@
       "label": "SectionsFeatureColumnsGroup",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L573",
+      "source_location": "L541",
       "id": "generated_components_d_sectionsfeaturecolumnsgroup",
       "community": 1,
       "norm_label": "sectionsfeaturecolumnsgroup"
@@ -15109,7 +14353,7 @@
       "label": "SectionsFeatureRowsGroup",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L585",
+      "source_location": "L553",
       "id": "generated_components_d_sectionsfeaturerowsgroup",
       "community": 1,
       "norm_label": "sectionsfeaturerowsgroup"
@@ -15118,7 +14362,7 @@
       "label": "SectionsFeaturedPosts",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L597",
+      "source_location": "L565",
       "id": "generated_components_d_sectionsfeaturedposts",
       "community": 1,
       "norm_label": "sectionsfeaturedposts"
@@ -15127,7 +14371,7 @@
       "label": "SectionsFeatures",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L609",
+      "source_location": "L577",
       "id": "generated_components_d_sectionsfeatures",
       "community": 1,
       "norm_label": "sectionsfeatures"
@@ -15136,7 +14380,7 @@
       "label": "SectionsHeading",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L622",
+      "source_location": "L590",
       "id": "generated_components_d_sectionsheading",
       "community": 1,
       "norm_label": "sectionsheading"
@@ -15145,7 +14389,7 @@
       "label": "SectionsHero",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L633",
+      "source_location": "L601",
       "id": "generated_components_d_sectionshero",
       "community": 1,
       "norm_label": "sectionshero"
@@ -15154,7 +14398,7 @@
       "label": "SectionsLargeVideo",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L649",
+      "source_location": "L617",
       "id": "generated_components_d_sectionslargevideo",
       "community": 1,
       "norm_label": "sectionslargevideo"
@@ -15163,7 +14407,7 @@
       "label": "SectionsLeadForm",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L664",
+      "source_location": "L632",
       "id": "generated_components_d_sectionsleadform",
       "community": 1,
       "norm_label": "sectionsleadform"
@@ -15172,7 +14416,7 @@
       "label": "SectionsPricing",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L681",
+      "source_location": "L649",
       "id": "generated_components_d_sectionspricing",
       "community": 1,
       "norm_label": "sectionspricing"
@@ -15181,7 +14425,7 @@
       "label": "SectionsPricingServiceCard",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L694",
+      "source_location": "L662",
       "id": "generated_components_d_sectionspricingservicecard",
       "community": 1,
       "norm_label": "sectionspricingservicecard"
@@ -15190,7 +14434,7 @@
       "label": "SectionsPricingSteps",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L731",
+      "source_location": "L699",
       "id": "generated_components_d_sectionspricingsteps",
       "community": 1,
       "norm_label": "sectionspricingsteps"
@@ -15199,25 +14443,16 @@
       "label": "SectionsPricingTeaser",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L746",
+      "source_location": "L714",
       "id": "generated_components_d_sectionspricingteaser",
       "community": 1,
       "norm_label": "sectionspricingteaser"
     },
     {
-      "label": "SectionsReviews",
-      "file_type": "code",
-      "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L781",
-      "id": "generated_components_d_sectionsreviews",
-      "community": 1,
-      "norm_label": "sectionsreviews"
-    },
-    {
       "label": "SectionsRichText",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L820",
+      "source_location": "L749",
       "id": "generated_components_d_sectionsrichtext",
       "community": 1,
       "norm_label": "sectionsrichtext"
@@ -15226,7 +14461,7 @@
       "label": "SectionsTeam",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L832",
+      "source_location": "L761",
       "id": "generated_components_d_sectionsteam",
       "community": 1,
       "norm_label": "sectionsteam"
@@ -15235,7 +14470,7 @@
       "label": "SectionsTestimonialsGroup",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L846",
+      "source_location": "L775",
       "id": "generated_components_d_sectionstestimonialsgroup",
       "community": 1,
       "norm_label": "sectionstestimonialsgroup"
@@ -15244,7 +14479,7 @@
       "label": "SharedMedia",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L861",
+      "source_location": "L790",
       "id": "generated_components_d_sharedmedia",
       "community": 1,
       "norm_label": "sharedmedia"
@@ -15253,7 +14488,7 @@
       "label": "SharedQuote",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L873",
+      "source_location": "L802",
       "id": "generated_components_d_sharedquote",
       "community": 1,
       "norm_label": "sharedquote"
@@ -15262,7 +14497,7 @@
       "label": "SharedRichText",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L890",
+      "source_location": "L819",
       "id": "generated_components_d_sharedrichtext",
       "community": 1,
       "norm_label": "sharedrichtext"
@@ -15271,7 +14506,7 @@
       "label": "SharedSeo",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L902",
+      "source_location": "L831",
       "id": "generated_components_d_sharedseo",
       "community": 1,
       "norm_label": "sharedseo"
@@ -15280,7 +14515,7 @@
       "label": "SharedSlider",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L920",
+      "source_location": "L849",
       "id": "generated_components_d_sharedslider",
       "community": 1,
       "norm_label": "sharedslider"
@@ -15289,7 +14524,7 @@
       "label": "SharedVideoEmbed",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L932",
+      "source_location": "L861",
       "id": "generated_components_d_sharedvideoembed",
       "community": 1,
       "norm_label": "sharedvideoembed"
@@ -15298,7 +14533,7 @@
       "label": "ComponentSchemas",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L945",
+      "source_location": "L874",
       "id": "generated_components_d_componentschemas",
       "community": 1,
       "norm_label": "componentschemas"
@@ -16470,7 +15705,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L1",
       "id": "frontend_src_tests_blog_post_test_tsx",
-      "community": 216,
+      "community": 79,
       "norm_label": "blog-post.test.tsx"
     },
     {
@@ -16479,7 +15714,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L14",
       "id": "tests_blog_post_test_basearticle",
-      "community": 216,
+      "community": 79,
       "norm_label": "basearticle"
     },
     {
@@ -16488,7 +15723,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L40",
       "id": "tests_blog_post_test_article",
-      "community": 216,
+      "community": 79,
       "norm_label": "article"
     },
     {
@@ -16497,7 +15732,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L66",
       "id": "tests_blog_post_test_img",
-      "community": 216,
+      "community": 79,
       "norm_label": "img"
     },
     {
@@ -16848,7 +16083,7 @@
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_blog_page_tsx",
-      "community": 190,
+      "community": 164,
       "norm_label": "page.tsx"
     },
     {
@@ -16857,7 +16092,7 @@
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L8",
       "id": "blog_page_page_limit",
-      "community": 190,
+      "community": 164,
       "norm_label": "page_limit"
     },
     {
@@ -16866,7 +16101,7 @@
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L10",
       "id": "blog_page_getblogheaders",
-      "community": 190,
+      "community": 164,
       "norm_label": "getblogheaders()"
     },
     {
@@ -16875,7 +16110,7 @@
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L24",
       "id": "blog_page_getinitialarticles",
-      "community": 190,
+      "community": 164,
       "norm_label": "getinitialarticles()"
     },
     {
@@ -16884,7 +16119,7 @@
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L42",
       "id": "blog_page_generatemetadata",
-      "community": 190,
+      "community": 164,
       "norm_label": "generatemetadata()"
     },
     {
@@ -16893,7 +16128,7 @@
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L55",
       "id": "blog_page_blogindex",
-      "community": 190,
+      "community": 164,
       "norm_label": "blogindex()"
     },
     {
@@ -16974,7 +16209,7 @@
       "source_file": "frontend/src/app/[lang]/blog/[category]/[slug]/layout.tsx",
       "source_location": "L77",
       "id": "slug_layout_generatestaticparams",
-      "community": 64,
+      "community": 31,
       "norm_label": "generatestaticparams()"
     },
     {
@@ -17145,7 +16380,7 @@
       "source_file": "frontend/src/app/[lang]/utils/seo.ts",
       "source_location": "L17",
       "id": "utils_seo_hreflang",
-      "community": 164,
+      "community": 39,
       "norm_label": "hreflang"
     },
     {
@@ -17487,7 +16722,7 @@
       "source_file": "frontend/src/app/[lang]/utils/structured-data.ts",
       "source_location": "L95",
       "id": "utils_structured_data_articleschema",
-      "community": 164,
+      "community": 39,
       "norm_label": "articleschema()"
     },
     {
@@ -17597,159 +16832,6 @@
       "id": "components_hashscroller_hashscroller",
       "community": 39,
       "norm_label": "hashscroller()"
-    },
-    {
-      "label": "Reviews.tsx",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L1",
-      "id": "frontend_src_app_lang_components_reviews_tsx",
-      "community": 215,
-      "norm_label": "reviews.tsx"
-    },
-    {
-      "label": "Platform",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L16",
-      "id": "components_reviews_platform",
-      "community": 215,
-      "norm_label": "platform"
-    },
-    {
-      "label": "ReviewAvatar",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L18",
-      "id": "components_reviews_reviewavatar",
-      "community": 215,
-      "norm_label": "reviewavatar"
-    },
-    {
-      "label": "Review",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L23",
-      "id": "components_reviews_review",
-      "community": 215,
-      "norm_label": "review"
-    },
-    {
-      "label": "ReviewsProps",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L34",
-      "id": "components_reviews_reviewsprops",
-      "community": 215,
-      "norm_label": "reviewsprops"
-    },
-    {
-      "label": "LogoProps",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L54",
-      "id": "components_reviews_logoprops",
-      "community": 215,
-      "norm_label": "logoprops"
-    },
-    {
-      "label": "GoogleLogo()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L59",
-      "id": "components_reviews_googlelogo",
-      "community": 215,
-      "norm_label": "googlelogo()"
-    },
-    {
-      "label": "TrustpilotLogo()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L77",
-      "id": "components_reviews_trustpilotlogo",
-      "community": 215,
-      "norm_label": "trustpilotlogo()"
-    },
-    {
-      "label": "InstagramLogo()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L86",
-      "id": "components_reviews_instagramlogo",
-      "community": 215,
-      "norm_label": "instagramlogo()"
-    },
-    {
-      "label": "FacebookLogo()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L110",
-      "id": "components_reviews_facebooklogo",
-      "community": 215,
-      "norm_label": "facebooklogo()"
-    },
-    {
-      "label": "PLATFORMS",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L119",
-      "id": "components_reviews_platforms",
-      "community": 215,
-      "norm_label": "platforms"
-    },
-    {
-      "label": "AVATAR_TINTS",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L127",
-      "id": "components_reviews_avatar_tints",
-      "community": 215,
-      "norm_label": "avatar_tints"
-    },
-    {
-      "label": "Stars()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L131",
-      "id": "components_reviews_stars",
-      "community": 215,
-      "norm_label": "stars()"
-    },
-    {
-      "label": "PlatformChip()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L153",
-      "id": "components_reviews_platformchip",
-      "community": 215,
-      "norm_label": "platformchip()"
-    },
-    {
-      "label": "PlatformWatermark()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L165",
-      "id": "components_reviews_platformwatermark",
-      "community": 215,
-      "norm_label": "platformwatermark()"
-    },
-    {
-      "label": "ReviewCard()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L182",
-      "id": "components_reviews_reviewcard",
-      "community": 79,
-      "norm_label": "reviewcard()"
-    },
-    {
-      "label": "Reviews()",
-      "file_type": "code",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L277",
-      "id": "components_reviews_reviews",
-      "community": 215,
-      "norm_label": "reviews()"
     },
     {
       "label": "VideoEmbed.tsx",
@@ -17883,7 +16965,7 @@
       "source_file": "frontend/src/app/[lang]/components/Media.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_components_media_tsx",
-      "community": 79,
+      "community": 204,
       "norm_label": "media.tsx"
     },
     {
@@ -17892,7 +16974,7 @@
       "source_file": "frontend/src/app/[lang]/components/Media.tsx",
       "source_location": "L4",
       "id": "components_media_mediaprops",
-      "community": 79,
+      "community": 204,
       "norm_label": "mediaprops"
     },
     {
@@ -17901,7 +16983,7 @@
       "source_file": "frontend/src/app/[lang]/components/Media.tsx",
       "source_location": "L14",
       "id": "components_media_mediacomponentprops",
-      "community": 79,
+      "community": 204,
       "norm_label": "mediacomponentprops"
     },
     {
@@ -17910,7 +16992,7 @@
       "source_file": "frontend/src/app/[lang]/components/Media.tsx",
       "source_location": "L18",
       "id": "components_media_media",
-      "community": 79,
+      "community": 204,
       "norm_label": "media()"
     },
     {
@@ -18819,7 +17901,7 @@
       "source_file": "frontend/src/app/[lang]/components/PageHeader.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_components_pageheader_tsx",
-      "community": 190,
+      "community": 64,
       "norm_label": "pageheader.tsx"
     },
     {
@@ -18828,7 +17910,7 @@
       "source_file": "frontend/src/app/[lang]/components/PageHeader.tsx",
       "source_location": "L1",
       "id": "components_pageheader_pageheaderprops",
-      "community": 190,
+      "community": 64,
       "norm_label": "pageheaderprops"
     },
     {
@@ -18837,7 +17919,7 @@
       "source_file": "frontend/src/app/[lang]/components/PageHeader.tsx",
       "source_location": "L6",
       "id": "components_pageheader_pageheader",
-      "community": 190,
+      "community": 64,
       "norm_label": "pageheader()"
     },
     {
@@ -21365,7 +20447,7 @@
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L9",
-      "community": 190,
+      "community": 164,
       "norm_label": "meta",
       "id": "blog_page_meta"
     },
@@ -21374,7 +20456,7 @@
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/blog/page.tsx",
       "source_location": "L17",
-      "community": 190,
+      "community": 164,
       "norm_label": "blogheaders",
       "id": "blog_page_blogheaders"
     },
@@ -23229,7 +22311,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 79,
       "norm_label": "blog post view test suite",
       "id": "blog_post_test_suite"
     },
@@ -23255,7 +22337,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 17,
       "norm_label": "dynamic page route test suite",
       "id": "dynamic_page_test_suite"
     },
@@ -23268,7 +22350,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 17,
       "norm_label": "home page route test suite",
       "id": "home_page_test_suite"
     },
@@ -23307,7 +22389,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 39,
+      "community": 17,
       "norm_label": "fetchapi util",
       "id": "fetch_api_fetchapi"
     },
@@ -23333,7 +22415,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 79,
       "norm_label": "componentresolver util",
       "id": "utils_component_resolver"
     },
@@ -23359,7 +22441,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 17,
       "norm_label": "strapi v5 dynamic zone pattern",
       "id": "concept_strapi_dynamic_zone"
     },
@@ -23684,7 +22766,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 39,
+      "community": 17,
       "norm_label": "getstrapiurl",
       "id": "api_helpers_getstrapiurl"
     },
@@ -23814,7 +22896,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 79,
+      "community": 17,
       "norm_label": "strapi v5 flat response shape",
       "id": "types_strapi_v5_flat_response"
     },
@@ -24113,7 +23195,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 79,
+      "community": 204,
       "norm_label": "s3-compatible upload provider config",
       "id": "config_plugins_uploads3provider"
     },
@@ -25886,66 +24968,6 @@
       "confidence_score": 1.0,
       "source": "backend_scripts_seeds_legal_cookie_policy_js",
       "target": "seeds_legal_cookie_policy_richtext"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_meta",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_withcomments",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_base",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_en",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L59",
-      "weight": 1.0,
-      "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_it",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/seeds/reviews.js",
-      "source_location": "L78",
-      "weight": 1.0,
-      "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_pt",
-      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -29627,416 +28649,6 @@
       "confidence_score": 1.0,
       "source": "sections_feature_columns_group_attributes_features",
       "target": "sections_feature_columns_group_features_component"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_sections_reviews_json",
-      "target": "sections_reviews_collectionname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_sections_reviews_json",
-      "target": "sections_reviews_info"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_sections_reviews_json",
-      "target": "sections_reviews_options"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_sections_reviews_json",
-      "target": "sections_reviews_attributes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_info",
-      "target": "sections_reviews_info_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_info",
-      "target": "sections_reviews_info_displayname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_info",
-      "target": "sections_reviews_info_icon"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_info",
-      "target": "sections_reviews_info_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_eyebrow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_title"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_variant"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_showsummary"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_summaryaverage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_summarycount"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_summarylabel"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_autoplay",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_autoplayinterval",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_reviews"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_eyebrow",
-      "target": "sections_reviews_eyebrow_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_title",
-      "target": "sections_reviews_title_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_description",
-      "target": "sections_reviews_description_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_variant",
-      "target": "sections_reviews_variant_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_variant",
-      "target": "sections_reviews_variant_enum"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_variant",
-      "target": "sections_reviews_variant_default"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_variant",
-      "target": "sections_reviews_variant_required"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_showsummary",
-      "target": "sections_reviews_showsummary_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_showsummary",
-      "target": "sections_reviews_showsummary_default"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_summaryaverage",
-      "target": "sections_reviews_summaryaverage_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_summaryaverage",
-      "target": "sections_reviews_summaryaverage_min"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_summaryaverage",
-      "target": "sections_reviews_summaryaverage_max"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_summarycount",
-      "target": "sections_reviews_summarycount_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_summarylabel",
-      "target": "sections_reviews_summarylabel_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes_autoplay",
-      "target": "sections_reviews_autoplay_type",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L43",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes_autoplay",
-      "target": "sections_reviews_autoplay_default",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes_autoplayinterval",
-      "target": "sections_reviews_autoplayinterval_type",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L47",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes_autoplayinterval",
-      "target": "sections_reviews_autoplayinterval_default",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "sections_reviews_attributes_autoplayinterval",
-      "target": "sections_reviews_autoplayinterval_min",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_reviews",
-      "target": "sections_reviews_reviews_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_reviews",
-      "target": "sections_reviews_reviews_repeatable"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_reviews",
-      "target": "sections_reviews_reviews_component"
     },
     {
       "relation": "contains",
@@ -36267,336 +34879,6 @@
       "confidence_score": 1.0,
       "source": "elements_footer_section_attributes_links",
       "target": "elements_footer_section_links_component"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_elements_review_json",
-      "target": "elements_review_collectionname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_elements_review_json",
-      "target": "elements_review_info"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_elements_review_json",
-      "target": "elements_review_options"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_src_components_elements_review_json",
-      "target": "elements_review_attributes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_info",
-      "target": "elements_review_info_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_info",
-      "target": "elements_review_info_displayname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_info",
-      "target": "elements_review_info_icon"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_info",
-      "target": "elements_review_info_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_authorname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_date"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_rating"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_comment"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_platform"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_sourceurl"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes",
-      "target": "elements_review_attributes_avatar"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_authorname",
-      "target": "elements_review_authorname_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_authorname",
-      "target": "elements_review_authorname_required"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_date",
-      "target": "elements_review_date_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_rating",
-      "target": "elements_review_rating_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_rating",
-      "target": "elements_review_rating_default"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_rating",
-      "target": "elements_review_rating_min"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_rating",
-      "target": "elements_review_rating_max"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_rating",
-      "target": "elements_review_rating_required"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_comment",
-      "target": "elements_review_comment_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_comment",
-      "target": "elements_review_comment_required"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_platform",
-      "target": "elements_review_platform_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_platform",
-      "target": "elements_review_platform_enum"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_platform",
-      "target": "elements_review_platform_default"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_platform",
-      "target": "elements_review_platform_required"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_sourceurl",
-      "target": "elements_review_sourceurl_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_avatar",
-      "target": "elements_review_avatar_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_avatar",
-      "target": "elements_review_avatar_multiple"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/elements/review.json",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "elements_review_attributes_avatar",
-      "target": "elements_review_avatar_allowedtypes"
     },
     {
       "relation": "contains",
@@ -44542,16 +42824,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L268",
-      "weight": 1.0,
-      "source": "backend_types_generated_components_d_ts",
-      "target": "generated_components_d_elementsreview",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/types/generated/components.d.ts",
       "source_location": "L254",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -44817,16 +43089,6 @@
       "confidence_score": 1.0,
       "source": "backend_types_generated_components_d_ts",
       "target": "generated_components_d_sectionspricingteaser"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L781",
-      "weight": 1.0,
-      "source": "backend_types_generated_components_d_ts",
-      "target": "generated_components_d_sectionsreviews",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -49964,17 +48226,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "frontend_src_app_lang_utils_api_helpers_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "frontend/src/app/[lang]/components/Media.tsx",
       "source_location": "L1",
       "weight": 1.0,
@@ -50159,17 +48410,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "utils_api_helpers_getstrapimedia"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "frontend/src/app/[lang]/components/Media.tsx",
       "source_location": "L1",
       "weight": 1.0,
@@ -50263,17 +48503,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "frontend_src_app_lang_components_team_tsx",
-      "target": "utils_api_helpers_getstrapimedia"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L197",
-      "weight": 1.0,
-      "source": "components_reviews_reviewcard",
       "target": "utils_api_helpers_getstrapimedia"
     },
     {
@@ -51028,177 +49257,6 @@
       "weight": 1.0,
       "source": "components_navbar_languageselector",
       "target": "components_hashscroller_hashscroller"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "frontend_src_app_lang_components_brackethighlight_tsx"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_platform"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_reviewavatar"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_review"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_reviewsprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_logoprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_googlelogo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L75",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_trustpilotlogo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_instagramlogo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L108",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_facebooklogo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L117",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_platforms"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L125",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_avatar_tints"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L129",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_stars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L151",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_platformchip"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L163",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_platformwatermark"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L180",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_reviewcard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L275",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_src_app_lang_components_reviews_tsx",
-      "target": "components_reviews_reviews"
     },
     {
       "relation": "contains",
@@ -58459,5 +56517,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "522d64830610d07c422110b2a479f8585b2d3644"
+  "built_at_commit": "37f62750ea28833c0ecaf722655a3d5998e39ceb"
 }

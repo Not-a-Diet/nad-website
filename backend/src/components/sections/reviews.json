@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_sections_reviews",
+  "info": {
+    "name": "Reviews",
+    "displayName": "Reviews",
+    "icon": "star",
+    "description": "Title + horizontal carousel of review cards. Platform shown as a faded watermark (or inline chip) per card."
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["watermark", "inline"],
+      "default": "watermark",
+      "required": true
+    },
+    "showSummary": {
+      "type": "boolean",
+      "default": true
+    },
+    "loop": {
+      "type": "boolean",
+      "default": false
+    },
+    "summaryAverage": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5
+    },
+    "summaryCount": {
+      "type": "integer"
+    },
+    "summaryLabel": {
+      "type": "string"
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplayInterval": {
+      "type": "integer",
+      "default": 5,
+      "min": 2
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.review"
+    }
+  }
+}
