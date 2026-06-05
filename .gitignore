@@ -2,8 +2,17 @@ node_modules
 readme-images
 .vscode
 .DS_Store
-frontend/next.config.js
-.env.example
+
+# real config + env templates are tracked on purpose (do not ignore):
+#   frontend/next.config.js, **/.env.example
+
+# actual secrets
+.env
+.env.local
+.env.*.local
+
+# caveman-compress human-readable backups
+*.original.md
 
 *.tar.gz
 

@@ -2,7 +2,7 @@
   "name": "backend",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Not a Diet CMS — Strapi 5 backend (content types, dynamic zones, seeds) for notadiet.life",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -29,7 +29,7 @@
     "styled-components": "^6.0.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Not a Diet"
   },
   "strapi": {
     "uuid": "0f95dc7c-202b-4ab2-a874-3799d23b1640"
@@ -38,5 +38,5 @@
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "UNLICENSED"
 }
