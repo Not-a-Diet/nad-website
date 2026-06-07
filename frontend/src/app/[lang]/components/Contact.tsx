@@ -152,9 +152,24 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
 
         <button
           onClick={handleBack}
-          className={`w-fit ${bgClasses} rounded-xl px-8 py-3 text-crema-800 font-semibold border-secondary-100 border-[3px] hover:scale-105 active:scale-95 transition-transform cursor-pointer`}
+          className={`group w-fit inline-flex items-center gap-2 ${bgClasses} rounded-xl px-8 py-3 text-crema-800 font-semibold border-secondary-100 border-[3px] hover:scale-105 active:scale-95 transition-transform cursor-pointer`}
         >
-          ← {backButtonText}
+          <svg
+            aria-hidden="true"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="shrink-0 transition-transform group-hover:-translate-x-[3px]"
+          >
+            <path d="M19 12 H5" />
+            <path d="M11 5 l-7 7 l7 7" />
+          </svg>
+          {backButtonText}
         </button>
       </div>
     );

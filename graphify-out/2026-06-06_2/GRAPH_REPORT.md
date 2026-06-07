@@ -1,11 +1,11 @@
 # Graph Report - nad-website  (2026-06-06)
 
 ## Corpus Check
-- 213 files · ~49,199 words
+- 213 files · ~49,165 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2605 nodes · 3397 edges · 220 communities (186 shown, 34 thin omitted)
+- 2605 nodes · 3397 edges · 221 communities (187 shown, 34 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 122 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
@@ -203,6 +203,7 @@
 - [[_COMMUNITY_Community 217|Community 217]]
 - [[_COMMUNITY_Community 218|Community 218]]
 - [[_COMMUNITY_Community 219|Community 219]]
+- [[_COMMUNITY_Community 220|Community 220]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `component` - 49 edges
@@ -228,7 +229,7 @@
 - `PricingServiceCard()` --semantically_similar_to--> `Pricing Section`  [INFERRED] [semantically similar]
   frontend/src/app/[lang]/components/PricingServiceCard.tsx → backend/src/components/sections/pricing.json
 
-## Communities (220 total, 34 thin omitted)
+## Communities (221 total, 34 thin omitted)
 
 ### Community 0 - "Schema Components"
 Cohesion: 0.21
@@ -264,7 +265,7 @@ Nodes (27): attributes, ctaText, ctaUrl, eyebrow, firstVisitLabel, firstVisitMet
 
 ### Community 8 - "Pricing Card Schema"
 Cohesion: 0.14
-Nodes (14): cardNote, ctaText, eyebrow, firstVisitSub, followUpMeta, followUpPrice, title, type (+6 more)
+Nodes (14): cardNote, eyebrow, firstVisitMeta, followUpPrice, followUpSub, reassurances, title, type (+6 more)
 
 ### Community 9 - "Article Content Type"
 Cohesion: 0.06
@@ -547,8 +548,8 @@ Cohesion: 0.19
 Nodes (13): code:block1 (.), code:bash (yarn install                              # install all work), code:bash (yarn dev        # clear cache + run frontend (:3000) and bac), code:bash (yarn build         # build frontend), Common commands, Content model, Contributing, Develop (+5 more)
 
 ### Community 79 - "Community 79"
-Cohesion: 0.11
-Nodes (25): formatDate, getStrapiMedia, PostList (blog-list view), FeaturedArticles(), FeaturedArticlesProps, Image, Slideshow(), SlidShowProps (+17 more)
+Cohesion: 0.13
+Nodes (22): formatDate, getStrapiMedia, PostList (blog-list view), FeaturedArticles(), FeaturedArticlesProps, Image, Slideshow(), SlidShowProps (+14 more)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.15
@@ -672,7 +673,7 @@ Nodes (13): Adding a new seed, `backend/scripts/`, Behavior, code:block1 (SEED_D
 
 ### Community 166 - "Community 166"
 Cohesion: 0.15
-Nodes (13): attributes, ctaUrl, description, firstVisitMeta, firstVisitName, followUpName, followUpSub, type (+5 more)
+Nodes (13): attributes, ctaUrl, description, firstVisitName, firstVisitSub, followUpMeta, followUpName, type (+5 more)
 
 ### Community 167 - "Community 167"
 Cohesion: 0.20
@@ -842,6 +843,10 @@ Nodes (33): attributes, authorName, avatar, comment, date, platform, rating, sou
 Cohesion: 0.12
 Nodes (7): AVATAR_TINTS, LogoProps, Platform, PLATFORMS, Review, ReviewAvatar, ReviewsProps
 
+### Community 216 - "Community 216"
+Cohesion: 0.50
+Nodes (3): article, baseArticle, img
+
 ### Community 218 - "Community 218"
 Cohesion: 0.67
 Nodes (3): onlineLabel, default, type
@@ -858,7 +863,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `PricingServiceCard()` connect `Community 162` to `Community 70`, `Community 166`, `Community 174`, `Community 79`, `Community 84`, `Community 30`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `attributes` connect `Community 166` to `Community 162`, `Pricing Card Schema`, `Community 168`, `Community 202`, `Community 170`, `Community 203`, `Community 174`, `Community 216`, `Community 218`, `Community 219`?**
+- **Why does `attributes` connect `Community 166` to `Community 162`, `Pricing Card Schema`, `Community 168`, `Community 202`, `Community 170`, `Community 203`, `Community 174`, `Community 218`, `Community 219`, `Community 220`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `packageManager` to the rest of the system?**
   _1292 weakly-connected nodes found - possible documentation gaps or missing edges._

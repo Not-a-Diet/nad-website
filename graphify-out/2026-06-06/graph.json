@@ -2115,7 +2115,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L29",
       "id": "sections_pricing_service_card_attributes_cardsubtitle",
-      "community": 219,
+      "community": 8,
       "norm_label": "cardsubtitle"
     },
     {
@@ -2124,7 +2124,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L30",
       "id": "sections_pricing_service_card_cardsubtitle_type",
-      "community": 219,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2241,7 +2241,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L48",
       "id": "sections_pricing_service_card_attributes_firstvisitname",
-      "community": 166,
+      "community": 8,
       "norm_label": "firstvisitname"
     },
     {
@@ -2250,7 +2250,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L49",
       "id": "sections_pricing_service_card_firstvisitname_type",
-      "community": 166,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2331,7 +2331,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L63",
       "id": "sections_pricing_service_card_attributes_followupsub",
-      "community": 166,
+      "community": 212,
       "norm_label": "followupsub"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L64",
       "id": "sections_pricing_service_card_followupsub_type",
-      "community": 166,
+      "community": 212,
       "norm_label": "type"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L66",
       "id": "sections_pricing_service_card_attributes_followupprice",
-      "community": 8,
+      "community": 166,
       "norm_label": "followupprice"
     },
     {
@@ -2358,7 +2358,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L67",
       "id": "sections_pricing_service_card_followupprice_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2367,7 +2367,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L69",
       "id": "sections_pricing_service_card_attributes_followupmeta",
-      "community": 8,
+      "community": 166,
       "norm_label": "followupmeta"
     },
     {
@@ -2376,7 +2376,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L70",
       "id": "sections_pricing_service_card_followupmeta_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2403,7 +2403,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L75",
       "id": "sections_pricing_service_card_attributes_ctatext",
-      "community": 8,
+      "community": 166,
       "norm_label": "ctatext"
     },
     {
@@ -2412,7 +2412,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L76",
       "id": "sections_pricing_service_card_ctatext_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2421,7 +2421,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L78",
       "id": "sections_pricing_service_card_attributes_ctaurl",
-      "community": 166,
+      "community": 8,
       "norm_label": "ctaurl"
     },
     {
@@ -2430,7 +2430,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L79",
       "id": "sections_pricing_service_card_ctaurl_type",
-      "community": 166,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2466,7 +2466,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L85",
       "id": "sections_pricing_service_card_attributes_reassurances",
-      "community": 216,
+      "community": 213,
       "norm_label": "reassurances"
     },
     {
@@ -2475,7 +2475,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L86",
       "id": "sections_pricing_service_card_reassurances_type",
-      "community": 216,
+      "community": 213,
       "norm_label": "type"
     },
     {
@@ -4000,37 +4000,10 @@
       "norm_label": "default"
     },
     {
-      "label": "loop",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L30",
-      "id": "sections_reviews_attributes_loop",
-      "community": 204,
-      "norm_label": "loop"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L31",
-      "id": "sections_reviews_loop_type",
-      "community": 204,
-      "norm_label": "type"
-    },
-    {
-      "label": "default",
-      "file_type": "code",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L32",
-      "id": "sections_reviews_loop_default",
-      "community": 204,
-      "norm_label": "default"
-    },
-    {
       "label": "summaryAverage",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L34",
+      "source_location": "L30",
       "id": "sections_reviews_attributes_summaryaverage",
       "community": 204,
       "norm_label": "summaryaverage"
@@ -4039,7 +4012,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L35",
+      "source_location": "L31",
       "id": "sections_reviews_summaryaverage_type",
       "community": 204,
       "norm_label": "type"
@@ -4048,7 +4021,7 @@
       "label": "min",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L36",
+      "source_location": "L32",
       "id": "sections_reviews_summaryaverage_min",
       "community": 204,
       "norm_label": "min"
@@ -4057,7 +4030,7 @@
       "label": "max",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L37",
+      "source_location": "L33",
       "id": "sections_reviews_summaryaverage_max",
       "community": 204,
       "norm_label": "max"
@@ -4066,7 +4039,7 @@
       "label": "summaryCount",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L39",
+      "source_location": "L35",
       "id": "sections_reviews_attributes_summarycount",
       "community": 204,
       "norm_label": "summarycount"
@@ -4075,7 +4048,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L40",
+      "source_location": "L36",
       "id": "sections_reviews_summarycount_type",
       "community": 204,
       "norm_label": "type"
@@ -4084,7 +4057,7 @@
       "label": "summaryLabel",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L42",
+      "source_location": "L38",
       "id": "sections_reviews_attributes_summarylabel",
       "community": 204,
       "norm_label": "summarylabel"
@@ -4093,7 +4066,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L43",
+      "source_location": "L39",
       "id": "sections_reviews_summarylabel_type",
       "community": 204,
       "norm_label": "type"
@@ -4102,7 +4075,7 @@
       "label": "autoplay",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L45",
+      "source_location": "L41",
       "id": "sections_reviews_attributes_autoplay",
       "community": 204,
       "norm_label": "autoplay"
@@ -4111,7 +4084,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L46",
+      "source_location": "L42",
       "id": "sections_reviews_autoplay_type",
       "community": 204,
       "norm_label": "type"
@@ -4120,7 +4093,7 @@
       "label": "default",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L47",
+      "source_location": "L43",
       "id": "sections_reviews_autoplay_default",
       "community": 204,
       "norm_label": "default"
@@ -4129,7 +4102,7 @@
       "label": "autoplayInterval",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L49",
+      "source_location": "L45",
       "id": "sections_reviews_attributes_autoplayinterval",
       "community": 204,
       "norm_label": "autoplayinterval"
@@ -4138,7 +4111,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L50",
+      "source_location": "L46",
       "id": "sections_reviews_autoplayinterval_type",
       "community": 204,
       "norm_label": "type"
@@ -4147,7 +4120,7 @@
       "label": "default",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L51",
+      "source_location": "L47",
       "id": "sections_reviews_autoplayinterval_default",
       "community": 204,
       "norm_label": "default"
@@ -4156,7 +4129,7 @@
       "label": "min",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L52",
+      "source_location": "L48",
       "id": "sections_reviews_autoplayinterval_min",
       "community": 204,
       "norm_label": "min"
@@ -4165,7 +4138,7 @@
       "label": "reviews",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L54",
+      "source_location": "L50",
       "id": "sections_reviews_attributes_reviews",
       "community": 204,
       "norm_label": "reviews"
@@ -4174,7 +4147,7 @@
       "label": "type",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L55",
+      "source_location": "L51",
       "id": "sections_reviews_reviews_type",
       "community": 204,
       "norm_label": "type"
@@ -4183,7 +4156,7 @@
       "label": "repeatable",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L56",
+      "source_location": "L52",
       "id": "sections_reviews_reviews_repeatable",
       "community": 204,
       "norm_label": "repeatable"
@@ -4192,7 +4165,7 @@
       "label": "component",
       "file_type": "code",
       "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L57",
+      "source_location": "L53",
       "id": "sections_reviews_reviews_component",
       "community": 204,
       "norm_label": "component"
@@ -6867,7 +6840,7 @@
       "source_file": "backend/src/components/elements/pricing-step.json",
       "source_location": "L3",
       "id": "elements_pricing_step_info",
-      "community": 178,
+      "community": 78,
       "norm_label": "info"
     },
     {
@@ -6876,7 +6849,7 @@
       "source_file": "backend/src/components/elements/pricing-step.json",
       "source_location": "L4",
       "id": "elements_pricing_step_info_name",
-      "community": 178,
+      "community": 78,
       "norm_label": "name"
     },
     {
@@ -6885,7 +6858,7 @@
       "source_file": "backend/src/components/elements/pricing-step.json",
       "source_location": "L5",
       "id": "elements_pricing_step_info_displayname",
-      "community": 178,
+      "community": 78,
       "norm_label": "displayname"
     },
     {
@@ -6894,7 +6867,7 @@
       "source_file": "backend/src/components/elements/pricing-step.json",
       "source_location": "L6",
       "id": "elements_pricing_step_info_description",
-      "community": 178,
+      "community": 78,
       "norm_label": "description"
     },
     {
@@ -6903,7 +6876,7 @@
       "source_file": "backend/src/components/elements/pricing-step.json",
       "source_location": "L7",
       "id": "elements_pricing_step_info_icon",
-      "community": 178,
+      "community": 78,
       "norm_label": "icon"
     },
     {
@@ -15244,7 +15217,7 @@
       "label": "SectionsRichText",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L821",
+      "source_location": "L820",
       "id": "generated_components_d_sectionsrichtext",
       "community": 1,
       "norm_label": "sectionsrichtext"
@@ -15253,7 +15226,7 @@
       "label": "SectionsTeam",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L833",
+      "source_location": "L832",
       "id": "generated_components_d_sectionsteam",
       "community": 1,
       "norm_label": "sectionsteam"
@@ -15262,7 +15235,7 @@
       "label": "SectionsTestimonialsGroup",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L847",
+      "source_location": "L846",
       "id": "generated_components_d_sectionstestimonialsgroup",
       "community": 1,
       "norm_label": "sectionstestimonialsgroup"
@@ -15271,7 +15244,7 @@
       "label": "SharedMedia",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L862",
+      "source_location": "L861",
       "id": "generated_components_d_sharedmedia",
       "community": 1,
       "norm_label": "sharedmedia"
@@ -15280,7 +15253,7 @@
       "label": "SharedQuote",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L874",
+      "source_location": "L873",
       "id": "generated_components_d_sharedquote",
       "community": 1,
       "norm_label": "sharedquote"
@@ -15289,7 +15262,7 @@
       "label": "SharedRichText",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L891",
+      "source_location": "L890",
       "id": "generated_components_d_sharedrichtext",
       "community": 1,
       "norm_label": "sharedrichtext"
@@ -15298,7 +15271,7 @@
       "label": "SharedSeo",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L903",
+      "source_location": "L902",
       "id": "generated_components_d_sharedseo",
       "community": 1,
       "norm_label": "sharedseo"
@@ -15307,7 +15280,7 @@
       "label": "SharedSlider",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L921",
+      "source_location": "L920",
       "id": "generated_components_d_sharedslider",
       "community": 1,
       "norm_label": "sharedslider"
@@ -15316,7 +15289,7 @@
       "label": "SharedVideoEmbed",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L933",
+      "source_location": "L932",
       "id": "generated_components_d_sharedvideoembed",
       "community": 1,
       "norm_label": "sharedvideoembed"
@@ -15325,7 +15298,7 @@
       "label": "ComponentSchemas",
       "file_type": "code",
       "source_file": "backend/types/generated/components.d.ts",
-      "source_location": "L946",
+      "source_location": "L945",
       "id": "generated_components_d_componentschemas",
       "community": 1,
       "norm_label": "componentschemas"
@@ -16326,7 +16299,7 @@
       "source_file": "frontend/src/__tests__/layout-components.test.tsx",
       "source_location": "L1",
       "id": "frontend_src_tests_layout_components_test_tsx",
-      "community": 3,
+      "community": 86,
       "norm_label": "layout-components.test.tsx"
     },
     {
@@ -16335,7 +16308,7 @@
       "source_file": "frontend/src/__tests__/layout-components.test.tsx",
       "source_location": "L4",
       "id": "tests_layout_components_test_mocknavbarprops",
-      "community": 3,
+      "community": 86,
       "norm_label": "mocknavbarprops"
     },
     {
@@ -16344,7 +16317,7 @@
       "source_file": "frontend/src/__tests__/layout-components.test.tsx",
       "source_location": "L13",
       "id": "tests_layout_components_test_mockfooterprops",
-      "community": 3,
+      "community": 86,
       "norm_label": "mockfooterprops"
     },
     {
@@ -16353,7 +16326,7 @@
       "source_file": "frontend/src/__tests__/layout-components.test.tsx",
       "source_location": "L38",
       "id": "tests_layout_components_test_container",
-      "community": 3,
+      "community": 86,
       "norm_label": "{ container }"
     },
     {
@@ -16362,7 +16335,7 @@
       "source_file": "frontend/src/__tests__/layout-components.test.tsx",
       "source_location": "L40",
       "id": "tests_layout_components_test_buttons",
-      "community": 3,
+      "community": 86,
       "norm_label": "buttons"
     },
     {
@@ -16371,7 +16344,7 @@
       "source_file": "frontend/src/__tests__/layout-components.test.tsx",
       "source_location": "L116",
       "id": "tests_layout_components_test_svg",
-      "community": 3,
+      "community": 86,
       "norm_label": "svg"
     },
     {
@@ -16497,7 +16470,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L1",
       "id": "frontend_src_tests_blog_post_test_tsx",
-      "community": 79,
+      "community": 216,
       "norm_label": "blog-post.test.tsx"
     },
     {
@@ -16506,7 +16479,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L14",
       "id": "tests_blog_post_test_basearticle",
-      "community": 79,
+      "community": 216,
       "norm_label": "basearticle"
     },
     {
@@ -16515,7 +16488,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L40",
       "id": "tests_blog_post_test_article",
-      "community": 79,
+      "community": 216,
       "norm_label": "article"
     },
     {
@@ -16524,7 +16497,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L66",
       "id": "tests_blog_post_test_img",
-      "community": 79,
+      "community": 216,
       "norm_label": "img"
     },
     {
@@ -16731,7 +16704,7 @@
       "source_file": "frontend/src/app/[lang]/error.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_error_tsx",
-      "community": 3,
+      "community": 201,
       "norm_label": "error.tsx"
     },
     {
@@ -16740,7 +16713,7 @@
       "source_file": "frontend/src/app/[lang]/error.tsx",
       "source_location": "L4",
       "id": "lang_error_rooterrorboundaryprops",
-      "community": 3,
+      "community": 201,
       "norm_label": "rooterrorboundaryprops"
     },
     {
@@ -16749,7 +16722,7 @@
       "source_file": "frontend/src/app/[lang]/error.tsx",
       "source_location": "L9",
       "id": "lang_error_rooterrorboundary",
-      "community": 3,
+      "community": 201,
       "norm_label": "rooterrorboundary()"
     },
     {
@@ -16812,7 +16785,7 @@
       "source_file": "frontend/src/app/[lang]/loading.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_loading_tsx",
-      "community": 3,
+      "community": 201,
       "norm_label": "loading.tsx"
     },
     {
@@ -16821,7 +16794,7 @@
       "source_file": "frontend/src/app/[lang]/loading.tsx",
       "source_location": "L3",
       "id": "lang_loading_rootloading",
-      "community": 3,
+      "community": 201,
       "norm_label": "rootloading()"
     },
     {
@@ -17674,7 +17647,7 @@
       "label": "LogoProps",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L55",
+      "source_location": "L54",
       "id": "components_reviews_logoprops",
       "community": 215,
       "norm_label": "logoprops"
@@ -17683,7 +17656,7 @@
       "label": "GoogleLogo()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L60",
+      "source_location": "L59",
       "id": "components_reviews_googlelogo",
       "community": 215,
       "norm_label": "googlelogo()"
@@ -17692,7 +17665,7 @@
       "label": "TrustpilotLogo()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L78",
+      "source_location": "L77",
       "id": "components_reviews_trustpilotlogo",
       "community": 215,
       "norm_label": "trustpilotlogo()"
@@ -17701,7 +17674,7 @@
       "label": "InstagramLogo()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L87",
+      "source_location": "L86",
       "id": "components_reviews_instagramlogo",
       "community": 215,
       "norm_label": "instagramlogo()"
@@ -17710,7 +17683,7 @@
       "label": "FacebookLogo()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L111",
+      "source_location": "L110",
       "id": "components_reviews_facebooklogo",
       "community": 215,
       "norm_label": "facebooklogo()"
@@ -17719,7 +17692,7 @@
       "label": "PLATFORMS",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L120",
+      "source_location": "L119",
       "id": "components_reviews_platforms",
       "community": 215,
       "norm_label": "platforms"
@@ -17728,7 +17701,7 @@
       "label": "AVATAR_TINTS",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L128",
+      "source_location": "L127",
       "id": "components_reviews_avatar_tints",
       "community": 215,
       "norm_label": "avatar_tints"
@@ -17737,7 +17710,7 @@
       "label": "Stars()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L132",
+      "source_location": "L131",
       "id": "components_reviews_stars",
       "community": 215,
       "norm_label": "stars()"
@@ -17746,7 +17719,7 @@
       "label": "PlatformChip()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L154",
+      "source_location": "L153",
       "id": "components_reviews_platformchip",
       "community": 215,
       "norm_label": "platformchip()"
@@ -17755,7 +17728,7 @@
       "label": "PlatformWatermark()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L166",
+      "source_location": "L165",
       "id": "components_reviews_platformwatermark",
       "community": 215,
       "norm_label": "platformwatermark()"
@@ -17764,7 +17737,7 @@
       "label": "ReviewCard()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L183",
+      "source_location": "L182",
       "id": "components_reviews_reviewcard",
       "community": 79,
       "norm_label": "reviewcard()"
@@ -17773,7 +17746,7 @@
       "label": "Reviews()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Reviews.tsx",
-      "source_location": "L278",
+      "source_location": "L277",
       "id": "components_reviews_reviews",
       "community": 215,
       "norm_label": "reviews()"
@@ -18133,7 +18106,7 @@
       "label": "Contact()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Contact.tsx",
-      "source_location": "L252",
+      "source_location": "L237",
       "id": "components_contact_contact",
       "community": 37,
       "norm_label": "contact()"
@@ -18387,7 +18360,7 @@
       "source_file": "frontend/src/app/[lang]/components/Navbar.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_components_navbar_tsx",
-      "community": 201,
+      "community": 77,
       "norm_label": "navbar.tsx"
     },
     {
@@ -18396,7 +18369,7 @@
       "source_file": "frontend/src/app/[lang]/components/Navbar.tsx",
       "source_location": "L11",
       "id": "components_navbar_navlink",
-      "community": 201,
+      "community": 77,
       "norm_label": "navlink"
     },
     {
@@ -18405,7 +18378,7 @@
       "source_file": "frontend/src/app/[lang]/components/Navbar.tsx",
       "source_location": "L18",
       "id": "components_navbar_mobilenavlink",
-      "community": 201,
+      "community": 77,
       "norm_label": "mobilenavlink"
     },
     {
@@ -18414,7 +18387,7 @@
       "source_file": "frontend/src/app/[lang]/components/Navbar.tsx",
       "source_location": "L39",
       "id": "components_navbar_languageselector",
-      "community": 201,
+      "community": 77,
       "norm_label": "languageselector()"
     },
     {
@@ -18423,7 +18396,7 @@
       "source_file": "frontend/src/app/[lang]/components/Navbar.tsx",
       "source_location": "L114",
       "id": "components_navbar_navbar",
-      "community": 201,
+      "community": 77,
       "norm_label": "navbar()"
     },
     {
@@ -18828,7 +18801,7 @@
       "source_file": "frontend/src/app/[lang]/components/Error.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_components_error_tsx",
-      "community": 3,
+      "community": 201,
       "norm_label": "error.tsx"
     },
     {
@@ -18837,7 +18810,7 @@
       "source_file": "frontend/src/app/[lang]/components/Error.tsx",
       "source_location": "L1",
       "id": "components_error_errorcomponent",
-      "community": 3,
+      "community": 201,
       "norm_label": "errorcomponent()"
     },
     {
@@ -19017,7 +18990,7 @@
       "source_file": "frontend/src/app/[lang]/components/Logo.tsx",
       "source_location": "L1",
       "id": "frontend_src_app_lang_components_logo_tsx",
-      "community": 201,
+      "community": 77,
       "norm_label": "logo.tsx"
     },
     {
@@ -19026,7 +18999,7 @@
       "source_file": "frontend/src/app/[lang]/components/Logo.tsx",
       "source_location": "L4",
       "id": "components_logo_logo",
-      "community": 201,
+      "community": 77,
       "norm_label": "logo()"
     },
     {
@@ -19818,125 +19791,791 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme_md",
-      "community": 212,
+      "community": 85,
       "norm_label": "readme.md"
     },
     {
-      "label": "Not a Diet",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "id": "nad_website_readme_not_a_diet",
-      "community": 78,
-      "norm_label": "not a diet"
-    },
-    {
-      "label": "Stack",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L9",
-      "id": "nad_website_readme_stack",
-      "community": 78,
-      "norm_label": "stack"
-    },
-    {
-      "label": "Layout",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L18",
-      "id": "nad_website_readme_layout",
-      "community": 78,
-      "norm_label": "layout"
-    },
-    {
-      "label": "code:block1 (.)",
+      "label": "Strapi Starter Next 14, Tailwind, Typescript and Strapi",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L20",
+      "id": "nad_website_readme_strapi_starter_next_14_tailwind_typescript_and_strapi",
+      "community": 85,
+      "norm_label": "strapi starter next 14, tailwind, typescript and strapi"
+    },
+    {
+      "label": "Hello Strapi",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "id": "nad_website_readme_hello_strapi",
+      "community": 85,
+      "norm_label": "hello strapi"
+    },
+    {
+      "label": "Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L40",
+      "id": "nad_website_readme_features",
+      "community": 85,
+      "norm_label": "features"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "id": "nad_website_readme_getting_started",
+      "community": 85,
+      "norm_label": "getting started"
+    },
+    {
+      "label": "code:bash (git clone https://github.com/strapi/nextjs-corporate-starter)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L57",
       "id": "nad_website_readme_codeblock_1",
-      "community": 78,
-      "norm_label": "code:block1 (.)"
+      "community": 85,
+      "norm_label": "code:bash (git clone https://github.com/strapi/nextjs-corporate-starter)"
+    },
+    {
+      "label": "code:bash (yarn setup)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "id": "nad_website_readme_codeblock_2",
+      "community": 85,
+      "norm_label": "code:bash (yarn setup)"
+    },
+    {
+      "label": "code:bash (HOST=localhost)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "id": "nad_website_readme_codeblock_3",
+      "community": 85,
+      "norm_label": "code:bash (host=localhost)"
+    },
+    {
+      "label": "code:bash (yarn build)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L83",
+      "id": "nad_website_readme_codeblock_4",
+      "community": 85,
+      "norm_label": "code:bash (yarn build)"
+    },
+    {
+      "label": "Seeding The Data",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L94",
+      "id": "nad_website_readme_seeding_the_data",
+      "community": 85,
+      "norm_label": "seeding the data"
+    },
+    {
+      "label": "code:bash (yarn strapi import -f ../seed-data.tar.gz)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "id": "nad_website_readme_codeblock_5",
+      "community": 85,
+      "norm_label": "code:bash (yarn strapi import -f ../seed-data.tar.gz)"
+    },
+    {
+      "label": "Setting Up The Frontend",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L118",
+      "id": "nad_website_readme_setting_up_the_frontend",
+      "community": 85,
+      "norm_label": "setting up the frontend"
+    },
+    {
+      "label": "code:bash (NEXT_PUBLIC_STRAPI_API_TOKEN=your-api-token)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "id": "nad_website_readme_codeblock_6",
+      "community": 85,
+      "norm_label": "code:bash (next_public_strapi_api_token=your-api-token)"
+    },
+    {
+      "label": "Start Both Projects Concurrently",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L187",
+      "id": "nad_website_readme_start_both_projects_concurrently",
+      "community": 85,
+      "norm_label": "start both projects concurrently"
+    },
+    {
+      "label": "code:json ({)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L193",
+      "id": "nad_website_readme_codeblock_7",
+      "community": 85,
+      "norm_label": "code:json ({)"
+    },
+    {
+      "label": "Conclusion",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L212",
+      "id": "nad_website_readme_conclusion",
+      "community": 85,
+      "norm_label": "conclusion"
+    },
+    {
+      "label": "Contributing to the Next.js Corporate Starter repository",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L222",
+      "id": "nad_website_readme_contributing_to_the_next_js_corporate_starter_repository",
+      "community": 85,
+      "norm_label": "contributing to the next.js corporate starter repository"
     },
     {
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L228",
       "id": "nad_website_readme_prerequisites",
-      "community": 212,
+      "community": 85,
       "norm_label": "prerequisites"
+    },
+    {
+      "label": "Steps to Contribute",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L235",
+      "id": "nad_website_readme_steps_to_contribute",
+      "community": 85,
+      "norm_label": "steps to contribute"
+    },
+    {
+      "label": "1. Fork the Repository",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L237",
+      "id": "nad_website_readme_1_fork_the_repository",
+      "community": 85,
+      "norm_label": "1. fork the repository"
+    },
+    {
+      "label": "2. Clone your Fork",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L241",
+      "id": "nad_website_readme_2_clone_your_fork",
+      "community": 85,
+      "norm_label": "2. clone your fork"
+    },
+    {
+      "label": "code:bash (git clone PASTE_CLONED_REPOSITORY_URL)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L247",
+      "id": "nad_website_readme_codeblock_8",
+      "community": 85,
+      "norm_label": "code:bash (git clone paste_cloned_repository_url)"
+    },
+    {
+      "label": "3. Add Upstream Repository",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L253",
+      "id": "nad_website_readme_3_add_upstream_repository",
+      "community": 85,
+      "norm_label": "3. add upstream repository"
+    },
+    {
+      "label": "code:bash (git remote add upstream https://github.com/strapi/nextjs-cor)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L257",
+      "id": "nad_website_readme_codeblock_9",
+      "community": 85,
+      "norm_label": "code:bash (git remote add upstream https://github.com/strapi/nextjs-cor)"
+    },
+    {
+      "label": "4. Synchronize your Fork",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L263",
+      "id": "nad_website_readme_4_synchronize_your_fork",
+      "community": 85,
+      "norm_label": "4. synchronize your fork"
+    },
+    {
+      "label": "code:bash (git fetch upstream)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L269",
+      "id": "nad_website_readme_codeblock_10",
+      "community": 85,
+      "norm_label": "code:bash (git fetch upstream)"
+    },
+    {
+      "label": "code:bash (git checkout main)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L275",
+      "id": "nad_website_readme_codeblock_11",
+      "community": 85,
+      "norm_label": "code:bash (git checkout main)"
+    },
+    {
+      "label": "code:bash (git merge upstream/main)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L281",
+      "id": "nad_website_readme_codeblock_12",
+      "community": 85,
+      "norm_label": "code:bash (git merge upstream/main)"
+    },
+    {
+      "label": "5. Create a Branch",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L287",
+      "id": "nad_website_readme_5_create_a_branch",
+      "community": 85,
+      "norm_label": "5. create a branch"
+    },
+    {
+      "label": "code:bash (git checkout -b BRANCH_NAME)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L291",
+      "id": "nad_website_readme_codeblock_13",
+      "community": 85,
+      "norm_label": "code:bash (git checkout -b branch_name)"
+    },
+    {
+      "label": "6. Make your Changes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L297",
+      "id": "nad_website_readme_6_make_your_changes",
+      "community": 85,
+      "norm_label": "6. make your changes"
+    },
+    {
+      "label": "7. Commit your Changes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L301",
+      "id": "nad_website_readme_7_commit_your_changes",
+      "community": 85,
+      "norm_label": "7. commit your changes"
+    },
+    {
+      "label": "code:bash (git add -A)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L305",
+      "id": "nad_website_readme_codeblock_14",
+      "community": 85,
+      "norm_label": "code:bash (git add -a)"
+    },
+    {
+      "label": "8. Push your Changes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L312",
+      "id": "nad_website_readme_8_push_your_changes",
+      "community": 85,
+      "norm_label": "8. push your changes"
+    },
+    {
+      "label": "code:bash (git push origin BRANCH_NAME)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L316",
+      "id": "nad_website_readme_codeblock_15",
+      "community": 85,
+      "norm_label": "code:bash (git push origin branch_name)"
+    },
+    {
+      "label": "9. Create a Pull Request",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L322",
+      "id": "nad_website_readme_9_create_a_pull_request",
+      "community": 85,
+      "norm_label": "9. create a pull request"
+    },
+    {
+      "label": "Congrats! \ud83c\udf89",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L328",
+      "id": "nad_website_readme_congrats",
+      "community": 85,
+      "norm_label": "congrats! \ud83c\udf89"
+    },
+    {
+      "label": "Psst...",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L336",
+      "id": "nad_website_readme_psst",
+      "community": 85,
+      "norm_label": "psst..."
+    },
+    {
+      "label": "code:bash (yarn repo:upstream)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L340",
+      "id": "nad_website_readme_codeblock_16",
+      "community": 85,
+      "norm_label": "code:bash (yarn repo:upstream)"
+    },
+    {
+      "label": "FAQ",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L344",
+      "id": "nad_website_readme_faq",
+      "community": 85,
+      "norm_label": "faq"
+    },
+    {
+      "label": "How do I add additional pages?",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L346",
+      "id": "nad_website_readme_how_do_i_add_additional_pages",
+      "community": 85,
+      "norm_label": "how do i add additional pages?"
+    },
+    {
+      "label": "How do I update my Strapi version?",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L349",
+      "id": "nad_website_readme_how_do_i_update_my_strapi_version",
+      "community": 85,
+      "norm_label": "how do i update my strapi version?"
+    },
+    {
+      "label": "AGENTS.original.md",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L1",
+      "id": "agents_original_md",
+      "community": 71,
+      "norm_label": "agents.original.md"
+    },
+    {
+      "label": "Agent Guidelines for NAD Website Repository",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L1",
+      "id": "nad_website_agents_original_agent_guidelines_for_nad_website_repository",
+      "community": 71,
+      "norm_label": "agent guidelines for nad website repository"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L3",
+      "id": "nad_website_agents_original_overview",
+      "community": 71,
+      "norm_label": "overview"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L6",
+      "id": "nad_website_agents_original_architecture",
+      "community": 71,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "Key Data Flow",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L13",
+      "id": "nad_website_agents_original_key_data_flow",
+      "community": 71,
+      "norm_label": "key data flow"
+    },
+    {
+      "label": "Development Commands",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L20",
+      "id": "nad_website_agents_original_development_commands",
+      "community": 71,
+      "norm_label": "development commands"
+    },
+    {
+      "label": "Root Level Commands (Yarn Berry Workspaces)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L22",
+      "id": "nad_website_agents_original_root_level_commands_yarn_berry_workspaces",
+      "community": 71,
+      "norm_label": "root level commands (yarn berry workspaces)"
+    },
+    {
+      "label": "code:bash (# Install all dependencies)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L23",
+      "id": "nad_website_agents_original_codeblock_1",
+      "community": 71,
+      "norm_label": "code:bash (# install all dependencies)"
+    },
+    {
+      "label": "Frontend Specific (Next.js 16)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L52",
+      "id": "nad_website_agents_original_frontend_specific_next_js_16",
+      "community": 71,
+      "norm_label": "frontend specific (next.js 16)"
+    },
+    {
+      "label": "code:bash (yarn workspace frontend dev      # Development server)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L53",
+      "id": "nad_website_agents_original_codeblock_2",
+      "community": 71,
+      "norm_label": "code:bash (yarn workspace frontend dev      # development server)"
+    },
+    {
+      "label": "Backend Specific (Strapi 5)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L62",
+      "id": "nad_website_agents_original_backend_specific_strapi_5",
+      "community": 71,
+      "norm_label": "backend specific (strapi 5)"
+    },
+    {
+      "label": "code:bash (yarn workspace backend develop   # Development server)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L63",
+      "id": "nad_website_agents_original_codeblock_3",
+      "community": 71,
+      "norm_label": "code:bash (yarn workspace backend develop   # development server)"
+    },
+    {
+      "label": "Package Manager",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L70",
+      "id": "nad_website_agents_original_package_manager",
+      "community": 71,
+      "norm_label": "package manager"
+    },
+    {
+      "label": "Testing",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L77",
+      "id": "nad_website_agents_original_testing",
+      "community": 71,
+      "norm_label": "testing"
     },
     {
       "label": "Setup",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L35",
-      "id": "nad_website_readme_setup",
-      "community": 78,
+      "source_file": "AGENTS.original.md",
+      "source_location": "L79",
+      "id": "nad_website_agents_original_setup",
+      "community": 71,
       "norm_label": "setup"
     },
     {
-      "label": "code:bash (yarn install                              # install all work)",
+      "label": "Running Tests",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L37",
-      "id": "nad_website_readme_codeblock_2",
-      "community": 78,
-      "norm_label": "code:bash (yarn install                              # install all work)"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L85",
+      "id": "nad_website_agents_original_running_tests",
+      "community": 71,
+      "norm_label": "running tests"
     },
     {
-      "label": "Develop",
+      "label": "code:bash (yarn test              # Run all tests once)",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L44",
-      "id": "nad_website_readme_develop",
-      "community": 78,
-      "norm_label": "develop"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L86",
+      "id": "nad_website_agents_original_codeblock_4",
+      "community": 71,
+      "norm_label": "code:bash (yarn test              # run all tests once)"
     },
     {
-      "label": "code:bash (yarn dev        # clear cache + run frontend (:3000) and bac)",
+      "label": "Mocking Strategy",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L46",
-      "id": "nad_website_readme_codeblock_3",
-      "community": 78,
-      "norm_label": "code:bash (yarn dev        # clear cache + run frontend (:3000) and bac)"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L91",
+      "id": "nad_website_agents_original_mocking_strategy",
+      "community": 71,
+      "norm_label": "mocking strategy"
     },
     {
-      "label": "Common commands",
+      "label": "Writing New Tests",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L52",
-      "id": "nad_website_readme_common_commands",
-      "community": 78,
-      "norm_label": "common commands"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L98",
+      "id": "nad_website_agents_original_writing_new_tests",
+      "community": 71,
+      "norm_label": "writing new tests"
     },
     {
-      "label": "code:bash (yarn build         # build frontend)",
+      "label": "code:typescript ({ data: { documentId: \"...\", id: 1, ...fields }, meta: {} })",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L54",
-      "id": "nad_website_readme_codeblock_4",
-      "community": 78,
-      "norm_label": "code:bash (yarn build         # build frontend)"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L102",
+      "id": "nad_website_agents_original_codeblock_5",
+      "community": 71,
+      "norm_label": "code:typescript ({ data: { documentid: \"...\", id: 1, ...fields }, meta: {} })"
     },
     {
-      "label": "Content model",
+      "label": "code:typescript (const result = await MyServerComponent({ params: Promise.res)",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L66",
-      "id": "nad_website_readme_content_model",
-      "community": 78,
-      "norm_label": "content model"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L106",
+      "id": "nad_website_agents_original_codeblock_6",
+      "community": 71,
+      "norm_label": "code:typescript (const result = await myservercomponent({ params: promise.res)"
     },
     {
-      "label": "Contributing",
+      "label": "Project-Specific Patterns",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L83",
-      "id": "nad_website_readme_contributing",
-      "community": 78,
-      "norm_label": "contributing"
+      "source_file": "AGENTS.original.md",
+      "source_location": "L111",
+      "id": "nad_website_agents_original_project_specific_patterns",
+      "community": 71,
+      "norm_label": "project-specific patterns"
+    },
+    {
+      "label": "Strapi v5 API Response Format",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L113",
+      "id": "nad_website_agents_original_strapi_v5_api_response_format",
+      "community": 71,
+      "norm_label": "strapi v5 api response format"
+    },
+    {
+      "label": "Component Resolver Pattern",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L121",
+      "id": "nad_website_agents_original_component_resolver_pattern",
+      "community": 71,
+      "norm_label": "component resolver pattern"
+    },
+    {
+      "label": "Centralized API Fetcher",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L129",
+      "id": "nad_website_agents_original_centralized_api_fetcher",
+      "community": 71,
+      "norm_label": "centralized api fetcher"
+    },
+    {
+      "label": "code:typescript (// WRONG (v4 dot-notation, no longer works):)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L136",
+      "id": "nad_website_agents_original_codeblock_7",
+      "community": 71,
+      "norm_label": "code:typescript (// wrong (v4 dot-notation, no longer works):)"
+    },
+    {
+      "label": "i18n Proxy (formerly Middleware)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L145",
+      "id": "nad_website_agents_original_i18n_proxy_formerly_middleware",
+      "community": 71,
+      "norm_label": "i18n proxy (formerly middleware)"
+    },
+    {
+      "label": "Strapi Page Populate Middleware",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L153",
+      "id": "nad_website_agents_original_strapi_page_populate_middleware",
+      "community": 71,
+      "norm_label": "strapi page populate middleware"
+    },
+    {
+      "label": "Content Model Map",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L161",
+      "id": "nad_website_agents_original_content_model_map",
+      "community": 71,
+      "norm_label": "content model map"
+    },
+    {
+      "label": "Strapi Content Types \u2192 Frontend Usage",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L163",
+      "id": "nad_website_agents_original_strapi_content_types_frontend_usage",
+      "community": 71,
+      "norm_label": "strapi content types \u2192 frontend usage"
+    },
+    {
+      "label": "Dynamic Zone Components (contentSections)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L175",
+      "id": "nad_website_agents_original_dynamic_zone_components_contentsections",
+      "community": 71,
+      "norm_label": "dynamic zone components (contentsections)"
+    },
+    {
+      "label": "Shared Components (nested in dynamic zones)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L193",
+      "id": "nad_website_agents_original_shared_components_nested_in_dynamic_zones",
+      "community": 71,
+      "norm_label": "shared components (nested in dynamic zones)"
+    },
+    {
+      "label": "Deployment Info",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L202",
+      "id": "nad_website_agents_original_deployment_info",
+      "community": 71,
+      "norm_label": "deployment info"
+    },
+    {
+      "label": "Frontend (Vercel)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L204",
+      "id": "nad_website_agents_original_frontend_vercel",
+      "community": 71,
+      "norm_label": "frontend (vercel)"
+    },
+    {
+      "label": "Backend (Strapi Cloud)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L210",
+      "id": "nad_website_agents_original_backend_strapi_cloud",
+      "community": 71,
+      "norm_label": "backend (strapi cloud)"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L218",
+      "id": "nad_website_agents_original_environment_variables",
+      "community": 71,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "Known Issues & Tech Debt",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L232",
+      "id": "nad_website_agents_original_known_issues_tech_debt",
+      "community": 71,
+      "norm_label": "known issues & tech debt"
+    },
+    {
+      "label": "Fixed (Migration to v5 + Next.js 16)",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L234",
+      "id": "nad_website_agents_original_fixed_migration_to_v5_next_js_16",
+      "community": 71,
+      "norm_label": "fixed (migration to v5 + next.js 16)"
+    },
+    {
+      "label": "Remaining Issues",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L249",
+      "id": "nad_website_agents_original_remaining_issues",
+      "community": 71,
+      "norm_label": "remaining issues"
+    },
+    {
+      "label": "Project-Specific Conventions",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L260",
+      "id": "nad_website_agents_original_project_specific_conventions",
+      "community": 71,
+      "norm_label": "project-specific conventions"
+    },
+    {
+      "label": "File Naming",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L262",
+      "id": "nad_website_agents_original_file_naming",
+      "community": 71,
+      "norm_label": "file naming"
+    },
+    {
+      "label": "API Call Patterns",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L268",
+      "id": "nad_website_agents_original_api_call_patterns",
+      "community": 71,
+      "norm_label": "api call patterns"
+    },
+    {
+      "label": "Component Props",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L275",
+      "id": "nad_website_agents_original_component_props",
+      "community": 71,
+      "norm_label": "component props"
+    },
+    {
+      "label": "Styling",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L281",
+      "id": "nad_website_agents_original_styling",
+      "community": 71,
+      "norm_label": "styling"
+    },
+    {
+      "label": "Important Gotchas",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L288",
+      "id": "nad_website_agents_original_important_gotchas",
+      "community": 71,
+      "norm_label": "important gotchas"
+    },
+    {
+      "label": "When in Doubt",
+      "file_type": "document",
+      "source_file": "AGENTS.original.md",
+      "source_location": "L300",
+      "id": "nad_website_agents_original_when_in_doubt",
+      "community": 71,
+      "norm_label": "when in doubt"
     },
     {
       "label": "CLAUDE.md",
@@ -20153,6 +20792,186 @@
       "id": "nad_website_claude_graphify",
       "community": 159,
       "norm_label": "graphify"
+    },
+    {
+      "label": "CLAUDE.original.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L1",
+      "id": "claude_original_md",
+      "community": 160,
+      "norm_label": "claude.original.md"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L1",
+      "id": "nad_website_claude_original_claude_md",
+      "community": 160,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L5",
+      "id": "nad_website_claude_original_overview",
+      "community": 160,
+      "norm_label": "overview"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L9",
+      "id": "nad_website_claude_original_commands",
+      "community": 160,
+      "norm_label": "commands"
+    },
+    {
+      "label": "code:bash (# Root (runs both frontend + backend concurrently))",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L11",
+      "id": "nad_website_claude_original_codeblock_1",
+      "community": 160,
+      "norm_label": "code:bash (# root (runs both frontend + backend concurrently))"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L29",
+      "id": "nad_website_claude_original_architecture",
+      "community": 160,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "Data Flow",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L31",
+      "id": "nad_website_claude_original_data_flow",
+      "community": 160,
+      "norm_label": "data flow"
+    },
+    {
+      "label": "Key Files",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L37",
+      "id": "nad_website_claude_original_key_files",
+      "community": 160,
+      "norm_label": "key files"
+    },
+    {
+      "label": "Route Structure",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L43",
+      "id": "nad_website_claude_original_route_structure",
+      "community": 160,
+      "norm_label": "route structure"
+    },
+    {
+      "label": "code:block2 (/[lang]/                    \u2192 page.tsx (home, contentSection)",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L44",
+      "id": "nad_website_claude_original_codeblock_2",
+      "community": 160,
+      "norm_label": "code:block2 (/[lang]/                    \u2192 page.tsx (home, contentsection)"
+    },
+    {
+      "label": "Critical Patterns",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L52",
+      "id": "nad_website_claude_original_critical_patterns",
+      "community": 160,
+      "norm_label": "critical patterns"
+    },
+    {
+      "label": "Strapi v5 Populate",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L54",
+      "id": "nad_website_claude_original_strapi_v5_populate",
+      "community": 160,
+      "norm_label": "strapi v5 populate"
+    },
+    {
+      "label": "code:typescript (// WRONG (v4 dot-notation))",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L57",
+      "id": "nad_website_claude_original_codeblock_3",
+      "community": 160,
+      "norm_label": "code:typescript (// wrong (v4 dot-notation))"
+    },
+    {
+      "label": "Component Resolver",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L64",
+      "id": "nad_website_claude_original_component_resolver",
+      "community": 160,
+      "norm_label": "component resolver"
+    },
+    {
+      "label": "API Calls",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L70",
+      "id": "nad_website_claude_original_api_calls",
+      "community": 160,
+      "norm_label": "api calls"
+    },
+    {
+      "label": "Next.js 16 Specifics",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L73",
+      "id": "nad_website_claude_original_next_js_16_specifics",
+      "community": 160,
+      "norm_label": "next.js 16 specifics"
+    },
+    {
+      "label": "Styling",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L78",
+      "id": "nad_website_claude_original_styling",
+      "community": 160,
+      "norm_label": "styling"
+    },
+    {
+      "label": "Testing",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L84",
+      "id": "nad_website_claude_original_testing",
+      "community": 160,
+      "norm_label": "testing"
+    },
+    {
+      "label": "Content Model \u2192 Frontend Mapping",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L92",
+      "id": "nad_website_claude_original_content_model_frontend_mapping",
+      "community": 160,
+      "norm_label": "content model \u2192 frontend mapping"
+    },
+    {
+      "label": "Known Tech Debt",
+      "file_type": "document",
+      "source_file": "CLAUDE.original.md",
+      "source_location": "L102",
+      "id": "nad_website_claude_original_known_tech_debt",
+      "community": 160,
+      "norm_label": "known tech debt"
     },
     {
       "label": "README.md",
@@ -20540,924 +21359,6 @@
       "id": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_source_nodes",
       "community": 193,
       "norm_label": "source nodes"
-    },
-    {
-      "label": "Strapi Starter Next 14, Tailwind, Typescript and Strapi",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L20",
-      "community": 86,
-      "norm_label": "strapi starter next 14, tailwind, typescript and strapi",
-      "id": "nad_website_readme_strapi_starter_next_14_tailwind_typescript_and_strapi"
-    },
-    {
-      "label": "Hello Strapi",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L27",
-      "community": 86,
-      "norm_label": "hello strapi",
-      "id": "nad_website_readme_hello_strapi"
-    },
-    {
-      "label": "Features",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L40",
-      "community": 86,
-      "norm_label": "features",
-      "id": "nad_website_readme_features"
-    },
-    {
-      "label": "Getting Started",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L51",
-      "community": 78,
-      "norm_label": "getting started",
-      "id": "nad_website_readme_getting_started"
-    },
-    {
-      "label": "Seeding The Data",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L94",
-      "community": 86,
-      "norm_label": "seeding the data",
-      "id": "nad_website_readme_seeding_the_data"
-    },
-    {
-      "label": "code:bash (yarn strapi import -f ../seed-data.tar.gz)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L106",
-      "community": 86,
-      "norm_label": "code:bash (yarn strapi import -f ../seed-data.tar.gz)",
-      "id": "nad_website_readme_codeblock_5"
-    },
-    {
-      "label": "Setting Up The Frontend",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L118",
-      "community": 86,
-      "norm_label": "setting up the frontend",
-      "id": "nad_website_readme_setting_up_the_frontend"
-    },
-    {
-      "label": "code:bash (NEXT_PUBLIC_STRAPI_API_TOKEN=your-api-token)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L122",
-      "community": 86,
-      "norm_label": "code:bash (next_public_strapi_api_token=your-api-token)",
-      "id": "nad_website_readme_codeblock_6"
-    },
-    {
-      "label": "Start Both Projects Concurrently",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L187",
-      "community": 86,
-      "norm_label": "start both projects concurrently",
-      "id": "nad_website_readme_start_both_projects_concurrently"
-    },
-    {
-      "label": "code:json ({)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L193",
-      "community": 86,
-      "norm_label": "code:json ({)",
-      "id": "nad_website_readme_codeblock_7"
-    },
-    {
-      "label": "Conclusion",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L212",
-      "community": 86,
-      "norm_label": "conclusion",
-      "id": "nad_website_readme_conclusion"
-    },
-    {
-      "label": "Contributing to the Next.js Corporate Starter repository",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L222",
-      "community": 212,
-      "norm_label": "contributing to the next.js corporate starter repository",
-      "id": "nad_website_readme_contributing_to_the_next_js_corporate_starter_repository"
-    },
-    {
-      "label": "Steps to Contribute",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L235",
-      "community": 85,
-      "norm_label": "steps to contribute",
-      "id": "nad_website_readme_steps_to_contribute"
-    },
-    {
-      "label": "1. Fork the Repository",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L237",
-      "community": 85,
-      "norm_label": "1. fork the repository",
-      "id": "nad_website_readme_1_fork_the_repository"
-    },
-    {
-      "label": "2. Clone your Fork",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L241",
-      "community": 85,
-      "norm_label": "2. clone your fork",
-      "id": "nad_website_readme_2_clone_your_fork"
-    },
-    {
-      "label": "code:bash (git clone PASTE_CLONED_REPOSITORY_URL)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L247",
-      "community": 85,
-      "norm_label": "code:bash (git clone paste_cloned_repository_url)",
-      "id": "nad_website_readme_codeblock_8"
-    },
-    {
-      "label": "3. Add Upstream Repository",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L253",
-      "community": 85,
-      "norm_label": "3. add upstream repository",
-      "id": "nad_website_readme_3_add_upstream_repository"
-    },
-    {
-      "label": "code:bash (git remote add upstream https://github.com/strapi/nextjs-cor)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L257",
-      "community": 85,
-      "norm_label": "code:bash (git remote add upstream https://github.com/strapi/nextjs-cor)",
-      "id": "nad_website_readme_codeblock_9"
-    },
-    {
-      "label": "4. Synchronize your Fork",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L263",
-      "community": 213,
-      "norm_label": "4. synchronize your fork",
-      "id": "nad_website_readme_4_synchronize_your_fork"
-    },
-    {
-      "label": "code:bash (git fetch upstream)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L269",
-      "community": 213,
-      "norm_label": "code:bash (git fetch upstream)",
-      "id": "nad_website_readme_codeblock_10"
-    },
-    {
-      "label": "code:bash (git checkout main)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L275",
-      "community": 213,
-      "norm_label": "code:bash (git checkout main)",
-      "id": "nad_website_readme_codeblock_11"
-    },
-    {
-      "label": "code:bash (git merge upstream/main)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L281",
-      "community": 213,
-      "norm_label": "code:bash (git merge upstream/main)",
-      "id": "nad_website_readme_codeblock_12"
-    },
-    {
-      "label": "5. Create a Branch",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L287",
-      "community": 85,
-      "norm_label": "5. create a branch",
-      "id": "nad_website_readme_5_create_a_branch"
-    },
-    {
-      "label": "code:bash (git checkout -b BRANCH_NAME)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L291",
-      "community": 85,
-      "norm_label": "code:bash (git checkout -b branch_name)",
-      "id": "nad_website_readme_codeblock_13"
-    },
-    {
-      "label": "6. Make your Changes",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L297",
-      "community": 85,
-      "norm_label": "6. make your changes",
-      "id": "nad_website_readme_6_make_your_changes"
-    },
-    {
-      "label": "7. Commit your Changes",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L301",
-      "community": 85,
-      "norm_label": "7. commit your changes",
-      "id": "nad_website_readme_7_commit_your_changes"
-    },
-    {
-      "label": "code:bash (git add -A)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L305",
-      "community": 85,
-      "norm_label": "code:bash (git add -a)",
-      "id": "nad_website_readme_codeblock_14"
-    },
-    {
-      "label": "8. Push your Changes",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L312",
-      "community": 85,
-      "norm_label": "8. push your changes",
-      "id": "nad_website_readme_8_push_your_changes"
-    },
-    {
-      "label": "code:bash (git push origin BRANCH_NAME)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L316",
-      "community": 85,
-      "norm_label": "code:bash (git push origin branch_name)",
-      "id": "nad_website_readme_codeblock_15"
-    },
-    {
-      "label": "9. Create a Pull Request",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L322",
-      "community": 85,
-      "norm_label": "9. create a pull request",
-      "id": "nad_website_readme_9_create_a_pull_request"
-    },
-    {
-      "label": "Congrats! \ud83c\udf89",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L328",
-      "community": 85,
-      "norm_label": "congrats! \ud83c\udf89",
-      "id": "nad_website_readme_congrats"
-    },
-    {
-      "label": "Psst...",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L336",
-      "community": 85,
-      "norm_label": "psst...",
-      "id": "nad_website_readme_psst"
-    },
-    {
-      "label": "code:bash (yarn repo:upstream)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L340",
-      "community": 85,
-      "norm_label": "code:bash (yarn repo:upstream)",
-      "id": "nad_website_readme_codeblock_16"
-    },
-    {
-      "label": "FAQ",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L344",
-      "community": 212,
-      "norm_label": "faq",
-      "id": "nad_website_readme_faq"
-    },
-    {
-      "label": "How do I add additional pages?",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L346",
-      "community": 212,
-      "norm_label": "how do i add additional pages?",
-      "id": "nad_website_readme_how_do_i_add_additional_pages"
-    },
-    {
-      "label": "How do I update my Strapi version?",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L349",
-      "community": 212,
-      "norm_label": "how do i update my strapi version?",
-      "id": "nad_website_readme_how_do_i_update_my_strapi_version"
-    },
-    {
-      "label": "AGENTS.original.md",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L1",
-      "community": 71,
-      "norm_label": "agents.original.md",
-      "id": "agents_original_md"
-    },
-    {
-      "label": "Agent Guidelines for NAD Website Repository",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L1",
-      "community": 71,
-      "norm_label": "agent guidelines for nad website repository",
-      "id": "nad_website_agents_original_agent_guidelines_for_nad_website_repository"
-    },
-    {
-      "label": "Overview",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L3",
-      "community": 71,
-      "norm_label": "overview",
-      "id": "nad_website_agents_original_overview"
-    },
-    {
-      "label": "Architecture",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L6",
-      "community": 71,
-      "norm_label": "architecture",
-      "id": "nad_website_agents_original_architecture"
-    },
-    {
-      "label": "Key Data Flow",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L13",
-      "community": 71,
-      "norm_label": "key data flow",
-      "id": "nad_website_agents_original_key_data_flow"
-    },
-    {
-      "label": "Development Commands",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L20",
-      "community": 71,
-      "norm_label": "development commands",
-      "id": "nad_website_agents_original_development_commands"
-    },
-    {
-      "label": "Root Level Commands (Yarn Berry Workspaces)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L22",
-      "community": 71,
-      "norm_label": "root level commands (yarn berry workspaces)",
-      "id": "nad_website_agents_original_root_level_commands_yarn_berry_workspaces"
-    },
-    {
-      "label": "code:bash (# Install all dependencies)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L23",
-      "community": 71,
-      "norm_label": "code:bash (# install all dependencies)",
-      "id": "nad_website_agents_original_codeblock_1"
-    },
-    {
-      "label": "Frontend Specific (Next.js 16)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L52",
-      "community": 71,
-      "norm_label": "frontend specific (next.js 16)",
-      "id": "nad_website_agents_original_frontend_specific_next_js_16"
-    },
-    {
-      "label": "code:bash (yarn workspace frontend dev      # Development server)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L53",
-      "community": 71,
-      "norm_label": "code:bash (yarn workspace frontend dev      # development server)",
-      "id": "nad_website_agents_original_codeblock_2"
-    },
-    {
-      "label": "Backend Specific (Strapi 5)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L62",
-      "community": 71,
-      "norm_label": "backend specific (strapi 5)",
-      "id": "nad_website_agents_original_backend_specific_strapi_5"
-    },
-    {
-      "label": "code:bash (yarn workspace backend develop   # Development server)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L63",
-      "community": 71,
-      "norm_label": "code:bash (yarn workspace backend develop   # development server)",
-      "id": "nad_website_agents_original_codeblock_3"
-    },
-    {
-      "label": "Package Manager",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L70",
-      "community": 71,
-      "norm_label": "package manager",
-      "id": "nad_website_agents_original_package_manager"
-    },
-    {
-      "label": "Testing",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L77",
-      "community": 71,
-      "norm_label": "testing",
-      "id": "nad_website_agents_original_testing"
-    },
-    {
-      "label": "Setup",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L79",
-      "community": 71,
-      "norm_label": "setup",
-      "id": "nad_website_agents_original_setup"
-    },
-    {
-      "label": "Running Tests",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L85",
-      "community": 71,
-      "norm_label": "running tests",
-      "id": "nad_website_agents_original_running_tests"
-    },
-    {
-      "label": "code:bash (yarn test              # Run all tests once)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L86",
-      "community": 71,
-      "norm_label": "code:bash (yarn test              # run all tests once)",
-      "id": "nad_website_agents_original_codeblock_4"
-    },
-    {
-      "label": "Mocking Strategy",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L91",
-      "community": 71,
-      "norm_label": "mocking strategy",
-      "id": "nad_website_agents_original_mocking_strategy"
-    },
-    {
-      "label": "Writing New Tests",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L98",
-      "community": 71,
-      "norm_label": "writing new tests",
-      "id": "nad_website_agents_original_writing_new_tests"
-    },
-    {
-      "label": "code:typescript ({ data: { documentId: \"...\", id: 1, ...fields }, meta: {} })",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L102",
-      "community": 71,
-      "norm_label": "code:typescript ({ data: { documentid: \"...\", id: 1, ...fields }, meta: {} })",
-      "id": "nad_website_agents_original_codeblock_5"
-    },
-    {
-      "label": "code:typescript (const result = await MyServerComponent({ params: Promise.res)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L106",
-      "community": 71,
-      "norm_label": "code:typescript (const result = await myservercomponent({ params: promise.res)",
-      "id": "nad_website_agents_original_codeblock_6"
-    },
-    {
-      "label": "Project-Specific Patterns",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L111",
-      "community": 71,
-      "norm_label": "project-specific patterns",
-      "id": "nad_website_agents_original_project_specific_patterns"
-    },
-    {
-      "label": "Strapi v5 API Response Format",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L113",
-      "community": 71,
-      "norm_label": "strapi v5 api response format",
-      "id": "nad_website_agents_original_strapi_v5_api_response_format"
-    },
-    {
-      "label": "Component Resolver Pattern",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L121",
-      "community": 71,
-      "norm_label": "component resolver pattern",
-      "id": "nad_website_agents_original_component_resolver_pattern"
-    },
-    {
-      "label": "Centralized API Fetcher",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L129",
-      "community": 71,
-      "norm_label": "centralized api fetcher",
-      "id": "nad_website_agents_original_centralized_api_fetcher"
-    },
-    {
-      "label": "code:typescript (// WRONG (v4 dot-notation, no longer works):)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L136",
-      "community": 71,
-      "norm_label": "code:typescript (// wrong (v4 dot-notation, no longer works):)",
-      "id": "nad_website_agents_original_codeblock_7"
-    },
-    {
-      "label": "i18n Proxy (formerly Middleware)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L145",
-      "community": 71,
-      "norm_label": "i18n proxy (formerly middleware)",
-      "id": "nad_website_agents_original_i18n_proxy_formerly_middleware"
-    },
-    {
-      "label": "Strapi Page Populate Middleware",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L153",
-      "community": 71,
-      "norm_label": "strapi page populate middleware",
-      "id": "nad_website_agents_original_strapi_page_populate_middleware"
-    },
-    {
-      "label": "Content Model Map",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L161",
-      "community": 71,
-      "norm_label": "content model map",
-      "id": "nad_website_agents_original_content_model_map"
-    },
-    {
-      "label": "Strapi Content Types \u2192 Frontend Usage",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L163",
-      "community": 71,
-      "norm_label": "strapi content types \u2192 frontend usage",
-      "id": "nad_website_agents_original_strapi_content_types_frontend_usage"
-    },
-    {
-      "label": "Dynamic Zone Components (contentSections)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L175",
-      "community": 71,
-      "norm_label": "dynamic zone components (contentsections)",
-      "id": "nad_website_agents_original_dynamic_zone_components_contentsections"
-    },
-    {
-      "label": "Shared Components (nested in dynamic zones)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L193",
-      "community": 71,
-      "norm_label": "shared components (nested in dynamic zones)",
-      "id": "nad_website_agents_original_shared_components_nested_in_dynamic_zones"
-    },
-    {
-      "label": "Deployment Info",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L202",
-      "community": 71,
-      "norm_label": "deployment info",
-      "id": "nad_website_agents_original_deployment_info"
-    },
-    {
-      "label": "Frontend (Vercel)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L204",
-      "community": 71,
-      "norm_label": "frontend (vercel)",
-      "id": "nad_website_agents_original_frontend_vercel"
-    },
-    {
-      "label": "Backend (Strapi Cloud)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L210",
-      "community": 71,
-      "norm_label": "backend (strapi cloud)",
-      "id": "nad_website_agents_original_backend_strapi_cloud"
-    },
-    {
-      "label": "Environment Variables",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L218",
-      "community": 71,
-      "norm_label": "environment variables",
-      "id": "nad_website_agents_original_environment_variables"
-    },
-    {
-      "label": "Known Issues & Tech Debt",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L232",
-      "community": 71,
-      "norm_label": "known issues & tech debt",
-      "id": "nad_website_agents_original_known_issues_tech_debt"
-    },
-    {
-      "label": "Fixed (Migration to v5 + Next.js 16)",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L234",
-      "community": 71,
-      "norm_label": "fixed (migration to v5 + next.js 16)",
-      "id": "nad_website_agents_original_fixed_migration_to_v5_next_js_16"
-    },
-    {
-      "label": "Remaining Issues",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L249",
-      "community": 71,
-      "norm_label": "remaining issues",
-      "id": "nad_website_agents_original_remaining_issues"
-    },
-    {
-      "label": "Project-Specific Conventions",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L260",
-      "community": 71,
-      "norm_label": "project-specific conventions",
-      "id": "nad_website_agents_original_project_specific_conventions"
-    },
-    {
-      "label": "File Naming",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L262",
-      "community": 71,
-      "norm_label": "file naming",
-      "id": "nad_website_agents_original_file_naming"
-    },
-    {
-      "label": "API Call Patterns",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L268",
-      "community": 71,
-      "norm_label": "api call patterns",
-      "id": "nad_website_agents_original_api_call_patterns"
-    },
-    {
-      "label": "Component Props",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L275",
-      "community": 71,
-      "norm_label": "component props",
-      "id": "nad_website_agents_original_component_props"
-    },
-    {
-      "label": "Styling",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L281",
-      "community": 71,
-      "norm_label": "styling",
-      "id": "nad_website_agents_original_styling"
-    },
-    {
-      "label": "Important Gotchas",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L288",
-      "community": 71,
-      "norm_label": "important gotchas",
-      "id": "nad_website_agents_original_important_gotchas"
-    },
-    {
-      "label": "When in Doubt",
-      "file_type": "document",
-      "source_file": "AGENTS.original.md",
-      "source_location": "L300",
-      "community": 71,
-      "norm_label": "when in doubt",
-      "id": "nad_website_agents_original_when_in_doubt"
-    },
-    {
-      "label": "CLAUDE.original.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L1",
-      "community": 160,
-      "norm_label": "claude.original.md",
-      "id": "claude_original_md"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L1",
-      "community": 160,
-      "norm_label": "claude.md",
-      "id": "nad_website_claude_original_claude_md"
-    },
-    {
-      "label": "Overview",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L5",
-      "community": 160,
-      "norm_label": "overview",
-      "id": "nad_website_claude_original_overview"
-    },
-    {
-      "label": "Commands",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L9",
-      "community": 160,
-      "norm_label": "commands",
-      "id": "nad_website_claude_original_commands"
-    },
-    {
-      "label": "code:bash (# Root (runs both frontend + backend concurrently))",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L11",
-      "community": 160,
-      "norm_label": "code:bash (# root (runs both frontend + backend concurrently))",
-      "id": "nad_website_claude_original_codeblock_1"
-    },
-    {
-      "label": "Architecture",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L29",
-      "community": 160,
-      "norm_label": "architecture",
-      "id": "nad_website_claude_original_architecture"
-    },
-    {
-      "label": "Data Flow",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L31",
-      "community": 160,
-      "norm_label": "data flow",
-      "id": "nad_website_claude_original_data_flow"
-    },
-    {
-      "label": "Key Files",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L37",
-      "community": 160,
-      "norm_label": "key files",
-      "id": "nad_website_claude_original_key_files"
-    },
-    {
-      "label": "Route Structure",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L43",
-      "community": 160,
-      "norm_label": "route structure",
-      "id": "nad_website_claude_original_route_structure"
-    },
-    {
-      "label": "code:block2 (/[lang]/                    \u2192 page.tsx (home, contentSection)",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L44",
-      "community": 160,
-      "norm_label": "code:block2 (/[lang]/                    \u2192 page.tsx (home, contentsection)",
-      "id": "nad_website_claude_original_codeblock_2"
-    },
-    {
-      "label": "Critical Patterns",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L52",
-      "community": 160,
-      "norm_label": "critical patterns",
-      "id": "nad_website_claude_original_critical_patterns"
-    },
-    {
-      "label": "Strapi v5 Populate",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L54",
-      "community": 160,
-      "norm_label": "strapi v5 populate",
-      "id": "nad_website_claude_original_strapi_v5_populate"
-    },
-    {
-      "label": "code:typescript (// WRONG (v4 dot-notation))",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L57",
-      "community": 160,
-      "norm_label": "code:typescript (// wrong (v4 dot-notation))",
-      "id": "nad_website_claude_original_codeblock_3"
-    },
-    {
-      "label": "Component Resolver",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L64",
-      "community": 160,
-      "norm_label": "component resolver",
-      "id": "nad_website_claude_original_component_resolver"
-    },
-    {
-      "label": "API Calls",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L70",
-      "community": 160,
-      "norm_label": "api calls",
-      "id": "nad_website_claude_original_api_calls"
-    },
-    {
-      "label": "Next.js 16 Specifics",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L73",
-      "community": 160,
-      "norm_label": "next.js 16 specifics",
-      "id": "nad_website_claude_original_next_js_16_specifics"
-    },
-    {
-      "label": "Styling",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L78",
-      "community": 160,
-      "norm_label": "styling",
-      "id": "nad_website_claude_original_styling"
-    },
-    {
-      "label": "Testing",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L84",
-      "community": 160,
-      "norm_label": "testing",
-      "id": "nad_website_claude_original_testing"
-    },
-    {
-      "label": "Content Model \u2192 Frontend Mapping",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L92",
-      "community": 160,
-      "norm_label": "content model \u2192 frontend mapping",
-      "id": "nad_website_claude_original_content_model_frontend_mapping"
-    },
-    {
-      "label": "Known Tech Debt",
-      "file_type": "document",
-      "source_file": "CLAUDE.original.md",
-      "source_location": "L102",
-      "community": 160,
-      "norm_label": "known tech debt",
-      "id": "nad_website_claude_original_known_tech_debt"
     },
     {
       "label": "Meta",
@@ -23380,7 +23281,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 86,
       "norm_label": "layout components test suite",
       "id": "layout_components_test_suite"
     },
@@ -25992,9 +25893,9 @@
       "source_file": "backend/scripts/seeds/reviews.js",
       "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_meta"
+      "target": "seeds_reviews_meta",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -26002,9 +25903,9 @@
       "source_file": "backend/scripts/seeds/reviews.js",
       "source_location": "L27",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_withcomments"
+      "target": "seeds_reviews_withcomments",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -26012,9 +25913,9 @@
       "source_file": "backend/scripts/seeds/reviews.js",
       "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_base"
+      "target": "seeds_reviews_base",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -26022,9 +25923,9 @@
       "source_file": "backend/scripts/seeds/reviews.js",
       "source_location": "L40",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_en"
+      "target": "seeds_reviews_en",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -26032,9 +25933,9 @@
       "source_file": "backend/scripts/seeds/reviews.js",
       "source_location": "L59",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_it"
+      "target": "seeds_reviews_it",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -26042,9 +25943,9 @@
       "source_file": "backend/scripts/seeds/reviews.js",
       "source_location": "L78",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_scripts_seeds_reviews_js",
-      "target": "seeds_reviews_pt"
+      "target": "seeds_reviews_pt",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -29865,16 +29766,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_loop"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes",
       "target": "sections_reviews_attributes_summaryaverage"
     },
     {
@@ -29903,9 +29794,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L41",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_autoplay"
+      "target": "sections_reviews_attributes_autoplay",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -29913,9 +29804,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L45",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_autoplayinterval"
+      "target": "sections_reviews_attributes_autoplayinterval",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30024,26 +29915,6 @@
       "source_location": "L31",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_loop",
-      "target": "sections_reviews_loop_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sections_reviews_attributes_loop",
-      "target": "sections_reviews_loop_default"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/src/components/sections/reviews.json",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_summaryaverage",
       "target": "sections_reviews_summaryaverage_type"
     },
@@ -30093,9 +29964,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L42",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_autoplay",
-      "target": "sections_reviews_autoplay_type"
+      "target": "sections_reviews_autoplay_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30103,9 +29974,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_autoplay",
-      "target": "sections_reviews_autoplay_default"
+      "target": "sections_reviews_autoplay_default",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30113,9 +29984,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L46",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_autoplayinterval",
-      "target": "sections_reviews_autoplayinterval_type"
+      "target": "sections_reviews_autoplayinterval_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30123,9 +29994,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_autoplayinterval",
-      "target": "sections_reviews_autoplayinterval_default"
+      "target": "sections_reviews_autoplayinterval_default",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30133,9 +30004,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L48",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_autoplayinterval",
-      "target": "sections_reviews_autoplayinterval_min"
+      "target": "sections_reviews_autoplayinterval_min",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44673,9 +44544,9 @@
       "source_file": "backend/types/generated/components.d.ts",
       "source_location": "L268",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_types_generated_components_d_ts",
-      "target": "generated_components_d_elementsreview"
+      "target": "generated_components_d_elementsreview",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44953,9 +44824,9 @@
       "source_file": "backend/types/generated/components.d.ts",
       "source_location": "L781",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "backend_types_generated_components_d_ts",
-      "target": "generated_components_d_sectionsreviews"
+      "target": "generated_components_d_sectionsreviews",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54996,16 +54867,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_md",
-      "target": "nad_website_readme_not_a_diet"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -55021,776 +54882,6 @@
       "confidence_score": 1.0,
       "source": "readme_md",
       "target": "nad_website_readme_contributing_to_the_next_js_corporate_starter_repository"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_stack"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_layout"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_setup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_develop"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_common_commands"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_content_model"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_contributing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_layout",
-      "target": "nad_website_readme_codeblock_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_getting_started",
-      "target": "nad_website_readme_codeblock_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L228",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_contributing_to_the_next_js_corporate_starter_repository",
-      "target": "nad_website_readme_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_setup",
-      "target": "nad_website_readme_codeblock_2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_getting_started",
-      "target": "nad_website_readme_codeblock_2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_develop",
-      "target": "nad_website_readme_codeblock_3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_getting_started",
-      "target": "nad_website_readme_codeblock_3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_common_commands",
-      "target": "nad_website_readme_codeblock_4"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_readme_getting_started",
-      "target": "nad_website_readme_codeblock_4"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_md",
-      "target": "nad_website_claude_claude_md"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_overview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_commands"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_seeding_yarn_seed_dev"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_architecture"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_critical_patterns"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L116",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_testing"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L124",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_content_model_frontend_mapping"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L134",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_known_tech_debt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L142",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_claude_md",
-      "target": "nad_website_claude_graphify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_commands",
-      "target": "nad_website_claude_codeblock_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_seeding_yarn_seed_dev",
-      "target": "nad_website_claude_strapi_v5_dynamic_zone_put_gotchas_the_reason_append_section_exists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_seeding_yarn_seed_dev",
-      "target": "nad_website_claude_adding_a_new_section_to_the_home_page_across_locales"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_architecture",
-      "target": "nad_website_claude_data_flow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L69",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_architecture",
-      "target": "nad_website_claude_key_files"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L75",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_architecture",
-      "target": "nad_website_claude_route_structure"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_route_structure",
-      "target": "nad_website_claude_codeblock_2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_critical_patterns",
-      "target": "nad_website_claude_strapi_v5_populate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L96",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_critical_patterns",
-      "target": "nad_website_claude_component_resolver"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L102",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_critical_patterns",
-      "target": "nad_website_claude_api_calls"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_critical_patterns",
-      "target": "nad_website_claude_next_js_16_specifics"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L110",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_critical_patterns",
-      "target": "nad_website_claude_styling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "nad_website_claude_strapi_v5_populate",
-      "target": "nad_website_claude_codeblock_3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_md",
-      "target": "backend_readme_getting_started_with_strapi"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_getting_started_with_strapi",
-      "target": "backend_readme_develop"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_getting_started_with_strapi",
-      "target": "backend_readme_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_getting_started_with_strapi",
-      "target": "backend_readme_build"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_getting_started_with_strapi",
-      "target": "backend_readme_deployment"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_getting_started_with_strapi",
-      "target": "backend_readme_learn_more"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_getting_started_with_strapi",
-      "target": "backend_readme_community"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_develop",
-      "target": "backend_readme_codeblock_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_start",
-      "target": "backend_readme_codeblock_2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/README.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_readme_build",
-      "target": "backend_readme_codeblock_3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "backend_scripts_readme_md",
-      "target": "scripts_readme_backend_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_backend_scripts",
-      "target": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_backend_scripts",
-      "target": "scripts_readme_manifest_shape"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L85",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_backend_scripts",
-      "target": "scripts_readme_adding_a_new_seed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest",
-      "target": "scripts_readme_one_time_token_setup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest",
-      "target": "scripts_readme_usage"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest",
-      "target": "scripts_readme_behavior"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_one_time_token_setup",
-      "target": "scripts_readme_codeblock_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_one_time_token_setup",
-      "target": "scripts_readme_codeblock_2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_usage",
-      "target": "scripts_readme_codeblock_3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_manifest_shape",
-      "target": "scripts_readme_codeblock_4"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_manifest_shape",
-      "target": "scripts_readme_mode_append_section_patch_an_existing_localized_entry"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/scripts/README.md",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_readme_mode_append_section_patch_an_existing_localized_entry",
-      "target": "scripts_readme_codeblock_5"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/seo-content-guidance.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_seo_content_guidance_md",
-      "target": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/seo-content-guidance.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team",
-      "target": "docs_seo_content_guidance_write_for_being_quoted"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/seo-content-guidance.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team",
-      "target": "docs_seo_content_guidance_cms_fields_that_feed_structured_data"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/seo-content-guidance.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team",
-      "target": "docs_seo_content_guidance_don_t"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/README.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_readme_md",
-      "target": "frontend_readme_getting_started"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/README.md",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_readme_md",
-      "target": "frontend_readme_learn_more"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/README.md",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_readme_md",
-      "target": "frontend_readme_deploy_on_vercel"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "frontend/README.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "frontend_readme_getting_started",
-      "target": "frontend_readme_codeblock_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260521_224932_why_does_banner___bridge_three_separate_communitie.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "graphify_out_memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_md",
-      "target": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_q_why_does_banner_bridge_three_separate_communities_banner_blog_post_layout_article_select_and_contact_booking_components"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260521_224932_why_does_banner___bridge_three_separate_communitie.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_q_why_does_banner_bridge_three_separate_communities_banner_blog_post_layout_article_select_and_contact_booking_components",
-      "target": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_answer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260521_224932_why_does_banner___bridge_three_separate_communitie.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_q_why_does_banner_bridge_three_separate_communities_banner_blog_post_layout_article_select_and_contact_booking_components",
-      "target": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_source_nodes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260601_224157_why_does_getstrapimedia_bridge_blog_media__feature.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "graphify_out_memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_md",
-      "target": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_q_why_does_getstrapimedia_bridge_blog_media_features_philosophy_localization_analytics_and_other_communities"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260601_224157_why_does_getstrapimedia_bridge_blog_media__feature.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_q_why_does_getstrapimedia_bridge_blog_media_features_philosophy_localization_analytics_and_other_communities",
-      "target": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_answer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "graphify-out/memory/query_20260601_224157_why_does_getstrapimedia_bridge_blog_media__feature.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_q_why_does_getstrapimedia_bridge_blog_media_features_philosophy_localization_analytics_and_other_communities",
-      "target": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_source_nodes"
     },
     {
       "relation": "contains",
@@ -55866,6 +54957,46 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_readme_getting_started",
+      "target": "nad_website_readme_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_readme_getting_started",
+      "target": "nad_website_readme_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_readme_getting_started",
+      "target": "nad_website_readme_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_readme_getting_started",
+      "target": "nad_website_readme_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L106",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -55891,6 +55022,16 @@
       "confidence_score": 1.0,
       "source": "nad_website_readme_start_both_projects_concurrently",
       "target": "nad_website_readme_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L228",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_readme_contributing_to_the_next_js_corporate_starter_repository",
+      "target": "nad_website_readme_prerequisites"
     },
     {
       "relation": "contains",
@@ -56585,6 +55726,236 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_md",
+      "target": "nad_website_claude_claude_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_seeding_yarn_seed_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_architecture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_critical_patterns"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_testing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_content_model_frontend_mapping"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_known_tech_debt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_claude_md",
+      "target": "nad_website_claude_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_commands",
+      "target": "nad_website_claude_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_seeding_yarn_seed_dev",
+      "target": "nad_website_claude_strapi_v5_dynamic_zone_put_gotchas_the_reason_append_section_exists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_seeding_yarn_seed_dev",
+      "target": "nad_website_claude_adding_a_new_section_to_the_home_page_across_locales"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_architecture",
+      "target": "nad_website_claude_data_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_architecture",
+      "target": "nad_website_claude_key_files"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_architecture",
+      "target": "nad_website_claude_route_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_route_structure",
+      "target": "nad_website_claude_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_critical_patterns",
+      "target": "nad_website_claude_strapi_v5_populate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_critical_patterns",
+      "target": "nad_website_claude_component_resolver"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_critical_patterns",
+      "target": "nad_website_claude_api_calls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_critical_patterns",
+      "target": "nad_website_claude_next_js_16_specifics"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_critical_patterns",
+      "target": "nad_website_claude_styling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "nad_website_claude_strapi_v5_populate",
+      "target": "nad_website_claude_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.original.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -56771,6 +56142,376 @@
       "confidence_score": 1.0,
       "source": "nad_website_claude_original_strapi_v5_populate",
       "target": "nad_website_claude_original_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_md",
+      "target": "backend_readme_getting_started_with_strapi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_getting_started_with_strapi",
+      "target": "backend_readme_develop"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_getting_started_with_strapi",
+      "target": "backend_readme_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_getting_started_with_strapi",
+      "target": "backend_readme_build"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_getting_started_with_strapi",
+      "target": "backend_readme_deployment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_getting_started_with_strapi",
+      "target": "backend_readme_learn_more"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_getting_started_with_strapi",
+      "target": "backend_readme_community"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_develop",
+      "target": "backend_readme_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_start",
+      "target": "backend_readme_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_readme_build",
+      "target": "backend_readme_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "backend_scripts_readme_md",
+      "target": "scripts_readme_backend_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_backend_scripts",
+      "target": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_backend_scripts",
+      "target": "scripts_readme_manifest_shape"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_backend_scripts",
+      "target": "scripts_readme_adding_a_new_seed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest",
+      "target": "scripts_readme_one_time_token_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest",
+      "target": "scripts_readme_usage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_seed_dev_populate_a_strapi_entry_from_a_manifest",
+      "target": "scripts_readme_behavior"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_one_time_token_setup",
+      "target": "scripts_readme_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_one_time_token_setup",
+      "target": "scripts_readme_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_usage",
+      "target": "scripts_readme_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_manifest_shape",
+      "target": "scripts_readme_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_manifest_shape",
+      "target": "scripts_readme_mode_append_section_patch_an_existing_localized_entry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/scripts/README.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_readme_mode_append_section_patch_an_existing_localized_entry",
+      "target": "scripts_readme_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/seo-content-guidance.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_seo_content_guidance_md",
+      "target": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/seo-content-guidance.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team",
+      "target": "docs_seo_content_guidance_write_for_being_quoted"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/seo-content-guidance.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team",
+      "target": "docs_seo_content_guidance_cms_fields_that_feed_structured_data"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/seo-content-guidance.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_seo_content_guidance_content_guidance_for_aeo_geo_marketing_team",
+      "target": "docs_seo_content_guidance_don_t"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_getting_started"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_learn_more"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_deploy_on_vercel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "frontend_readme_getting_started",
+      "target": "frontend_readme_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260521_224932_why_does_banner___bridge_three_separate_communitie.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "graphify_out_memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_md",
+      "target": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_q_why_does_banner_bridge_three_separate_communities_banner_blog_post_layout_article_select_and_contact_booking_components"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260521_224932_why_does_banner___bridge_three_separate_communitie.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_q_why_does_banner_bridge_three_separate_communities_banner_blog_post_layout_article_select_and_contact_booking_components",
+      "target": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_answer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260521_224932_why_does_banner___bridge_three_separate_communitie.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_q_why_does_banner_bridge_three_separate_communities_banner_blog_post_layout_article_select_and_contact_booking_components",
+      "target": "memory_query_20260521_224932_why_does_banner_bridge_three_separate_communitie_source_nodes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260601_224157_why_does_getstrapimedia_bridge_blog_media__feature.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "graphify_out_memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_md",
+      "target": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_q_why_does_getstrapimedia_bridge_blog_media_features_philosophy_localization_analytics_and_other_communities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260601_224157_why_does_getstrapimedia_bridge_blog_media__feature.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_q_why_does_getstrapimedia_bridge_blog_media_features_philosophy_localization_analytics_and_other_communities",
+      "target": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_answer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260601_224157_why_does_getstrapimedia_bridge_blog_media__feature.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_q_why_does_getstrapimedia_bridge_blog_media_features_philosophy_localization_analytics_and_other_communities",
+      "target": "memory_query_20260601_224157_why_does_getstrapimedia_bridge_blog_media_feature_source_nodes"
     },
     {
       "relation": "calls",
@@ -58718,5 +58459,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "12c6b49a58a02a2903d207903785456c88566998"
+  "built_at_commit": "522d64830610d07c422110b2a479f8585b2d3644"
 }

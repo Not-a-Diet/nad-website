@@ -2259,7 +2259,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L51",
       "id": "sections_pricing_service_card_attributes_firstvisitsub",
-      "community": 8,
+      "community": 166,
       "norm_label": "firstvisitsub"
     },
     {
@@ -2268,7 +2268,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L52",
       "id": "sections_pricing_service_card_firstvisitsub_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2295,7 +2295,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L57",
       "id": "sections_pricing_service_card_attributes_firstvisitmeta",
-      "community": 166,
+      "community": 8,
       "norm_label": "firstvisitmeta"
     },
     {
@@ -2304,7 +2304,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L58",
       "id": "sections_pricing_service_card_firstvisitmeta_type",
-      "community": 166,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2331,7 +2331,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L63",
       "id": "sections_pricing_service_card_attributes_followupsub",
-      "community": 166,
+      "community": 8,
       "norm_label": "followupsub"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L64",
       "id": "sections_pricing_service_card_followupsub_type",
-      "community": 166,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -2367,7 +2367,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L69",
       "id": "sections_pricing_service_card_attributes_followupmeta",
-      "community": 8,
+      "community": 166,
       "norm_label": "followupmeta"
     },
     {
@@ -2376,7 +2376,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L70",
       "id": "sections_pricing_service_card_followupmeta_type",
-      "community": 8,
+      "community": 166,
       "norm_label": "type"
     },
     {
@@ -2403,7 +2403,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L75",
       "id": "sections_pricing_service_card_attributes_ctatext",
-      "community": 8,
+      "community": 220,
       "norm_label": "ctatext"
     },
     {
@@ -2412,7 +2412,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L76",
       "id": "sections_pricing_service_card_ctatext_type",
-      "community": 8,
+      "community": 220,
       "norm_label": "type"
     },
     {
@@ -2466,7 +2466,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L85",
       "id": "sections_pricing_service_card_attributes_reassurances",
-      "community": 216,
+      "community": 8,
       "norm_label": "reassurances"
     },
     {
@@ -2475,7 +2475,7 @@
       "source_file": "backend/src/components/sections/pricing-service-card.json",
       "source_location": "L86",
       "id": "sections_pricing_service_card_reassurances_type",
-      "community": 216,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -16497,7 +16497,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L1",
       "id": "frontend_src_tests_blog_post_test_tsx",
-      "community": 79,
+      "community": 216,
       "norm_label": "blog-post.test.tsx"
     },
     {
@@ -16506,7 +16506,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L14",
       "id": "tests_blog_post_test_basearticle",
-      "community": 79,
+      "community": 216,
       "norm_label": "basearticle"
     },
     {
@@ -16515,7 +16515,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L40",
       "id": "tests_blog_post_test_article",
-      "community": 79,
+      "community": 216,
       "norm_label": "article"
     },
     {
@@ -16524,7 +16524,7 @@
       "source_file": "frontend/src/__tests__/blog-post.test.tsx",
       "source_location": "L66",
       "id": "tests_blog_post_test_img",
-      "community": 79,
+      "community": 216,
       "norm_label": "img"
     },
     {
@@ -18133,7 +18133,7 @@
       "label": "Contact()",
       "file_type": "code",
       "source_file": "frontend/src/app/[lang]/components/Contact.tsx",
-      "source_location": "L252",
+      "source_location": "L237",
       "id": "components_contact_contact",
       "community": 37,
       "norm_label": "contact()"
@@ -29863,9 +29863,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes",
-      "target": "sections_reviews_attributes_loop"
+      "target": "sections_reviews_attributes_loop",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30023,9 +30023,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L31",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_loop",
-      "target": "sections_reviews_loop_type"
+      "target": "sections_reviews_loop_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -30033,9 +30033,9 @@
       "source_file": "backend/src/components/sections/reviews.json",
       "source_location": "L32",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "sections_reviews_attributes_loop",
-      "target": "sections_reviews_loop_default"
+      "target": "sections_reviews_loop_default",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54998,9 +54998,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "nad_website_readme_not_a_diet"
+      "target": "nad_website_readme_not_a_diet",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55028,9 +55028,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_stack"
+      "target": "nad_website_readme_stack",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55038,9 +55038,9 @@
       "source_file": "README.md",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_layout"
+      "target": "nad_website_readme_layout",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55048,9 +55048,9 @@
       "source_file": "README.md",
       "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_prerequisites"
+      "target": "nad_website_readme_prerequisites",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55058,9 +55058,9 @@
       "source_file": "README.md",
       "source_location": "L35",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_setup"
+      "target": "nad_website_readme_setup",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55068,9 +55068,9 @@
       "source_file": "README.md",
       "source_location": "L44",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_develop"
+      "target": "nad_website_readme_develop",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55078,9 +55078,9 @@
       "source_file": "README.md",
       "source_location": "L52",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_common_commands"
+      "target": "nad_website_readme_common_commands",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55088,9 +55088,9 @@
       "source_file": "README.md",
       "source_location": "L66",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_content_model"
+      "target": "nad_website_readme_content_model",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55098,9 +55098,9 @@
       "source_file": "README.md",
       "source_location": "L83",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_not_a_diet",
-      "target": "nad_website_readme_contributing"
+      "target": "nad_website_readme_contributing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55108,9 +55108,9 @@
       "source_file": "README.md",
       "source_location": "L20",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_layout",
-      "target": "nad_website_readme_codeblock_1"
+      "target": "nad_website_readme_codeblock_1",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55138,9 +55138,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_setup",
-      "target": "nad_website_readme_codeblock_2"
+      "target": "nad_website_readme_codeblock_2",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55158,9 +55158,9 @@
       "source_file": "README.md",
       "source_location": "L46",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_develop",
-      "target": "nad_website_readme_codeblock_3"
+      "target": "nad_website_readme_codeblock_3",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55178,9 +55178,9 @@
       "source_file": "README.md",
       "source_location": "L54",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "nad_website_readme_common_commands",
-      "target": "nad_website_readme_codeblock_4"
+      "target": "nad_website_readme_codeblock_4",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",

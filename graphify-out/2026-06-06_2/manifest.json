@@ -785,8 +785,8 @@
     "semantic_hash": "8179b4a44a27cf98ebaa505b03479a28"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Contact.tsx": {
-    "mtime": 1780763606.6885006,
-    "ast_hash": "fae46f0b03ef96ded97adc3546feedfc",
+    "mtime": 1780691977.3016849,
+    "ast_hash": "955fcd2854c4c8734d14fa18b119ed5e",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/PricingTeaser.tsx": {

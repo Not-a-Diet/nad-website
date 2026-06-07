@@ -114,16 +114,15 @@ export default function Footer({
         </div>
         <div className="pt-8 border-t border-crema-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-crema-500">
-              © {currentYear} Notadiet™ All rights reserved.
-            </p>
-            <div className="flex flex-row flex-end space-x-4">
-              <ul>
-                {legalLinks.map((link: FooterLink) => (
-                  <FooterLink className=" lg:inline lg:ml-9" key={link.id} {...link} />
-                ))}
-              </ul>
+            <div className="text-crema-500 text-center md:text-left">
+              <p>© {currentYear} Notadiet™</p>
+              <p>P.IVA: 05749220280</p>
             </div>
+            <ul className="flex flex-wrap justify-center gap-x-9 gap-y-2">
+              {legalLinks.map((link: FooterLink) => (
+                <FooterLink key={link.id} {...link} />
+              ))}
+            </ul>
           </div>
         </div>
       </div>
