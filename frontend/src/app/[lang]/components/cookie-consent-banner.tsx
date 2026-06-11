@@ -276,7 +276,9 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
         {`
 #cc-main {
 --cc-btn-primary-bg: #B8CE12;
+--cc-btn-primary-color: #1c1917;
 --cc-btn-primary-hover-bg: #16a34a;
+--cc-btn-primary-hover-color: #1c1917;
 --cc-btn-primary-hover-border-color: #444444;
 --cc-toggle-on-bg: var(--cc-btn-primary-bg);
 }
