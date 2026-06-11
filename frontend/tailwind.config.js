@@ -11,13 +11,14 @@ module.exports = {
         },
         'primary':
         {
-          DEFAULT: '#e8471e',
+          DEFAULT: '#d63b12',
           500: '#ff8566',
           100: '#ffedd5',
         },
         'secondary':
         {
           DEFAULT: '#B8CE12',
+          700: '#5f6e0c',
           500: '#bcda01',
           100: '#dcfce7',
         },
@@ -39,7 +40,7 @@ module.exports = {
         {
           DEFAULT: '#1c1917',
           200: '#e7e5e4',
-          500: '#a8a29e',
+          500: '#78716c',
           800: '#292524'
         }
 
