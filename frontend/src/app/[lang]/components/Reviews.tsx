@@ -203,6 +203,7 @@ function ReviewCard({
         year: "numeric",
         month: "long",
         day: "numeric",
+        timeZone: "UTC",
       }).format(new Date(review.date))
     : null;
 
