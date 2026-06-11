@@ -53,12 +53,12 @@ function TeamMemberCard({ name, occupation, profilePhoto, description, skills }:
         )}
       </div>
       <h3 className="text-crema-900 text-center mb-2">{name}</h3>
-      <p className="text-secondary text-center mb-4">{occupation}</p>
+      <p className="text-secondary-700 text-center mb-4">{occupation}</p>
       <p className="text-crema-700 mb-4">{description}</p>
       <div className="text-left space-y-2 mt-4">
         {skillsArr.map((skill, index) => (
           <div key={index} className="flex items-start">
-            <span className="text-secondary mr-2 mt-1">✓</span>
+            <span className="text-secondary-700 mr-2 mt-1">✓</span>
             <p className="text-crema-800 ">{skill}</p>
           </div>
         ))}

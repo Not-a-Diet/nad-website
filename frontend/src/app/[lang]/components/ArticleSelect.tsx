@@ -57,7 +57,7 @@ export default function ArticleSelect({
                     href={`/${params.lang}/blog/${params.category}/${article.slug}`}
                     className={`${
                       params.slug === article.slug &&
-                      "text-secondary"
+                      "text-secondary-700"
                     }  hover:underline transition-colors duration-200`}
                   >
                     {article.title}

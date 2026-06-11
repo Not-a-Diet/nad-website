@@ -369,7 +369,7 @@ export default function Reviews({ data, lang }: Readonly<ReviewsProps>) {
         <div className="mb-12 flex flex-wrap items-end justify-between gap-12">
           <div className="max-w-[640px]">
             {data.eyebrow && (
-              <p className="m-0 mb-3 text-sm font-bold uppercase tracking-[0.12em] text-secondary-500">
+              <p className="m-0 mb-3 text-sm font-bold uppercase tracking-[0.12em] text-secondary-700">
                 {data.eyebrow}
               </p>
             )}

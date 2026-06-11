@@ -35,19 +35,19 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
     primary: {
       bg: "bg-primary-100",
       border: "border-primary",
-      text: "text-primary-500",
+      text: "text-primary",
       button: "bg-primary",
     },
     secondary: {
       bg: "bg-secondary-100",
       border: "border-secondary",
-      text: "text-secondary-500",
+      text: "text-secondary-700",
       button: "bg-secondary",
     },
     tertiary: {
       bg: "bg-tertiary-100",
       border: "border-tertiary-500",
-      text: "text-tertiary-500",
+      text: "text-tertiary",
       button: "bg-tertiary-500",
     },
     quaternary: {

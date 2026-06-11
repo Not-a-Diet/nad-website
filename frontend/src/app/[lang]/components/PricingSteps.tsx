@@ -51,7 +51,7 @@ interface PricingStepsProps {
 function Step({ step, index }: { step: PricingStep; index: number }) {
   const accent = step.accent || (index === 0 ? "primary" : "secondary");
   const accentBg = accent === "primary" ? "bg-primary" : "bg-secondary-500";
-  const accentText = accent === "primary" ? "text-primary" : "text-secondary-500";
+  const accentText = accent === "primary" ? "text-primary" : "text-secondary-700";
   const accentBorder = accent === "primary" ? "border-l-primary" : "border-l-secondary-500";
 
   const imgUrl = step.image?.url ? getStrapiMedia(step.image.url) : null;
@@ -184,7 +184,7 @@ export default function PricingSteps({ data }: PricingStepsProps) {
             <h2 className="m-0 font-heading text-[clamp(1.75rem,3.6vw,2.25rem)] font-bold leading-[1.1] tracking-tight">
               <BracketHighlight
                 text={data.structureTitle}
-                highlightClass="text-secondary-500"
+                highlightClass="text-secondary-700"
               />
             </h2>
           </div>
