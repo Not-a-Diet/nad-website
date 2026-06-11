@@ -1,16 +1,16 @@
-# Graph Report - nad-website  (2026-06-10)
+# Graph Report - nad-website  (2026-06-06)
 
 ## Corpus Check
-- 215 files · ~53,006 words
+- 213 files · ~49,199 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2664 nodes · 3454 edges · 232 communities (197 shown, 35 thin omitted)
+- 2605 nodes · 3397 edges · 220 communities (186 shown, 34 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 122 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `00bc4441`
+- Built from commit: `12c6b49a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -203,18 +203,6 @@
 - [[_COMMUNITY_Community 217|Community 217]]
 - [[_COMMUNITY_Community 218|Community 218]]
 - [[_COMMUNITY_Community 219|Community 219]]
-- [[_COMMUNITY_Community 220|Community 220]]
-- [[_COMMUNITY_Community 221|Community 221]]
-- [[_COMMUNITY_Community 222|Community 222]]
-- [[_COMMUNITY_Community 223|Community 223]]
-- [[_COMMUNITY_Community 224|Community 224]]
-- [[_COMMUNITY_Community 225|Community 225]]
-- [[_COMMUNITY_Community 226|Community 226]]
-- [[_COMMUNITY_Community 227|Community 227]]
-- [[_COMMUNITY_Community 228|Community 228]]
-- [[_COMMUNITY_Community 229|Community 229]]
-- [[_COMMUNITY_Community 230|Community 230]]
-- [[_COMMUNITY_Community 231|Community 231]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `component` - 49 edges
@@ -240,7 +228,7 @@
 - `PricingServiceCard()` --semantically_similar_to--> `Pricing Section`  [INFERRED] [semantically similar]
   frontend/src/app/[lang]/components/PricingServiceCard.tsx → backend/src/components/sections/pricing.json
 
-## Communities (232 total, 35 thin omitted)
+## Communities (220 total, 34 thin omitted)
 
 ### Community 0 - "Schema Components"
 Cohesion: 0.21
@@ -255,8 +243,8 @@ Cohesion: 0.05
 Nodes (43): dependencies, concurrently, npm-check-updates, name, packageManager, private, resolutions, axios (+35 more)
 
 ### Community 3 - "UI State Components"
-Cohesion: 0.18
-Nodes (6): Error component, Loader(), SectionErrorBoundary, SectionErrorBoundaryProps, SectionErrorBoundaryState, ThrowingComponent()
+Cohesion: 0.09
+Nodes (15): Error component, Loader(), SectionErrorBoundary, SectionErrorBoundaryProps, SectionErrorBoundaryState, RootErrorBoundary(), RootErrorBoundaryProps, RootLoading() (+7 more)
 
 ### Community 4 - "Pricing Step Schema"
 Cohesion: 0.07
@@ -276,7 +264,7 @@ Nodes (27): attributes, ctaText, ctaUrl, eyebrow, firstVisitLabel, firstVisitMet
 
 ### Community 8 - "Pricing Card Schema"
 Cohesion: 0.14
-Nodes (14): cardNote, cardSubtitle, ctaUrl, eyebrow, firstVisitName, firstVisitSub, title, type (+6 more)
+Nodes (14): cardNote, ctaText, eyebrow, firstVisitSub, followUpMeta, followUpPrice, title, type (+6 more)
 
 ### Community 9 - "Article Content Type"
 Cohesion: 0.06
@@ -311,8 +299,8 @@ Cohesion: 0.09
 Nodes (21): compilerOptions, allowJs, baseUrl, esModuleInterop, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx (+13 more)
 
 ### Community 17 - "Blog Routing & Metadata"
-Cohesion: 0.18
-Nodes (13): Meta, normalizeParams, normalizePopulate, Strapi v5 Dot-Notation Populate Conversion, fetchSideMenuData(), generateStaticParams(), LayoutRoute(), generateStaticParams() (+5 more)
+Cohesion: 0.22
+Nodes (7): Meta, normalizeParams, normalizePopulate, Strapi v5 Dot-Notation Populate Conversion, decoded, normalizeParams(), normalizePopulate()
 
 ### Community 18 - "Category Schema"
 Cohesion: 0.10
@@ -368,7 +356,7 @@ Nodes (13): BracketHighlight(), BracketHighlightProps, CtaButton(), CtaButtonPro
 
 ### Community 31 - "Community 31"
 Cohesion: 0.23
-Nodes (11): LayoutRoute (blog post layout), ArticleSelect(), selectedFilter(), ArticleSummary, AuthorsBio, Avatar, Block, Category (+3 more)
+Nodes (13): LayoutRoute (blog post layout), ArticleSelect(), selectedFilter(), fetchSideMenuData(), LayoutRoute(), ArticleSummary, AuthorsBio, Avatar (+5 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.10
@@ -400,7 +388,7 @@ Nodes (19): attributes, description, name, occupation, profilePhoto, skills, col
 
 ### Community 39 - "Community 39"
 Cohesion: 0.12
-Nodes (27): HashScroller(), scrollToHash(), FALLBACK_SEO, generateMetadata(), getGlobal, inter, RootLayout(), PostRoute() (+19 more)
+Nodes (26): getStrapiURL, HashScroller(), scrollToHash(), FALLBACK_SEO, fetchAPI util, generateMetadata(), getGlobal, inter (+18 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.12
@@ -444,7 +432,7 @@ Nodes (18): attributes, description, icon, title, collectionName, type, allowedT
 
 ### Community 50 - "Community 50"
 Cohesion: 0.16
-Nodes (17): getStrapiURL, capitalizeFirstLetter, componentResolver, Strapi __component UID to React Component Mapping, Strapi v5 dynamic zone pattern, Dynamic Page route test suite, fetchAPI util, getPageBySlug (+9 more)
+Nodes (16): Blog Post view test suite, capitalizeFirstLetter, componentResolver, Strapi __component UID to React Component Mapping, Strapi v5 dynamic zone pattern, Dynamic Page route test suite, getPageBySlug, Home Page route test suite (+8 more)
 
 ### Community 51 - "Community 51"
 Cohesion: 0.14
@@ -499,8 +487,8 @@ Cohesion: 0.17
 Nodes (12): attributes, heading, items, collectionName, type, info, description, displayName (+4 more)
 
 ### Community 64 - "Community 64"
-Cohesion: 0.14
-Nodes (12): CategoryRoute (blog category page), layout(), loadInitialData, loadMorePosts (pagination handler), Profile(), Category Router, CategoryRoute(), fetchPostsByCategory() (+4 more)
+Cohesion: 0.17
+Nodes (16): CategoryRoute (blog category page), generateMetadata (blog article page), getMetaData (blog article), PostRoute (blog article page), Category Router, CategoryRoute(), fetchPostsByCategory(), generateMetadata() (+8 more)
 
 ### Community 65 - "Community 65"
 Cohesion: 0.16
@@ -551,16 +539,16 @@ Cohesion: 0.05
 Nodes (40): default, type, type, type, attributes, addressCountry, addressLocality, addressRegion (+32 more)
 
 ### Community 77 - "Community 77"
-Cohesion: 0.26
-Nodes (10): CategoryLink, Footer(), FooterLink, Logo(), LanguageSelector(), MobileNavLink, Navbar(), NavLink (+2 more)
+Cohesion: 0.52
+Nodes (5): CategoryLink, Footer(), FooterLink, RenderSocialIcon, RenderSocialIcon()
 
 ### Community 78 - "Community 78"
 Cohesion: 0.19
 Nodes (13): code:block1 (.), code:bash (yarn install                              # install all work), code:bash (yarn dev        # clear cache + run frontend (:3000) and bac), code:bash (yarn build         # build frontend), Common commands, Content model, Contributing, Develop (+5 more)
 
 ### Community 79 - "Community 79"
-Cohesion: 0.13
-Nodes (23): formatDate, getStrapiMedia, PostList (blog-list view), Blog Post view test suite, FeaturedArticles(), FeaturedArticlesProps, Image, Slideshow() (+15 more)
+Cohesion: 0.11
+Nodes (25): formatDate, getStrapiMedia, PostList (blog-list view), FeaturedArticles(), FeaturedArticlesProps, Image, Slideshow(), SlidShowProps (+17 more)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.15
@@ -675,8 +663,8 @@ Cohesion: 0.13
 Nodes (14): required, type, attributes, answer, question, collectionName, info, description (+6 more)
 
 ### Community 164 - "Community 164"
-Cohesion: 0.20
-Nodes (16): authOptions(), safeFetch(), sharedAlternates(), sitemap(), BlogHeaders, BlogIndex(), generateMetadata(), getBlogHeaders() (+8 more)
+Cohesion: 0.32
+Nodes (11): authOptions(), safeFetch(), sharedAlternates(), sitemap(), generateMetadata(), buildAlternates(), cleanPath(), HREFLANG (+3 more)
 
 ### Community 165 - "Community 165"
 Cohesion: 0.14
@@ -684,7 +672,7 @@ Nodes (13): Adding a new seed, `backend/scripts/`, Behavior, code:block1 (SEED_D
 
 ### Community 166 - "Community 166"
 Cohesion: 0.15
-Nodes (13): attributes, ctaText, description, firstVisitMeta, followUpMeta, followUpName, followUpPrice, type (+5 more)
+Nodes (13): attributes, ctaUrl, description, firstVisitMeta, firstVisitName, followUpName, followUpSub, type (+5 more)
 
 ### Community 167 - "Community 167"
 Cohesion: 0.20
@@ -692,7 +680,7 @@ Nodes (11): collectionName, info, description, displayName, icon, name, options,
 
 ### Community 168 - "Community 168"
 Cohesion: 0.17
-Nodes (12): ctaNewTab, onlineLabel, showOnline, showStudio, default, type, default, type (+4 more)
+Nodes (12): ctaNewTab, showOnline, showStudio, studioLabel, default, type, default, type (+4 more)
 
 ### Community 169 - "Community 169"
 Cohesion: 0.18
@@ -775,8 +763,8 @@ Cohesion: 0.40
 Nodes (5): Adding a new section to the home page across locales, code:js (// Single entry (no i18n)), code:js (module.exports = {), Seeding via `yarn seed:dev`, Strapi v5 dynamic-zone PUT gotchas (why `append-section` exists)
 
 ### Community 190 - "Community 190"
-Cohesion: 0.20
-Nodes (9): code:tsx (const dateLabel = review.date), code:bash (git add frontend/src), code:bash (curl -s https://media.notadiet.life/nad_logo_850x850_3150bb3), code:bash (npx -y lighthouse https://www.notadiet.life/it --output=json), Lighthouse Performance + Accessibility Fixes Implementation Plan, Task 10: Replace the 1.1 MB logo SVG (biggest single win — 620 KB transfer, half the page weight), Task 11: Long cache TTL on media.notadiet.life (MANUAL — Cloudflare), Task 12: Final verification (+1 more)
+Cohesion: 0.16
+Nodes (12): layout(), BlogHeaders, BlogIndex(), generateMetadata(), getBlogHeaders(), getInitialArticles(), loadInitialData, loadMorePosts (pagination handler) (+4 more)
 
 ### Community 191 - "Community 191"
 Cohesion: 0.25
@@ -815,8 +803,8 @@ Cohesion: 0.67
 Nodes (3): studioLabel, default, type
 
 ### Community 201 - "Community 201"
-Cohesion: 0.20
-Nodes (10): code:tsx (<p className="text-md text-secondary-700">), code:tsx (primary: {), code:bash (git add frontend/src), code:tsx (secondColor="text-secondary-700"), code:tsx (<p className="text-secondary-700 text-center mb-4">{occupati), code:tsx (<span className="text-secondary-700 mr-2 mt-1">✓</span>), code:tsx (<p className="m-0 mb-3 text-sm font-bold uppercase tracking-), code:tsx (<span className="inline-flex items-center gap-1.5 rounded-fu) (+2 more)
+Cohesion: 0.48
+Nodes (5): Logo(), LanguageSelector(), MobileNavLink, Navbar(), NavLink
 
 ### Community 204 - "Community 204"
 Cohesion: 0.04
@@ -835,8 +823,8 @@ Cohesion: 0.40
 Nodes (4): CMS fields that feed structured data, Content guidance for AEO / GEO (marketing team), Don't, Write for being quoted
 
 ### Community 210 - "Community 210"
-Cohesion: 0.40
-Nodes (4): browserslist, name, private, version
+Cohesion: 0.50
+Nodes (3): name, private, version
 
 ### Community 212 - "Community 212"
 Cohesion: 0.33
@@ -855,72 +843,28 @@ Cohesion: 0.12
 Nodes (7): AVATAR_TINTS, LogoProps, Platform, PLATFORMS, Review, ReviewAvatar, ReviewsProps
 
 ### Community 218 - "Community 218"
-Cohesion: 0.20
-Nodes (10): code:ts (default:), code:tsx (const colorMap: Record<string, { bg: string, border: string,), code:tsx (showLink && <a href={url} target={newTab ? '_blank' : '_self), code:ts (? "px-3 py-1 rounded-lg bg-secondary text-crema"), code:tsx (const accentBg = accent === "primary" ? "bg-primary" : "bg-s), code:tsx (<span), code:tsx (<span), code:tsx (<style>) (+2 more)
-
-### Community 219 - "Community 219"
-Cohesion: 0.29
-Nodes (3): RootErrorBoundary(), RootErrorBoundaryProps, RootLoading()
-
-### Community 220 - "Community 220"
-Cohesion: 0.48
-Nodes (6): Layout Components test suite, buttons, { container }, mockFooterProps, mockNavbarProps, svg
-
-### Community 221 - "Community 221"
-Cohesion: 0.40
-Nodes (5): code:tsx (import { render, screen } from '@testing-library/react'), code:tsx (function Stars({ value = 5 }: { value?: number }) {), code:tsx (<div className="flex items-center gap-2" role="group" aria-l), code:bash (git add frontend/src/app/\[lang\]/components/Reviews.tsx fro), Task 4: Reviews carousel ARIA + touch targets (TDD)
-
-### Community 222 - "Community 222"
-Cohesion: 0.40
-Nodes (5): code:tsx (describe('Footer heading order', () => {), code:tsx (<h2 className="text-white mb-4">Menu</h2>), code:tsx (aria-label="Not a Diet - Back to homepage"), code:bash (git add frontend/src/app/\[lang\]/components/Footer.tsx fron), Task 5: Footer heading order + Logo link name (TDD)
-
-### Community 223 - "Community 223"
-Cohesion: 0.50
-Nodes (4): generateMetadata (blog article page), getMetaData (blog article), PostRoute (blog article page), getPostBySlug()
-
-### Community 224 - "Community 224"
-Cohesion: 0.50
-Nodes (3): article, baseArticle, img
-
-### Community 225 - "Community 225"
-Cohesion: 0.50
-Nodes (4): code:js ('primary':), code:js ('crema':), code:bash (git add frontend/tailwind.config.js), Task 1: Tailwind palette — accessible color values
-
-### Community 226 - "Community 226"
-Cohesion: 0.50
-Nodes (4): code:tsx ({/* GA4 library — deferred until the browser is idle; analyt), code:tsx (<Script id="gtag-init" strategy="lazyOnload">), code:bash (git add frontend/src/app/\[lang\]/components/cookie-consent-), Task 7: Defer Google Analytics off the critical path
-
-### Community 227 - "Community 227"
-Cohesion: 0.50
-Nodes (4): code:tsx (<Image), code:tsx (<Image), code:bash (git add frontend/src/app/\[lang\]/components/Team.tsx fronte), Task 8: Responsive `sizes` for oversized images
-
-### Community 228 - "Community 228"
-Cohesion: 0.50
-Nodes (4): code:json ("browserslist": [), code:js ({ key: 'Strict-Transport-Security', value: 'max-age=63072000), code:bash (git add frontend/package.json frontend/next.config.*), Task 9: Cut legacy JS polyfills + HSTS header (small wins)
-
-### Community 229 - "Community 229"
 Cohesion: 0.67
-Nodes (3): studioLabel, default, type
+Nodes (3): onlineLabel, default, type
 
 ## Knowledge Gaps
-- **1326 isolated node(s):** `name`, `private`, `packageManager`, `workspaces`, `dev` (+1321 more)
+- **1281 isolated node(s):** `name`, `private`, `packageManager`, `workspaces`, `dev` (+1276 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PricingServiceCard()` connect `Community 162` to `Community 70`, `Community 166`, `Community 174`, `Community 79`, `Community 84`, `Community 30`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `attributes` connect `Community 166` to `Community 162`, `Community 229`, `Community 231`, `Pricing Card Schema`, `Community 168`, `Community 202`, `Community 170`, `Community 203`, `Community 174`, `Community 216`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `bookingCalendar` connect `Contact Page Components` to `Community 37`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `PricingServiceCard()` connect `Community 162` to `Community 70`, `Community 166`, `Community 174`, `Community 79`, `Community 84`, `Community 30`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `attributes` connect `Community 166` to `Community 162`, `Pricing Card Schema`, `Community 168`, `Community 202`, `Community 170`, `Community 203`, `Community 174`, `Community 216`, `Community 218`, `Community 219`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `packageManager` to the rest of the system?**
-  _1337 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1292 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Strapi Component Schemas` be split into smaller, more focused modules?**
   _Cohesion score 0.06265664160401002 - nodes in this community are weakly interconnected._
 - **Should `Root Package Config` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
-- **Should `Pricing Step Schema` be split into smaller, more focused modules?**
-  _Cohesion score 0.06553911205073996 - nodes in this community are weakly interconnected._
+- **Should `UI State Components` be split into smaller, more focused modules?**
+  _Cohesion score 0.09401709401709402 - nodes in this community are weakly interconnected._
