@@ -131,7 +131,7 @@ const AVATAR_TINTS = ["#ffedd5", "#dcfce7", "#fce4ec", "#fef9c3", "#cffafe"];
 
 function Stars({ value = 5 }: { value?: number }) {
   return (
-    <div className="inline-flex gap-0.5" aria-label={`${value} out of 5 stars`}>
+    <div className="inline-flex gap-0.5" role="img" aria-label={`${value} out of 5 stars`}>
       {[0, 1, 2, 3, 4].map((i) => (
         <svg
           key={i}
@@ -431,18 +431,23 @@ export default function Reviews({ data, lang }: Readonly<ReviewsProps>) {
           {/* Controls */}
           {pageCount > 1 && (
             <div className="mt-8 flex items-center justify-between gap-6">
-              <div className="flex items-center gap-2" role="tablist" aria-label="Review pages">
+              <div className="flex items-center gap-2" role="group" aria-label="Review pages">
                 {Array.from({ length: pageCount }).map((_, i) => (
                   <button
                     key={i}
                     type="button"
                     onClick={() => scrollTo(i)}
                     aria-label={`Go to page ${i + 1}`}
-                    aria-selected={i === page}
-                    className={`h-2 cursor-pointer rounded-full border-0 transition-[background,width] duration-300 ${
-                      i === page ? "w-6 bg-primary" : "w-2 bg-crema-200 hover:bg-crema-500"
-                    }`}
-                  />
+                    aria-current={i === page ? "true" : undefined}
+                    className="group/dot flex h-6 min-w-6 cursor-pointer items-center justify-center rounded-full border-0 bg-transparent p-0"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className={`h-2 rounded-full transition-[background,width] duration-300 ${
+                        i === page ? "w-6 bg-primary" : "w-2 bg-crema-200 group-hover/dot:bg-crema-500"
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
               <div className="flex gap-3">
