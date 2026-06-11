@@ -27,3 +27,29 @@ describe('Reviews accessibility', () => {
     ).toBeGreaterThan(0)
   })
 })
+
+describe('Footer heading order', () => {
+  it('renders the Menu heading as h2 (no skipped levels after page h2/h3s)', async () => {
+    const Footer = (await import('@/app/[lang]/components/Footer')).default
+    render(
+      <Footer
+        logoUrl={null}
+        logoText="Not a Diet"
+        description="desc"
+        menuLinks={[]}
+        categoryLinks={[]}
+        legalLinks={[]}
+        socialLinks={[]}
+      />
+    )
+    expect(screen.getByRole('heading', { level: 2, name: 'Menu' })).toBeInTheDocument()
+  })
+})
+
+describe('Logo link accessible name', () => {
+  it('includes the visible brand text in the aria-label (WCAG 2.5.3 label-in-name)', async () => {
+    const Logo = (await import('@/app/[lang]/components/Logo')).default
+    render(<Logo src={null}><h2>Not a Diet</h2></Logo>)
+    expect(screen.getByRole('link').getAttribute('aria-label')).toMatch(/Not a Diet/)
+  })
+})

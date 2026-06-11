@@ -102,7 +102,7 @@ export default function Footer({
           </div>
 
           <div>
-            <h6 className="text-white mb-4">Menu</h6>
+            <h2 className="text-white mb-4">Menu</h2>
             <ul className="space-y-3">
               {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
