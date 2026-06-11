@@ -285,17 +285,17 @@ export default function GA4CookieConsentBanner({ measurementId }: GA4ProviderPro
 `}
       </style>
 
-      {/* GA4 library — loaded after page is interactive */}
+      {/* GA4 library — deferred to idle because analytics is consent-gated anyway */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
 
       {/* GA4 init. Consent Mode v2 `default` (all denied) MUST be the first
           command — before `config` fires the first page_view — so tracking is
           gated until the user accepts. Includes the v2-required ad_user_data /
           ad_personalization signals. The update is emitted from the effect above. */}
-      <Script id="gtag-init" strategy="afterInteractive">
+      <Script id="gtag-init" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || []; window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}; gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500}); gtag('js', new Date()); gtag('config', '${measurementId}', { debug_mode: false });`}
       </Script>
 
