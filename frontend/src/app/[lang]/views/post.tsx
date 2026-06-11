@@ -29,6 +29,7 @@ export default function Post({ data, lang = 'en' }: { data: Article; lang?: stri
                 alt={author ? `${author.name}` : "author"}
                 width={400}
                 height={400}
+                sizes="56px"
                 className="w-14 h-14 border rounded-full dark:bg-gray-500 dark:border-gray-700"
               />
             )}
