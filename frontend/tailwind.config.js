@@ -19,6 +19,7 @@ module.exports = {
         {
           DEFAULT: '#B8CE12',
           700: '#5f6e0c',
+          600: '#849409',       // deep lime — 3.38:1 on white, passes WCAG AA for LARGE text (hero title)
           500: '#bcda01',
           100: '#dcfce7',
         },
