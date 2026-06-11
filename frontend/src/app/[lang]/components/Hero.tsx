@@ -43,7 +43,7 @@ export default function Hero({ data }: HeroProps) {
             tag="h1"
             className="font-sans font-bold text-[3rem] leading-none p-2"
             color="text-primary"
-            secondColor="text-secondary-700"
+            secondColor="text-secondary"
           />
 
           <HighlightedText
