@@ -25,7 +25,7 @@ function FooterLink({ url, text, className }: FooterLink) {
     <li className={className}>
       <Link
         href={url}
-        className={`text-crema-500 hover:text-secondary ${path === url && "text-secondary border-secondary-500"
+        className={`text-crema-400 hover:text-secondary ${path === url && "text-secondary border-secondary-500"
           }`}
       >
         {text}
@@ -79,7 +79,7 @@ export default function Footer({
               <div className="bg-crema-200 rounded-full w-auto"><Logo src={logoUrl}></Logo></div>
               <span className="text-xl text-white">{logoText}</span>
             </div>
-            <p className="text-crema-500 mb-6 max-w-xs">{description}</p>
+            <p className="text-crema-400 mb-6 max-w-xs">{description}</p>
             <div className="flex space-x-4">
 
               {/* Social links*/}
@@ -114,7 +114,7 @@ export default function Footer({
         </div>
         <div className="pt-8 border-t border-crema-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-crema-500 text-center md:text-left">
+            <div className="text-crema-400 text-center md:text-left">
               <p>© {currentYear} Notadiet™</p>
               <p>P.IVA: 05749220280</p>
             </div>

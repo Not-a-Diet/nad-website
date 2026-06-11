@@ -40,6 +40,7 @@ module.exports = {
         {
           DEFAULT: '#1c1917',
           200: '#e7e5e4',
+          400: '#a8a29e',       // muted text on the DARK footer bg — 6.8:1 on #1c1917 (crema-500 #78716c is for light bgs)
           500: '#78716c',
           800: '#292524'
         }
