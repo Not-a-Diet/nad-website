@@ -63,7 +63,7 @@ export default function PricingServiceCard({ data }: PricingServiceCardProps) {
       <div className="relative z-10 mx-auto max-w-[1180px] px-6">
         <div className="mx-auto mb-12 max-w-[780px] text-center">
           {data.eyebrow ? (
-            <span className="mb-3.5 inline-block text-sm font-bold uppercase tracking-[0.14em] text-secondary-500">
+            <span className="mb-3.5 inline-block text-sm font-bold uppercase tracking-[0.14em] text-secondary-700">
               {data.eyebrow}
             </span>
           ) : null}

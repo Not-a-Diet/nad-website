@@ -31,33 +31,37 @@ interface Feature {
 
 function Feature({ title, description, showLink, newTab, media, url, text, color, descriptionList }: Feature) {
   const descriptions = parseDescriptionList(descriptionList);
-  const colorMap: Record<string, { bg: string, border: string, text: string, button: string }> = {
+  const colorMap: Record<string, { bg: string, border: string, text: string, button: string, buttonText: string }> = {
     primary: {
       bg: "bg-primary-100",
       border: "border-primary",
-      text: "text-primary-500",
+      text: "text-primary",
       button: "bg-primary",
+      buttonText: "text-white",
     },
     secondary: {
       bg: "bg-secondary-100",
       border: "border-secondary",
-      text: "text-secondary-500",
+      text: "text-secondary-700",
       button: "bg-secondary",
+      buttonText: "text-crema",
     },
     tertiary: {
       bg: "bg-tertiary-100",
       border: "border-tertiary-500",
-      text: "text-tertiary-500",
+      text: "text-tertiary",
       button: "bg-tertiary-500",
+      buttonText: "text-crema",
     },
     quaternary: {
       bg: "bg-quaternary-rose-100",
       border: "border-quaternary-rose",
       text: "text-quaternary-rose",
       button: "bg-quaternary-rose",
+      buttonText: "text-white",
     }
   }
-  const tw_col: { bg: string, border: string, text: string, button: string } = colorMap[color] || "bg-gray-500";
+  const tw_col: { bg: string, border: string, text: string, button: string, buttonText: string } = colorMap[color] || colorMap.primary;
 
 
   return (
@@ -89,7 +93,7 @@ function Feature({ title, description, showLink, newTab, media, url, text, color
       </div>
       <div className="relative mt-auto">
         {
-          showLink && <a href={url} target={newTab ? '_blank' : '_self'} rel="noopener noreferrer" className={`${tw_col.button} rounded-[0.5rem] py-2 px-6 inline-block text-white`}>{text}</a>
+          showLink && <a href={url} target={newTab ? '_blank' : '_self'} rel="noopener noreferrer" className={`${tw_col.button} ${tw_col.buttonText} rounded-[0.5rem] py-2 px-6 inline-block`}>{text}</a>
         }
       </div>
     </div>

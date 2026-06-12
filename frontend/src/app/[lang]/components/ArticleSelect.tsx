@@ -3,7 +3,7 @@ import type { Category, ArticleSummary } from "../types/strapi";
 
 function selectedFilter(current: string, selected: string) {
   return current === selected
-    ? "px-3 py-1 rounded-lg bg-secondary text-white"
+    ? "px-3 py-1 rounded-lg bg-secondary text-crema"
     : "px-3 py-1 rounded-lg hover:underline bg-secondary-100 text-black";
 }
 
@@ -57,7 +57,7 @@ export default function ArticleSelect({
                     href={`/${params.lang}/blog/${params.category}/${article.slug}`}
                     className={`${
                       params.slug === article.slug &&
-                      "text-secondary"
+                      "text-secondary-700"
                     }  hover:underline transition-colors duration-200`}
                   >
                     {article.title}

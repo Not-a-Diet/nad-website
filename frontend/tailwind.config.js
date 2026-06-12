@@ -11,13 +11,15 @@ module.exports = {
         },
         'primary':
         {
-          DEFAULT: '#e8471e',
+          DEFAULT: '#d63b12',
           500: '#ff8566',
           100: '#ffedd5',
         },
         'secondary':
         {
           DEFAULT: '#B8CE12',
+          700: '#5f6e0c',
+          600: '#849409',       // deep lime — 3.38:1 on white, passes WCAG AA for LARGE text (hero title)
           500: '#bcda01',
           100: '#dcfce7',
         },
@@ -39,7 +41,8 @@ module.exports = {
         {
           DEFAULT: '#1c1917',
           200: '#e7e5e4',
-          500: '#a8a29e',
+          400: '#a8a29e',       // muted text on the DARK footer bg — 6.8:1 on #1c1917 (crema-500 #78716c is for light bgs)
+          500: '#78716c',
           800: '#292524'
         }
 

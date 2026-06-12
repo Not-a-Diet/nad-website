@@ -11,7 +11,7 @@ export default function Logo({
   return (
     <Link
       href="/"
-      aria-label="Back to homepage"
+      aria-label="Not a Diet - Back to homepage"
       className="flex items-center p-2"
     >
       {src && <Image src={src} alt="logo" width={75} height={75} />}

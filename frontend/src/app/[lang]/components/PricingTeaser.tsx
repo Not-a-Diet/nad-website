@@ -47,7 +47,7 @@ function CardVariant({ data }: { data: PricingTeaserData }) {
     <article className="grid grid-cols-1 overflow-hidden rounded-[2.5rem] border border-crema-200 bg-white shadow-md md:grid-cols-[1.1fr_1fr]">
       <div className="flex flex-col justify-center gap-4 bg-gradient-to-br from-secondary-100/55 to-tertiary-100/40 px-8 py-10 md:px-11">
         {data.eyebrow ? (
-          <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-secondary-500">
+          <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-secondary-700">
             {data.eyebrow}
           </span>
         ) : null}
@@ -111,12 +111,12 @@ function CardVariant({ data }: { data: PricingTeaserData }) {
         {(data.showStudio || data.showOnline) ? (
           <div className="mt-1 flex flex-wrap gap-2 text-xs text-crema-500">
             {data.showStudio && data.studioLabel ? (
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-100 px-2.5 py-1 font-bold text-secondary-500">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-100 px-2.5 py-1 font-bold text-secondary-700">
                 {data.studioLabel}
               </span>
             ) : null}
             {data.showOnline && data.onlineLabel ? (
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-100 px-2.5 py-1 font-bold text-secondary-500">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary-100 px-2.5 py-1 font-bold text-secondary-700">
                 {data.onlineLabel}
               </span>
             ) : null}
@@ -193,7 +193,7 @@ function InlineVariant({ data }: { data: PricingTeaserData }) {
   return (
     <article className="rounded-[2.5rem] border border-dashed border-secondary-100 bg-anti-flash_white-100 px-6 py-11 text-center">
       {data.eyebrow ? (
-        <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-secondary-500">
+        <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-secondary-700">
           {data.eyebrow}
         </span>
       ) : null}
@@ -216,7 +216,7 @@ function InlineVariant({ data }: { data: PricingTeaserData }) {
         {data.followUpLabel ? (
           <div className="flex items-baseline gap-2 px-5 py-2.5">
             <span className="text-sm font-semibold text-crema-800">{data.followUpLabel}</span>
-            <span className="font-heading text-2xl font-bold tracking-tight text-secondary-500">
+            <span className="font-heading text-2xl font-bold tracking-tight text-secondary-700">
               {data.followUpPrice}
             </span>
           </div>

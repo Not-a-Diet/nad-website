@@ -51,7 +51,8 @@ interface PricingStepsProps {
 function Step({ step, index }: { step: PricingStep; index: number }) {
   const accent = step.accent || (index === 0 ? "primary" : "secondary");
   const accentBg = accent === "primary" ? "bg-primary" : "bg-secondary-500";
-  const accentText = accent === "primary" ? "text-primary" : "text-secondary-500";
+  const accentFg = accent === "primary" ? "text-white" : "text-crema";
+  const accentText = accent === "primary" ? "text-primary" : "text-secondary-700";
   const accentBorder = accent === "primary" ? "border-l-primary" : "border-l-secondary-500";
 
   const imgUrl = step.image?.url ? getStrapiMedia(step.image.url) : null;
@@ -60,7 +61,7 @@ function Step({ step, index }: { step: PricingStep; index: number }) {
     <div className={`grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-14 ${step.reverse ? "lg:[&>.step-media]:order-2" : ""}`}>
       <div className="step-media relative">
         <span
-          className={`absolute -left-5 -top-5 z-10 flex h-16 w-16 items-center justify-center rounded-full font-heading text-[1.75rem] font-bold text-white shadow-md ${accentBg}`}
+          className={`absolute -left-5 -top-5 z-10 flex h-16 w-16 items-center justify-center rounded-full font-heading text-[1.75rem] font-bold ${accentFg} shadow-md ${accentBg}`}
         >
           {step.stepNumber || String(index + 1)}
         </span>
@@ -184,7 +185,7 @@ export default function PricingSteps({ data }: PricingStepsProps) {
             <h2 className="m-0 font-heading text-[clamp(1.75rem,3.6vw,2.25rem)] font-bold leading-[1.1] tracking-tight">
               <BracketHighlight
                 text={data.structureTitle}
-                highlightClass="text-secondary-500"
+                highlightClass="text-secondary-700"
               />
             </h2>
           </div>
