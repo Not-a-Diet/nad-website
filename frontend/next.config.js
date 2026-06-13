@@ -15,7 +15,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: blob: https://${STRAPI_MEDIA_HOST} https://images.pexels.com https://www.googletagmanager.com https://www.google-analytics.com${isDev ? ' http://localhost:1337' : ''}`,
   "font-src 'self' data:",
-  `connect-src 'self' https://${STRAPI_MEDIA_HOST} https://${STRAPI_API_HOST} https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com${isDev ? ' ws: http://localhost:1337 http://localhost:3000' : ''}`,
+  `connect-src 'self' https://${STRAPI_MEDIA_HOST} https://${STRAPI_API_HOST} https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com${isDev ? ' ws: http://localhost:1337 http://localhost:3000' : ''}`,
   // YouTube embeds + Google Calendar appointment iframes.
   "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://calendar.google.com",
   "frame-ancestors 'self'",
