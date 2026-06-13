@@ -15,6 +15,7 @@ const mockArticlesResponse = {
       publishedAt: '2024-01-01T00:00:00.000Z',
       cover: { url: '/cover.jpg' },
       category: {
+        id: 1,
         name: 'Health',
         slug: 'health',
       },

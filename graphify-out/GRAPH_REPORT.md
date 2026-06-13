@@ -1,16 +1,16 @@
-# Graph Report - nad-website  (2026-06-10)
+# Graph Report - nad-website  (2026-06-13)
 
 ## Corpus Check
-- 215 files · ~53,006 words
+- 222 files · ~56,467 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2664 nodes · 3454 edges · 232 communities (197 shown, 35 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 122 edges (avg confidence: 0.82)
+- 2786 nodes · 3585 edges · 251 communities (212 shown, 39 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 122 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `00bc4441`
+- Built from commit: `8a49c90d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -215,10 +215,28 @@
 - [[_COMMUNITY_Community 229|Community 229]]
 - [[_COMMUNITY_Community 230|Community 230]]
 - [[_COMMUNITY_Community 231|Community 231]]
+- [[_COMMUNITY_Community 232|Community 232]]
+- [[_COMMUNITY_Community 233|Community 233]]
+- [[_COMMUNITY_Community 234|Community 234]]
+- [[_COMMUNITY_Community 235|Community 235]]
+- [[_COMMUNITY_Community 236|Community 236]]
+- [[_COMMUNITY_Community 238|Community 238]]
+- [[_COMMUNITY_Community 239|Community 239]]
+- [[_COMMUNITY_Community 240|Community 240]]
+- [[_COMMUNITY_Community 241|Community 241]]
+- [[_COMMUNITY_Community 242|Community 242]]
+- [[_COMMUNITY_Community 243|Community 243]]
+- [[_COMMUNITY_Community 244|Community 244]]
+- [[_COMMUNITY_Community 245|Community 245]]
+- [[_COMMUNITY_Community 246|Community 246]]
+- [[_COMMUNITY_Community 247|Community 247]]
+- [[_COMMUNITY_Community 248|Community 248]]
+- [[_COMMUNITY_Community 249|Community 249]]
+- [[_COMMUNITY_Community 250|Community 250]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `component` - 49 edges
-2. `fetchAPI()` - 28 edges
+2. `fetchAPI()` - 29 edges
 3. `getStrapiMedia()` - 28 edges
 4. `attributes` - 27 edges
 5. `getStrapiMedia` - 26 edges
@@ -240,7 +258,7 @@
 - `PricingServiceCard()` --semantically_similar_to--> `Pricing Section`  [INFERRED] [semantically similar]
   frontend/src/app/[lang]/components/PricingServiceCard.tsx → backend/src/components/sections/pricing.json
 
-## Communities (232 total, 35 thin omitted)
+## Communities (251 total, 39 thin omitted)
 
 ### Community 0 - "Schema Components"
 Cohesion: 0.21
@@ -255,8 +273,8 @@ Cohesion: 0.05
 Nodes (43): dependencies, concurrently, npm-check-updates, name, packageManager, private, resolutions, axios (+35 more)
 
 ### Community 3 - "UI State Components"
-Cohesion: 0.18
-Nodes (6): Error component, Loader(), SectionErrorBoundary, SectionErrorBoundaryProps, SectionErrorBoundaryState, ThrowingComponent()
+Cohesion: 0.09
+Nodes (15): Error component, Loader(), SectionErrorBoundary, SectionErrorBoundaryProps, SectionErrorBoundaryState, RootErrorBoundary(), RootErrorBoundaryProps, RootLoading() (+7 more)
 
 ### Community 4 - "Pricing Step Schema"
 Cohesion: 0.07
@@ -275,8 +293,8 @@ Cohesion: 0.11
 Nodes (27): attributes, ctaText, ctaUrl, eyebrow, firstVisitLabel, firstVisitMeta, firstVisitPrice, followUpLabel (+19 more)
 
 ### Community 8 - "Pricing Card Schema"
-Cohesion: 0.14
-Nodes (14): cardNote, cardSubtitle, ctaUrl, eyebrow, firstVisitName, firstVisitSub, title, type (+6 more)
+Cohesion: 0.17
+Nodes (12): eyebrow, firstVisitName, firstVisitSub, followUpMeta, reassurances, title, type, type (+4 more)
 
 ### Community 9 - "Article Content Type"
 Cohesion: 0.06
@@ -311,8 +329,8 @@ Cohesion: 0.09
 Nodes (21): compilerOptions, allowJs, baseUrl, esModuleInterop, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx (+13 more)
 
 ### Community 17 - "Blog Routing & Metadata"
-Cohesion: 0.18
-Nodes (13): Meta, normalizeParams, normalizePopulate, Strapi v5 Dot-Notation Populate Conversion, fetchSideMenuData(), generateStaticParams(), LayoutRoute(), generateStaticParams() (+5 more)
+Cohesion: 0.14
+Nodes (16): generateMetadata (blog article page), getMetaData (blog article), PostRoute (blog article page), getPostBySlug(), PostRoute(), SITE_URL, BusinessInfo, CmsBusinessInfo (+8 more)
 
 ### Community 18 - "Category Schema"
 Cohesion: 0.10
@@ -367,8 +385,8 @@ Cohesion: 0.25
 Nodes (13): BracketHighlight(), BracketHighlightProps, CtaButton(), CtaButtonProps, PriceDisplay(), PriceDisplayProps, BandVariant(), CardVariant() (+5 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.23
-Nodes (11): LayoutRoute (blog post layout), ArticleSelect(), selectedFilter(), ArticleSummary, AuthorsBio, Avatar, Block, Category (+3 more)
+Cohesion: 0.14
+Nodes (19): LayoutRoute (blog post layout), generateStaticParams(), ArticleSelect(), selectedFilter(), fetchSideMenuData(), generateStaticParams(), LayoutRoute(), generateStaticParams() (+11 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.10
@@ -400,7 +418,7 @@ Nodes (19): attributes, description, name, occupation, profilePhoto, skills, col
 
 ### Community 39 - "Community 39"
 Cohesion: 0.12
-Nodes (27): HashScroller(), scrollToHash(), FALLBACK_SEO, generateMetadata(), getGlobal, inter, RootLayout(), PostRoute() (+19 more)
+Nodes (25): getStrapiURL, Blog Post view test suite, HashScroller(), scrollToHash(), Strapi v5 dynamic zone pattern, FALLBACK_SEO, Dynamic Page route test suite, fetchAPI util (+17 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.12
@@ -443,8 +461,8 @@ Cohesion: 0.16
 Nodes (18): attributes, description, icon, title, collectionName, type, allowedTypes, multiple (+10 more)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.16
-Nodes (17): getStrapiURL, capitalizeFirstLetter, componentResolver, Strapi __component UID to React Component Mapping, Strapi v5 dynamic zone pattern, Dynamic Page route test suite, fetchAPI util, getPageBySlug (+9 more)
+Cohesion: 0.19
+Nodes (13): capitalizeFirstLetter, componentResolver, Strapi __component UID to React Component Mapping, getPageBySlug, RootRoute(), generateMetadata(), PageRoute(), Props (+5 more)
 
 ### Community 51 - "Community 51"
 Cohesion: 0.14
@@ -499,8 +517,8 @@ Cohesion: 0.17
 Nodes (12): attributes, heading, items, collectionName, type, info, description, displayName (+4 more)
 
 ### Community 64 - "Community 64"
-Cohesion: 0.14
-Nodes (12): CategoryRoute (blog category page), layout(), loadInitialData, loadMorePosts (pagination handler), Profile(), Category Router, CategoryRoute(), fetchPostsByCategory() (+4 more)
+Cohesion: 0.23
+Nodes (13): CategoryRoute (blog category page), generateMetadata(), Category Router, CategoryRoute(), fetchPostsByCategory(), generateMetadata(), getCategoryBySlug(), generateMetadata() (+5 more)
 
 ### Community 65 - "Community 65"
 Cohesion: 0.16
@@ -523,8 +541,8 @@ Cohesion: 0.20
 Nodes (9): required, type, attributes, address, collectionName, info, description, displayName (+1 more)
 
 ### Community 70 - "Community 70"
-Cohesion: 0.29
-Nodes (9): CheckBullet(), CheckBulletProps, MediaItem, PricingList, PricingStep, PricingStepsData, PricingStepsProps, Step() (+1 more)
+Cohesion: 0.18
+Nodes (16): CheckBullet(), CheckBulletProps, COMPACT_FLOAT_POSITIONS, DEFAULT_FLOAT_ANIMATIONS, DEFAULT_FLOAT_POSITIONS, Float position/animation constants, FloatingFood(), FloatingFoodItem (+8 more)
 
 ### Community 71 - "Community 71"
 Cohesion: 0.04
@@ -551,16 +569,16 @@ Cohesion: 0.05
 Nodes (40): default, type, type, type, attributes, addressCountry, addressLocality, addressRegion (+32 more)
 
 ### Community 77 - "Community 77"
-Cohesion: 0.26
-Nodes (10): CategoryLink, Footer(), FooterLink, Logo(), LanguageSelector(), MobileNavLink, Navbar(), NavLink (+2 more)
+Cohesion: 0.33
+Nodes (6): Logo(), LanguageSelector(), MobileNavLink, Navbar(), NavLink, localizedHref()
 
 ### Community 78 - "Community 78"
 Cohesion: 0.19
 Nodes (13): code:block1 (.), code:bash (yarn install                              # install all work), code:bash (yarn dev        # clear cache + run frontend (:3000) and bac), code:bash (yarn build         # build frontend), Common commands, Content model, Contributing, Develop (+5 more)
 
 ### Community 79 - "Community 79"
-Cohesion: 0.13
-Nodes (23): formatDate, getStrapiMedia, PostList (blog-list view), Blog Post view test suite, FeaturedArticles(), FeaturedArticlesProps, Image, Slideshow() (+15 more)
+Cohesion: 0.10
+Nodes (25): formatDate, getStrapiMedia, PostList (blog-list view), Meta, FeaturedArticles(), FeaturedArticlesProps, Image, Slideshow() (+17 more)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.15
@@ -667,24 +685,24 @@ Cohesion: 0.17
 Nodes (18): attributes, heading, link, show, text, type, required, type (+10 more)
 
 ### Community 162 - "Community 162"
-Cohesion: 0.20
-Nodes (14): COMPACT_FLOAT_POSITIONS, DEFAULT_FLOAT_ANIMATIONS, DEFAULT_FLOAT_POSITIONS, Float position/animation constants, FloatingFood(), FloatingFoodItem, FloatingFoodProps, MediaItem (+6 more)
+Cohesion: 0.17
+Nodes (13): MediaItem, PricingServiceCard(), PricingServiceCardData, PricingServiceCardProps, Pricing Section, collectionName, info, displayName (+5 more)
 
 ### Community 163 - "Community 163"
 Cohesion: 0.13
 Nodes (14): required, type, attributes, answer, question, collectionName, info, description (+6 more)
 
 ### Community 164 - "Community 164"
-Cohesion: 0.20
-Nodes (16): authOptions(), safeFetch(), sharedAlternates(), sitemap(), BlogHeaders, BlogIndex(), generateMetadata(), getBlogHeaders() (+8 more)
+Cohesion: 0.36
+Nodes (8): authOptions(), isNoindex(), safeFetch(), sharedAlternates(), sitemap(), SitemapArticle, SitemapPage, HREFLANG
 
 ### Community 165 - "Community 165"
 Cohesion: 0.14
 Nodes (13): Adding a new seed, `backend/scripts/`, Behavior, code:block1 (SEED_DEV_TOKEN=<paste-here>), code:block2 (STRAPI_URL=http://localhost:1337), code:bash (yarn seed:dev              # list available seeds + usage), code:js (module.exports = {), code:js (module.exports = {) (+5 more)
 
 ### Community 166 - "Community 166"
-Cohesion: 0.15
-Nodes (13): attributes, ctaText, description, firstVisitMeta, followUpMeta, followUpName, followUpPrice, type (+5 more)
+Cohesion: 0.17
+Nodes (12): attributes, cardTitle, ctaText, description, firstVisitMeta, firstVisitPrice, type, type (+4 more)
 
 ### Community 167 - "Community 167"
 Cohesion: 0.20
@@ -711,12 +729,12 @@ Cohesion: 0.24
 Nodes (10): decoration, mascot, allowedTypes, multiple, required, type, allowedTypes, multiple (+2 more)
 
 ### Community 173 - "Community 173"
-Cohesion: 0.22
-Nodes (8): Agent Guidelines for NAD Website Repository, Architecture, Fixed (Migration to v5 + Next.js 16), Key Data Flow, Known Issues & Tech Debt, Overview, Remaining Issues, When in Doubt
+Cohesion: 0.25
+Nodes (7): Agent Guidelines for NAD Website, Agent Guidelines for NAD Website Repository, Fixed (Migration to v5 + Next.js 16), graphify, Known Issues & Tech Debt, Remaining Issues, When in Doubt
 
 ### Community 174 - "Community 174"
-Cohesion: 0.25
-Nodes (7): collectionName, info, description, displayName, icon, name, options
+Cohesion: 0.17
+Nodes (12): Adding a new section to the home page across locales, Centralized API Fetcher, code:typescript (// WRONG (v4 dot-notation, no longer works):), code:js (// Single entry (no i18n)), code:js (module.exports = {), Component Resolver Pattern, i18n Proxy (formerly Middleware), Project-Specific Patterns (+4 more)
 
 ### Community 175 - "Community 175"
 Cohesion: 0.25
@@ -731,8 +749,8 @@ Cohesion: 0.25
 Nodes (8): code:bash (yarn test              # Run all tests once), code:typescript ({ data: { documentId: "...", id: 1, ...fields }, meta: {} }), code:typescript (const result = await MyServerComponent({ params: Promise.res), Mocking Strategy, Running Tests, Setup, Testing, Writing New Tests
 
 ### Community 178 - "Community 178"
-Cohesion: 0.08
-Nodes (26): collectionName, info, description, displayName, icon, name, options, attributes (+18 more)
+Cohesion: 0.40
+Nodes (5): info, description, displayName, icon, name
 
 ### Community 180 - "Community 180"
 Cohesion: 0.13
@@ -771,8 +789,8 @@ Cohesion: 0.40
 Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
 
 ### Community 189 - "Community 189"
-Cohesion: 0.40
-Nodes (5): Adding a new section to the home page across locales, code:js (// Single entry (no i18n)), code:js (module.exports = {), Seeding via `yarn seed:dev`, Strapi v5 dynamic-zone PUT gotchas (why `append-section` exists)
+Cohesion: 0.16
+Nodes (11): layout(), BlogHeaders, BlogIndex(), getBlogHeaders(), getInitialArticles(), loadInitialData, loadMorePosts (pagination handler), Meta (+3 more)
 
 ### Community 190 - "Community 190"
 Cohesion: 0.20
@@ -818,6 +836,14 @@ Nodes (3): studioLabel, default, type
 Cohesion: 0.20
 Nodes (10): code:tsx (<p className="text-md text-secondary-700">), code:tsx (primary: {), code:bash (git add frontend/src), code:tsx (secondColor="text-secondary-700"), code:tsx (<p className="text-secondary-700 text-center mb-4">{occupati), code:tsx (<span className="text-secondary-700 mr-2 mt-1">✓</span>), code:tsx (<p className="m-0 mb-3 text-sm font-bold uppercase tracking-), code:tsx (<span className="inline-flex items-center gap-1.5 rounded-fu) (+2 more)
 
+### Community 202 - "Community 202"
+Cohesion: 0.20
+Nodes (9): Agent Guidelines for NAD Website, Architecture, Data Flow, Fixed (Migration to v5 + Next.js 16), graphify, Known Issues & Tech Debt, Overview, Remaining (+1 more)
+
+### Community 203 - "Community 203"
+Cohesion: 0.20
+Nodes (9): Agent Guidelines for NAD Website Repository, Architecture, Fixed (Migration to v5 + Next.js 16), graphify, Key Data Flow, Known Issues & Tech Debt, Overview, Remaining Issues (+1 more)
+
 ### Community 204 - "Community 204"
 Cohesion: 0.04
 Nodes (44): attributes, autoplay, autoplayInterval, description, eyebrow, loop, reviews, showSummary (+36 more)
@@ -852,19 +878,23 @@ Nodes (33): attributes, authorName, avatar, comment, date, platform, rating, sou
 
 ### Community 215 - "Community 215"
 Cohesion: 0.12
-Nodes (7): AVATAR_TINTS, LogoProps, Platform, PLATFORMS, Review, ReviewAvatar, ReviewsProps
+Nodes (8): AVATAR_TINTS, LogoProps, Platform, PLATFORMS, Review, ReviewAvatar, ReviewCard(), ReviewsProps
+
+### Community 216 - "Community 216"
+Cohesion: 0.25
+Nodes (8): Backend (Strapi 5), code:bash (yarn install), code:bash (yarn workspace frontend dev), code:bash (yarn workspace backend develop), Development Commands, Frontend (Next.js 16), Package Manager, Root (Yarn Berry Workspaces)
 
 ### Community 218 - "Community 218"
 Cohesion: 0.20
 Nodes (10): code:ts (default:), code:tsx (const colorMap: Record<string, { bg: string, border: string,), code:tsx (showLink && <a href={url} target={newTab ? '_blank' : '_self), code:ts (? "px-3 py-1 rounded-lg bg-secondary text-crema"), code:tsx (const accentBg = accent === "primary" ? "bg-primary" : "bg-s), code:tsx (<span), code:tsx (<span), code:tsx (<style>) (+2 more)
 
 ### Community 219 - "Community 219"
-Cohesion: 0.29
-Nodes (3): RootErrorBoundary(), RootErrorBoundaryProps, RootLoading()
+Cohesion: 0.25
+Nodes (8): code:bash (yarn test), code:typescript ({ data: { documentId: "...", id: 1, ...fields }, meta: {} }), code:typescript (const result = await MyServerComponent({ params: Promise.res), Commands, Mocks, Setup, Testing, Writing Tests
 
 ### Community 220 - "Community 220"
-Cohesion: 0.48
-Nodes (6): Layout Components test suite, buttons, { container }, mockFooterProps, mockNavbarProps, svg
+Cohesion: 0.25
+Nodes (8): Backend Specific (Strapi 5), code:bash (# Install all dependencies), code:bash (yarn workspace frontend dev      # Development server), code:bash (yarn workspace backend develop   # Development server), Development Commands, Frontend Specific (Next.js 16), Package Manager, Root Level Commands (Yarn Berry Workspaces)
 
 ### Community 221 - "Community 221"
 Cohesion: 0.40
@@ -875,12 +905,12 @@ Cohesion: 0.40
 Nodes (5): code:tsx (describe('Footer heading order', () => {), code:tsx (<h2 className="text-white mb-4">Menu</h2>), code:tsx (aria-label="Not a Diet - Back to homepage"), code:bash (git add frontend/src/app/\[lang\]/components/Footer.tsx fron), Task 5: Footer heading order + Logo link name (TDD)
 
 ### Community 223 - "Community 223"
-Cohesion: 0.50
-Nodes (4): generateMetadata (blog article page), getMetaData (blog article), PostRoute (blog article page), getPostBySlug()
+Cohesion: 0.25
+Nodes (8): code:bash (yarn test              # Run all tests once), code:typescript ({ data: { documentId: "...", id: 1, ...fields }, meta: {} }), code:typescript (const result = await MyServerComponent({ params: Promise.res), Mocking Strategy, Running Tests, Setup, Testing, Writing New Tests
 
 ### Community 224 - "Community 224"
-Cohesion: 0.50
-Nodes (3): article, baseArticle, img
+Cohesion: 0.52
+Nodes (5): CategoryLink, Footer(), FooterLink, RenderSocialIcon, RenderSocialIcon()
 
 ### Community 225 - "Community 225"
 Cohesion: 0.50
@@ -899,28 +929,72 @@ Cohesion: 0.50
 Nodes (4): code:json ("browserslist": [), code:js ({ key: 'Strict-Transport-Security', value: 'max-age=63072000), code:bash (git add frontend/package.json frontend/next.config.*), Task 9: Cut legacy JS polyfills + HSTS header (small wins)
 
 ### Community 229 - "Community 229"
+Cohesion: 0.29
+Nodes (7): Centralized API Fetcher, code:typescript (// WRONG:), Component Resolver, i18n Proxy, Project Patterns, Strapi Page Populate Middleware, Strapi v5 API Response
+
+### Community 232 - "Community 232"
+Cohesion: 0.11
+Nodes (21): collectionName, options, attributes, decoration, steps, structureTitle, collectionName, allowedTypes (+13 more)
+
+### Community 233 - "Community 233"
+Cohesion: 0.33
+Nodes (6): API Calls, Component Props, Conventions, File Naming, Gotchas, Styling
+
+### Community 234 - "Community 234"
+Cohesion: 0.33
+Nodes (6): API Call Patterns, Component Props, File Naming, Important Gotchas, Project-Specific Conventions, Styling
+
+### Community 235 - "Community 235"
+Cohesion: 0.40
+Nodes (5): Adding a new section to the home page across locales, code:js (// Single entry (no i18n)), code:js (module.exports = {), Seeding via `yarn seed:dev`, Strapi v5 dynamic-zone PUT gotchas (why `append-section` exists)
+
+### Community 238 - "Community 238"
+Cohesion: 0.40
+Nodes (5): Adding new section to home page (all locales), code:js (module.exports = {), code:js (module.exports = {), Seeding via `yarn seed:dev`, Strapi v5 DZ PUT gotchas
+
+### Community 239 - "Community 239"
+Cohesion: 0.50
+Nodes (4): Backend (Strapi Cloud), Deployment, Environment Variables, Frontend (Vercel)
+
+### Community 240 - "Community 240"
+Cohesion: 0.50
+Nodes (4): Content Model, Dynamic Zone Components (contentSections), Shared Components (nested in DZ), Strapi Content Types → Frontend
+
+### Community 241 - "Community 241"
+Cohesion: 0.50
+Nodes (4): Backend (Strapi Cloud), Deployment Info, Environment Variables, Frontend (Vercel)
+
+### Community 242 - "Community 242"
+Cohesion: 0.50
+Nodes (4): Content Model Map, Dynamic Zone Components (contentSections), Shared Components (nested in dynamic zones), Strapi Content Types → Frontend Usage
+
+### Community 243 - "Community 243"
+Cohesion: 0.67
+Nodes (3): Architecture, Key Data Flow, Overview
+
+### Community 245 - "Community 245"
 Cohesion: 0.67
 Nodes (3): studioLabel, default, type
 
 ## Knowledge Gaps
-- **1326 isolated node(s):** `name`, `private`, `packageManager`, `workspaces`, `dev` (+1321 more)
+- **1403 isolated node(s):** `name`, `private`, `packageManager`, `workspaces`, `dev` (+1398 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **39 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `PricingServiceCard()` connect `Community 162` to `Community 70`, `Community 166`, `Community 174`, `Community 79`, `Community 84`, `Community 30`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `attributes` connect `Community 166` to `Community 162`, `Community 229`, `Community 231`, `Pricing Card Schema`, `Community 168`, `Community 202`, `Community 170`, `Community 203`, `Community 174`, `Community 216`?**
+- **Why does `PricingServiceCard()` connect `Community 162` to `Community 70`, `Community 166`, `Community 79`, `Community 84`, `Community 30`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `attributes` connect `Community 166` to `Community 162`, `Community 231`, `Pricing Card Schema`, `Community 168`, `Community 170`, `Community 245`, `Community 246`, `Community 247`, `Community 248`, `Community 249`, `Community 250`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `bookingCalendar` connect `Contact Page Components` to `Community 37`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `packageManager` to the rest of the system?**
-  _1337 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1414 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Strapi Component Schemas` be split into smaller, more focused modules?**
   _Cohesion score 0.06265664160401002 - nodes in this community are weakly interconnected._
 - **Should `Root Package Config` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
-- **Should `Pricing Step Schema` be split into smaller, more focused modules?**
-  _Cohesion score 0.06553911205073996 - nodes in this community are weakly interconnected._
+- **Should `UI State Components` be split into smaller, more focused modules?**
+  _Cohesion score 0.09401709401709402 - nodes in this community are weakly interconnected._

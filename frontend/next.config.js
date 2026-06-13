@@ -77,6 +77,14 @@ const nextConfig = {
         destination: 'https://www.notadiet.life/:path*',
         permanent: true,
       },
+      // Kill the duplicate home page that the CMS "home" slug produces.
+      // /en/home, /it/home, /pt/home → respective locale root.
+      // Google was indexing /en/home as a second copy of the home page.
+      {
+        source: '/:lang(en|it|pt)/home',
+        destination: '/:lang',
+        permanent: true,
+      },
     ];
   },
 }

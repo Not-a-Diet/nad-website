@@ -8,6 +8,7 @@ const mockNavbarProps = {
   ],
   logoUrl: 'https://example.com/logo.png',
   logoText: 'Not A Diet',
+  lang: 'en',
 }
 
 const mockFooterProps = {
@@ -18,6 +19,7 @@ const mockFooterProps = {
   categoryLinks: [],
   legalLinks: [{ id: 2, url: '/en/privacy', newTab: false, text: 'Privacy' }],
   socialLinks: [{ id: 3, url: 'https://instagram.com', newTab: true, text: 'Instagram', social: 'INSTAGRAM' }],
+  lang: 'en',
 }
 
 describe('Layout Components', () => {
@@ -48,7 +50,7 @@ describe('Layout Components', () => {
 
       render(<Footer {...mockFooterProps} />)
 
-      expect(screen.getByText(/All rights reserved/)).toBeTruthy()
+      expect(screen.getByText(/Notadiet™/)).toBeTruthy()
       expect(screen.getByText('Privacy')).toBeTruthy()
     })
 

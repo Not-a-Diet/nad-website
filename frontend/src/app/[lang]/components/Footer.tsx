@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Logo from "./Logo";
 import { RenderSocialIcon } from "../utils/social-icon";
+import { localizedHref } from "@/app/[lang]/utils/links";
 
 interface FooterLink {
   id: number;
@@ -57,6 +58,7 @@ export default function Footer({
   categoryLinks,
   legalLinks,
   socialLinks,
+  lang,
 }: {
   logoUrl: string | null;
   logoText: string | null;
@@ -65,6 +67,7 @@ export default function Footer({
   categoryLinks: Array<CategoryLink>;
   legalLinks: Array<FooterLink>;
   socialLinks: Array<FooterLink>;
+  lang: string;
 }) {
 
   const currentYear = new Date().getFullYear();
@@ -76,7 +79,7 @@ export default function Footer({
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center space-x-3">
-              <div className="bg-crema-200 rounded-full w-auto"><Logo src={logoUrl}></Logo></div>
+              <div className="bg-crema-200 rounded-full w-auto"><Logo src={logoUrl} lang={lang}></Logo></div>
               <span className="text-xl text-white">{logoText}</span>
             </div>
             <p className="text-crema-400 mb-6 max-w-xs">{description}</p>
@@ -105,7 +108,7 @@ export default function Footer({
             <h2 className="text-white mb-4">Menu</h2>
             <ul className="space-y-3">
               {menuLinks.map((link: FooterLink) => (
-                <FooterLink key={link.id} {...link} />
+                <FooterLink key={link.id} {...link} url={localizedHref(link.url, lang)} />
               ))}
             </ul>
           </div>
@@ -120,7 +123,7 @@ export default function Footer({
             </div>
             <ul className="flex flex-wrap justify-center gap-x-9 gap-y-2">
               {legalLinks.map((link: FooterLink) => (
-                <FooterLink key={link.id} {...link} />
+                <FooterLink key={link.id} {...link} url={localizedHref(link.url, lang)} />
               ))}
             </ul>
           </div>

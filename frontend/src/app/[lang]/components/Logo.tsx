@@ -1,16 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import { i18n } from "i18n-config"
 
 export default function Logo({
   src,
   children,
+  lang = i18n.defaultLocale,
 }: {
   src: string | null;
   children?: React.ReactNode;
+  /** Current locale — used to build a redirect-free home link. */
+  lang?: string;
 }) {
   return (
     <Link
-      href="/"
+      href={`/${lang}`}
       aria-label="Not a Diet - Back to homepage"
       className="flex items-center p-2"
     >
