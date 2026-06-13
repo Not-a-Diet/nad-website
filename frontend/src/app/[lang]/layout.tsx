@@ -128,6 +128,7 @@ export default async function RootLayout({
           links={navbar.links}
           logoUrl={navbarLogoUrl}
           logoText={navbar.navbarLogo.logoText}
+          lang={lang}
         />
 
         <main className="bg-anti-flash_white text-black min-h-screen">
@@ -143,6 +144,7 @@ export default async function RootLayout({
           categoryLinks={footer.categories}
           legalLinks={footer.legalLinks}
           socialLinks={footer.socialLinks}
+          lang={lang}
         />
         <GA4CookieConsentBanner measurementId={GA_MEASUREMENT_ID} />
       </body>

@@ -40,6 +40,7 @@ describe('Footer heading order', () => {
         categoryLinks={[]}
         legalLinks={[]}
         socialLinks={[]}
+        lang="en"
       />
     )
     expect(screen.getByRole('heading', { level: 2, name: 'Menu' })).toBeInTheDocument()

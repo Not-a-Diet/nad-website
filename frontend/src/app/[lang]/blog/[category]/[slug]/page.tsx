@@ -1,22 +1,23 @@
 import { fetchAPI } from '@/app/[lang]/utils/fetch-api';
 import Post from '@/app/[lang]/views/post';
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { i18n } from 'i18n-config';
-import { buildAlternates, pageUrl, safeMediaUrl } from '@/app/[lang]/utils/seo';
+import { buildCanonical, pageUrl, safeMediaUrl } from '@/app/[lang]/utils/seo';
 import JsonLd from '@/app/[lang]/components/JsonLd';
 import { resolveBusinessInfo } from '@/app/[lang]/utils/site-config';
 import { articleSchema, breadcrumbSchema } from '@/app/[lang]/utils/structured-data';
 
-async function getPostBySlug(slug: string, lang: string) {
+async function getPostBySlug(slug: string, category: string, lang: string) {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
     const path = `/articles`;
     const urlParamsObject = {
         locale: lang,
-        filters: { slug },
+        filters: { slug, category: { slug: category } },
         populate: {
             cover: { fields: ['url', 'alternativeText'] },
             authorsBio: { populate: '*' },
-            category: { fields: ['name'] },
+            category: { fields: ['name', 'slug'] },
             blocks: { populate: '*' },
         },
     };
@@ -25,12 +26,12 @@ async function getPostBySlug(slug: string, lang: string) {
     return response;
 }
 
-async function getMetaData(slug: string, lang: string) {
+async function getMetaData(slug: string, category: string, lang: string) {
     const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
     const path = `/articles`;
     const urlParamsObject = {
         locale: lang,
-        filters: { slug },
+        filters: { slug, category: { slug: category } },
         fields: ['title', 'description', 'publishedAt', 'updatedAt'],
         populate: {
             seo: { populate: '*' },
@@ -45,10 +46,14 @@ async function getMetaData(slug: string, lang: string) {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; category: string; lang: string }> }): Promise<Metadata> {
     const { slug, category, lang } = await params;
-    const meta = await getMetaData(slug, lang);
+    const meta = await getMetaData(slug, category, lang);
     const article = meta?.[0];
     const seo = article?.seo;
     const path = `/blog/${category}/${slug}`;
+
+    if (!article) {
+        return { title: 'Not found', robots: { index: false, follow: false }, alternates: buildCanonical(lang, path) };
+    }
 
     const title = seo?.metaTitle ?? article?.title;
     const description = seo?.metaDescription ?? article?.description;
@@ -60,7 +65,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description,
         ...(seo?.keywords ? { keywords: seo.keywords } : {}),
         ...(seo?.metaRobots ? { robots: seo.metaRobots } : {}),
-        alternates: buildAlternates(lang, path, seo?.canonicalURL),
+        alternates: buildCanonical(lang, path, seo?.canonicalURL),
         openGraph: {
             title,
             description,
@@ -76,8 +81,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function PostRoute({ params }: { params: Promise<{ slug: string; category: string; lang: string }> }) {
     const { slug, category, lang } = await params;
-    const data = await getPostBySlug(slug, lang);
-    if (data.data.length === 0) return <h2>no post found</h2>;
+    const data = await getPostBySlug(slug, category, lang);
+    if (data.data.length === 0) return notFound();
 
     const article = data.data[0];
     const path = `/blog/${category}/${slug}`;

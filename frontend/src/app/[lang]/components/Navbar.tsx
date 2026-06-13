@@ -7,6 +7,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState, useTransition } from "react";
 import { languages } from "i18n-config";
+import { localizedHref } from "@/app/[lang]/utils/links";
 
 interface NavLink {
   id: number;
@@ -115,10 +116,12 @@ export default function Navbar({
   links,
   logoUrl,
   logoText,
+  lang,
 }: {
   links: Array<NavLink>;
   logoUrl: string | null;
   logoText: string | null;
+  lang: string;
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -138,14 +141,14 @@ export default function Navbar({
   return (
     <div className={`p-4 ${mobileMenuOpen! ? 'fixed' : ''} fixed top-0 left-0 right-0 z-50 ${scrolled ? scrolledTransition : notscrolledTransition}`}>
       <div className="container flex justify-between h-16 mx-auto px-0 sm:px-6">
-        <Logo src={logoUrl}>
+        <Logo src={logoUrl} lang={lang}>
           <h2 className="text-m font-sans font-bold">{logoText}</h2>
         </Logo>
 
         <div className="items-center text-m flex-shrink-0 hidden lg:flex">
           <ul className="items-stretch hidden space-x-3 lg:flex">
             {links.map((item: NavLink) => (
-              <NavLink key={item.id} {...item} />
+              <NavLink key={item.id} {...item} url={localizedHref(item.url, lang)} />
             ))}
             <LanguageSelector key="language-selector" id="language-selector" />
           </ul>
@@ -189,6 +192,7 @@ export default function Navbar({
                       key={item.id}
                       closeMenu={closeMenu}
                       {...item}
+                      url={localizedHref(item.url, lang)}
                     />
                   ))}
                 </div>

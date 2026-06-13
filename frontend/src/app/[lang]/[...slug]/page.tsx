@@ -1,9 +1,9 @@
 import {Metadata} from "next";
-import {notFound} from "next/navigation";
+import {notFound, redirect} from "next/navigation";
 import {i18n} from "i18n-config";
 import {fetchAPI} from "@/app/[lang]/utils/fetch-api";
 import {getPageBySlug} from "@/app/[lang]/utils/get-page-by-slug";
-import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
+import {FALLBACK_SEO, SITE_URL} from "@/app/[lang]/utils/constants";
 import {buildAlternates, pageUrl, safeMediaUrl} from "@/app/[lang]/utils/seo";
 import JsonLd from "@/app/[lang]/components/JsonLd";
 import {breadcrumbSchema} from "@/app/[lang]/utils/structured-data";
@@ -21,6 +21,15 @@ type Props = {
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
     const { lang, slug } = await params;
+    // "home" slug is a duplicate of the locale root — the config redirect handles
+    // the HTTP redirect; return a canonical pointing to the real URL so the
+    // metadata is correct if the page is somehow rendered before the redirect.
+    if (slug.join('/') === 'home') {
+        return {
+            robots: { index: false, follow: false },
+            alternates: { canonical: `${SITE_URL}/${lang}` },
+        };
+    }
     const path = `/${slug.join('/')}`;
     const page = await getPageBySlug(slug.join('/'), lang);
 
@@ -49,6 +58,9 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 
 export default async function PageRoute({params}: Props) {
     const { lang, slug } = await params;
+    // Defense-in-depth: next.config redirects handle this at the edge, but
+    // guard here too in case the route is hit directly (e.g. prefetch).
+    if (slug.join('/') === 'home') redirect(`/${lang}`);
     const page = await getPageBySlug(slug.join('/'), lang);
     if (!page.data || page.data.length === 0) return notFound();
     const entry = page.data[0];

@@ -4,13 +4,16 @@ import Image from "next/image";
 export default function Logo({
   src,
   children,
+  lang = "en",
 }: {
   src: string | null;
   children?: React.ReactNode;
+  /** Current locale — used to build a redirect-free home link. */
+  lang?: string;
 }) {
   return (
     <Link
-      href="/"
+      href={`/${lang}`}
       aria-label="Not a Diet - Back to homepage"
       className="flex items-center p-2"
     >

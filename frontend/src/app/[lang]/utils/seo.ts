@@ -55,6 +55,20 @@ export function buildAlternates(
   };
 }
 
+/** Canonical only, for routes whose slugs are localized and cannot share hreflang. */
+export function buildCanonical(
+  lang: string,
+  path = "",
+  canonicalOverride?: string,
+) {
+  const clean = cleanPath(path);
+  return {
+    canonical: canonicalOverride?.trim()
+      ? canonicalOverride.trim()
+      : `${SITE_URL}/${lang}${clean}`,
+  };
+}
+
 /** Absolute URL for a locale path (no locale prefix), e.g. for OpenGraph `url`. */
 export function pageUrl(lang: string, path = ""): string {
   return `${SITE_URL}/${lang}${cleanPath(path)}`;
