@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Markdown from "react-markdown";
+import rehypeSanitize from "rehype-sanitize";
 import { getStrapiMedia } from "../utils/api-helpers";
 
 export interface TeamProfileCardItem {
@@ -145,10 +147,6 @@ function findContact(member: TeamProfile, social: string) {
   return member.socials?.find((link) => link.social?.toLowerCase() === social);
 }
 
-function looksLikeHtml(value: string) {
-  return /<\/?[a-z][\s\S]*>/i.test(value);
-}
-
 function CredentialIcon({ type }: { type: "education" | "register" | "languages" }) {
   if (type === "register") {
     return (
@@ -212,16 +210,11 @@ function splitCredentials(credentials: TeamProfileCardItem[] = [], copy: ReturnT
 }
 
 function BodyCopy({ value }: { value: string }) {
-  if (looksLikeHtml(value)) {
-    return (
-      <div
-        className="space-y-4 text-lg leading-8 text-crema-700"
-        dangerouslySetInnerHTML={{ __html: value }}
-      />
-    );
-  }
-
-  return <p className="text-lg leading-8 text-crema-700">{value}</p>;
+  return (
+    <div className="space-y-4 text-lg leading-8 text-crema-700">
+      <Markdown rehypePlugins={[rehypeSanitize]}>{value}</Markdown>
+    </div>
+  );
 }
 
 export default function TeamDetails({ lang, member }: Props) {

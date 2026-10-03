@@ -1,6 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import TeamDetails, { type TeamProfile } from '@/app/[lang]/components/TeamDetails';
 
+// Match the RichText tests: Jest runs CommonJS, while these packages are ESM.
+jest.mock('react-markdown', () => ({
+  __esModule: true,
+  default: ({ children }: { children: string }) => <div>{children}</div>,
+}));
+jest.mock('rehype-sanitize', () => ({ __esModule: true, default: () => {} }));
+
 jest.mock('next/image', () => ({ __esModule: true, default: (props: any) => {
   const imageProps = { ...props }; delete imageProps.unoptimized;
   // eslint-disable-next-line @next/next/no-img-element

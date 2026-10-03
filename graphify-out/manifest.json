@@ -15,7 +15,7 @@
     "semantic_hash": "3d5ce288d093b7b235c55a7020891015"
   },
   "/home/kaido/dev/nad-website/backend/.strapi-updater.json": {
-    "mtime": 1791064029.8456445,
+    "mtime": 1791067411.8301573,
     "ast_hash": "456020a2d1fc221e39a26ff150e7016a",
     "semantic_hash": ""
   },
@@ -50,7 +50,7 @@
     "semantic_hash": "6d1009c18a93c1d3a38abde51a3350ab"
   },
   "/home/kaido/dev/nad-website/backend/.strapi/client/app.js": {
-    "mtime": 1791064029.9376469,
+    "mtime": 1791066149.2145,
     "ast_hash": "8e610fa843decd24376b1562fddf63bd",
     "semantic_hash": "8e610fa843decd24376b1562fddf63bd"
   },
@@ -515,12 +515,12 @@
     "semantic_hash": "34b72dad2ee0b62e8dc9106c3220ddac"
   },
   "/home/kaido/dev/nad-website/backend/types/generated/contentTypes.d.ts": {
-    "mtime": 1791063624.8442976,
+    "mtime": 1791066149.6145117,
     "ast_hash": "b78f64fc52b55ad6e14b051f601bd014",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/types/generated/components.d.ts": {
-    "mtime": 1791063624.8442976,
+    "mtime": 1791066149.617225,
     "ast_hash": "aaef5d536e017aab2e573a3b280bccd3",
     "semantic_hash": ""
   },
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/next-env.d.ts": {
-    "mtime": 1791064275.578446,
-    "ast_hash": "2a74d3909800ca5467fa83b0ab4a4890",
+    "mtime": 1791064941.8552134,
+    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/jest.config.js": {
@@ -960,7 +960,7 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/.strapi/client/index.html": {
-    "mtime": 1791064029.9136462,
+    "mtime": 1791066149.1914992,
     "ast_hash": "eda04f64d11a5c9c5df544c8274f6cc3",
     "semantic_hash": "eda04f64d11a5c9c5df544c8274f6cc3"
   },
@@ -1180,8 +1180,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/TeamDetails.tsx": {
-    "mtime": 1791063624.8576362,
-    "ast_hash": "293e446c62bf18921eb3093cb6ac3449",
+    "mtime": 1791069004.0133815,
+    "ast_hash": "67663e84f6840141ad85f592c682b8f6",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/team/[slug]/page.tsx": {
@@ -1202,11 +1202,6 @@
   "/home/kaido/dev/nad-website/.serena/memories/memory_maintenance.md": {
     "mtime": 1791063624.8426359,
     "ast_hash": "5a2422d8355cb91f16402415a54e3c66",
-    "semantic_hash": ""
-  },
-  "/home/kaido/dev/nad-website/frontend/A _ Editorial profile.png": {
-    "mtime": 1791063624.8566363,
-    "ast_hash": "01b125b3756974943cd50c274386d817",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/TeamDirectory.tsx": {
@@ -1235,8 +1230,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Collaborators.tsx": {
-    "mtime": 1791063624.8576362,
-    "ast_hash": "47f31e6252e4c197d109a357c8d97252",
+    "mtime": 1791069004.0135126,
+    "ast_hash": "7914b23857b1614b7b7380a5916495a2",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/docs/events-calendar-proposal.md": {
@@ -1310,8 +1305,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/get-dietitians.ts": {
-    "mtime": 1791063624.8585103,
-    "ast_hash": "5f4ce1b6d319642eb3603437e41c8816",
+    "mtime": 1791064715.630798,
+    "ast_hash": "b19263f4f9b42c2a3ce3c5fac53a3397",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/dietitians.ts": {
@@ -1330,8 +1325,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/team-details-photo.test.tsx": {
-    "mtime": 1791063624.8576362,
-    "ast_hash": "0f6de8f0bd307d4e4a7911f0937c74f9",
+    "mtime": 1791069068.1904151,
+    "ast_hash": "23a4c04e1df1df7b33ae37528a589342",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/scripts/dietitian-editor.test.js": {
@@ -1355,8 +1350,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/docs/production-release.md": {
-    "mtime": 1791064608.6948423,
-    "ast_hash": "3ae5383d3b53f6caa9d05a088f04de4b",
+    "mtime": 1791064657.3913398,
+    "ast_hash": "a17eb037d0c87cd88707288afa78d879",
     "semantic_hash": ""
   }
 }

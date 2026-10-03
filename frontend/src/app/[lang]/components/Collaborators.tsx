@@ -2,9 +2,9 @@
 
 import { useId, useState } from "react";
 import Image from "next/image";
-import BracketHighlight from "./BracketHighlight";
-import { getStrapiMedia } from "../utils/api-helpers";
-import type { StrapiMedia } from "../types/strapi";
+import BracketHighlight from "@/app/[lang]/components/BracketHighlight";
+import { getStrapiMedia } from "@/app/[lang]/utils/api-helpers";
+import type { StrapiMedia } from "@/app/[lang]/types/strapi";
 
 interface CollaboratorsProps {
   data: {
