@@ -168,7 +168,7 @@ function sanitizeValue(value, opts = {}) {
   if (Array.isArray(value)) {
     if (value.length && isMediaObject(value[0])) return value.map((v) => v.id);
     if (value.length && isRelationObject(value[0])) return value.map((v) => v.id);
-    return value.map((v) => sanitizeValue(v));
+    return value.map((v) => sanitizeValue(v, opts));
   }
   if (value && typeof value === 'object') {
     if (isMediaObject(value)) return value.id;
@@ -181,7 +181,7 @@ function sanitizeValue(value, opts = {}) {
       if (STRIP_KEYS_TOP.has(k)) continue;
       if (k === '__component') continue;
       if (opts.dropId && k === 'id') continue;
-      out[k] = sanitizeValue(v);
+      out[k] = sanitizeValue(v, opts);
     }
     return out;
   }
@@ -212,14 +212,29 @@ async function appendSectionEntry(name, endpoint, uniqueBy, section, locale) {
   // Note: PUT replaces the whole dynamic zone; existing components are recreated rather
   // than updated in place (Strapi v5 rejects {id, __component, ...fields} payloads with
   // "Invalid key __component"). Dropping ids is the only shape it accepts here.
-  const keptExisting = sections.map((s) => sanitizeValue(s, { dropId: true }));
-  const body = { data: { contentSections: [...keptExisting, section] } };
+  const body = { data: buildAppendSectionData(entry, section) };
   if (process.env.SEED_DEBUG) {
     require('fs').writeFileSync(`/tmp/seed-payload-${locale}.json`, JSON.stringify(body, null, 2));
     console.log(`[seed:dev] ${label}: wrote payload to /tmp/seed-payload-${locale}.json`);
   }
-  await api('PUT', `${endpoint}/${documentId}?locale=${encodeURIComponent(locale)}`, { body });
+  await api('PUT', `${endpoint}/${documentId}?locale=${encodeURIComponent(locale)}&status=published`, { body });
   console.log(`[seed:dev] ${label}: appended ${section.__component}.`);
+}
+
+function buildAppendSectionData(entry, section) {
+  // The REST read returns the published entry. Its draft may contain older
+  // values (including a null slug), so publishing a partial update can lose
+  // live fields. Carry the populated published snapshot into the update.
+  const data = {};
+  for (const [key, value] of Object.entries(entry)) {
+    if (key === 'id' || STRIP_KEYS_TOP.has(key) || key === 'contentSections') continue;
+    data[key] = sanitizeValue(value, { dropId: true });
+  }
+  data.contentSections = [
+    ...(entry.contentSections || []).map((s) => sanitizeValue(s, { dropId: true })),
+    section,
+  ];
+  return data;
 }
 
 async function runSeedEntry(name, endpoint, uniqueBy, data, locale) {
@@ -312,9 +327,13 @@ async function main() {
   return 0;
 }
 
-main()
-  .then((code) => process.exit(code))
-  .catch((err) => {
-    console.error('[seed:dev] unexpected error:', err);
-    process.exit(1);
-  });
+module.exports = { buildAppendSectionData };
+
+if (require.main === module) {
+  main()
+    .then((code) => process.exit(code))
+    .catch((err) => {
+      console.error('[seed:dev] unexpected error:', err);
+      process.exit(1);
+    });
+}

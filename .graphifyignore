@@ -18,3 +18,7 @@ backend/public/uploads*
 !.yarn/sdks
 !.yarn/versions.pnp.cjs
 .pnp.*
+
+# Local-only design references
+frontend/*.design.zip
+frontend/A _ Editorial profile.png

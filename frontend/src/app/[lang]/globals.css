@@ -185,3 +185,42 @@ body {
 .animate-slide-in-right {
   animation: slide-in-right 0.4s ease-out forwards;
 }
+
+@keyframes collaborator-scroll {
+  to { transform: translateX(-50%); }
+}
+
+.collaborator-track {
+  width: max-content;
+  min-width: 200%;
+  animation: collaborator-scroll 40s linear infinite;
+}
+
+.collaborator-track > ul {
+  min-width: 0;
+  flex: 1 0 auto;
+}
+
+.collaborator-strip:hover .collaborator-track,
+.collaborator-strip:focus-within .collaborator-track,
+.collaborator-strip[data-paused="true"] .collaborator-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collaborator-track {
+    width: 100%;
+    min-width: 0;
+    animation: none;
+  }
+
+  .collaborator-track > ul {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .collaborator-copy {
+    display: none;
+  }
+}

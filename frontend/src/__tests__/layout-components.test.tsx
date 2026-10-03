@@ -50,7 +50,7 @@ describe('Layout Components', () => {
 
       render(<Footer {...mockFooterProps} />)
 
-      expect(screen.getByText(/Notadiet™/)).toBeTruthy()
+      expect(screen.getByText(/Notadiet®/)).toBeTruthy()
       expect(screen.getByText('Privacy')).toBeTruthy()
     })
 

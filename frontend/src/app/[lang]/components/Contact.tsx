@@ -1,6 +1,10 @@
 "use client"
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { getStrapiMedia } from "../utils/api-helpers";
+import { specializationLabels, type Dietitian } from "../utils/dietitians";
 import { RenderSocialIcon } from "../utils/social-icon";
 
 interface SocialLink {
@@ -21,31 +25,20 @@ interface HoursData {
   locations?: Location[];
 }
 
-interface BookingLocation {
-  name: string;
-  embedUrl: string;
-  isDefault?: boolean;
-}
-
-interface BookingPerson {
-  name: string;
-  locations: BookingLocation[];
-}
-
 interface BookingCalendarData {
   bookingTitle?: string;
-  persons: BookingPerson[];
   personLabel?: string;
   locationLabel?: string;
   selectPersonPlaceholder?: string;
   selectLocationPlaceholder?: string;
-  noSelectionMessage?: string;
   viewCalendarButtonText?: string;
   backButtonText?: string;
 }
 
 interface ContactProps {
+  lang?: string;
   data: {
+    dietitians?: Dietitian[];
     title: string;
     description: string;
     contactLinks: SocialLink[];
@@ -89,10 +82,9 @@ const HoursCard = ({ data }: { data: HoursData }) => {
   );
 };
 
-const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
+const BookingSelector = ({ data, dietitians, lang }: { data: BookingCalendarData; dietitians: Dietitian[]; lang: string }) => {
   const {
     bookingTitle = "Book your appointment",
-    persons = [],
     personLabel = "Person",
     locationLabel = "Location",
     selectPersonPlaceholder = "Select a person",
@@ -107,11 +99,11 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
 
   const currentEmbedUrl = useMemo(() => {
     if (selectedPerson === null || selectedLocation === null) return "";
-    if (!persons[selectedPerson]?.locations[selectedLocation]) return "";
-    return persons[selectedPerson].locations[selectedLocation].embedUrl;
-  }, [selectedPerson, selectedLocation, persons]);
+    if (!dietitians[selectedPerson]?.bookingLocations?.[selectedLocation]) return "";
+    return dietitians[selectedPerson].bookingLocations?.[selectedLocation]?.embedUrl ?? "";
+  }, [selectedPerson, selectedLocation, dietitians]);
 
-  if (!persons.length) return null;
+  if (!dietitians.length) return null;
 
   const handlePersonChange = (index: number) => {
     setSelectedPerson(index);
@@ -131,7 +123,27 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
   };
 
   const bgClasses = "bg-gradient-to-br from-secondary-100/60 to-tertiary-100/60";
-  const isFormValid = selectedPerson !== null && selectedLocation !== null;
+  const isFormValid = Boolean(currentEmbedUrl);
+  const selectedProfile = selectedPerson === null ? undefined : dietitians[selectedPerson];
+  const profilePhoto = getStrapiMedia(selectedProfile?.profilePhoto?.url);
+  const profilePreview = selectedProfile ? (
+    <div className="flex min-w-0 flex-col gap-4 rounded-2xl bg-white p-4 sm:flex-row" aria-live="polite">
+      <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-secondary-100">
+        {profilePhoto ? <Image src={profilePhoto} alt={selectedProfile.profilePhoto?.alternativeText || selectedProfile.name} fill sizes="96px" className="object-cover" /> : <span className="flex h-full items-center justify-center text-3xl font-bold text-secondary-700">{selectedProfile.name.charAt(0)}</span>}
+      </div>
+      <div className="min-w-0">
+        <h4 className="text-xl font-bold text-crema-900">{selectedProfile.name}</h4>
+        <p className="mb-2 text-sm font-semibold text-secondary-700">{selectedProfile.role}</p>
+        {selectedProfile.shortBio && <p className="mb-2 text-sm leading-6 text-crema-700">{selectedProfile.shortBio}</p>}
+        <ul className="mb-3 flex flex-wrap gap-2">
+          {specializationLabels(selectedProfile.specializations).slice(0, 3).map(label => <li key={label} className="rounded-full bg-secondary-100/60 px-3 py-1 text-xs text-crema-800">{label}</li>)}
+        </ul>
+        <Link href={`/${lang}/team/${selectedProfile.slug}`} className="font-bold text-primary underline underline-offset-4">
+          {lang === "it" ? "Scopri di più" : lang === "pt" ? "Saiba mais" : "Know more"}<span aria-hidden="true"> →</span>
+        </Link>
+      </div>
+    </div>
+  ) : null;
 
   if (view === 'calendar' && currentEmbedUrl) {
     return (
@@ -140,13 +152,14 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
           {bookingTitle}
         </h3>
 
+        {profilePreview}
         <div className="rounded-3xl overflow-hidden border-secondary-100 border-[4px] bg-white animate-slide-in-right">
           <iframe
             src={currentEmbedUrl}
             style={{ border: 0 }}
             width="100%"
             height="700"
-            title={`Booking calendar for ${persons[selectedPerson!]?.name} - ${persons[selectedPerson!]?.locations[selectedLocation!]?.name}`}
+            title={`Booking calendar for ${dietitians[selectedPerson!]?.name} - ${dietitians[selectedPerson!]?.bookingLocations?.[selectedLocation!]?.name}`}
           />
         </div>
 
@@ -199,7 +212,7 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
                 <option value="" disabled>
                   {selectPersonPlaceholder}
                 </option>
-                {persons.map((person: BookingPerson, index: number) => (
+                {dietitians.map((person, index) => (
                   <option key={index} value={index}>
                     {person.name}
                   </option>
@@ -207,6 +220,7 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
               </select>
             </div>
 
+            {profilePreview}
             <div className="flex flex-col gap-2">
               <label htmlFor="location-select" className="text-sm font-semibold text-crema-800">
                 {locationLabel}
@@ -221,7 +235,7 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
                 <option value="" disabled>
                   {selectLocationPlaceholder}
                 </option>
-                {selectedPerson !== null && persons[selectedPerson]?.locations.map((location: BookingLocation, index: number) => (
+                {selectedPerson !== null && dietitians[selectedPerson]?.bookingLocations?.map((location, index) => (
                   <option key={index} value={index}>
                     {location.name}
                   </option>
@@ -249,7 +263,7 @@ const BookingSelector = ({ data }: { data: BookingCalendarData }) => {
   );
 };
 
-export default function Contact({ data }: ContactProps) {
+export default function Contact({ data, lang = "en" }: ContactProps) {
   const {
     title,
     description,
@@ -257,6 +271,9 @@ export default function Contact({ data }: ContactProps) {
     hours,
     bookingCalendar,
   } = data;
+
+  const bookableDietitians = (data.dietitians ?? [])
+    .filter(person => person.bookingEnabled && person.bookingLocations?.length);
 
   const getIconStyle = (index: number) => {
     const styles = [
@@ -318,7 +335,7 @@ export default function Contact({ data }: ContactProps) {
         </div>
           {bookingCalendar && (
             <div className="w-full pt-6 lg:pt-0 lg:pl-20 lg:w-2/3">
-              <BookingSelector data={bookingCalendar} />
+              <BookingSelector data={bookingCalendar} dietitians={bookableDietitians} lang={lang} />
             </div>
           )}
 

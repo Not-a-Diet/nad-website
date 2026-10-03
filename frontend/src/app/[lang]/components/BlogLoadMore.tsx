@@ -41,7 +41,7 @@ export default function BlogLoadMore({
           populate: {
             cover: { fields: ["url"] },
             category: { populate: "*" },
-            authorsBio: { populate: "*" },
+            dietitian: { populate: { profilePhoto: true } },
           },
           pagination: { start, limit },
         },

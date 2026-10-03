@@ -39,7 +39,7 @@ describe('Post view', () => {
   it('renders author name when provided', () => {
     const article: Article = {
       ...baseArticle,
-      authorsBio: { name: 'Jane Doe', avatar: { url: 'http://example.com/avatar.jpg' } },
+      dietitian: { documentId: 'jane', slug: 'jane-doe', role: 'Dietitian', name: 'Jane Doe', profilePhoto: { url: 'http://example.com/avatar.jpg' } },
     }
 
     render(<Post data={article} />)
@@ -91,7 +91,7 @@ describe('Post view', () => {
   it('renders author avatar image when provided', () => {
     const article: Article = {
       ...baseArticle,
-      authorsBio: { name: 'Jane Doe', avatar: { url: 'http://example.com/avatar.jpg' } },
+      dietitian: { documentId: 'jane', slug: 'jane-doe', role: 'Dietitian', name: 'Jane Doe', profilePhoto: { url: 'http://example.com/avatar.jpg' } },
     }
 
     render(<Post data={article} />)

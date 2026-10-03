@@ -99,6 +99,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // The shared profile collection also drives team discovery.
+  for (const locale of i18n.locales) {
+    entries.push({ url: pageUrl(locale, "/team"), changeFrequency: "monthly", priority: 0.7 });
+    const dietitians = await safeFetch("/dietitians", {
+      locale, filters: { listed: true }, fields: ["slug", "updatedAt"], pagination: { pageSize: 100 },
+    });
+    for (const person of dietitians) {
+      if (person.slug) entries.push({
+        url: pageUrl(locale, `/team/${person.slug}`),
+        lastModified: person.updatedAt ? new Date(person.updatedAt) : undefined,
+        changeFrequency: "monthly", priority: 0.6,
+      });
+    }
+  }
+
   // Blog index — one per locale.
   for (const locale of i18n.locales) {
     entries.push({

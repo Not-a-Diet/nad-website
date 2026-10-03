@@ -19,8 +19,10 @@ const populate = {
       },
       "sections.team": {
         populate: {
+          // Keep legacy components populated until rollout cleanup: append-section
+          // seeds read and replace the full dynamic zone, including migration sources.
           member: { populate: { profilePhoto: true } },
-          filosofy: { populate: { items: true } },
+          filosofy: { populate: { items: { populate: { illustration: true } } } },
         },
       },
       "sections.testimonials-group": {
@@ -37,7 +39,7 @@ const populate = {
         },
       },
       "sections.featured-posts": {
-        populate: { posts: { populate: "*" } },
+        populate: { posts: { populate: { cover: true, category: true, dietitian: { populate: { profilePhoto: true } } } } },
       },
       "sections.rich-text": { populate: "*" },
       "sections.heading": { populate: "*" },
@@ -71,6 +73,9 @@ const populate = {
       },
       "sections.reviews": {
         populate: { reviews: { populate: { avatar: true } } },
+      },
+      "sections.collaborators": {
+        populate: { logos: { populate: { logo: true } } },
       },
     },
   },
