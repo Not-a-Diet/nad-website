@@ -12,13 +12,12 @@ export interface StrapiMedia {
   height?: number;
 }
 
-export interface Avatar {
-  url: string;
-}
-
-export interface AuthorsBio {
+export interface ArticleAuthor {
+  bio?: string;
+  url?: string;
+  sameAs?: string[];
   name: string;
-  avatar?: Avatar;
+  avatar?: StrapiMedia;
 }
 
 export interface CategorySummary {
@@ -58,7 +57,7 @@ export interface Article {
   blocks?: Block[];
   cover?: StrapiMedia;
   category?: CategorySummary;
-  authorsBio?: AuthorsBio;
+  dietitian?: import("../utils/dietitians").Dietitian;
 }
 
 /** Stripped-down article shape used by the blog sidebar. */

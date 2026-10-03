@@ -1,6 +1,12 @@
 # `backend/scripts/`
 
-On-demand dev tools. **Local only. Never used in production.**
+Development seeds and the one-time Dietitian migration. **`seed:dev` is local-only.**
+
+## Dietitian migration
+
+`yarn workspace backend migrate:dietitians` previews changes; add `--apply` to migrate. Production additionally requires `--allow-production`. Railway runs this command before deployment for this release. See [release instructions](../../docs/production-release.md) and [profile migration details](../../docs/dietitians.md).
+
+The preview loads Strapi and can synchronize schema; it is not a read-only database check.
 
 ## `seed:dev` — populate a Strapi entry from a manifest
 
@@ -80,7 +86,7 @@ module.exports = {
 };
 ```
 
-Behavior per entry: fetches the entry for that locale via `filters[uniqueBy]` + `locale`, skips if a component with the same `__component` is already present, otherwise PUTs back the whole `contentSections` array (existing components preserved by `id`) with the new section appended.
+Behavior per entry: fetches the entry for that locale via `filters[uniqueBy]` + `locale`, skips if a component with the same `__component` is already present, otherwise PUTs back the whole `contentSections` array (existing content preserved, nested IDs stripped) with the new section appended.
 
 ## Adding a new seed
 

@@ -1,3 +1,4 @@
+import { articleAuthor } from "@/app/[lang]/utils/article-author";
 import { fetchAPI } from '@/app/[lang]/utils/fetch-api';
 import Post from '@/app/[lang]/views/post';
 import type { Metadata } from 'next';
@@ -16,7 +17,7 @@ async function getPostBySlug(slug: string, category: string, lang: string) {
         filters: { slug, category: { slug: category } },
         populate: {
             cover: { fields: ['url', 'alternativeText'] },
-            authorsBio: { populate: '*' },
+            dietitian: { populate: { profilePhoto: true } },
             category: { fields: ['name', 'slug'] },
             blocks: { populate: '*' },
         },
@@ -36,7 +37,7 @@ async function getMetaData(slug: string, category: string, lang: string) {
         populate: {
             seo: { populate: '*' },
             cover: { fields: ['url', 'alternativeText'] },
-            authorsBio: { fields: ['name'] },
+            dietitian: { populate: { profilePhoto: true } },
         },
     };
     const options = { headers: { Authorization: `Bearer ${token}` } };
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const title = seo?.metaTitle ?? article?.title;
     const description = seo?.metaDescription ?? article?.description;
     const ogImage = safeMediaUrl(seo?.shareImage?.url) ?? safeMediaUrl(article?.cover?.url);
-    const authorName: string | undefined = article?.authorsBio?.name;
+    const authorName: string | undefined = articleAuthor(article, lang)?.name;
 
     return {
         title,
@@ -87,7 +88,7 @@ export default async function PostRoute({ params }: { params: Promise<{ slug: st
     const article = data.data[0];
     const path = `/blog/${category}/${slug}`;
     const business = resolveBusinessInfo();
-    const author = article.authorsBio;
+    const author = articleAuthor(article, lang);
 
     const blogPosting = articleSchema(
         {
@@ -97,7 +98,7 @@ export default async function PostRoute({ params }: { params: Promise<{ slug: st
             publishedAt: article.publishedAt,
             updatedAt: article.updatedAt,
             author: author
-                ? { name: author.name, bio: author.bio, url: author.url, sameAs: author.sameAs, avatarUrl: author.avatar?.url }
+                ? { name: author.name, bio: author.bio, url: author.url?.startsWith("/") ? pageUrl(lang, author.url.replace(`/${lang}`, "")) : author.url, sameAs: author.sameAs, avatarUrl: author.avatar?.url }
                 : null,
         },
         lang,

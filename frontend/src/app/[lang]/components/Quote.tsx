@@ -1,4 +1,7 @@
 import { parseDescriptionList } from '../utils/description-parser';
+import Image from 'next/image';
+import { getStrapiMedia } from '../utils/api-helpers';
+import type { StrapiMedia } from '../types/strapi';
 
 // --- Types & Interfaces ---
 
@@ -6,6 +9,7 @@ interface PhilosophyItem {
   id: number;
   title: string;
   description: string;
+  illustration?: StrapiMedia | null;
 }
 
 interface PhilosophyProps {
@@ -42,8 +46,19 @@ const PhilosophyList = ({
         {items.map((item, index) => (
           <div key={item.id} className="flex flex-col items-center">
             {/* Icon Circle */}
-            <div className="w-16 h-16 text-2xl rounded-full bg-white flex items-center justify-center shadow-sm mb-6">
-               {PHILOSOPHY_ICONS[index % PHILOSOPHY_ICONS.length]}
+            <div className="mb-6 flex h-32 w-32 items-center justify-center text-6xl md:h-40 md:w-40 md:text-7xl">
+              {getStrapiMedia(item.illustration?.url) ? (
+                <Image
+                  src={getStrapiMedia(item.illustration?.url)!}
+                  alt={item.illustration?.alternativeText || ""}
+                  width={160}
+                  height={160}
+                  sizes="(min-width: 768px) 160px, 128px"
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <span aria-hidden="true">{PHILOSOPHY_ICONS[index % PHILOSOPHY_ICONS.length]}</span>
+              )}
             </div>
             
             {/* Title */}

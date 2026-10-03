@@ -17,21 +17,24 @@ const baseData = {
   },
 }
 
-const bookingCalendar = {
-  bookingTitle: 'Book your session',
-  persons: [
+const dietitians = [
     {
+      documentId: 'alice', slug: 'alice', role: 'Dietitian', bookingEnabled: true,
       name: 'Alice',
-      locations: [
+      bookingLocations: [
         { name: 'Studio', embedUrl: 'https://calendar.example.com/alice-studio' },
         { name: 'Online', embedUrl: 'https://calendar.example.com/alice-online' },
       ],
     },
     {
+      documentId: 'bob', slug: 'bob', role: 'Dietitian', bookingEnabled: true,
       name: 'Bob',
-      locations: [{ name: 'Studio', embedUrl: 'https://calendar.example.com/bob-studio' }],
+      bookingLocations: [{ name: 'Studio', embedUrl: 'https://calendar.example.com/bob-studio' }],
     },
-  ],
+  ]
+
+const bookingCalendar = {
+  bookingTitle: 'Book your session',
   personLabel: 'Coach',
   locationLabel: 'Location',
   selectPersonPlaceholder: 'Pick a coach',
@@ -79,27 +82,27 @@ describe('Contact', () => {
 
 describe('BookingSelector inside Contact', () => {
   it('renders booking title', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     expect(screen.getByText('Book your session')).toBeInTheDocument()
   })
 
   it('renders person options in select', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     expect(screen.getByText('Alice')).toBeInTheDocument()
     expect(screen.getByText('Bob')).toBeInTheDocument()
   })
 
   it('location select is disabled before person is chosen', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const locationSelect = screen.getByLabelText('Location')
     expect(locationSelect).toBeDisabled()
   })
 
   it('location select becomes enabled after person selection', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const personSelect = screen.getByLabelText('Coach')
     fireEvent.change(personSelect, { target: { value: '0' } })
@@ -109,7 +112,7 @@ describe('BookingSelector inside Contact', () => {
   })
 
   it('location options update to match selected person', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const personSelect = screen.getByLabelText('Coach')
     fireEvent.change(personSelect, { target: { value: '0' } })
@@ -119,7 +122,7 @@ describe('BookingSelector inside Contact', () => {
   })
 
   it('"View Calendar" button disabled until both person and location chosen', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const button = screen.getByText('View Calendar')
     expect(button).toBeDisabled()
@@ -131,7 +134,7 @@ describe('BookingSelector inside Contact', () => {
   })
 
   it('"View Calendar" button enabled after both selections', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const personSelect = screen.getByLabelText('Coach')
     fireEvent.change(personSelect, { target: { value: '0' } })
@@ -144,7 +147,7 @@ describe('BookingSelector inside Contact', () => {
   })
 
   it('clicking "View Calendar" shows iframe with correct src', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const personSelect = screen.getByLabelText('Coach')
     fireEvent.change(personSelect, { target: { value: '0' } })
@@ -160,7 +163,7 @@ describe('BookingSelector inside Contact', () => {
   })
 
   it('"Back" button returns to selection view', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const personSelect = screen.getByLabelText('Coach')
     fireEvent.change(personSelect, { target: { value: '0' } })
@@ -174,7 +177,7 @@ describe('BookingSelector inside Contact', () => {
   })
 
   it('location resets when person changes', () => {
-    render(<Contact data={{ ...baseData, bookingCalendar }} />)
+    render(<Contact data={{ ...baseData, bookingCalendar, dietitians }} />)
 
     const personSelect = screen.getByLabelText('Coach')
     fireEvent.change(personSelect, { target: { value: '0' } })

@@ -16,7 +16,12 @@ export interface ElementsBookingCalendar extends Struct.ComponentSchema {
     noSelectionMessage: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'Please select a person and location to view available times.'>;
     personLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Person'>;
-    persons: Schema.Attribute.Component<'elements.booking-person', true>;
+    persons: Schema.Attribute.Component<'elements.booking-person', true> &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          visible: false;
+        };
+      }>;
     selectLocationPlaceholder: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Select a location'>;
     selectPersonPlaceholder: Schema.Attribute.String &
@@ -195,6 +200,7 @@ export interface ElementsPhilosophyItem extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    illustration: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -530,6 +536,19 @@ export interface SectionsBottomActions extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsCollaborators extends Struct.ComponentSchema {
+  collectionName: 'components_sections_collaborators';
+  info: {
+    description: 'Scrolling collaborator logos';
+    displayName: 'Collaborators';
+    icon: 'handshake';
+  };
+  attributes: {
+    logos: Schema.Attribute.Component<'elements.logos', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsContact extends Struct.ComponentSchema {
   collectionName: 'components_sections_contacts';
   info: {
@@ -837,9 +856,17 @@ export interface SectionsTeam extends Struct.ComponentSchema {
     displayName: 'Team';
   };
   attributes: {
+    ctaLabel: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     filosofy: Schema.Attribute.Component<'shared.quote', false>;
-    member: Schema.Attribute.Component<'elements.team-member', true>;
+    layout: Schema.Attribute.Enumeration<['preview', 'classic']> &
+      Schema.Attribute.DefaultTo<'preview'>;
+    member: Schema.Attribute.Component<'elements.team-member', true> &
+      Schema.Attribute.SetPluginOptions<{
+        'content-manager': {
+          visible: false;
+        };
+      }>;
     title: Schema.Attribute.String;
   };
 }
@@ -974,6 +1001,7 @@ declare module '@strapi/strapi' {
       'meta.metadata': MetaMetadata;
       'sections.booking-calendar': SectionsBookingCalendar;
       'sections.bottom-actions': SectionsBottomActions;
+      'sections.collaborators': SectionsCollaborators;
       'sections.contact': SectionsContact;
       'sections.faq': SectionsFaq;
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;

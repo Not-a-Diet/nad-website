@@ -5,8 +5,8 @@
     "semantic_hash": "abd73118b8d0aad187a04d06d35dd69f"
   },
   "/home/kaido/dev/nad-website/backend/package.json": {
-    "mtime": 1780618479.6734858,
-    "ast_hash": "f8343e2094953cb2d0c55fb8a052df30",
+    "mtime": 1791064608.693102,
+    "ast_hash": "493b7a55e3104dd439e13967039069a8",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/.strapi-cloud.json": {
@@ -15,14 +15,14 @@
     "semantic_hash": "3d5ce288d093b7b235c55a7020891015"
   },
   "/home/kaido/dev/nad-website/backend/.strapi-updater.json": {
-    "mtime": 1781296404.286749,
-    "ast_hash": "0776068d2a1db8b6fb546a99f491450e",
+    "mtime": 1791064029.8456445,
+    "ast_hash": "456020a2d1fc221e39a26ff150e7016a",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/scripts/seed.js": {
-    "mtime": 1780353164.3259728,
-    "ast_hash": "fa0f08788bc12e62ff8b10887de82401",
-    "semantic_hash": "fa0f08788bc12e62ff8b10887de82401"
+    "mtime": 1791063624.8426359,
+    "ast_hash": "c64e99a949208d4e99657c42ff4bfcbe",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/scripts/seeds/legal-terms.js": {
     "mtime": 1779137029.2540035,
@@ -50,14 +50,14 @@
     "semantic_hash": "6d1009c18a93c1d3a38abde51a3350ab"
   },
   "/home/kaido/dev/nad-website/backend/.strapi/client/app.js": {
-    "mtime": 1781296391.389607,
+    "mtime": 1791064029.9376469,
     "ast_hash": "8e610fa843decd24376b1562fddf63bd",
     "semantic_hash": "8e610fa843decd24376b1562fddf63bd"
   },
   "/home/kaido/dev/nad-website/backend/src/index.js": {
-    "mtime": 1779137029.2540035,
-    "ast_hash": "5f2836316393361bdc22750ef35712a3",
-    "semantic_hash": "5f2836316393361bdc22750ef35712a3"
+    "mtime": 1791063624.8442976,
+    "ast_hash": "a35778621bd2d6d7f1b5ab895b2d8171",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/middlewares/rate-limit.js": {
     "mtime": 1779137029.2540035,
@@ -80,9 +80,9 @@
     "semantic_hash": "baa8dec897f8449e7e9df0d029f556e0"
   },
   "/home/kaido/dev/nad-website/backend/src/components/sections/team.json": {
-    "mtime": 1768172373.5885978,
-    "ast_hash": "af20f39899854c2a91893ec1593a17c9",
-    "semantic_hash": "af20f39899854c2a91893ec1593a17c9"
+    "mtime": 1791063624.8442976,
+    "ast_hash": "da173f86850c3ff6120fc3393364690d",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/components/sections/pricing-service-card.json": {
     "mtime": 1779137029.2540035,
@@ -180,9 +180,9 @@
     "semantic_hash": "1fe794d7aadc158248f6763b850653ea"
   },
   "/home/kaido/dev/nad-website/backend/src/components/elements/booking-calendar.json": {
-    "mtime": 1776299327.8838372,
-    "ast_hash": "293eddd8268a98e0b870943359e28829",
-    "semantic_hash": "293eddd8268a98e0b870943359e28829"
+    "mtime": 1791063624.8442976,
+    "ast_hash": "d8054d8f21205ba14652f63b424bcf48",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/components/elements/pricing-step.json": {
     "mtime": 1779137029.2540035,
@@ -195,9 +195,9 @@
     "semantic_hash": "94ddd55c52e5398ec1a3c60bb6d74365"
   },
   "/home/kaido/dev/nad-website/backend/src/components/elements/philosophy-item.json": {
-    "mtime": 1776299327.8838372,
-    "ast_hash": "fa3e7f8a4f0b84ef56eaa21c605e074a",
-    "semantic_hash": "fa3e7f8a4f0b84ef56eaa21c605e074a"
+    "mtime": 1791063624.8442976,
+    "ast_hash": "0cae546d84e3da37a085bb2feb0cf57f",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/components/elements/logos.json": {
     "mtime": 1765134336.5200462,
@@ -355,8 +355,8 @@
     "semantic_hash": "c0d68bcd1ce7194d2b6bc19524842355"
   },
   "/home/kaido/dev/nad-website/backend/src/api/author/content-types/author/schema.json": {
-    "mtime": 1780359786.9530263,
-    "ast_hash": "8097bd5167a2a234ab5e290fc1b9025b",
+    "mtime": 1791063624.8436358,
+    "ast_hash": "906645f00a73f559274a2b86947fe1bb",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/api/legal/routes/legal.js": {
@@ -395,13 +395,13 @@
     "semantic_hash": "92deac3fbe3f535b0f7b6d22392a62e8"
   },
   "/home/kaido/dev/nad-website/backend/src/api/page/middlewares/page-populate-middleware.js": {
-    "mtime": 1780605554.5741427,
-    "ast_hash": "7ec314fe7d5e0774c21f6f8e0d81e284",
+    "mtime": 1791063624.8440235,
+    "ast_hash": "00c3b09059260488af023c58f966fade",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/api/page/content-types/page/schema.json": {
-    "mtime": 1780605553.31681,
-    "ast_hash": "5015fe465e186d87e5b5c98fed179ea9",
+    "mtime": 1791063624.8440235,
+    "ast_hash": "28ae57e8edd1145b2a8b27979d26c1d6",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/api/article/routes/article.js": {
@@ -420,8 +420,8 @@
     "semantic_hash": "2ce48a40460c702516074baf8a0a96c9"
   },
   "/home/kaido/dev/nad-website/backend/src/api/article/content-types/article/schema.json": {
-    "mtime": 1780359786.9530263,
-    "ast_hash": "3f9a2b9a0d6aef458a1b831300748850",
+    "mtime": 1791063624.8436358,
+    "ast_hash": "75bcb813332d7b55eed84ed753301247",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/src/api/blog-header/routes/blog-header.js": {
@@ -515,13 +515,13 @@
     "semantic_hash": "34b72dad2ee0b62e8dc9106c3220ddac"
   },
   "/home/kaido/dev/nad-website/backend/types/generated/contentTypes.d.ts": {
-    "mtime": 1781296393.5326784,
-    "ast_hash": "6f7c15efaac9288f16ec2e26eec6d7ec",
+    "mtime": 1791063624.8442976,
+    "ast_hash": "b78f64fc52b55ad6e14b051f601bd014",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/types/generated/components.d.ts": {
-    "mtime": 1781296393.544679,
-    "ast_hash": "3f2e8c21313c1ae0644b4b96a53c05d9",
+    "mtime": 1791063624.8442976,
+    "ast_hash": "aaef5d536e017aab2e573a3b280bccd3",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/.claude/settings.local.json": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/next-env.d.ts": {
-    "mtime": 1781144471.5904708,
-    "ast_hash": "d0f8375ae1199dc7acd3977fc33b78b8",
+    "mtime": 1791064275.578446,
+    "ast_hash": "2a74d3909800ca5467fa83b0ab4a4890",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/jest.config.js": {
@@ -590,8 +590,8 @@
     "semantic_hash": "a9d26486807dbc373bb1c6d44561d015"
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/layout-components.test.tsx": {
-    "mtime": 1781377639.575337,
-    "ast_hash": "62051f1ca18e7a7dec669c584bd2a32b",
+    "mtime": 1791063624.8566363,
+    "ast_hash": "3da0d3a3542a964eaac2286d12d2a6e7",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/section-components.test.tsx": {
@@ -600,8 +600,8 @@
     "semantic_hash": "53181e94a87c803aee0ed1bee5017a42"
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/blog-listing.test.tsx": {
-    "mtime": 1781297314.9459155,
-    "ast_hash": "28f83a6266343c30858c51dfe7337c86",
+    "mtime": 1791063624.8566363,
+    "ast_hash": "d16afec8569b21a045f61cc12b560d4b",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/home-page.test.tsx": {
@@ -610,8 +610,8 @@
     "semantic_hash": "77223cf861bb87529d52cb7eb7774fe3"
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/blog-post.test.tsx": {
-    "mtime": 1780359963.9150896,
-    "ast_hash": "e1130e4f75b75b6928e71f0d4e639342",
+    "mtime": 1791063624.8566363,
+    "ast_hash": "8497ede6702df83102e0d3ff45257300",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/utils.test.ts": {
@@ -625,69 +625,69 @@
     "semantic_hash": "f7aade3af199e86044312870d0bd4bf5"
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/contact.test.tsx": {
-    "mtime": 1780353263.9055977,
-    "ast_hash": "f944e5c467c1cccf4f262b9b21606eff",
-    "semantic_hash": "f944e5c467c1cccf4f262b9b21606eff"
+    "mtime": 1791063624.8566363,
+    "ast_hash": "43509ef26320cf88d68e8211a30af764",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/error.tsx": {
-    "mtime": 1776299327.8863804,
+    "mtime": 1791046322.287363,
     "ast_hash": "f14bc5ec821fe014c3b3c66b90d9f73f",
     "semantic_hash": "f14bc5ec821fe014c3b3c66b90d9f73f"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/layout.tsx": {
-    "mtime": 1781377537.9605439,
+    "mtime": 1791046322.2874749,
     "ast_hash": "7de9911145c15e3a0330f4668810874c",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/loading.tsx": {
-    "mtime": 1765134336.525338,
+    "mtime": 1791046322.2875385,
     "ast_hash": "05dc42dc60c6f901f173fd1da4c8fa8d",
     "semantic_hash": "05dc42dc60c6f901f173fd1da4c8fa8d"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/page.tsx": {
-    "mtime": 1780359786.9530263,
+    "mtime": 1791046322.287597,
     "ast_hash": "1a03025bf6e3ab3bc5755625a68cc94f",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/blog/layout.tsx": {
-    "mtime": 1765134336.5252194,
+    "mtime": 1791046322.2876687,
     "ast_hash": "b7b3f44049d0bdcf2a729825a3082d2c",
     "semantic_hash": "b7b3f44049d0bdcf2a729825a3082d2c"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/blog/page.tsx": {
-    "mtime": 1780359871.3978167,
-    "ast_hash": "cabdb9abc842c031ce91184ecec58d1a",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "4ade45b6cf065a8958d4fac9f670360c",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/blog/[category]/page.tsx": {
-    "mtime": 1781297314.9459155,
-    "ast_hash": "13a42643ec69c3961fce0d2e761db472",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "89721b2f2fc4549759b95d8be8488090",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/blog/[category]/[slug]/layout.tsx": {
-    "mtime": 1779137029.2540035,
+    "mtime": 1791046322.292256,
     "ast_hash": "d4bffd7882deb5da22598a07fbd6a612",
     "semantic_hash": "d4bffd7882deb5da22598a07fbd6a612"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/blog/[category]/[slug]/page.tsx": {
-    "mtime": 1781297314.9459155,
-    "ast_hash": "629fb562424f0af9e367b8295c0829bc",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "8f519a693ceb23d5034bcf49621a4888",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/views/blog-list.tsx": {
-    "mtime": 1779137029.2542095,
-    "ast_hash": "596a63b2ed14b09a75e3e729787f42e3",
-    "semantic_hash": "596a63b2ed14b09a75e3e729787f42e3"
+    "mtime": 1791063624.8585103,
+    "ast_hash": "8f622fd8da235f1d27b398487b82a651",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/views/post.tsx": {
-    "mtime": 1781297175.2597601,
-    "ast_hash": "77720ce461525032e9dd843bd3e7f5fc",
+    "mtime": 1791063624.8585103,
+    "ast_hash": "0488d7491fceb1d70489c40ed1f5abb0",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/get-page-by-slug.ts": {
-    "mtime": 1768172373.595596,
-    "ast_hash": "c80656694699f29344b8af17e44157c2",
-    "semantic_hash": "c80656694699f29344b8af17e44157c2"
+    "mtime": 1791063624.8585103,
+    "ast_hash": "1914b3e91cff1428fbe55386ae734700",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/constants.ts": {
     "mtime": 1780359786.9530263,
@@ -700,14 +700,14 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/social-icon.tsx": {
-    "mtime": 1768172373.595596,
+    "mtime": 1791046322.288474,
     "ast_hash": "deca719e5a513e651cdbbe117f5e3ca8",
     "semantic_hash": "deca719e5a513e651cdbbe117f5e3ca8"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/fetch-api.tsx": {
-    "mtime": 1779051107.3824503,
-    "ast_hash": "b5cca1ec1b195c16f2800e0517bb383a",
-    "semantic_hash": "b5cca1ec1b195c16f2800e0517bb383a"
+    "mtime": 1791063624.8585103,
+    "ast_hash": "83e522cbb6fbe19e98954fc69a4550de",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/api-helpers.ts": {
     "mtime": 1779137029.2542095,
@@ -715,7 +715,7 @@
     "semantic_hash": "639652fc209bd2c412808b8781552133"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/component-resolver.tsx": {
-    "mtime": 1779137029.2542095,
+    "mtime": 1791046322.2885828,
     "ast_hash": "ddc856b949036685bd3664cc77d0f9a8",
     "semantic_hash": "ddc856b949036685bd3664cc77d0f9a8"
   },
@@ -730,208 +730,208 @@
     "semantic_hash": "75ae803288eaeda67c6abcad7e9a5259"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/[...slug]/page.tsx": {
-    "mtime": 1781377574.024959,
+    "mtime": 1791046322.2886655,
     "ast_hash": "2ee880ab6cc7128c71d3b5de917d478f",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/FeatureRowsGroup.tsx": {
-    "mtime": 1779051107.3807704,
+    "mtime": 1791046322.2887518,
     "ast_hash": "fb5f5fa3a9b989e6cea1bf55eff4eafe",
     "semantic_hash": "fb5f5fa3a9b989e6cea1bf55eff4eafe"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Loader.tsx": {
-    "mtime": 1765134336.525327,
+    "mtime": 1791046322.2888553,
     "ast_hash": "4c3885174ecacbf2f6b7f10d1f1cc5b6",
     "semantic_hash": "4c3885174ecacbf2f6b7f10d1f1cc5b6"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/HashScroller.tsx": {
-    "mtime": 1780353164.3259728,
+    "mtime": 1791046322.2889035,
     "ast_hash": "17f61f5ce3e0a50ba34df5e043dbb648",
     "semantic_hash": "17f61f5ce3e0a50ba34df5e043dbb648"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/VideoEmbed.tsx": {
-    "mtime": 1765134336.525338,
+    "mtime": 1791046322.2894022,
     "ast_hash": "67ef27ea8b94e668c6a5d0dc74567947",
     "semantic_hash": "67ef27ea8b94e668c6a5d0dc74567947"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/FeaturedPosts.tsx": {
-    "mtime": 1780691977.3287058,
+    "mtime": 1791046322.2895677,
     "ast_hash": "1d6e23cd10a9e7f326827d2dc981c7f1",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Quote.tsx": {
-    "mtime": 1779051107.3807704,
-    "ast_hash": "845ca83ce8b3e7a4346dd2505ffd5310",
-    "semantic_hash": "845ca83ce8b3e7a4346dd2505ffd5310"
+    "mtime": 1791063624.8576362,
+    "ast_hash": "46df02157af88116c460a86f78d071a8",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Media.tsx": {
-    "mtime": 1780353164.3259728,
+    "mtime": 1791046322.289703,
     "ast_hash": "b8abd43760ff59ea8d345fb74294a4d5",
     "semantic_hash": "b8abd43760ff59ea8d345fb74294a4d5"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/CtaButton.tsx": {
-    "mtime": 1780763406.5396566,
+    "mtime": 1791046322.2897594,
     "ast_hash": "55fa097e8a87a345189e572fbb9dc326",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Hero.tsx": {
-    "mtime": 1781297175.2588434,
+    "mtime": 1791046322.28981,
     "ast_hash": "a4390f88c8fcae4116e76c4e7dc902b9",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/HighlightedText.tsx": {
-    "mtime": 1776299327.885818,
+    "mtime": 1791046322.2898548,
     "ast_hash": "8179b4a44a27cf98ebaa505b03479a28",
     "semantic_hash": "8179b4a44a27cf98ebaa505b03479a28"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Contact.tsx": {
-    "mtime": 1780763606.6885006,
-    "ast_hash": "fae46f0b03ef96ded97adc3546feedfc",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "b72365b610b6fbad7356ce497bfad412",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/PricingTeaser.tsx": {
-    "mtime": 1781297175.2597601,
+    "mtime": 1791046322.2900913,
     "ast_hash": "7ba96c0a36aeb6ef51b68b3675f02dee",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/BracketHighlight.tsx": {
-    "mtime": 1779137029.2540035,
+    "mtime": 1791046322.2901452,
     "ast_hash": "5d0e3b7f9e721861f2ee14be20932959",
     "semantic_hash": "5d0e3b7f9e721861f2ee14be20932959"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/PricingServiceCard.tsx": {
-    "mtime": 1781297175.2588434,
+    "mtime": 1791046322.2902799,
     "ast_hash": "9c9185a694fb4ca1417171daa04eb470",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/RichText.tsx": {
-    "mtime": 1780691980.573076,
+    "mtime": 1791046322.2903352,
     "ast_hash": "3156021f01a9d55b0d3dcff66c3495d9",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Footer.tsx": {
-    "mtime": 1781377524.800151,
-    "ast_hash": "51fe2092b9c949dd7def621e5e4f29ca",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "5a68275823a7df0d0a964915fb7260f6",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/LangRedirect.tsx": {
-    "mtime": 1779051107.3807704,
+    "mtime": 1791046322.2904484,
     "ast_hash": "5f2690af7e20aa2294640930e33a136b",
     "semantic_hash": "5f2690af7e20aa2294640930e33a136b"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Navbar.tsx": {
-    "mtime": 1781377498.2934268,
+    "mtime": 1791046322.2905338,
     "ast_hash": "dac41870c123b000f54cb0027309d535",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Features.tsx": {
-    "mtime": 1781297175.2588434,
+    "mtime": 1791046322.2906036,
     "ast_hash": "b8f04197d45bc17d9b28c30a941282a9",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Banner.tsx": {
-    "mtime": 1776299327.885818,
+    "mtime": 1791046322.2906494,
     "ast_hash": "a1ba4fc48d96ccde9da8a0a6a34af7d1",
     "semantic_hash": "a1ba4fc48d96ccde9da8a0a6a34af7d1"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/FloatingFood.tsx": {
-    "mtime": 1779137029.2540035,
+    "mtime": 1791046322.290767,
     "ast_hash": "aaf3e317ae5a903a305b7c0260755020",
     "semantic_hash": "aaf3e317ae5a903a305b7c0260755020"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/CheckBullet.tsx": {
-    "mtime": 1779137029.2540035,
+    "mtime": 1791046322.2908072,
     "ast_hash": "5cf3f1b96c5d2369d531c1e6a81ce16b",
     "semantic_hash": "5cf3f1b96c5d2369d531c1e6a81ce16b"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/BottomActions.tsx": {
-    "mtime": 1779051107.3797705,
+    "mtime": 1791046322.2908468,
     "ast_hash": "4c80e3596178918f09b61ab1391fc395",
     "semantic_hash": "4c80e3596178918f09b61ab1391fc395"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/cookie-consent-banner.tsx": {
-    "mtime": 1781297175.2597601,
+    "mtime": 1791046322.291003,
     "ast_hash": "903112ac323a2cd464601c0503c61653",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/ArticleSelect.tsx": {
-    "mtime": 1781297175.2588434,
+    "mtime": 1791046322.2910762,
     "ast_hash": "dbf753934cc942381b221a4d1e98b34f",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/TestimonialsGroup.tsx": {
-    "mtime": 1780691983.3508928,
+    "mtime": 1791046322.291125,
     "ast_hash": "869f41de0aa1b94fe02090c24d374c38",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/ImageSlider.tsx": {
-    "mtime": 1779137029.2540035,
+    "mtime": 1791046322.2911656,
     "ast_hash": "14f02285212b1d68008a734d7ee563f7",
     "semantic_hash": "14f02285212b1d68008a734d7ee563f7"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Pricing.tsx": {
-    "mtime": 1780691977.5909097,
+    "mtime": 1791046322.2912235,
     "ast_hash": "0a15407d5a58256f5a27ede210533f24",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Error.tsx": {
-    "mtime": 1765134336.525327,
+    "mtime": 1791046322.291262,
     "ast_hash": "80fdcad79f0b737b8e95cbc268e0165e",
     "semantic_hash": "80fdcad79f0b737b8e95cbc268e0165e"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/PageHeader.tsx": {
-    "mtime": 1768172373.5945961,
+    "mtime": 1791046322.2913077,
     "ast_hash": "3a7b2ec0cbb2657c2f5199d5776f975d",
     "semantic_hash": "3a7b2ec0cbb2657c2f5199d5776f975d"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/PricingSteps.tsx": {
-    "mtime": 1781297175.2588434,
-    "ast_hash": "33db84f3608481f87bbdda07f6d02ed5",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "325314388d68635adc9332302ba04555",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Team.tsx": {
-    "mtime": 1781297175.2597601,
-    "ast_hash": "35bc3a398dfba3f8ed1163e541d66696",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "aa22a67277cbaad31251092917113811",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/PriceDisplay.tsx": {
-    "mtime": 1781297175.2588434,
+    "mtime": 1791046322.291504,
     "ast_hash": "ddb87b10d04a1986d1272516283dca3a",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Logo.tsx": {
-    "mtime": 1781377470.1108663,
-    "ast_hash": "62faa52fde3f7a6587ea8c334685ef28",
+    "mtime": 1791046322.291545,
+    "ast_hash": "1bec37caa1b6a6c9c6314c9c147e304b",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/SectionErrorBoundary.tsx": {
-    "mtime": 1776299327.886314,
+    "mtime": 1791046322.29159,
     "ast_hash": "4bf878c628b27f698222579112afbbd7",
     "semantic_hash": "4bf878c628b27f698222579112afbbd7"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/FeatureColumnsGroup.tsx": {
-    "mtime": 1779051107.3797705,
+    "mtime": 1791046322.2916286,
     "ast_hash": "78a355e26979f2dc01e2157dd72f78c8",
     "semantic_hash": "78a355e26979f2dc01e2157dd72f78c8"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Heading.tsx": {
-    "mtime": 1779051107.3807704,
+    "mtime": 1791046322.291809,
     "ast_hash": "7dc02c77e0c4ab8a3efcbe58cb813937",
     "semantic_hash": "7dc02c77e0c4ab8a3efcbe58cb813937"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/LargeVideo.tsx": {
-    "mtime": 1779051107.3807704,
+    "mtime": 1791046322.2918384,
     "ast_hash": "4d48796aa3b57aa3912b709c2d993c92",
     "semantic_hash": "4d48796aa3b57aa3912b709c2d993c92"
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/types/strapi.ts": {
-    "mtime": 1779137029.2542095,
-    "ast_hash": "a82f8c39a67da8c1da0fa7c7752589f5",
-    "semantic_hash": "a82f8c39a67da8c1da0fa7c7752589f5"
+    "mtime": 1791063624.8585103,
+    "ast_hash": "6411a5b4ee1ba063483d290e08890cfa",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/AGENTS.md": {
-    "mtime": 1781375875.843969,
-    "ast_hash": "31e24a04a4c4f1733d4ebe22ee07dc2e",
+    "mtime": 1791063624.8426359,
+    "ast_hash": "211615b21c48f5dc5808758d38991c07",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/README.md": {
@@ -955,12 +955,12 @@
     "semantic_hash": "73c03d6ca30c2fa51aa676ab61c23779"
   },
   "/home/kaido/dev/nad-website/backend/scripts/README.md": {
-    "mtime": 1780353164.3259728,
-    "ast_hash": "8b577cfb69ca544af4277b042c0ec9cb",
-    "semantic_hash": "8b577cfb69ca544af4277b042c0ec9cb"
+    "mtime": 1791064195.5143025,
+    "ast_hash": "c3f630fd82f60cee399def34097798d9",
+    "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/.strapi/client/index.html": {
-    "mtime": 1781296391.340606,
+    "mtime": 1791064029.9136462,
     "ast_hash": "eda04f64d11a5c9c5df544c8274f6cc3",
     "semantic_hash": "eda04f64d11a5c9c5df544c8274f6cc3"
   },
@@ -1030,7 +1030,7 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Faq.tsx": {
-    "mtime": 1780692412.3780022,
+    "mtime": 1791046322.291766,
     "ast_hash": "00a04b8f07b774321b8cb9a0f01bdd5e",
     "semantic_hash": ""
   },
@@ -1040,8 +1040,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/sitemap.ts": {
-    "mtime": 1781297314.9459155,
-    "ast_hash": "8c10a4d896e28e8565a2a4ce58237fda",
+    "mtime": 1791063624.8585103,
+    "ast_hash": "d87f1f98dd5228af6e70ac234c6c0de1",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/manifest.ts": {
@@ -1055,7 +1055,7 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/seo.ts": {
-    "mtime": 1781297314.9459155,
+    "mtime": 1781386306.672563,
     "ast_hash": "e5843e6a05ed726e281a2844eefdca3a",
     "semantic_hash": ""
   },
@@ -1070,13 +1070,13 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/JsonLd.tsx": {
-    "mtime": 1780359642.2474961,
+    "mtime": 1791046322.2901993,
     "ast_hash": "dfd2f78d0edd03500fcc6514ac61e012",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/BlogLoadMore.tsx": {
-    "mtime": 1780359860.6216004,
-    "ast_hash": "dd5ef016e2f9c75d8a4af191ce84c065",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "b6933c415e87ccbb860f1ca13d6613bf",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/docs/seo-content-guidance.md": {
@@ -1105,8 +1105,8 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Reviews.tsx": {
-    "mtime": 1781297175.2597601,
-    "ast_hash": "1709556cefced9f001c18bd0d7089227",
+    "mtime": 1791063624.8576362,
+    "ast_hash": "c913863ea402ca80e738e1614cd81c4b",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/backend/scripts/seeds/reviews.js": {
@@ -1115,7 +1115,7 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/a11y-fixes.test.tsx": {
-    "mtime": 1781377643.5851858,
+    "mtime": 1781386306.672563,
     "ast_hash": "306af92ff849cb2c4d5180b52dd8e6df",
     "semantic_hash": ""
   },
@@ -1125,12 +1125,12 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/.opencode/opencode.json": {
-    "mtime": 1781375055.838623,
+    "mtime": 1781386306.6714299,
     "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/.opencode/plugins/graphify.js": {
-    "mtime": 1781297314.959798,
+    "mtime": 1781386306.6714299,
     "ast_hash": "64ccd3c03dbfe0980b6095766f5c4e52",
     "semantic_hash": ""
   },
@@ -1140,23 +1140,223 @@
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/__tests__/localized-href.test.ts": {
-    "mtime": 1781377595.8260527,
+    "mtime": 1781386306.672563,
     "ast_hash": "4e6912f526d523600804d1adce75e53d",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/links.ts": {
-    "mtime": 1781377458.7824714,
+    "mtime": 1781386306.672563,
     "ast_hash": "ada2a6d0bc6960c1309a2b737c1f2b2d",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/AGENTS.example.md": {
-    "mtime": 1781375658.7874508,
+    "mtime": 1781386306.672563,
     "ast_hash": "33ceadc9f6ace789add83f04da428f52",
     "semantic_hash": ""
   },
   "/home/kaido/dev/nad-website/AGENTS.md.original.md": {
     "mtime": 1781375595.5583541,
     "ast_hash": "1d21c953294c396d3396a6c9cc025fc7",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/team-member/routes/team-member.js": {
+    "mtime": 1791063624.8442976,
+    "ast_hash": "b3605a20daad62dcabde956a0137f7c6",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/team-member/controllers/team-member.js": {
+    "mtime": 1791063624.8442976,
+    "ast_hash": "d109ed18a1c177cc0242117b96b26ec8",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/team-member/services/team-member.js": {
+    "mtime": 1791063624.8442976,
+    "ast_hash": "0890ef8033efb359e6b0488c7ffada30",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/team-member/content-types/team-member/schema.json": {
+    "mtime": 1791063624.8442976,
+    "ast_hash": "8dd9530ae4eac768aca5f30f33fe0643",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/TeamDetails.tsx": {
+    "mtime": 1791063624.8576362,
+    "ast_hash": "293e446c62bf18921eb3093cb6ac3449",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/team/[slug]/page.tsx": {
+    "mtime": 1791063624.8585103,
+    "ast_hash": "0e9a9e632b85db3a0c49922100a27c5f",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/.serena/project.yml": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "d22d10b66667f0296695b402463afb4b",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/.serena/project.local.yml": {
+    "mtime": 1791063619.988054,
+    "ast_hash": "f136e7d47205d9a758913615074760e5",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/.serena/memories/memory_maintenance.md": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "5a2422d8355cb91f16402415a54e3c66",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/A _ Editorial profile.png": {
+    "mtime": 1791063624.8566363,
+    "ast_hash": "01b125b3756974943cd50c274386d817",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/TeamDirectory.tsx": {
+    "mtime": 1791063624.8576362,
+    "ast_hash": "5dd499197481fb94ab2746e76e5a88b0",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/team/page.tsx": {
+    "mtime": 1791063624.8585103,
+    "ast_hash": "771cf724f6b3c829971a5f0a28033fe8",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/seeds/home-collaborators.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "1fdfc057805637c69282f74de3a7d828",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/components/sections/collaborators.json": {
+    "mtime": 1791063624.8442976,
+    "ast_hash": "4915312b072b67d505ede51c53774ab5",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/__tests__/collaborators.test.tsx": {
+    "mtime": 1791063624.8566363,
+    "ast_hash": "42604eb9c152a5b7c39a2c7b22e59bd0",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/Collaborators.tsx": {
+    "mtime": 1791063624.8576362,
+    "ast_hash": "47f31e6252e4c197d109a357c8d97252",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/docs/events-calendar-proposal.md": {
+    "mtime": 1791063624.844636,
+    "ast_hash": "7e2b35afc22ab4411c96756773a89346",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/docs/cms-visual-updates.md": {
+    "mtime": 1791063624.844636,
+    "ast_hash": "c313f3d13ef330ed84e8681e1054be1e",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/seed.test.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "399d707d594dfea969922e1037e7e878",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/__tests__/reviews-pagination.test.tsx": {
+    "mtime": 1791063624.8576362,
+    "ast_hash": "5d3678f834139524bea335172695fa27",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/migrate-dietitians.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "93055540bca321b6cd3ab84e579f869f",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/dietitian-migration.test.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "be65cebb48edf84b1f6eaf5bd088e2e1",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/lib/dietitian-migration.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "f2c3638912df2767b9049c120e3cfd5f",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/dietitian/routes/dietitian.js": {
+    "mtime": 1791063624.8440235,
+    "ast_hash": "e954f85c7535c71a13da5ab1ae3f9f8c",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/dietitian/controllers/dietitian.js": {
+    "mtime": 1791063624.8440235,
+    "ast_hash": "42875053b6c75baca4367504cbb9739a",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/dietitian/services/dietitian.js": {
+    "mtime": 1791063624.8440235,
+    "ast_hash": "f16bfc08519ea294a36f6b264561a889",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/api/dietitian/content-types/dietitian/schema.json": {
+    "mtime": 1791063624.8440235,
+    "ast_hash": "08639423450329663a2c810abb502abb",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/__tests__/dietitian-data.test.ts": {
+    "mtime": 1791063624.8566363,
+    "ast_hash": "a9ef2778c99ba9386977a638306c6d71",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/__tests__/dietitian-experience.test.tsx": {
+    "mtime": 1791063624.8566363,
+    "ast_hash": "2a6fe5eace30a550d83c93be5933f830",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/article-author.ts": {
+    "mtime": 1791063624.8585103,
+    "ast_hash": "00e9fdd36d4da72b2b31b99bd74e515d",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/get-dietitians.ts": {
+    "mtime": 1791063624.8585103,
+    "ast_hash": "5f4ce1b6d319642eb3603437e41c8816",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/utils/dietitians.ts": {
+    "mtime": 1791063624.8585103,
+    "ast_hash": "3efedb3c3149afc20ef84baf05407adb",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/app/[lang]/components/TeamClassic.tsx": {
+    "mtime": 1791063624.8576362,
+    "ast_hash": "dd55b315257c1b88cfe3395cb2f7ed20",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/docs/dietitians.md": {
+    "mtime": 1791064608.693297,
+    "ast_hash": "0a5f33ef931b15213c62ca7063f8996e",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/frontend/src/__tests__/team-details-photo.test.tsx": {
+    "mtime": 1791063624.8576362,
+    "ast_hash": "0f6de8f0bd307d4e4a7911f0937c74f9",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/dietitian-editor.test.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "3825503a509d59d8c8f6e63ea3f8403c",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/src/utils/dietitian-editor.js": {
+    "mtime": 1791063624.8442976,
+    "ast_hash": "c2257a1b72a762cb0f0887e6cb5557e2",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/backend/scripts/seeds/dietitian.js": {
+    "mtime": 1791063624.8426359,
+    "ast_hash": "f7901c35839a372fb0a65bd064f066cb",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/railway.json": {
+    "mtime": 1791064524.2473283,
+    "ast_hash": "92ecb96ffb5a18c6ee58b030db0c16fe",
+    "semantic_hash": ""
+  },
+  "/home/kaido/dev/nad-website/docs/production-release.md": {
+    "mtime": 1791064608.6948423,
+    "ast_hash": "3ae5383d3b53f6caa9d05a088f04de4b",
     "semantic_hash": ""
   }
 }

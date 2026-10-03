@@ -1,3 +1,4 @@
+import { articleAuthor } from "../utils/article-author";
 import Image from "next/image";
 import Link from "next/link";
 import { getStrapiMedia, formatDate } from "../utils/api-helpers";
@@ -20,9 +21,9 @@ export default function PostList({
             article.cover?.url
           );
           const category = article.category;
-          const authorsBio = article.authorsBio;
+          const author = articleAuthor(article, lang);
           const avatarUrl = getStrapiMedia(
-            authorsBio?.avatar?.url
+            author?.avatar?.url
           );
 
           return (
@@ -43,7 +44,7 @@ export default function PostList({
               <div className="p-6 space-y-2 relative">
                 {avatarUrl && (
                   <Image
-                    alt={authorsBio ? `${authorsBio.name}'s avatar` : "author avatar"}
+                    alt={author ? `${author.name}'s avatar` : "author avatar"}
                     width="80"
                     height="80"
                     src={avatarUrl}
@@ -59,9 +60,9 @@ export default function PostList({
                   <span className="text-xs dark:text-gray-400">
                     {formatDate(article.publishedAt)}
                   </span>
-                  {authorsBio && (
+                  {author && (
                     <span className="text-xs dark:text-gray-400">
-                      {authorsBio.name}
+                      {author.name}
                     </span>
                   )}
                 </div>

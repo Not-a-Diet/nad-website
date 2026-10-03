@@ -1,91 +1,30 @@
-import { parseDescriptionList } from "../utils/description-parser";
-import { getStrapiMedia } from "../utils/api-helpers";
-import Image from "next/image";
+import TeamClassic, { type TeamProps } from "./TeamClassic";
+import CtaButton from "./CtaButton";
 import Quote from "./Quote";
 
-interface TeamProps {
-  data: {
-    title: string;
-    description: string;
-    member: Array<TeamMember>;
-    filosofy: {
-      title?: string;
-      body: string;
-      type: 'quotation' | 'filosofy';
-      sign?: string;
-      isList: boolean;
-      items?: Array<{
-        id: number;
-        title: string;
-        description: string;
-      }>;
-    };
-  };
-}
+const copy = {
+  en: { eyebrow: "People, before plans", cta: "Meet the team" },
+  it: { eyebrow: "Le persone, prima dei piani", cta: "Scopri il team" },
+  pt: { eyebrow: "Pessoas, antes dos planos", cta: "Conheça a equipa" },
+};
 
-interface TeamMember {
-  name: string;
-  occupation: string;
-  profilePhoto: {
-    url: string;
-  };
-  description: string;
-  skills: string;
-}
-
-function TeamMemberCard({ name, occupation, profilePhoto, description, skills }: TeamMember) {
-  const skillsArr = parseDescriptionList(skills);
-  const profilePhotoUrl = getStrapiMedia(profilePhoto?.url);
-
+export default function Team({ data, lang = "en" }: TeamProps) {
+  const text = copy[lang as keyof typeof copy] ?? copy.en;
+  if (data.layout === "classic") {
+    return <TeamClassic data={data} lang={lang} />;
+  }
   return (
-    <div className="bg-anti-flash_white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 lg:max-w-md mx-4 my-4">
-      <div className="w-32 h-32 mx-auto mb-4 relative">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-kiwi-100 to-pasta-100"></div>
-        {profilePhotoUrl && (
-          <Image
-            src={profilePhotoUrl}
-            alt={name}
-            width={400}
-            height={400}
-            loading="lazy"
-            sizes="128px"
-            className="border-2 rounded-full drop-shadow-md dark:bg-gray-500 dark:border-gray-700"
-          />
-        )}
-      </div>
-      <h3 className="text-crema-900 text-center mb-2">{name}</h3>
-      <p className="text-secondary-700 text-center mb-4">{occupation}</p>
-      <p className="text-crema-700 mb-4">{description}</p>
-      <div className="text-left space-y-2 mt-4">
-        {skillsArr.map((skill, index) => (
-          <div key={index} className="flex items-start">
-            <span className="text-secondary-700 mr-2 mt-1">✓</span>
-            <p className="text-crema-800 ">{skill}</p>
+    <section id="about" className="bg-anti-flash_white-100 py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="flex flex-col gap-6 border-y border-secondary-100 py-8 sm:py-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          <div className="max-w-2xl">
+            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-secondary-700">{text.eyebrow}</p>
+            <h2 className="text-3xl text-crema-900 sm:text-4xl">{data.title}</h2>
+            <p className="mb-0 mt-3 leading-7 text-crema-700">{data.description}</p>
           </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-
-
-export default function Team({ data }: TeamProps) {
-  return (
-    <section id="about" className="py-20 lg:py-24 bg-anti-flash_white-100 relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-sans font-bold text-crema-900 mb-4">{data.title}</h2>
-          <p className="text-crema-700 max-w-2xl mx-auto">{data.description}</p>
+          <CtaButton text={data.ctaLabel || text.cta} url={`/${lang}/team`} className="group inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-full bg-primary px-6 py-3 font-bold text-white transition hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:self-center" />
         </div>
-        <div className="flex flex-row items-center justify-center flex-wrap">
-          {data.member?.map((member) => (
-            <TeamMemberCard key={`${member.name}-${member.occupation}`} {...member} />
-          ))}
-        </div>
-        <Quote
-          data={data.filosofy}
-        />
+        {data.filosofy && <div className="mt-12"><Quote data={data.filosofy} /></div>}
       </div>
     </section>
   );

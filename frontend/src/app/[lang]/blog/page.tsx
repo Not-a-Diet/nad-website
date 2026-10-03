@@ -31,7 +31,7 @@ async function getInitialArticles(lang: string) {
       populate: {
         cover: { fields: ["url"] },
         category: { populate: "*" },
-        authorsBio: { populate: "*" },
+        dietitian: { populate: { profilePhoto: true } },
       },
       pagination: { start: 0, limit: PAGE_LIMIT },
     },

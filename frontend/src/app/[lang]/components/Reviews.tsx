@@ -431,8 +431,14 @@ export default function Reviews({ data, lang }: Readonly<ReviewsProps>) {
 
           {/* Controls */}
           {pageCount > 1 && (
-            <div className="mt-8 flex items-center justify-between gap-6">
-              <div className="flex items-center gap-2" role="group" aria-label="Review pages">
+            <div className="mt-8 flex min-w-0 items-center justify-between gap-6">
+              <p
+                className="m-0 text-sm font-semibold tabular-nums text-crema-500 sm:hidden"
+                aria-label={`Review page ${page + 1} of ${pageCount}`}
+              >
+                {page + 1} / {pageCount}
+              </p>
+              <div className="hidden min-w-0 flex-1 flex-wrap items-center gap-2 sm:flex" role="group" aria-label="Review pages">
                 {Array.from({ length: pageCount }).map((_, i) => (
                   <button
                     key={i}
@@ -451,7 +457,7 @@ export default function Reviews({ data, lang }: Readonly<ReviewsProps>) {
                   </button>
                 ))}
               </div>
-              <div className="flex gap-3">
+              <div className="flex shrink-0 gap-3">
                 <button
                   type="button"
                   onClick={goPrev}

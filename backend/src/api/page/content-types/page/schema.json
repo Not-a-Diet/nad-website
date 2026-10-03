@@ -50,7 +50,8 @@
         "sections.pricing-service-card",
         "sections.pricing-steps",
         "sections.faq",
-        "sections.reviews"
+        "sections.reviews",
+        "sections.collaborators"
       ]
     },
     "slug": {

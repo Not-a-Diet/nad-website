@@ -118,7 +118,7 @@ export default function Footer({
         <div className="pt-8 border-t border-crema-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-crema-400 text-center md:text-left">
-              <p>© {currentYear} Notadiet™</p>
+              <p>© {currentYear} Notadiet®</p>
               <p>P.IVA: 05749220280</p>
             </div>
             <ul className="flex flex-wrap justify-center gap-x-9 gap-y-2">

@@ -19,9 +19,10 @@ const mockArticlesResponse = {
         name: 'Health',
         slug: 'health',
       },
-      authorsBio: {
+      dietitian: {
+        documentId: 'test-author', slug: 'test-author', role: 'Dietitian',
         name: 'Test Author',
-        avatar: { url: '/avatar.jpg' },
+        profilePhoto: { url: '/avatar.jpg' },
       },
       blocks: [],
     },

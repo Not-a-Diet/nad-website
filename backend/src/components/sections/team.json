@@ -15,12 +15,28 @@
     "member": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.team-member"
+      "component": "elements.team-member",
+      "pluginOptions": {
+        "content-manager": {
+          "visible": false
+        }
+      }
     },
     "filosofy": {
       "type": "component",
       "repeatable": false,
       "component": "shared.quote"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "preview",
+        "classic"
+      ],
+      "default": "preview"
+    },
+    "ctaLabel": {
+      "type": "string"
     }
   }
 }

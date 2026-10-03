@@ -9,7 +9,8 @@
     "build": "strapi build",
     "strapi": "strapi",
     "seed:dev": "node scripts/seed.js",
-    "seed:dev:all": "node scripts/seed.js --all"
+    "seed:dev:all": "node scripts/seed.js --all",
+    "migrate:dietitians": "node scripts/migrate-dietitians.js"
   },
   "devDependencies": {
     "baseline-browser-mapping": "^2.10.17"

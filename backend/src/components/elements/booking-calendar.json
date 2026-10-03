@@ -13,7 +13,12 @@
     "persons": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.booking-person"
+      "component": "elements.booking-person",
+      "pluginOptions": {
+        "content-manager": {
+          "visible": false
+        }
+      }
     },
     "personLabel": {
       "type": "string",

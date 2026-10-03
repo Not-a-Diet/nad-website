@@ -79,7 +79,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::author.author",
-      "inversedBy": "articles"
+      "inversedBy": "articles",
+      "pluginOptions": {
+        "content-manager": {
+          "visible": false
+        }
+      }
     },
     "seo": {
       "type": "component",
@@ -90,6 +95,12 @@
           "localized": true
         }
       }
+    },
+    "dietitian": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dietitian.dietitian",
+      "inversedBy": "articles"
     }
   }
 }
