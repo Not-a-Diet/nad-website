@@ -1,5 +1,6 @@
 "use client";
 
+import ArrowIcon from "./ArrowIcon";
 import { useCallback, useState } from "react";
 import BracketHighlight from "./BracketHighlight";
 
@@ -197,20 +198,7 @@ export default function Faq({ data }: Readonly<FaqProps>) {
               className="inline-flex items-center gap-2.5 rounded-full bg-crema px-5 py-[11px] text-sm font-semibold text-white transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.04] motion-reduce:transition-none"
             >
               {data.ctaText}
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12 h14" />
-                <path d="M13 5 l7 7 l-7 7" />
-              </svg>
+              <ArrowIcon />
             </a>
           )}
         </div>

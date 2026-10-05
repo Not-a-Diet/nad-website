@@ -1,5 +1,6 @@
 "use client";
 
+import ArrowIcon from "./ArrowIcon";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,14 +57,6 @@ const copy = {
     empty: "Os perfis da nossa equipa estarão disponíveis em breve.",
   },
 } as const;
-
-function Arrow({ direction }: { direction: "left" | "right" }) {
-  return (
-    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
-      <path d={direction === "left" ? "m15 18-6-6 6-6" : "m9 6 6 6-6 6"} />
-    </svg>
-  );
-}
 
 export default function TeamDirectory({ lang, members }: Props) {
   const text = copy[lang as keyof typeof copy] ?? copy.en;
@@ -162,7 +155,7 @@ export default function TeamDirectory({ lang, members }: Props) {
                       {member.shortBio ? <p className="mt-3 text-base leading-7 text-crema-500">{member.shortBio}</p> : null}
                       <span className="mt-auto pt-6 inline-flex items-center gap-2 font-bold text-primary transition-colors group-hover:text-primary-500">
                         {text.profile}
-                        <span aria-hidden="true">→</span>
+                        <ArrowIcon />
                       </span>
                     </div>
                   </Link>
@@ -194,7 +187,7 @@ export default function TeamDirectory({ lang, members }: Props) {
                     aria-label={text.previous}
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-crema-200 bg-white text-crema-800 transition hover:border-crema-800 disabled:cursor-not-allowed disabled:opacity-35 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
                   >
-                    <Arrow direction="left" />
+                    <ArrowIcon direction="left" size={20} />
                   </button>
                   <button
                     type="button"
@@ -203,7 +196,7 @@ export default function TeamDirectory({ lang, members }: Props) {
                     aria-label={text.next}
                     className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-crema-200 bg-white text-crema-800 transition hover:border-crema-800 disabled:cursor-not-allowed disabled:opacity-35 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
                   >
-                    <Arrow direction="right" />
+                    <ArrowIcon size={20} />
                   </button>
                 </div>
               </div>

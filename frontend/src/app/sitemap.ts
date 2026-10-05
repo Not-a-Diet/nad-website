@@ -101,7 +101,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // The shared profile collection also drives team discovery.
   for (const locale of i18n.locales) {
-    entries.push({ url: pageUrl(locale, "/team"), changeFrequency: "monthly", priority: 0.7 });
+    entries.push({
+      url: pageUrl(locale, "/team"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: { languages: sharedAlternates("/team") },
+    });
     const dietitians = await safeFetch("/dietitians", {
       locale, filters: { listed: true }, fields: ["slug", "updatedAt"], pagination: { pageSize: 100 },
     });

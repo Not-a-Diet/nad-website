@@ -1,3 +1,4 @@
+import ArrowIcon from "./ArrowIcon";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -150,7 +151,7 @@ function findContact(member: TeamProfile, social: string) {
 function CredentialIcon({ type }: { type: "education" | "register" | "languages" }) {
   if (type === "register") {
     return (
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-100 text-orange-500">
+      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary-100 text-primary">
         <svg aria-hidden="true" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path d="M12 3 5 6v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10V6l-7-3Z" />
           <path d="m9 12 2 2 4-4" />
@@ -161,7 +162,7 @@ function CredentialIcon({ type }: { type: "education" | "register" | "languages"
 
   if (type === "languages") {
     return (
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-yellow-100 text-yellow-600">
+      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-tertiary-100 text-tertiary">
         <svg aria-hidden="true" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="9" />
           <path d="M3 12h18M12 3c2.3 2.4 3.5 5.4 3.5 9S14.3 18.6 12 21c-2.3-2.4-3.5-5.4-3.5-9S9.7 5.4 12 3Z" />
@@ -171,7 +172,7 @@ function CredentialIcon({ type }: { type: "education" | "register" | "languages"
   }
 
   return (
-    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-green-100 text-green-500">
+    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-secondary-100 text-secondary-700">
       <svg aria-hidden="true" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
         <path d="M12 14 3 9l9-5 9 5-9 5Z" />
         <path d="m6 11.5-3 1.7L12 18l9-4.8-3-1.7" />
@@ -259,22 +260,22 @@ export default function TeamDetails({ lang, member }: Props) {
               unoptimized
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-green-100 to-yellow-50 text-5xl font-bold text-green-500">
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-secondary-100 to-tertiary-100/40 text-5xl font-bold text-secondary-700">
               {member.name.charAt(0)}
             </div>
           )}
         </div>
 
-        <p className="mt-8 text-sm font-extrabold uppercase tracking-widest text-green-500">{copy.profileType}</p>
+        <p className="mt-8 text-sm font-extrabold uppercase tracking-widest text-secondary-700">{copy.profileType}</p>
         <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-crema-900 md:text-5xl">{member.name}</h1>
-        {role ? <p className="mt-4 text-xl font-bold text-green-500">{role}</p> : null}
+        {role ? <p className="mt-4 text-xl font-bold text-secondary-700">{role}</p> : null}
 
         {chips.length > 0 ? (
           <ul className="mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-3 text-sm font-semibold text-crema-700 sm:grid-cols-2 lg:grid-cols-3">
             {chips.map((item, index) => (
               <li
                 key={`${pillText(item)}-${index}`}
-                className={index === 0 ? "flex min-h-10 items-center justify-center gap-3 rounded-full border border-lime-400 bg-green-100/70 px-5 text-green-600" : "flex min-h-10 items-center justify-center gap-3 rounded-full border border-crema-200 bg-white px-5 shadow-sm"}
+                className={index === 0 ? "flex min-h-10 items-center justify-center gap-3 rounded-full border border-secondary bg-secondary-100/70 px-5 text-secondary-700" : "flex min-h-10 items-center justify-center gap-3 rounded-full border border-crema-200 bg-white px-5 shadow-sm"}
               >
                 <ChipIcon index={index} />
                 <span className="leading-tight">{pillText(item)}</span>
@@ -286,11 +287,11 @@ export default function TeamDetails({ lang, member }: Props) {
 
       {philosophy ? (
         <section className="mx-auto max-w-7xl px-6 lg:px-16">
-          <figure className="rounded-[2rem] bg-gradient-to-br from-green-50 via-white to-yellow-50 px-8 py-12 text-center md:px-24">
+          <figure className="rounded-[2rem] bg-gradient-to-br from-secondary-100/40 via-white to-tertiary-100/40 px-8 py-12 text-center md:px-24">
             <blockquote className="mx-auto max-w-5xl text-2xl italic leading-relaxed text-crema-800 md:text-3xl">
               “{philosophy}”
             </blockquote>
-            <figcaption className="mt-8 font-extrabold text-orange-500">— {member.name}</figcaption>
+            <figcaption className="mt-8 font-extrabold text-primary">— {member.name}</figcaption>
           </figure>
         </section>
       ) : null}
@@ -311,7 +312,7 @@ export default function TeamDetails({ lang, member }: Props) {
             <ul className="mt-10 divide-y divide-crema-200">
               {specializations.map((item) => (
                 <li key={item.title} className="grid grid-cols-[1.5rem_1fr] gap-4 py-5">
-                  <span className="pt-1 text-xl font-bold text-green-500">✓</span>
+                  <span className="pt-1 text-xl font-bold text-secondary-700">✓</span>
                   <div>
                     <h3 className="text-xl font-extrabold text-crema-900">{item.title}</h3>
                     {item.description ? <p className="mt-2 text-lg leading-7 text-crema-400">{item.description}</p> : null}
@@ -345,7 +346,7 @@ export default function TeamDetails({ lang, member }: Props) {
                 <ul className="mt-7 space-y-6">
                   {locations.map((item) => (
                     <li key={item.label} className="grid grid-cols-[0.75rem_1fr] gap-4">
-                      <span className="mt-2 h-3 w-3 rounded-full bg-orange-500" aria-hidden="true" />
+                      <span className="mt-2 h-3 w-3 rounded-full bg-primary" aria-hidden="true" />
                       <div>
                         <h3 className="text-lg font-extrabold text-crema-900">{item.label}</h3>
                         {item.description ? <p className="mt-1 text-base text-crema-400">{item.description}</p> : null}
@@ -359,7 +360,7 @@ export default function TeamDetails({ lang, member }: Props) {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-green-50 via-white to-yellow-50 px-6 py-20 text-center lg:px-16">
+      <section className="bg-gradient-to-br from-secondary-100/40 via-white to-tertiary-100/40 px-6 py-20 text-center lg:px-16">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-4xl font-extrabold tracking-tight text-crema-900">{copy.ctaTitle}</h2>
           <p className="mt-6 text-lg text-crema-400">{copy.ctaText}</p>
@@ -368,10 +369,10 @@ export default function TeamDetails({ lang, member }: Props) {
               <Link
                 href={bookingHref}
                 target={bookingLink?.newTab ? "_blank" : undefined}
-                className="inline-flex min-h-14 min-w-56 items-center justify-center gap-8 rounded-full bg-orange-500 px-7 text-lg font-extrabold text-white shadow-sm transition hover:bg-orange-600"
+                className="inline-flex min-h-14 min-w-56 items-center justify-center gap-8 rounded-full bg-primary px-7 text-lg font-extrabold text-white shadow-sm transition hover:bg-primary-500"
               >
                 {bookingText}
-                <span aria-hidden="true">→</span>
+                <ArrowIcon />
               </Link>
             ) : null}
 
@@ -379,7 +380,7 @@ export default function TeamDetails({ lang, member }: Props) {
               <Link
                 href={linkHref(whatsappLink)}
                 target={whatsappLink.newTab ? "_blank" : undefined}
-                className="inline-flex min-h-14 min-w-56 items-center justify-center rounded-2xl border border-crema-200 bg-white px-7 text-lg font-extrabold text-crema-900 shadow-sm transition hover:border-green-300"
+                className="inline-flex min-h-14 min-w-56 items-center justify-center rounded-2xl border border-crema-200 bg-white px-7 text-lg font-extrabold text-crema-900 shadow-sm transition hover:border-secondary"
               >
                 {linkText(whatsappLink) || copy.whatsapp}
               </Link>

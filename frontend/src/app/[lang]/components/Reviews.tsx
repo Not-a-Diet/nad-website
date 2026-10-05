@@ -1,5 +1,6 @@
 "use client";
 
+import ArrowIcon from "./ArrowIcon";
 import {
   useCallback,
   useEffect,
@@ -465,9 +466,7 @@ export default function Reviews({ data, lang }: Readonly<ReviewsProps>) {
                   aria-label="Previous reviews"
                   className="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-crema bg-anti-flash_white text-crema transition-[background,color,transform] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] enabled:hover:scale-105 enabled:hover:bg-crema enabled:hover:text-white disabled:cursor-not-allowed disabled:border-crema-200 disabled:text-crema-500 disabled:opacity-35 motion-reduce:transition-none"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
+                  <ArrowIcon direction="left" size={20} />
                 </button>
                 <button
                   type="button"
@@ -476,9 +475,7 @@ export default function Reviews({ data, lang }: Readonly<ReviewsProps>) {
                   aria-label="Next reviews"
                   className="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-crema bg-anti-flash_white text-crema transition-[background,color,transform] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] enabled:hover:scale-105 enabled:hover:bg-crema enabled:hover:text-white disabled:cursor-not-allowed disabled:border-crema-200 disabled:text-crema-500 disabled:opacity-35 motion-reduce:transition-none"
                 >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M9 6l6 6-6 6" />
-                  </svg>
+                  <ArrowIcon size={20} />
                 </button>
               </div>
             </div>

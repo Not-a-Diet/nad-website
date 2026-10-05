@@ -1,5 +1,6 @@
 "use client"
 
+import ArrowIcon from "./ArrowIcon";
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -138,8 +139,8 @@ const BookingSelector = ({ data, dietitians, lang }: { data: BookingCalendarData
         <ul className="mb-3 flex flex-wrap gap-2">
           {specializationLabels(selectedProfile.specializations).slice(0, 3).map(label => <li key={label} className="rounded-full bg-secondary-100/60 px-3 py-1 text-xs text-crema-800">{label}</li>)}
         </ul>
-        <Link href={`/${lang}/team/${selectedProfile.slug}`} className="font-bold text-primary underline underline-offset-4">
-          {lang === "it" ? "Scopri di più" : lang === "pt" ? "Saiba mais" : "Know more"}<span aria-hidden="true"> →</span>
+        <Link href={`/${lang}/team/${selectedProfile.slug}`} className="inline-flex items-center gap-2 font-bold text-primary underline underline-offset-4">
+          {lang === "it" ? "Scopri di più" : lang === "pt" ? "Saiba mais" : "Know more"}<ArrowIcon />
         </Link>
       </div>
     </div>
